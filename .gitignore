@@ -61,5 +61,5 @@ hs_err_pid*
 
 .recommenders/
 .metadata/
-.proyect.xml
+.project.xml
 .classpath.xml
