@@ -1,5 +1,5 @@
 package Main;
 
-public class MapaGui {
+public class MapaGui{
 
 }
