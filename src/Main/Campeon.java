@@ -11,4 +11,8 @@ public abstract class Campeon extends Entidad{
 	protected int rango;
 	protected List<Magia> magias;
 	
+	public void restarVida(Disparo d) {
+		vida = vida - d.getFuerza();
+	}
+	
 }

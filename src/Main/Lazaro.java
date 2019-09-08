@@ -24,8 +24,12 @@ public class Lazaro extends Aliado{
 		
 		DisparoAliado d = new DisparoAliado(n);
 		return d;
-		
 	}
+	 
+	
+	
+	
+	
 	
 	
 	

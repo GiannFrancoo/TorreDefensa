@@ -5,4 +5,8 @@ public abstract class Disparo extends Entidad{
 	//columna --> Entidad;
 	
 	protected int fuerza;
+	
+	public int getFuerza() {
+		return fuerza;
+	}
 }
