@@ -1,5 +1,9 @@
 package Main;
 
-public abstract class DisparoAliado extends Disparo{
-
+public class DisparoAliado extends Disparo{
+	//Fuerza de disparo;
+	
+	public DisparoAliado(int f) {
+		this.fuerza = f;
+	}
 }

@@ -2,6 +2,17 @@ package Main;
 
 public class Jugador {
 
-	protected int moneda;
+	protected int monedas;
+	
+	public Jugador(int monedas) {
+		this.monedas = monedas;
+	}
+	
+	//public void agregarMonedas(int n) {}
+	
+	public int getMonedas(){
+		return monedas;
+	}
+	
 	
 }
