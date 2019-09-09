@@ -41,13 +41,13 @@ public class MapaLogico {
 	
 //	public void Recibir(PPair<Integer,Integer> p) {}
 	
-	public void Insertar(Pair<Integer,Integer> pos, Objeto o) {
-			entidades[pos.getKey()][pos.getValue()].add(o);
+	public void Insertar(Pair<Integer,Integer> p, Objeto o) {
+			entidades[p.getKey()][p.getValue()].add(o);
 			objetos.add(o);
 	}
 	
-	public void Insertar(Pair<Integer,Integer> pos, Aliado a) {
-			entidades[pos.getKey()][pos.getValue()].add(a);
+	public void Insertar(Pair<Integer,Integer> p, Aliado a) {
+			entidades[p.getKey()][p.getValue()].add(a);
 			aliados.add(a);
 	}
 	
@@ -55,5 +55,7 @@ public class MapaLogico {
 	
 // 	public void mover() {}
 	
-	public 
+//	public void aplicarMagia(Pair<Integer,Integer> p, Magia m) {
+//		
+//	}
 }
