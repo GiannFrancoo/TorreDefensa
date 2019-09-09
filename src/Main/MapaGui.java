@@ -22,21 +22,19 @@ public class MapaGui extends JFrame {
 	   setVisible(true);
 	   gamePanel = new JPanel();
 	   gamePanel.setLayout(new FlowLayout());
-	   dibujarPanelDeJuego(1);
+	   gamePanel.setSize(contenPane.getSize());
 	   contenPane.add(gamePanel);
+	   dibujarPanelDeJuego(1);
 	   
 	}
 	
 	public void dibujarPanelDeJuego(int nivel) {
-		ImageIcon fondoNivel = new ImageIcon(this.getClass().getResource("/Texturas/nivel1.png"));
+		ImageIcon fondoNivel = new ImageIcon(this.getClass().getResource("/texturas/nivel1.png"));
 		lvlBackground.setIcon(fondoNivel);
-		gamePanel.add(lvlBackground);
-		lvlBackground.setVisible(true);
+		lvlBackground.setSize(contenPane.getSize());
+		contenPane.add(lvlBackground);
+//		System.out.println("Ruta del archivo: " + this.getClass().getResource("/texturas/nivel1.png").getPath());
 		
-	}
-
-	public static void main(String[] args) {
-		new MapaGui();
 	}
 
 }
