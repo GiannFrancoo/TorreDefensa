@@ -8,7 +8,9 @@ public class Jugador {
 		this.monedas = monedas;
 	}
 	
-	//public void agregarMonedas(int n) {}
+	public void agregarMonedas(int n) {
+		monedas+=n;
+	}
 	
 	public int getMonedas(){
 		return monedas;

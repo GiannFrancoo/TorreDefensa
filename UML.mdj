@@ -540,7 +540,7 @@
 											"top": 285,
 											"width": 142.7080078125,
 											"height": 13,
-											"text": "+agregarMonedas(int m)",
+											"text": "+agregarMonedas(int n)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -875,23 +875,6 @@
 										},
 										{
 											"_type": "UMLOperationView",
-											"_id": "AAAAAAFtA4AgZfk0wTI=",
-											"_parent": {
-												"$ref": "AAAAAAFs3jHGK8vTKH4="
-											},
-											"model": {
-												"$ref": "AAAAAAFtA4AfvfkxscU="
-											},
-											"font": "Arial;13;0",
-											"left": 349,
-											"top": 302,
-											"width": 208.126953125,
-											"height": 13,
-											"text": "+Insertar(Pair par, Aliado a)",
-											"horizontalAlignment": 0
-										},
-										{
-											"_type": "UMLOperationView",
 											"_id": "AAAAAAFtEjqn3MUgZS4=",
 											"_parent": {
 												"$ref": "AAAAAAFs3jHGK8vTKH4="
@@ -901,7 +884,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 349,
-											"top": 317,
+											"top": 302,
 											"width": 208.126953125,
 											"height": 13,
 											"text": "+mover()",
@@ -918,10 +901,10 @@
 											},
 											"font": "Arial;13;0",
 											"left": 349,
-											"top": 332,
+											"top": 317,
 											"width": 208.126953125,
 											"height": 13,
-											"text": "+aplicarMagia(Pair par)",
+											"text": "+aplicarMagia(Pair par, Magia m)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -935,10 +918,27 @@
 											},
 											"font": "Arial;13;0",
 											"left": 349,
+											"top": 332,
+											"width": 208.126953125,
+											"height": 13,
+											"text": "+Insertar(Pair p, Objeto o)",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAFtE7PImm6cAnI=",
+											"_parent": {
+												"$ref": "AAAAAAFs3jHGK8vTKH4="
+											},
+											"model": {
+												"$ref": "AAAAAAFtE7PIXG6Z0eQ="
+											},
+											"font": "Arial;13;0",
+											"left": 349,
 											"top": 347,
 											"width": 208.126953125,
 											"height": 13,
-											"text": "+insertar(Pair par, Objeto o)",
+											"text": "+Insertar(Pair p, Aliado a)",
 											"horizontalAlignment": 0
 										}
 									],
@@ -984,7 +984,7 @@
 							"left": 344,
 							"top": 144,
 							"width": 218.126953125,
-							"height": 221,
+							"height": 236,
 							"nameCompartment": {
 								"$ref": "AAAAAAFs3jHGKsvNwfk="
 							},
@@ -3620,7 +3620,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 397,
-									"top": 371,
+									"top": 378,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -3641,7 +3641,7 @@
 									"visible": null,
 									"font": "Arial;13;0",
 									"left": 382,
-									"top": 371,
+									"top": 378,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -3662,7 +3662,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 426,
-									"top": 372,
+									"top": 379,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -3746,7 +3746,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 397,
-									"top": 383,
+									"top": 398,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 30,
@@ -3766,7 +3766,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 383,
-									"top": 386,
+									"top": 401,
 									"height": 13,
 									"alpha": -0.7853981633974483,
 									"distance": 40,
@@ -3786,7 +3786,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 424,
-									"top": 379,
+									"top": 394,
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 25,
@@ -3834,7 +3834,7 @@
 							"tail": {
 								"$ref": "AAAAAAFs3jIgV8wjk8Y="
 							},
-							"points": "412:392;412:364",
+							"points": "412:392;412:379",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFs3jSaes5TMu4="
@@ -12234,8 +12234,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFtEle6C12A8Rw="
 									},
-									"name": "int m",
-									"type": ""
+									"name": "int n"
 								}
 							]
 						},
@@ -12364,7 +12363,8 @@
 									"_parent": {
 										"$ref": "AAAAAAFtA3riSO9hAMc="
 									},
-									"name": "Pair par"
+									"name": "Pair par",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
@@ -12391,7 +12391,8 @@
 									"_parent": {
 										"$ref": "AAAAAAFtA3tdj/EPNWY="
 									},
-									"name": "Aliado a"
+									"name": "Aliado a",
+									"type": ""
 								}
 							]
 						},
@@ -12409,33 +12410,8 @@
 									"_parent": {
 										"$ref": "AAAAAAFtA3vUs/IXAo8="
 									},
-									"name": "Enemigo e"
-								}
-							]
-						},
-						{
-							"_type": "UMLOperation",
-							"_id": "AAAAAAFtA4AfvfkxscU=",
-							"_parent": {
-								"$ref": "AAAAAAFs3jHGKcvKMpc="
-							},
-							"name": "Insertar",
-							"parameters": [
-								{
-									"_type": "UMLParameter",
-									"_id": "AAAAAAFtA4BqVPndMG0=",
-									"_parent": {
-										"$ref": "AAAAAAFtA4AfvfkxscU="
-									},
-									"name": "Pair par"
-								},
-								{
-									"_type": "UMLParameter",
-									"_id": "AAAAAAFtEjyvCsbrGhc=",
-									"_parent": {
-										"$ref": "AAAAAAFtA4AfvfkxscU="
-									},
-									"name": "Aliado a"
+									"name": "Enemigo e",
+									"type": ""
 								}
 							]
 						},
@@ -12461,7 +12437,17 @@
 									"_parent": {
 										"$ref": "AAAAAAFtEuXBTg1V7I8="
 									},
-									"name": "Pair par"
+									"name": "Pair par",
+									"type": ""
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAFtE7a1LnDzLC0=",
+									"_parent": {
+										"$ref": "AAAAAAFtEuXBTg1V7I8="
+									},
+									"name": "Magia m",
+									"type": ""
 								}
 							]
 						},
@@ -12471,7 +12457,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFs3jHGKcvKMpc="
 							},
-							"name": "insertar",
+							"name": "Insertar",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -12479,7 +12465,8 @@
 									"_parent": {
 										"$ref": "AAAAAAFtExHs9V9qWqw="
 									},
-									"name": "Pair par"
+									"name": "Pair p",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
@@ -12487,7 +12474,36 @@
 									"_parent": {
 										"$ref": "AAAAAAFtExHs9V9qWqw="
 									},
-									"name": "Objeto o"
+									"name": "Objeto o",
+									"type": ""
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAFtE7PIXG6Z0eQ=",
+							"_parent": {
+								"$ref": "AAAAAAFs3jHGKcvKMpc="
+							},
+							"name": "Insertar",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAFtE7SseW/x6fw=",
+									"_parent": {
+										"$ref": "AAAAAAFtE7PIXG6Z0eQ="
+									},
+									"name": "Pair p",
+									"type": ""
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAFtE7SseW/yfj8=",
+									"_parent": {
+										"$ref": "AAAAAAFtE7PIXG6Z0eQ="
+									},
+									"name": "Aliado a",
+									"type": ""
 								}
 							]
 						}
@@ -12714,7 +12730,8 @@
 									"_parent": {
 										"$ref": "AAAAAAFtEj1yi8srdlQ="
 									},
-									"name": "Pair par"
+									"name": "Pair par",
+									"type": ""
 								}
 							]
 						},
@@ -12819,7 +12836,8 @@
 									"_parent": {
 										"$ref": "AAAAAAFtExW4hXcHQIA="
 									},
-									"name": "Disparo d"
+									"name": "Disparo d",
+									"type": ""
 								}
 							]
 						}
