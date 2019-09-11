@@ -34,7 +34,7 @@ public class MapaGui extends JFrame {
 ////		fondoNivel.setSize(gamePanel.getSize());
 //		gamePanel.add(fondoNivel);
 //		fondoNivel.setVisible(true);
-////		System.out.println("Ruta: " + MapaGui.class.getClassLoader().getResource("texturas/fondo_nivel1.png"));
+//		System.out.println("Ruta: " + MapaGui.class.getClassLoader().getResource("texturas/fondo_nivel1.png"));
 		
 //	}
 	/////////////////////////////
@@ -56,6 +56,8 @@ public class MapaGui extends JFrame {
 	    super.paintComponent(g);
 	    if (image != null)
 	      g.drawImage(image, 0,0,this.getWidth(),this.getHeight(),this);
+	    else
+	    	System.out.println("La reputisima madre que lo remil pario!!!");
 	  }
 	}
 
