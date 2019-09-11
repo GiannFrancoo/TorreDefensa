@@ -1,4 +1,6 @@
-package Main;
+package Entidades.Objetos.Consumibles;
+
+import Entidades.Objetos.Objeto;
 
 public abstract class Consumible extends Objeto{
 	

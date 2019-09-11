@@ -1,4 +1,7 @@
-package Main;
+package Entidades.Campeones.Enemigos;
+
+import Entidades.Campeones.Campeon;
+import Entidades.Disparos.Enemigos.DisparoEnemigo;
 
 public abstract class Enemigo extends Campeon{
 

@@ -1,4 +1,6 @@
-package Main;
+package Entidades.Disparos;
+
+import Entidades.Entidad;
 
 public abstract class Disparo extends Entidad{
 	//fila 	  --> Entidad;

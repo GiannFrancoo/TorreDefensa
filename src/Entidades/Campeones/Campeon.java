@@ -1,7 +1,11 @@
-package Main;
+package Entidades.Campeones;
 import java.util.List;
 
 import javax.swing.JLabel;
+
+import Entidades.Entidad;
+import Entidades.Disparos.Disparo;
+import Entidades.Objetos.Magias.Magia;
 
 public abstract class Campeon extends Entidad{
 	//fila 	  --> Entidad;
