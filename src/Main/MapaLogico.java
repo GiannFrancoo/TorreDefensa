@@ -6,6 +6,7 @@ import Entidades.Campeones.Aliados.Aliado;
 import Entidades.Campeones.Enemigos.Enemigo;
 import Entidades.Objetos.Objeto;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 import Utilidad.Pair;
 
@@ -43,6 +44,7 @@ public class MapaLogico {
 		 return false;
 	}
 	
+	
 //	public void Recibir(Pair<Integer,Integer> p) {	}
 	
 //	public void Recibir(PPair<Integer,Integer> p) {}
@@ -57,7 +59,27 @@ public class MapaLogico {
 			aliados.add(a);
 	}
 	
-//	public void Eliminar(Pair<Integer,Integer>  pos) {}
+	//Eliminar: Metodo que se encarga de eliminar la entidad en la posicion pasada por parametro.
+	public void Eliminar(Pair<Integer,Integer> pos, Entidad e) {
+		//Borro la entidad de la lista, no hace falta verificar si la lista esta vacia.
+		Iterator<Entidad> it = entidades[pos.getKey()][pos.getValue()].iterator();
+		boolean encontre = false;
+		while(!encontre && it.hasNext()) {
+			
+		}
+	}
+	
+	
+//	public int venderAliado(Pair<Integer,Integer>  pos) {
+//			//Vender: este metodo es para cuando el usuario quiere sacar un aliado o objeto del juego(Hay q ver cuanto dinero se le devuelve al jugador).
+//			//---------------------------------------------------------//
+//			//hay que ver la cantidad de plata a devolver a Jugador(Si esta dañado se le devuelve la mitad, sino el dinero completo).
+//			entidades[pos.getKey()][pos.getValue()]
+//	}
+//	
+//	public int venderObjeto(Pair<Integer,Integer> pos) {
+//		
+//	}
 	
 // 	public void mover() {}
 	
