@@ -60,14 +60,15 @@ public class MapaLogico {
 	}
 	
 	//Eliminar: Metodo que se encarga de eliminar la entidad en la posicion pasada por parametro.
-	public void Eliminar(Pair<Integer,Integer> pos, Entidad e) {
-		//Borro la entidad de la lista, no hace falta verificar si la lista esta vacia.
-		Iterator<Entidad> it = entidades[pos.getKey()][pos.getValue()].iterator();
-		boolean encontre = false;
-		while(!encontre && it.hasNext()) {
-			
+	//Eliminar: Metodo que se encarga de eliminar la entidad en la posicion pasada por parametro.
+		public void Eliminar(Pair<Integer,Integer> pos, Entidad e) {
+			//Borro la entidad de la lista, no hace falta verificar si la lista esta vacia.
+			Iterator<Entidad> it = entidades[pos.getKey()][pos.getValue()].iterator();
+			boolean encontre = false;
+			while(!encontre && it.hasNext()) {
+				
+			}
 		}
-	}
 	
 	
 //	public int venderAliado(Pair<Integer,Integer>  pos) {
