@@ -1,4 +1,4 @@
-package Main;
+package Entidades;
 import javax.swing.Icon;
 import javax.swing.JLabel;
 

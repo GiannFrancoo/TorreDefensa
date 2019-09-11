@@ -1,5 +1,11 @@
 package Main;
 import java.util.List;
+
+import Entidades.Entidad;
+import Entidades.Campeones.Aliados.Aliado;
+import Entidades.Campeones.Enemigos.Enemigo;
+import Entidades.Objetos.Objeto;
+
 import java.util.LinkedList;
 import Utilidad.Pair;
 

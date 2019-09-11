@@ -1,4 +1,6 @@
-package Main;
+package Entidades.EventosAleatorios;
+
+import Entidades.Entidad;
 
 public abstract class EventoAleatorio extends Entidad {
 	//fila 	  --> Entidad;

@@ -1,4 +1,6 @@
-package Main;
+package Entidades.Objetos;
+
+import Entidades.Entidad;
 
 public abstract class Objeto extends Entidad{
 	

@@ -1,4 +1,6 @@
-package Main;
+package Entidades.Disparos.Aliados;
+
+import Entidades.Disparos.Disparo;
 
 public class DisparoAliado extends Disparo{
 	//Fuerza de disparo;
