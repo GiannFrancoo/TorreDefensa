@@ -12,4 +12,14 @@ public abstract class Enemigo extends Campeon{
 	protected int velocidad;
 	protected int cantMonedas;
 	
+
+	public void mover(){
+		//Mueve para la derecha;
+		this.columna = this.columna - velocidad;
+		cambiarGrafica(3); //Corriendo;
+	}
+	
+	public abstract DisparoEnemigo disparar();
+	
+	
 }
