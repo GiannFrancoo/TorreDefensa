@@ -6,6 +6,9 @@ public abstract class EventoAleatorio extends Entidad {
 	//fila 	  --> Entidad;
 	//columna --> Entidad;
 	
+	public EventoAleatorio(int x, int y) {
+		super(x, y);
+	}
 	protected int fuerza;
 	
 	public abstract int getFuerza();

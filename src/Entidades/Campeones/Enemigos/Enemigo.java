@@ -2,6 +2,7 @@ package Entidades.Campeones.Enemigos;
 
 import Entidades.Campeones.Campeon;
 import Entidades.Disparos.Enemigos.DisparoEnemigo;
+import Utilidad.Pair;
 
 public abstract class Enemigo extends Campeon{
 
@@ -15,10 +16,14 @@ public abstract class Enemigo extends Campeon{
 	protected int velocidad;
 	protected int cantMonedas;
 	
+	public Enemigo(int x, int y) {
+		super(x,y);
+	}
 
 	public void mover(){
+		System.out.println("Enemigo:: mueve para derecha, cambia pos");
 		//Mueve para la derecha;
-		this.columna = this.columna - velocidad;
+		this.setPos(new Pair<Integer,Integer>(posicion.getValue(), posicion.getValue() - velocidad));
 		cambiarGrafica(3); //Corriendo;
 	}
 	
