@@ -22,7 +22,7 @@ public abstract class Enemigo extends Campeon{
 
 	public void mover(){
 		System.out.println("Enemigo:: mueve para derecha, cambia pos");
-		//Mueve para la derecha;
+		//Mueve para la izquierda;
 		this.setPos(new Pair<Integer,Integer>(posicion.getValue(), posicion.getValue() - velocidad));
 		cambiarGrafica(3); //Corriendo;
 	}

@@ -7,6 +7,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
 import Entidades.Disparos.Aliados.DisparoAliado;
+import Entidades.Disparos.Enemigos.DisparoEnemigo;
 import Entidades.Objetos.Magias.Magia;
 
 public class Lazaro extends Aliado{
@@ -49,8 +50,19 @@ public class Lazaro extends Aliado{
 	
 		return d;
 	}
+
 	
+	public void agregarMagia(Magia m) {
+		this.magias.add(m);
+	}
 	
+	public void restarVida(DisparoEnemigo e) {
+		
+	}
+	
+	public void restarVida(DisparoAliado a) {
+		
+	}
 	
 	 
 	

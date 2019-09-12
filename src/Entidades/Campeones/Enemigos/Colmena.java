@@ -3,6 +3,7 @@ package Entidades.Campeones.Enemigos;
 import java.util.LinkedList;
 import javax.swing.ImageIcon;
 
+import Entidades.Disparos.Aliados.DisparoAliado;
 import Entidades.Disparos.Enemigos.DisparoEnemigo;
 import Entidades.Objetos.Magias.Magia;
 
@@ -51,6 +52,18 @@ public class Colmena extends Enemigo {
 	
 		return d;
 	}
+
+	@Override
+	public void agregarMagia(Magia m) {
+		this.magias.add(m);
+	}
 	
+	public void restarVida(DisparoAliado a) {
+		
+	}
+	
+	public void restarVida(DisparoEnemigo e) {
+		
+	}
 	
 }

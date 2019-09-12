@@ -9,6 +9,8 @@ public abstract class Entidad {
 	
 	//Atributos logica;
 	protected Pair<Integer,Integer> posicion;
+	protected int fila;
+	protected int col;
 	
 	//Atributos grafica;
 	protected JLabel grafica; // Estado actual de la imagen

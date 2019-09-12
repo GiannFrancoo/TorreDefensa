@@ -47,9 +47,13 @@ public class MapaLogico {
 	}
 	
 	
-//	public void Recibir(Pair<Integer,Integer> p) {	}
+	public void Recibir(Aliado a) {	
+		
+	}
 	
-//	public void Recibir(PPair<Integer,Integer> p) {}
+	public void Recibir(Enemigo e) {
+		
+	}
 	
 	public void Insertar(Pair<Integer,Integer> p, Objeto o) {
 			entidades[p.getKey()][p.getValue()].add(o);
@@ -68,24 +72,14 @@ public class MapaLogico {
 			entidades[pos.getKey()][pos.getValue()].remove(posEliminar);
 		}
 	
-	
-//	public int venderAliado(Pair<Integer,Integer>  pos) {
-//			//Vender: este metodo es para cuando el usuario quiere sacar un aliado o objeto del juego(Hay q ver cuanto dinero se le devuelve al jugador).
-//			//---------------------------------------------------------//
-//			//hay que ver la cantidad de plata a devolver a Jugador(Si esta dañado se le devuelve la mitad, sino el dinero completo).
-//			entidades[pos.getKey()][pos.getValue()]
-//	}
-//	
-//	public int venderObjeto(Pair<Integer,Integer> pos) {
-//		
-//	}
-	
-// 	public void Mover() {
-//		
-//	}
-	
-	//AplicarMagia: Metodo que aplica la magia a la entidad pasada por parametro.
-	public void aplicarMagia(Campeon c, Magia m) {
-		c.
+		
+ 	public void Mover() {
+		
 	}
+	
+	//AplicarMagia: Metodo que aplica la magia a el campeon pasado por parametro.
+	public void aplicarMagia(Campeon c, Magia m) {
+		c.agregarMagia(m);
+	}
+	
 }
