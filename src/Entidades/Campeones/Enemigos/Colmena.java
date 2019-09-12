@@ -19,7 +19,9 @@ public class Colmena extends Enemigo {
 	//velocidad --> Enemigo;
 	//cantMonedas --> Enemigo;
 	
-	public Colmena() {
+	public Colmena(int x, int y) {
+		super(x,y);
+		
 		this.velocidad = 4;
 		this.vida = 100;
 		this.fuerza = 100;
@@ -41,7 +43,7 @@ public class Colmena extends Enemigo {
 		//Si hay magia se afecta + fuerza;
 		int n = 0;
 		
-		DisparoEnemigo d = new DisparoEnemigo(n);
+		DisparoEnemigo d = new DisparoEnemigo(posicion.getKey(), posicion.getValue(), n);
 		
 		
 		//Grafica

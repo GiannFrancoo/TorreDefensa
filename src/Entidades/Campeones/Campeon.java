@@ -18,13 +18,19 @@ public abstract class Campeon extends Entidad{
 	protected int rango;
 	protected List<Magia> magias;
 	
+	public Campeon(int x,int y) {
+		super(x,y); // Entidad;
+	}
+	
 	public void restarVida(Disparo d) {
+		System.out.println("Camepon:: restar vida, cambia grafica");
 		vida = vida - d.getFuerza();
-		cambiarGrafica(2); // Sufriendo
+		this.cambiarGrafica(2); // Sufriendo;
 	}
 	
 	public void cambiarGrafica(int i) {
-		grafica = new JLabel(imagenes[i]);	
+		System.out.println("Campeon:: cambio grafica 0, cambia grafica");
+		this.grafica.setIcon(imagenes[i]);
 	}
 	
 }

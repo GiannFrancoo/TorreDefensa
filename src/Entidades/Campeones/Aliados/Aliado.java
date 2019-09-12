@@ -12,5 +12,9 @@ public abstract class Aliado extends Campeon{
 	//rango   --> Campeon;
 	//magias  --> Campeon;
 	
+	public Aliado(int x, int y) {
+		super(x,y);
+	}
+	
 	public abstract DisparoAliado disparar();
 }
