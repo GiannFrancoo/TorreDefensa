@@ -5,6 +5,8 @@ import javax.swing.JLabel;
 
 import Entidades.Entidad;
 import Entidades.Disparos.Disparo;
+import Entidades.Disparos.Aliados.DisparoAliado;
+import Entidades.Disparos.Enemigos.DisparoEnemigo;
 import Entidades.Objetos.Magias.Magia;
 
 public abstract class Campeon extends Entidad{
@@ -22,15 +24,21 @@ public abstract class Campeon extends Entidad{
 		super(x,y); // Entidad;
 	}
 	
-	public void restarVida(Disparo d) {
+	protected void restarVida(DisparoEnemigo d) {
+		
+	}
+	
+	protected void restarVida(DisparoAliado d) {
 		System.out.println("Camepon:: restar vida, cambia grafica");
 		vida = vida - d.getFuerza();
 		this.cambiarGrafica(2); // Sufriendo;
 	}
 	
-	public void cambiarGrafica(int i) {
+	protected void cambiarGrafica(int i) {
 		System.out.println("Campeon:: cambio grafica 0, cambia grafica");
 		this.grafica.setIcon(imagenes[i]);
 	}
+	
+	public abstract void agregarMagia(Magia m);
 	
 }
