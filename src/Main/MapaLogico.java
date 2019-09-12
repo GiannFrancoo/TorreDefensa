@@ -2,9 +2,11 @@ package Main;
 import java.util.List;
 
 import Entidades.Entidad;
+import Entidades.Campeones.Campeon;
 import Entidades.Campeones.Aliados.Aliado;
 import Entidades.Campeones.Enemigos.Enemigo;
 import Entidades.Objetos.Objeto;
+import Entidades.Objetos.Magias.Magia;
 
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -60,14 +62,10 @@ public class MapaLogico {
 	}
 	
 	//Eliminar: Metodo que se encarga de eliminar la entidad en la posicion pasada por parametro.
-	//Eliminar: Metodo que se encarga de eliminar la entidad en la posicion pasada por parametro.
 		public void Eliminar(Pair<Integer,Integer> pos, Entidad e) {
 			//Borro la entidad de la lista, no hace falta verificar si la lista esta vacia.
-			Iterator<Entidad> it = entidades[pos.getKey()][pos.getValue()].iterator();
-			boolean encontre = false;
-			while(!encontre && it.hasNext()) {
-				
-			}
+			int posEliminar = entidades[pos.getKey()][pos.getValue()].indexOf(e);
+			entidades[pos.getKey()][pos.getValue()].remove(posEliminar);
 		}
 	
 	
@@ -82,9 +80,12 @@ public class MapaLogico {
 //		
 //	}
 	
-// 	public void mover() {}
-	
-//	public void aplicarMagia(Pair<Integer,Integer> p, Magia m) {
+// 	public void Mover() {
 //		
 //	}
+	
+	//AplicarMagia: Metodo que aplica la magia a la entidad pasada por parametro.
+	public void aplicarMagia(Campeon c, Magia m) {
+		c.
+	}
 }
