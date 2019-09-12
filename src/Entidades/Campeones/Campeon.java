@@ -29,13 +29,13 @@ public abstract class Campeon extends Entidad{
 	}
 	
 	protected void restarVida(DisparoAliado d) {
-		System.out.println("Camepon:: restar vida, cambia grafica");
+		//System.out.println("Campeon:: restar vida, cambia grafica");
 		vida = vida - d.getFuerza();
 		this.cambiarGrafica(2); // Sufriendo;
 	}
 	
 	protected void cambiarGrafica(int i) {
-		System.out.println("Campeon:: cambio grafica 0, cambia grafica");
+		//System.out.println("Campeon:: cambia grafica" + i);
 		this.grafica.setIcon(imagenes[i]);
 	}
 	

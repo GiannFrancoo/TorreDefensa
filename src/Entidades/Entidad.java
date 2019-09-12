@@ -33,7 +33,7 @@ public abstract class Entidad {
 	}
 		
 	public JLabel getGrafica(){
-		System.out.println("Entidad:: Retorno la grafica");
+		//System.out.println("Entidad:: Retorno la grafica");
 		return grafica;
 	}
 	
