@@ -9,9 +9,7 @@ public abstract class Entidad {
 	
 	//Atributos logica;
 	protected Pair<Integer,Integer> posicion;
-	protected int fila;
-	protected int col;
-	
+
 	//Atributos grafica;
 	protected JLabel grafica; // Estado actual de la imagen
 	protected Icon imagenes[]; // Conjunto de imagenes;
@@ -34,6 +32,7 @@ public abstract class Entidad {
 		
 	public JLabel getGrafica(){
 		//System.out.println("Entidad:: Retorno la grafica");
+		grafica.setBounds(posicion.getKey(), posicion.getValue(), alto, ancho);
 		return grafica;
 	}
 	

@@ -21,6 +21,9 @@ import javax.swing.JLabel;
 
 public class GUI extends JFrame {
 
+	
+	protected Game juego;
+	
 	private JPanel contentPane;
 	private JPanel panelGame;
 
@@ -66,10 +69,16 @@ public class GUI extends JFrame {
 		lblFondo.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/fondo_nivel1.png")).getImage().getScaledInstance(lblFondo.getWidth(), lblFondo.getHeight(), Image.SCALE_SMOOTH)));
 		
 		
+		
+		juego = new Game(this);
+		contentPane.add(lblFondo);
+		
+		/*
 		Lazaro laz = new Lazaro(3,4); // Coordenadas;
 		laz.disparar(); // Cambia disparando;
 		JLabel lblLazaro = laz.getGrafica(); // Seteo el label;
 		lblLazaro.setSize(contentPane.getSize());
+		*/
 		
 		
 		//OTRA OPCION
@@ -83,8 +92,8 @@ public class GUI extends JFrame {
 //		ImageIcon imageIcon = new ImageIcon(dimg);
 //		lblFondo.setIcon(imageIcon);
 		
-		contentPane.add(lblLazaro);
-		contentPane.add(lblFondo);
+		//contentPane.add(lblLazaro);
+		//contentPane.add(lblFondo);
 		
 	}
 		
