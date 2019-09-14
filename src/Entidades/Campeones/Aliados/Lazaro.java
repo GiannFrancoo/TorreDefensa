@@ -35,6 +35,7 @@ public class Lazaro extends Aliado{
 		this.imagenes[2] = new ImageIcon(getClass().getClassLoader().getResource("texturas/Aliados/lazarus_sufriendo.png")); // Sufriendo;
 		
 		grafica.setIcon(imagenes[0]); // Arranca estatico;
+		grafica.setBounds(x, y, alto, ancho);
 		
 	}
 
