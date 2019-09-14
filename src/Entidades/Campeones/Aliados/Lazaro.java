@@ -28,7 +28,6 @@ public class Lazaro extends Aliado{
 		this.vida = 100;
 		this.fuerza = 15;
 		this.rango = 5;
-		this.magias = new LinkedList<Magia>();
 
 		//System.out.println("Lazaro:: constructor, inicialize imagenes[0]");
 		this.imagenes[0] = new ImageIcon(getClass().getClassLoader().getResource("texturas/Aliados/lazarus_estatico.png")); // Estatico;

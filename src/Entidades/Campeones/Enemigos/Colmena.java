@@ -29,8 +29,6 @@ public class Colmena extends Enemigo {
 		this.rango = 3;
 		this.cantMonedas = 30; // Random puede ser;
 		
-		magias = new LinkedList<Magia>();
-		
 		
 		this.imagenes[0] = new ImageIcon(this.getClass().getResource("/BattleCity/up.png")); // Estatico;
 		this.imagenes[1] = new ImageIcon(this.getClass().getResource("/BattleCity/down.png")); // Disparando;

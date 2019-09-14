@@ -14,6 +14,9 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import Entidades.Campeones.Aliados.Lazaro;
+
 import javax.swing.JLabel;
 
 public class GUI extends JFrame {
@@ -62,6 +65,13 @@ public class GUI extends JFrame {
 		lblFondo.setSize(contentPane.getSize());
 		lblFondo.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/fondo_nivel1.png")).getImage().getScaledInstance(lblFondo.getWidth(), lblFondo.getHeight(), Image.SCALE_SMOOTH)));
 		
+		
+		Lazaro laz = new Lazaro(3,4); // Coordenadas;
+		laz.disparar(); // Cambia disparando;
+		JLabel lblLazaro = laz.getGrafica(); // Seteo el label;
+		lblLazaro.setSize(contentPane.getSize());
+		
+		
 		//OTRA OPCION
 //		BufferedImage img = null;
 //		try {
@@ -73,6 +83,7 @@ public class GUI extends JFrame {
 //		ImageIcon imageIcon = new ImageIcon(dimg);
 //		lblFondo.setIcon(imageIcon);
 		
+		contentPane.add(lblLazaro);
 		contentPane.add(lblFondo);
 		
 	}
