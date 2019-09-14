@@ -1,6 +1,7 @@
 package Entidades.Campeones;
-import java.util.List;
 
+import java.util.LinkedList;
+import java.util.List;
 import javax.swing.JLabel;
 
 import Entidades.Entidad;
@@ -22,23 +23,19 @@ public abstract class Campeon extends Entidad{
 	
 	public Campeon(int x,int y) {
 		super(x,y); // Entidad;
+		magias = new LinkedList<Magia>();
 	}
 	
-	protected void restarVida(DisparoEnemigo d) {
-		
-	}
+	public abstract void restarVida(DisparoEnemigo d);
 	
-	protected void restarVida(DisparoAliado d) {
-		//System.out.println("Campeon:: restar vida, cambia grafica");
-		vida = vida - d.getFuerza();
-		this.cambiarGrafica(2); // Sufriendo;
-	}
+	public abstract void restarVida(DisparoAliado d);
 	
+	public abstract void agregarMagia(Magia m);
+
 	protected void cambiarGrafica(int i) {
 		//System.out.println("Campeon:: cambia grafica" + i);
 		this.grafica.setIcon(imagenes[i]);
 	}
 	
-	public abstract void agregarMagia(Magia m);
 	
 }
