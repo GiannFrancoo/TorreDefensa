@@ -26,7 +26,7 @@ public abstract class Entidad {
 			this.posicion = pos;
 	}
 	
-	protected Pair<Integer,Integer> getPos(){
+	public Pair<Integer,Integer> getPos(){
 		return posicion;
 	}
 		
