@@ -18,13 +18,11 @@ import javax.swing.border.EmptyBorder;
 import Entidades.Campeones.Aliados.Lazaro;
 
 import javax.swing.JLabel;
+import javax.swing.JLayeredPane;
 
 public class GUI extends JFrame {
 
-	
-	protected Game juego;
-	
-	private JPanel contentPane;
+	private JLayeredPane contentPane;
 	private JPanel panelGame;
 
 	/**
@@ -49,94 +47,80 @@ public class GUI extends JFrame {
 	 */
 	public GUI() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(new Rectangle(1280, 720));
+		setSize(1280, 720);
 		this.setResizable(false);
-		contentPane = new JPanel();
+		contentPane = new JLayeredPane();
 		contentPane.setSize(this.getSize());
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
 		
-//		panelGame = new JPanel();
-//		panelGame.setSize(contentPane.getSize());
-//		contentPane.add(panelGame);		
-//		panelGame.setLayout(null);
-//		inicializarTienda();
-		
 		
 		JLabel lblFondo = new JLabel();
-		lblFondo.setSize(contentPane.getSize());
+		lblFondo.setBounds(new Rectangle(1280, 720));
 		lblFondo.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/fondo_nivel1.png")).getImage().getScaledInstance(lblFondo.getWidth(), lblFondo.getHeight(), Image.SCALE_SMOOTH)));
 		
+		contentPane.add(lblFondo, 1, 0); 
+		inicializarTienda();
+		inicializarGrilla();
 		
 		
-		juego = new Game(this);
-		contentPane.add(lblFondo);
-		
-		/*
-		Lazaro laz = new Lazaro(3,4); // Coordenadas;
-		laz.disparar(); // Cambia disparando;
-		JLabel lblLazaro = laz.getGrafica(); // Seteo el label;
-		lblLazaro.setSize(contentPane.getSize());
-		*/
-		
-		
-		//OTRA OPCION
-//		BufferedImage img = null;
-//		try {
-//		    img = ImageIO.read(new File(this.getClass().getClassLoader().getResource("texturas/fondo_nivel1.png").getPath()));
-//		} catch (IOException e) {
-//		    e.printStackTrace();
-//		}
-//		Image dimg = img.getScaledInstance(lblFondo.getWidth(), lblFondo.getHeight(), Image.SCALE_SMOOTH);
-//		ImageIcon imageIcon = new ImageIcon(dimg);
-//		lblFondo.setIcon(imageIcon);
-		
-		//contentPane.add(lblLazaro);
-		//contentPane.add(lblFondo);
 		
 	}
 		
 	public void inicializarTienda() {
-		JPanel panelTienda = new JPanel();
-		panelTienda.setBackground(Color.ORANGE);
-		panelTienda.setBounds(12, 519, 1256, 169);
-		panelGame.add(panelTienda);
-		panelTienda.setLayout(null);
 		
-		JLabel lblObj1 = new JLabel("Obj1");
+		JLabel fondoTienda = new JLabel();
+		fondoTienda.setOpaque(true);
+		fondoTienda.setBackground(Color.CYAN);
+		fondoTienda.setBounds(7, 588, 1266, 100);
+		contentPane.add(fondoTienda, 5, 1);
+		
+		JLabel lblObj1 = new JLabel();
+		lblObj1.setOpaque(true);
 		lblObj1.setBackground(Color.ORANGE);
-		lblObj1.setBounds(12, 12, 145, 145);
-		panelTienda.add(lblObj1);
+		lblObj1.setBounds(12, 593, 90, 90);
+		contentPane.add(lblObj1, 10, 2);
 		
-		JLabel lblObj2 = new JLabel("Obj2");
+		JLabel lblObj2 = new JLabel();
+		lblObj2.setOpaque(true);
 		lblObj2.setBackground(Color.ORANGE);
-		lblObj2.setBounds(169, 12, 145, 145);
-		panelTienda.add(lblObj2);
+		lblObj2.setBounds(107, 593, 90, 90);
+		contentPane.add(lblObj2, 10, 2);
 		
-		JLabel lblObj3 = new JLabel("Obj3");
+		JLabel lblObj3 = new JLabel();
+		lblObj3.setOpaque(true);
 		lblObj3.setBackground(Color.ORANGE);
-		lblObj3.setBounds(326, 12, 145, 145);
-		panelTienda.add(lblObj3);
+		lblObj3.setBounds(202, 593, 90, 90);
+		contentPane.add(lblObj3, 10, 2);
 		
-		JLabel lblObj4 = new JLabel("Obj4");
+		JLabel lblObj4 = new JLabel();
+		lblObj4.setOpaque(true);
 		lblObj4.setBackground(Color.ORANGE);
-		lblObj4.setBounds(483, 12, 145, 145);
-		panelTienda.add(lblObj4);
+		lblObj4.setBounds(297, 593, 90, 90);
+		contentPane.add(lblObj4, 10, 2);
 		
-		JLabel lblObj5 = new JLabel("Obj5");
+		JLabel lblObj5 = new JLabel();
+		lblObj5.setOpaque(true);
 		lblObj5.setBackground(Color.ORANGE);
-		lblObj5.setBounds(640, 12, 145, 145);
-		panelTienda.add(lblObj5);
+		lblObj5.setBounds(392, 593, 90, 90);
+		contentPane.add(lblObj5, 10, 2);
 		
-		JLabel lblObj6 = new JLabel("Obj6");
+		JLabel lblObj6 = new JLabel();
+		lblObj6.setOpaque(true);
 		lblObj6.setBackground(Color.ORANGE);
-		lblObj6.setBounds(797, 12, 145, 145);
-		panelTienda.add(lblObj6);
+		lblObj6.setBounds(487, 593, 90, 90);
+		contentPane.add(lblObj6, 10, 2);
 		
-		JLabel lblObj7 = new JLabel("Obj7");
+		JLabel lblObj7 = new JLabel();
+		lblObj7.setOpaque(true);
 		lblObj7.setBackground(Color.ORANGE);
-		lblObj7.setBounds(954, 12, 145, 145);
-		panelTienda.add(lblObj7);
+		lblObj7.setBounds(582, 593, 90, 90);
+		contentPane.add(lblObj7, 10, 2);
 	}
+	
+	public void inicializarGrilla() {
+		
+	}
+	
 }
