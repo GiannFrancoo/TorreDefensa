@@ -13,6 +13,7 @@ import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JTable;
 import javax.swing.border.EmptyBorder;
 
 import Entidades.Campeones.Aliados.Lazaro;
@@ -64,17 +65,28 @@ public class GUI extends JFrame {
 		inicializarTienda();
 		inicializarGrilla();
 		
+		JTable grilla = new JTable(6, 10);
+		grilla.setOpaque(true);
+		grilla.setBackground(Color.BLUE);
+		grilla.setBounds(200, 45, 900, 490);
+		contentPane.add(grilla, 10, 2);
 		
+		for (int i = 1; i <= 6; i++) {
+			for (int j = 1; j <= 10; j++) {
+				JLabel lbl = new JLabel();
+				
+			}
+		}
 		
 	}
 		
 	public void inicializarTienda() {
 		
-		JLabel fondoTienda = new JLabel();
-		fondoTienda.setOpaque(true);
-		fondoTienda.setBackground(Color.CYAN);
-		fondoTienda.setBounds(7, 588, 1266, 100);
-		contentPane.add(fondoTienda, 5, 1);
+//		JLabel fondoTienda = new JLabel();
+//		fondoTienda.setOpaque(true);
+//		fondoTienda.setBackground(Color.CYAN);
+//		fondoTienda.setBounds(7, 588, 1266, 100);
+//		contentPane.add(fondoTienda, 5, 1);
 		
 		JLabel lblObj1 = new JLabel();
 		lblObj1.setOpaque(true);
@@ -121,6 +133,436 @@ public class GUI extends JFrame {
 	
 	public void inicializarGrilla() {
 		
+//		JLabel pos00 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//		JLabel pos02 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//		JLabel pos03 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//		JLabel pos04 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//		JLabel pos05 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//		JLabel pos06 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//		JLabel pos07 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos08 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos09 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos010 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos10 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos11 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos12 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos13 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos14 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos15 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos16 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos17 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos18 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos19 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos110 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos20 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos21 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos22 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos23 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos24 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos25 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos26 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos27 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos28 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos29 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos210 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos00 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos00 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos00 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos00 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos00 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos00 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos00 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos00 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos00 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos00 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos00 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos00 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos00 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos00 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos00 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos00 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos00 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos00 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos00 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos00 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos00 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos00 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos00 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos00 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos00 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos00 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos00 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos00 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+//
+//		JLabel pos00 = new JLabel();
+//		pos00.setOpaque(true);
+//		pos00.setBackground(Color.ORANGE);
+//		pos00.setBounds(582, 593, 90, 90);
+//		contentPane.add(pos00, 10, 2);
+//
+
+
+
 	}
 	
 }
