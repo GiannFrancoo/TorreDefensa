@@ -5,18 +5,18 @@ import java.util.Iterator;
 public class DoubleLinkedList<E> implements PositionList<E> {
 	
 	dNode<E> header, trailer;
-	int tamaño;
+	int tamanio;
 	
 	public DoubleLinkedList() {
 		header = new dNode<E>(null, null, null);
 		trailer = new dNode<E>(header, null, null);
 		header.setNext(trailer);
-		tamaño = 0;
+		tamanio = 0;
 	}
 	
 	private dNode<E> checkPosition(Position<E> p) throws InvalidPositionException {
 		if (p == null) {
-			throw new InvalidPositionException("Posicion Invalida (Lista vacía");
+			throw new InvalidPositionException("Posicion Invalida (Lista vacï¿½a");
 		}
 		
 		if (p == header) {
@@ -31,7 +31,7 @@ public class DoubleLinkedList<E> implements PositionList<E> {
 			
 			dNode<E> aux = (dNode<E>) p;
 			if (aux.getNext() == null || aux.getPrev() == null) {
-				throw new InvalidPositionException("La posicion no pertenece a una lista válida");
+				throw new InvalidPositionException("La posicion no pertenece a una lista vï¿½lida");
 			}
 			
 			return aux;
@@ -47,19 +47,19 @@ public class DoubleLinkedList<E> implements PositionList<E> {
 	}
 	
 	public int size() {
-		return tamaño;
+		return tamanio;
 	}
 
 	public Position<E> first() throws EmptyListException {
 		if (this.isEmpty()) {
-			throw new EmptyListException("Lista vacía");
+			throw new EmptyListException("Lista vacï¿½a");
 		}
 		return header.getNext();
 	}
 
 	public Position<E> last() throws EmptyListException {
 		if (this.isEmpty()) {
-			throw new EmptyListException("Lista vacía");
+			throw new EmptyListException("Lista vacï¿½a");
 		}
 		return trailer.getPrev();
 	}
@@ -84,14 +84,14 @@ public class DoubleLinkedList<E> implements PositionList<E> {
 		dNode<E> nuevo = new dNode<E>(header, header.getNext(), element);
 		header.getNext().setPrev(nuevo);
 		header.setNext(nuevo);
-		tamaño++;
+		tamanio++;
 	}
 
 	public void addLast(E element) {
 		dNode<E> nuevo = new dNode<E>(trailer.getPrev(), trailer, element);
 		trailer.getPrev().setNext(nuevo);
 		trailer.setPrev(nuevo);
-		tamaño++;
+		tamanio++;
 	}
 
 	public void addAfter(Position<E> p, E element) throws InvalidPositionException {
@@ -99,7 +99,7 @@ public class DoubleLinkedList<E> implements PositionList<E> {
 		dNode<E> nuevo = new dNode<E>(pos, pos.getNext(), element);
 		pos.getNext().setPrev(nuevo);
 		pos.setNext(nuevo);
-		tamaño++;
+		tamanio++;
 	}
 
 	public void addBefore(Position<E> p, E element) throws InvalidPositionException {
@@ -107,7 +107,7 @@ public class DoubleLinkedList<E> implements PositionList<E> {
 		dNode<E> nuevo = new dNode<E>(pos.getPrev(), pos, element);
 		pos.getPrev().setNext(nuevo);
 		pos.setPrev(nuevo);
-		tamaño++;
+		tamanio++;
 	}
 
 	public E remove(Position<E> p) throws InvalidPositionException {
@@ -120,7 +120,7 @@ public class DoubleLinkedList<E> implements PositionList<E> {
 		auxPrev.setNext(auxNext);
 		auxNext.setPrev(auxPrev);
 		E auxElem = aux.element();
-		tamaño--;
+		tamanio--;
 		return auxElem;
 	}
 
