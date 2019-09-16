@@ -81,7 +81,7 @@ public class GUI extends JFrame {
 		            @Override
 		            public void actionPerformed(ActionEvent e) {
 		            	Celda boton = (Celda) e.getSource();
-		            	//Prueba para probar los botones
+		            	//Prueba de los botones
 		            	prueba.setText(boton.obtenerX() + "-" + boton.obtenerY());
 		            	////////////////////////////////////////////////////////////
 		            }
@@ -89,6 +89,7 @@ public class GUI extends JFrame {
 //				celda.setBackground(Color.GREEN);
 				celda.setContentAreaFilled(false);
 				celda.setOpaque(false);
+				celda.setBorder(null);
 				celda.setBounds(241, 45, 75, 75);
 				grilla.add(celda);
 			}
