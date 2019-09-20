@@ -8,4 +8,10 @@ public class MagiaDefensa extends Magia {
 		super(x, y);
 	}
 
+	@Override
+	public void mover() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
