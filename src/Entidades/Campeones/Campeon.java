@@ -2,10 +2,8 @@ package Entidades.Campeones;
 
 import java.util.LinkedList;
 import java.util.List;
-import javax.swing.JLabel;
 
 import Entidades.Entidad;
-import Entidades.Disparos.Disparo;
 import Entidades.Disparos.Aliados.DisparoAliado;
 import Entidades.Disparos.Enemigos.DisparoEnemigo;
 import Entidades.Objetos.Magias.Magia;
@@ -32,10 +30,7 @@ public abstract class Campeon extends Entidad{
 	
 	public abstract void agregarMagia(Magia m);
 
-	protected void cambiarGrafica(int i) {
-		//System.out.println("Campeon:: cambia grafica" + i);
-		this.grafica.setIcon(imagenes[i]);
-	}
+
 	
 	
 }

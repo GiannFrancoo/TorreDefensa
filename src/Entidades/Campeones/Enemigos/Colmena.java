@@ -1,8 +1,5 @@
 package Entidades.Campeones.Enemigos;
 
-import java.util.LinkedList;
-import javax.swing.ImageIcon;
-
 import Entidades.Disparos.Aliados.DisparoAliado;
 import Entidades.Disparos.Enemigos.DisparoEnemigo;
 import Entidades.Objetos.Magias.Magia;
@@ -20,6 +17,8 @@ public class Colmena extends Enemigo {
 	//velocidad --> Enemigo;
 	//cantMonedas --> Enemigo;
 	
+	protected ColmenaGrafico colmenaGrafico;
+	
 	public Colmena(int x, int y) {
 		super(x,y);
 		
@@ -29,11 +28,7 @@ public class Colmena extends Enemigo {
 		this.rango = 3;
 		this.cantMonedas = 30; // Random puede ser;
 		
-		
-		this.imagenes[0] = new ImageIcon(this.getClass().getResource("/BattleCity/up.png")); // Estatico;
-		this.imagenes[1] = new ImageIcon(this.getClass().getResource("/BattleCity/down.png")); // Disparando;
-		this.imagenes[2] = new ImageIcon(this.getClass().getResource("/BattleCity/left.png")); // Sufriendo;
-		this.imagenes[3] = new ImageIcon(this.getClass().getResource("/BattleCity/right.png")); // Corriendo;
+		colmenaGrafico = new ColmenaGrafico(this);
 	}
 
 	@Override
@@ -46,7 +41,7 @@ public class Colmena extends Enemigo {
 		
 		
 		//Grafica
-		cambiarGrafica(1); //Disparando
+		colmenaGrafico.disparar(); //Disparando
 	
 		return d;
 	}
@@ -57,11 +52,14 @@ public class Colmena extends Enemigo {
 	}
 	
 	public void restarVida(DisparoAliado a) {
-		
+		colmenaGrafico.restarVida();
 	}
 	
-	public void restarVida(DisparoEnemigo e) {
-		
+	public void restarVida(DisparoEnemigo e) {}
+
+	public void mover() {
+		colmenaGrafico.correr();
 	}
+
 	
 }
