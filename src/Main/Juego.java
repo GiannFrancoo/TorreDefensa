@@ -35,7 +35,7 @@ public class Juego extends Thread{
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			mapaLogico.Mover();
+			mapaLogico.Actualizar();
 		}
 	}
 
