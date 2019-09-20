@@ -7,6 +7,8 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 import javax.swing.border.Border;
 
+import Entidades.Campeones.Aliados.Lazaro;
+
 public class GUI extends JFrame {
 
 	private JLayeredPane contentPane;
@@ -51,6 +53,7 @@ public class GUI extends JFrame {
 		inicializarGrilla();
 		
 		
+		
 	}
 	
 	public void inicializarGrilla() {
@@ -73,6 +76,7 @@ public class GUI extends JFrame {
 		
 		for (int i = 0; i < 6; i++) {
 			for (int j = 0; j < 10; j++) {
+//				Celda celda = new Celda();
 				Celda celda = new Celda(i + "-" + j);
 				celda.setearX(i);
 				celda.setearY(j);
@@ -116,7 +120,14 @@ public class GUI extends JFrame {
 		lblObj1.setBackground(Color.ORANGE);
 		lblObj1.setBounds(12, 583, 90, 90);
 		contentPane.add(lblObj1, 10, 2);
-		lblObj1.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/Aliados/lazarus_estatico.png")).getImage().getScaledInstance(lblObj1.getWidth(), lblObj1.getHeight(), Image.SCALE_SMOOTH)));
+		lblObj1.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/Aliados/lazarus_tienda.png")).getImage().getScaledInstance(lblObj1.getWidth(), lblObj1.getHeight(), Image.SCALE_SMOOTH)));
+		lblObj1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            	JButton boton = (JButton) e.getSource();
+            	
+            }
+        });
 		
 		JLabel lblObj2 = new JLabel();
 		lblObj2.setOpaque(true);
