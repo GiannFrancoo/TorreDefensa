@@ -171,8 +171,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": -96,
-									"top": -112,
+									"left": -24,
+									"top": 8,
 									"width": 10,
 									"height": 10
 								},
@@ -187,8 +187,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": -96,
-									"top": -112,
+									"left": -24,
+									"top": 8,
 									"width": 10,
 									"height": 10
 								}
@@ -1096,7 +1096,7 @@
 											"top": 372,
 											"width": 249.65966796875,
 											"height": 13,
-											"text": "+Accionar()",
+											"text": "+Accionar(int x, int y)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -14439,7 +14439,8 @@
 								"$ref": "AAAAAAFs3jHGKcvKMpc="
 							},
 							"name": "String estadoJuego CVN",
-							"visibility": "private"
+							"visibility": "private",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -14738,7 +14739,27 @@
 							"_parent": {
 								"$ref": "AAAAAAFs3jHGKcvKMpc="
 							},
-							"name": "Accionar"
+							"name": "Accionar",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAFtUQtoeP47ITY=",
+									"_parent": {
+										"$ref": "AAAAAAFtEjqnf8UdWLY="
+									},
+									"name": "int x",
+									"type": ""
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAFtUQtoef484vE=",
+									"_parent": {
+										"$ref": "AAAAAAFtEjqnf8UdWLY="
+									},
+									"name": "int y",
+									"type": ""
+								}
+							]
 						},
 						{
 							"_type": "UMLOperation",
@@ -14988,7 +15009,8 @@
 								"$ref": "AAAAAAFs3jIgV8whC7w="
 							},
 							"name": "EntidadGrafica entidadGrafica",
-							"visibility": "protected"
+							"visibility": "protected",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -15167,7 +15189,8 @@
 									"_parent": {
 										"$ref": "AAAAAAFtExW4hXcHQIA="
 									},
-									"name": "int x"
+									"name": "int x",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
@@ -15175,7 +15198,8 @@
 									"_parent": {
 										"$ref": "AAAAAAFtExW4hXcHQIA="
 									},
-									"name": "int y"
+									"name": "int y",
+									"type": ""
 								}
 							]
 						},
@@ -15193,7 +15217,8 @@
 									"_parent": {
 										"$ref": "AAAAAAFtIc10jf92sO4="
 									},
-									"name": "DisparoEnemigo e"
+									"name": "DisparoEnemigo e",
+									"type": ""
 								}
 							]
 						},
@@ -15211,7 +15236,8 @@
 									"_parent": {
 										"$ref": "AAAAAAFtIffpPKt72lI="
 									},
-									"name": "DisparoAliado a"
+									"name": "DisparoAliado a",
+									"type": ""
 								}
 							]
 						},
@@ -15229,7 +15255,8 @@
 									"_parent": {
 										"$ref": "AAAAAAFtKFlhVs7V/cM="
 									},
-									"name": "int i"
+									"name": "int i",
+									"type": ""
 								}
 							]
 						},
@@ -16939,7 +16966,8 @@
 								"$ref": "AAAAAAFtUDNAtPOFKc0="
 							},
 							"name": "JLabel grafica",
-							"visibility": "protected"
+							"visibility": "protected",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -16948,7 +16976,8 @@
 								"$ref": "AAAAAAFtUDNAtPOFKc0="
 							},
 							"name": "Icon imagenes [ ]",
-							"visibility": "protected"
+							"visibility": "protected",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -16957,7 +16986,8 @@
 								"$ref": "AAAAAAFtUDNAtPOFKc0="
 							},
 							"name": "Entidad entidad",
-							"visibility": "protected"
+							"visibility": "protected",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -16966,7 +16996,8 @@
 								"$ref": "AAAAAAFtUDNAtPOFKc0="
 							},
 							"name": "int alto",
-							"visibility": "protected"
+							"visibility": "protected",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -16975,7 +17006,8 @@
 								"$ref": "AAAAAAFtUDNAtPOFKc0="
 							},
 							"name": "int ancho",
-							"visibility": "protected"
+							"visibility": "protected",
+							"type": ""
 						}
 					],
 					"operations": [
