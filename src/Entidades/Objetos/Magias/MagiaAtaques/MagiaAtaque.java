@@ -1,5 +1,6 @@
 package Entidades.Objetos.Magias.MagiaAtaques;
 
+import Entidades.Disparos.Disparo;
 import Entidades.Objetos.Magias.Magia;
 
 public class MagiaAtaque extends Magia {

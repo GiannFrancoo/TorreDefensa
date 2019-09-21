@@ -1,6 +1,10 @@
 package Entidades.Disparos.Enemigos;
 
+import Entidades.Campeones.Aliados.Aliado;
+import Entidades.Campeones.Enemigos.Enemigo;
 import Entidades.Disparos.Disparo;
+import Entidades.Objetos.Objeto;
+import Entidades.Objetos.ObjetosVida.ObjetoVida;
 
 public class DisparoEnemigo extends Disparo {
 	//Fuerza de disparo;
@@ -14,10 +18,29 @@ public class DisparoEnemigo extends Disparo {
 		disparoEnemigoGrafico = new DisparoEnemigoGrafico(this);
 	}
 
-	@Override
+	
 	public void mover() {
 		// logico
 		disparoEnemigoGrafico.mover();
 		
 	}
+	
+	public void disparoEnemigo(Enemigo e) {
+		e.restarVida(fuerza);
+		//this.mover();
+		//deberia llamar a disparoGrafico para que cambie la imagen o algo.
+	}
+
+	
+	public void disparoAliado(Aliado a) {
+		
+		
+	}
+
+	
+	public void disparoObjeto(ObjetoVida o) {
+		
+		
+	}
+
 }

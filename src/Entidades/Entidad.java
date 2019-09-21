@@ -1,6 +1,7 @@
 package Entidades;
 
 
+import Entidades.Disparos.Disparo;
 import Utilidad.Pair;
 
 public abstract class Entidad {

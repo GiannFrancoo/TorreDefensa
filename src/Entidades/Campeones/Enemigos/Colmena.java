@@ -1,5 +1,6 @@
 package Entidades.Campeones.Enemigos;
 
+import Entidades.Disparos.Disparo;
 import Entidades.Disparos.Aliados.DisparoAliado;
 import Entidades.Disparos.Enemigos.DisparoEnemigo;
 import Entidades.Objetos.Magias.Magia;
@@ -61,5 +62,14 @@ public class Colmena extends Enemigo {
 		colmenaGrafico.correr();
 	}
 
-	
+	public void restarVida(int d) {
+		this.vida-= d;
+		//Chequear cuando la vida llega a 0.
+		
+	}
+
+	public void recibir(Disparo d) {
+		d.disparoEnemigo(this);
+	}
+
 }
