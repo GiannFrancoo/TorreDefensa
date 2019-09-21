@@ -7,6 +7,8 @@ public class Juego extends Thread{
 	
 	private MapaLogico mapaLogico;
 	private MapaGUI mapaGUI;
+	private Tienda tienda;
+	private Jugador jugador;
 	
 	
 
@@ -22,6 +24,9 @@ public class Juego extends Thread{
 	
 	public Juego() {
 		this.mapaLogico = new MapaLogico();
+		this.jugador = new Jugador(20);
+		this.tienda = new Tienda(mapaLogico, jugador);
+//		this.mapaGUI = new MapaGUI(mapaLogico, tienda);
 		this.mapaGUI = new MapaGUI();
 		mapaGUI.setVisible(true);
 		

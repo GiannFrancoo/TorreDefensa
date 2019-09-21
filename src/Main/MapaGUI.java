@@ -13,30 +13,35 @@ public class MapaGUI extends JFrame {
 
 	private MapaLogico mapaLogico;
 	private Tienda tienda;
+	private Jugador jugador;
 	private JLayeredPane panel;
 	private ClickeablePanel contentPane;
 
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					MapaGUI frame = new MapaGUI();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+//	public static void main(String[] args) {
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				try {
+//					MapaGUI frame = new MapaGUI();
+//					frame.setVisible(true);
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//	}
 
 	/**
 	 * Create the frame.
 	 */
-	public MapaGUI() {
+	public MapaGUI(MapaLogico mapaLogico, Tienda tienda, Jugador jugador) {
+//	public MapaGUI() {
 		
+		this.mapaLogico = mapaLogico;
+		this.tienda = tienda;
+		this.jugador = jugador;
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(1130, 710);
 		this.setResizable(false);
@@ -54,7 +59,6 @@ public class MapaGUI extends JFrame {
 		lblFondo.setSize(panel.getSize());
 		lblFondo.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/fondo_nivel1.png")).getImage().getScaledInstance(lblFondo.getWidth(), lblFondo.getHeight(), Image.SCALE_SMOOTH)));
 		panel.add(lblFondo, 1, 0); 
-		
 		inicializarTienda();
 		
 //		Coordenadas de la grilla (229, 40, 848, 490);
@@ -75,7 +79,7 @@ public class MapaGUI extends JFrame {
 		lblObj1.setBackground(Color.ORANGE);
 		lblObj1.setBounds(12, 583, 90, 90);
 		panel.add(lblObj1, 10, 2);
-		lblObj1.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/Aliados/lazarus_tienda.png")).getImage().getScaledInstance(lblObj1.getWidth(), lblObj1.getHeight(), Image.SCALE_SMOOTH)));
+		lblObj1.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/Aliados/Lazaro/lazaro_tienda.png")).getImage().getScaledInstance(lblObj1.getWidth(), lblObj1.getHeight(), Image.SCALE_SMOOTH)));
 		lblObj1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -119,6 +123,22 @@ public class MapaGUI extends JFrame {
 		lblObj7.setBackground(Color.ORANGE);
 		lblObj7.setBounds(582, 583, 90, 90);
 		panel.add(lblObj7, 10, 2);
+	}
+	
+	public void insertar(JLabel lbl) {
+		
+	}
+	
+	public void remover(JLabel lbl) {
+		panel.remove(lbl);
+	}
+	
+	public void actualizarEntidad(JLabel lbl, int x, int y) {
+		
+	}
+	
+	public void actualizarMonedas(int m) {
+		
 	}
 	
 	
