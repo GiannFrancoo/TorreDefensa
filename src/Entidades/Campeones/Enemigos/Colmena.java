@@ -1,10 +1,12 @@
 package Entidades.Campeones.Enemigos;
 
+import Entidades.Entidad;
 import Entidades.Disparos.Disparo;
 import Entidades.Disparos.Aliados.DisparoAliado;
 import Entidades.Disparos.Enemigos.DisparoEnemigo;
 import Entidades.Objetos.Magias.Magia;
 import Main.Visitante;
+import Utilidad.Lista.Position;
 
 public class Colmena extends Enemigo {
 
@@ -80,6 +82,18 @@ public class Colmena extends Enemigo {
 	
 	public int getMonedas() {
 		return this.monedas;
+	}
+
+	@Override
+	public Position<Entidad> getPosEnLista() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void setPosEnLista(Position<Entidad> pos) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

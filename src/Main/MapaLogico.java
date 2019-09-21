@@ -33,24 +33,6 @@ public class MapaLogico {
 	
 	public boolean disponible(Pair<Integer,Integer> pos) {
 		//Retorna true si en esa posicion no existe ninguna entidad.
-//		for(Aliado a: this.aliados) {
-//			if( (a.getPos().getKey() == pos.getKey()) && (a.getPos().getValue() == pos.getValue())) {
-//				return false;
-//			}
-//		}
-//		
-//		for(Enemigo e: this.enemigos) {
-//			if( (e.getPos().getKey() == pos.getKey()) && (e.getPos().getValue() == pos.getValue())) {
-//				return false;
-//			}
-//		}
-//		
-//		for(Objeto o: this.objetos) {
-//			if( (o.getPos().getKey() == pos.getKey()) && (o.getPos().getValue() == pos.getValue())) {
-//				return false;
-//			}
-//		}
-		
 		 return true;
 	}
 	
@@ -64,9 +46,13 @@ public class MapaLogico {
 	
 	public void insertar(Pair<Integer,Integer> p, Entidad e) {
 		this.entidades.addLast(e);
+		try {
+			e.setPosEnLista(this.entidades.last());
+		} catch (EmptyListException e1) {
+			e1.printStackTrace();
+		}
 	}
 	
-	//Eliminar: Metodo que se encarga de eliminar la entidad en la lista.
 	public void eliminar(Pair<Integer,Integer> pos) {
 		for(Entidad e: this.entidades) {
 			if(pos.getKey().equals(e.getPos().getKey()) && pos.getValue().equals(e.getPos().getValue())) {
@@ -75,9 +61,13 @@ public class MapaLogico {
 		}
 		
 	}
-	
-	public void eliminarPosta(Entidad e) {
-		//this.entidades.remove();
+	//eliminarPosta: Metodo que se encarga de eliminar la entidad en la lista.
+	public void eliminarPosta(Position<Entidad> pos) {
+		try {
+			this.entidades.remove(pos);
+		} catch (InvalidPositionException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	public void accionar(String s) {
