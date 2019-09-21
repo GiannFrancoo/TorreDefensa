@@ -18,12 +18,11 @@ public class Colmena extends Enemigo {
 
 	//velocidad --> Enemigo;
 	//cantMonedas --> Enemigo;
-	
+	protected final int monedas = 10;
 	protected ColmenaGrafico colmenaGrafico;
 	
 	public Colmena(int x, int y) {
 		super(x,y);
-		
 		this.velocidad = 4;
 		this.vida = 100;
 		this.fuerza = 100;
@@ -73,9 +72,14 @@ public class Colmena extends Enemigo {
 		d.disparoEnemigo(this);
 	}
 
-	@Override
+	
 	public void visitado(Visitante v) {
 		v.visita(this);
+	}
+
+	
+	public int getMonedas() {
+		return this.monedas;
 	}
 
 }

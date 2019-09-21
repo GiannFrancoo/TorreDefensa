@@ -30,6 +30,6 @@ public abstract class Campeon extends Entidad{
 	public abstract void restarVida(int d);
 	public abstract void recibir(Disparo d);
 	public abstract void agregarMagia(Magia m);
-	
+	public abstract int getMonedas();
 	
 }

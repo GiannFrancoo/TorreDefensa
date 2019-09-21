@@ -2150,13 +2150,30 @@
 											"height": 13,
 											"text": "+restarVida(int n)",
 											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAFtVezHnmeqJXw=",
+											"_parent": {
+												"$ref": "AAAAAAFs3jJH1cxUcFE="
+											},
+											"model": {
+												"$ref": "AAAAAAFtVezG7WenuGU="
+											},
+											"font": "Arial;13;0",
+											"left": 621,
+											"top": 1099,
+											"width": 182.20947265625,
+											"height": 13,
+											"text": "+getMonedas(): int",
+											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 616,
 									"top": 989,
 									"width": 192.20947265625,
-									"height": 113
+									"height": 128
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -2196,7 +2213,7 @@
 							"left": 616,
 							"top": 896,
 							"width": 192.20947265625,
-							"height": 206,
+							"height": 221,
 							"nameCompartment": {
 								"$ref": "AAAAAAFs3jJH1MxOXOg="
 							},
@@ -3919,7 +3936,7 @@
 							"tail": {
 								"$ref": "AAAAAAFs3jKB0sx3YOg="
 							},
-							"points": "577:1392;577:1368;680:1368;680:1101",
+							"points": "577:1392;577:1368;680:1368;680:1116",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFs3jQuWs30VkU="
@@ -4012,7 +4029,7 @@
 							"tail": {
 								"$ref": "AAAAAAFs3jKaFMyhZao="
 							},
-							"points": "775:1392;775:1368;680:1368;680:1101",
+							"points": "775:1392;775:1368;680:1368;680:1116",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFs3jQ+F84F4RI="
@@ -7026,11 +7043,30 @@
 									"model": {
 										"$ref": "AAAAAAFtEmpfi6jcoYs="
 									},
+									"subViews": [
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAFtVfSErvnuLM8=",
+											"_parent": {
+												"$ref": "AAAAAAFtEmpfjKjkkmQ="
+											},
+											"model": {
+												"$ref": "AAAAAAFtVfSD5fncSPE="
+											},
+											"font": "Arial;13;0",
+											"left": 309,
+											"top": 1518,
+											"width": 182.20947265625,
+											"height": 13,
+											"text": "+int monedas",
+											"horizontalAlignment": 0
+										}
+									],
 									"font": "Arial;13;0",
 									"left": 304,
 									"top": 1513,
 									"width": 192.20947265625,
-									"height": 10
+									"height": 23
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -7053,7 +7089,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 309,
-											"top": 1528,
+											"top": 1541,
 											"width": 182.20947265625,
 											"height": 13,
 											"text": "+Lazaro(int x, int y)",
@@ -7070,7 +7106,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 309,
-											"top": 1543,
+											"top": 1556,
 											"width": 182.20947265625,
 											"height": 13,
 											"text": "+disparar(): DisparoAliado",
@@ -7087,7 +7123,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 309,
-											"top": 1558,
+											"top": 1571,
 											"width": 182.20947265625,
 											"height": 13,
 											"text": "+restarVida(DisparoEnemigo e)",
@@ -7104,7 +7140,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 309,
-											"top": 1573,
+											"top": 1586,
 											"width": 182.20947265625,
 											"height": 13,
 											"text": "+restarVida(DisparoAliado a)",
@@ -7121,7 +7157,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 309,
-											"top": 1588,
+											"top": 1601,
 											"width": 182.20947265625,
 											"height": 13,
 											"text": "+agregarMagia(Magia m)",
@@ -7130,7 +7166,7 @@
 									],
 									"font": "Arial;13;0",
 									"left": 304,
-									"top": 1523,
+									"top": 1536,
 									"width": 192.20947265625,
 									"height": 83
 								},
@@ -7172,7 +7208,7 @@
 							"left": 304,
 							"top": 1488,
 							"width": 192.20947265625,
-							"height": 118,
+							"height": 131,
 							"nameCompartment": {
 								"$ref": "AAAAAAFtEmpfjKjf0EM="
 							},
@@ -9162,11 +9198,30 @@
 									"model": {
 										"$ref": "AAAAAAFtEm2F17+GAG4="
 									},
+									"subViews": [
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAFtVfTYz/2LHpI=",
+											"_parent": {
+												"$ref": "AAAAAAFtEm2F2L+OtNQ="
+											},
+											"model": {
+												"$ref": "AAAAAAFtVfTYW/15u+s="
+											},
+											"font": "Arial;13;0",
+											"left": 885,
+											"top": 1870,
+											"width": 182.20947265625,
+											"height": 13,
+											"text": "+int monedas",
+											"horizontalAlignment": 0
+										}
+									],
 									"font": "Arial;13;0",
 									"left": 880,
 									"top": 1865,
 									"width": 192.20947265625,
-									"height": 10
+									"height": 23
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -9189,7 +9244,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 885,
-											"top": 1880,
+											"top": 1893,
 											"width": 182.20947265625,
 											"height": 13,
 											"text": "+Colmena(int x, int y)",
@@ -9206,7 +9261,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 885,
-											"top": 1895,
+											"top": 1908,
 											"width": 182.20947265625,
 											"height": 13,
 											"text": "+restarVida(DisparoAliado a)",
@@ -9223,7 +9278,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 885,
-											"top": 1910,
+											"top": 1923,
 											"width": 182.20947265625,
 											"height": 13,
 											"text": "+restarVida(DisparoEnemigo e)",
@@ -9240,7 +9295,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 885,
-											"top": 1925,
+											"top": 1938,
 											"width": 182.20947265625,
 											"height": 13,
 											"text": "+disparar(): DisparoEnemigo",
@@ -9257,7 +9312,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 885,
-											"top": 1940,
+											"top": 1953,
 											"width": 182.20947265625,
 											"height": 13,
 											"text": "+agregarMagia(Magia m)",
@@ -9266,7 +9321,7 @@
 									],
 									"font": "Arial;13;0",
 									"left": 880,
-									"top": 1875,
+									"top": 1888,
 									"width": 192.20947265625,
 									"height": 83
 								},
@@ -9308,7 +9363,7 @@
 							"left": 880,
 							"top": 1840,
 							"width": 192.20947265625,
-							"height": 118,
+							"height": 131,
 							"nameCompartment": {
 								"$ref": "AAAAAAFtEm2F17+Jjp4="
 							},
@@ -16290,6 +16345,25 @@
 									"type": ""
 								}
 							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAFtVezG7WenuGU=",
+							"_parent": {
+								"$ref": "AAAAAAFs3jJH0sxLoAU="
+							},
+							"name": "getMonedas",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAFtVez4P2iGX4A=",
+									"_parent": {
+										"$ref": "AAAAAAFtVezG7WenuGU="
+									},
+									"type": "int",
+									"direction": "return"
+								}
+							]
 						}
 					],
 					"isAbstract": true
@@ -17343,6 +17417,16 @@
 							}
 						}
 					],
+					"attributes": [
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAFtVfSD5fncSPE=",
+							"_parent": {
+								"$ref": "AAAAAAFtEmpfi6jcoYs="
+							},
+							"name": "int monedas"
+						}
+					],
 					"operations": [
 						{
 							"_type": "UMLOperation",
@@ -17685,6 +17769,16 @@
 									"$ref": "AAAAAAFtEkG/gwXcqcA="
 								}
 							}
+						}
+					],
+					"attributes": [
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAFtVfTYW/15u+s=",
+							"_parent": {
+								"$ref": "AAAAAAFtEm2F17+GAG4="
+							},
+							"name": "int monedas"
 						}
 					],
 					"operations": [

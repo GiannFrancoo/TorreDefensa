@@ -18,6 +18,7 @@ public class MapaLogico {
 	protected Tienda tienda;
 	protected Jugador jugador;
 	private String estadoJuego;
+	private Visitante visitante;
 	
 	public MapaLogico() {		
 		entidades = new DoubleLinkedList<Entidad>();
@@ -61,50 +62,23 @@ public class MapaLogico {
 		
 	}
 	
-	public void insertar(Pair<Integer,Integer> p, Objeto o) {
-//		this.objetos.addLast(o);
-	}
-	
-	public void insertar(Pair<Integer,Integer> p, Aliado a) {
-//		this.aliados.addLast(a);
+	public void insertar(Pair<Integer,Integer> p, Entidad e) {
+		this.entidades.addLast(e);
 	}
 	
 	//Eliminar: Metodo que se encarga de eliminar la entidad en la lista.
-	public void eliminar(Pair<Integer,Integer> pos, Entidad e) {
-//		for(Position<Aliado> posA: this.aliados.positions()) {
-//			if( (posA.element().getPos().getKey() == pos.getKey()) && (posA.element().getPos().getValue() == pos.getValue()) ) {
-//				try {
-//					this.aliados.remove(posA);
-//				} catch (InvalidPositionException e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		}
+	public void eliminar(Pair<Integer,Integer> pos) {
+		for(Entidad e: this.entidades) {
+			if(pos.getKey().equals(e.getPos().getKey()) && pos.getValue().equals(e.getPos().getValue())) {
+				e.visitado(visitante);	
+			}
+		}
+		
 	}
 	
-	//public void eliminar(Pair<Integer,Integer> pos, Enemigo e) {
-//		for(Position<Enemigo> posE: this.enemigos.positions()) {
-//			if( (posE.element().getPos().getKey() == pos.getKey()) && (posE.element().getPos().getValue() == pos.getValue()) ) {
-//				try {
-//					this.enemigos.remove(posE);
-//				} catch (InvalidPositionException e1) {
-//					e1.printStackTrace();
-//				}
-//			}
-//		}
-//	}
-	
-	//public void eliminar(Pair<Integer,Integer> pos, Objeto o) {
-//		for(Position<Objeto> posO: this.objetos.positions()) {
-//			if( (posO.element().getPos().getKey() == pos.getKey()) && (posO.element().getPos().getValue() == pos.getValue()) ) {
-//				try {
-//					this.objetos.remove(posO);
-//				} catch (InvalidPositionException e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		}
-	//}
+	public void eliminarPosta(Entidad e) {
+		//this.entidades.remove();
+	}
 	
 	public void accionar(String s) {
 		//vendiendo, jugando, comprando.
@@ -123,8 +97,7 @@ public class MapaLogico {
  	public void actualizar() {
  		//Recorre toda la lista y llamo a los accionar de las clases.
  		for(Entidad e: entidades) {
-// 			e.mover();
- 			
+			e.mover();
  		}
  		
 	}

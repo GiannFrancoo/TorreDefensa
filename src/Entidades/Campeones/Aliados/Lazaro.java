@@ -14,7 +14,7 @@ public class Lazaro extends Aliado{
 	//magias  --> Campeon;
 	
 	protected LazaroGrafico lazaroGrafico;
-	
+	protected final int monedas = 100;
 	
 	public Lazaro(int x, int y){
 		super(x,y); // Campeon;
@@ -68,7 +68,7 @@ public class Lazaro extends Aliado{
 		d.disparoAliado(this);		
 	}
 
-	@Override
+	
 	public void restarVida(int d) {
 		this.vida-= d;
 		//Si llega la vida a 0 hay q ver como modelar para que desaparezca.
@@ -78,6 +78,11 @@ public class Lazaro extends Aliado{
 	
 	public void visitado(Visitante v) {
 		v.visita(this);
+	}
+
+	
+	public int getMonedas() {
+		return this.monedas;
 	}
 
 	
