@@ -5,6 +5,7 @@ import Entidades.Campeones.Enemigos.Enemigo;
 import Entidades.Disparos.Disparo;
 import Entidades.Objetos.Objeto;
 import Entidades.Objetos.ObjetosVida.ObjetoVida;
+import Main.Visitante;
 
 public class DisparoAliado extends Disparo{
 	//Fuerza de disparo;
@@ -38,6 +39,12 @@ public class DisparoAliado extends Disparo{
 	
 	public void disparoObjeto(ObjetoVida o) {
 		//No se hace nada aca.
+	}
+
+	@Override
+	public void visitado(Visitante v) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

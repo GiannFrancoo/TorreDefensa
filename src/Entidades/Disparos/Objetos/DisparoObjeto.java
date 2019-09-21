@@ -5,6 +5,7 @@ import Entidades.Campeones.Enemigos.Enemigo;
 import Entidades.Disparos.Disparo;
 import Entidades.Objetos.Objeto;
 import Entidades.Objetos.ObjetosVida.ObjetoVida;
+import Main.Visitante;
 
 public class DisparoObjeto extends Disparo{
 
@@ -32,6 +33,13 @@ public class DisparoObjeto extends Disparo{
 
 	public void mover() {
 		
+		
+	}
+
+
+	@Override
+	public void visitado(Visitante v) {
+		// TODO Auto-generated method stub
 		
 	}
 

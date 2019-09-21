@@ -2,6 +2,7 @@ package Entidades;
 
 
 import Entidades.Disparos.Disparo;
+import Main.Visitante;
 import Utilidad.Pair;
 
 public abstract class Entidad {
@@ -27,6 +28,6 @@ public abstract class Entidad {
 	}
 
 	public abstract void mover();
-	
+	public abstract void visitado(Visitante v);
 }
 
