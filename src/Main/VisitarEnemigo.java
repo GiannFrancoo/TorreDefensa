@@ -10,7 +10,7 @@ public class VisitarEnemigo implements Visitante{
 	
 	
 	public void visita(Enemigo e) {
-		mapaLogico.eliminarPosta(e);
+		mapaLogico.eliminarPosta(e.getPosEnLista());
 	}
 
 	

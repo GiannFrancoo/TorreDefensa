@@ -1,11 +1,13 @@
 package Entidades.Disparos.Enemigos;
 
+import Entidades.Entidad;
 import Entidades.Campeones.Aliados.Aliado;
 import Entidades.Campeones.Enemigos.Enemigo;
 import Entidades.Disparos.Disparo;
 import Entidades.Objetos.Objeto;
 import Entidades.Objetos.ObjetosVida.ObjetoVida;
 import Main.Visitante;
+import Utilidad.Lista.Position;
 
 public class DisparoEnemigo extends Disparo {
 	//Fuerza de disparo;
@@ -47,6 +49,20 @@ public class DisparoEnemigo extends Disparo {
 
 	@Override
 	public void visitado(Visitante v) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public Position<Entidad> getPosEnLista() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public void setPosEnLista(Position<Entidad> pos) {
 		// TODO Auto-generated method stub
 		
 	}

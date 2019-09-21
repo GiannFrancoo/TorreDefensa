@@ -4,6 +4,7 @@ package Entidades;
 import Entidades.Disparos.Disparo;
 import Main.Visitante;
 import Utilidad.Pair;
+import Utilidad.Lista.*;
 
 public abstract class Entidad {
 	
@@ -27,6 +28,8 @@ public abstract class Entidad {
 		return entidadGrafica;
 	}
 
+	public abstract Position<Entidad> getPosEnLista();
+	public abstract void setPosEnLista(Position<Entidad> pos);
 	public abstract void mover();
 	public abstract void visitado(Visitante v);
 }

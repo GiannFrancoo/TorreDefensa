@@ -1,10 +1,12 @@
 package Entidades.Campeones.Aliados;
 
+import Entidades.Entidad;
 import Entidades.Disparos.Disparo;
 import Entidades.Disparos.Aliados.DisparoAliado;
 import Entidades.Disparos.Enemigos.DisparoEnemigo;
 import Entidades.Objetos.Magias.Magia;
 import Main.Visitante;
+import Utilidad.Lista.Position;
 
 public class Lazaro extends Aliado{
 	//pos	  --> Entidad
@@ -15,6 +17,7 @@ public class Lazaro extends Aliado{
 	
 	protected LazaroGrafico lazaroGrafico;
 	protected final int monedas = 100;
+	protected Position<Entidad> posEnLista;
 	
 	public Lazaro(int x, int y){
 		super(x,y); // Campeon;
@@ -74,7 +77,6 @@ public class Lazaro extends Aliado{
 		//Si llega la vida a 0 hay q ver como modelar para que desaparezca.
 		
 	}
-
 	
 	public void visitado(Visitante v) {
 		v.visita(this);
@@ -84,6 +86,16 @@ public class Lazaro extends Aliado{
 	public int getMonedas() {
 		return this.monedas;
 	}
+
+	public void setPosEnLista(Position<Entidad> pos) {
+		this.posEnLista = pos;
+	}
+
+	public Position<Entidad> getPosEnLista() {
+		return this.posEnLista;
+	}
+	
+	
 
 	
 	 
