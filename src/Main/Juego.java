@@ -6,7 +6,7 @@ import java.awt.EventQueue;
 public class Juego extends Thread{
 	
 	private MapaLogico mapaLogico;
-	private GUI mapaGUI;
+	private MapaGUI mapaGUI;
 	
 	
 
@@ -22,7 +22,7 @@ public class Juego extends Thread{
 	
 	public Juego() {
 		this.mapaLogico = new MapaLogico();
-		this.mapaGUI = new GUI();
+		this.mapaGUI = new MapaGUI();
 		mapaGUI.setVisible(true);
 		
 		this.start();

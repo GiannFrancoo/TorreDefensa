@@ -21,8 +21,8 @@ public class MapaLogico {
 	
 	public MapaLogico() {		
 		entidades = new DoubleLinkedList<Entidad>();
-		tienda = new Tienda();
 		jugador = new Jugador(100);
+		tienda = new Tienda(this, jugador);
 	}
 	
 	
@@ -123,7 +123,7 @@ public class MapaLogico {
  	public void Actualizar() {
  		//Recorre toda la lista y llamo a los accionar de las clases.
  		for(Entidad e: entidades) {
- 			e.mover();
+// 			e.mover();
  		}
  		
 	}

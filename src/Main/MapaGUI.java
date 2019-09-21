@@ -9,7 +9,7 @@ import javax.swing.border.Border;
 
 import Entidades.Campeones.Aliados.Lazaro;
 
-public class GUI extends JFrame {
+public class MapaGUI extends JFrame {
 
 	private MapaLogico mapaLogico;
 	private Tienda tienda;
@@ -23,7 +23,7 @@ public class GUI extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					GUI frame = new GUI();
+					MapaGUI frame = new MapaGUI();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -35,7 +35,7 @@ public class GUI extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public GUI() {
+	public MapaGUI() {
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(1130, 710);
