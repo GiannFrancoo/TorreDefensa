@@ -30,7 +30,7 @@ public class MapaLogico {
 		estadoJuego = s;
 	}
 	
-	public boolean Disponible(Pair<Integer,Integer> pos) {
+	public boolean disponible(Pair<Integer,Integer> pos) {
 		//Retorna true si en esa posicion no existe ninguna entidad.
 //		for(Aliado a: this.aliados) {
 //			if( (a.getPos().getKey() == pos.getKey()) && (a.getPos().getValue() == pos.getValue())) {
@@ -53,24 +53,24 @@ public class MapaLogico {
 		 return true;
 	}
 	
-	public void Recibir(Aliado a) {	
+	public void recibir(Aliado a) {	
 		
 	}
 	
-	public void Recibir(Enemigo e) {
+	public void recibir(Enemigo e) {
 		
 	}
 	
-	public void Insertar(Pair<Integer,Integer> p, Objeto o) {
+	public void insertar(Pair<Integer,Integer> p, Objeto o) {
 //		this.objetos.addLast(o);
 	}
 	
-	public void Insertar(Pair<Integer,Integer> p, Aliado a) {
+	public void insertar(Pair<Integer,Integer> p, Aliado a) {
 //		this.aliados.addLast(a);
 	}
 	
 	//Eliminar: Metodo que se encarga de eliminar la entidad en la lista.
-	public void Eliminar(Pair<Integer,Integer> pos, Aliado a) {
+	public void eliminar(Pair<Integer,Integer> pos, Aliado a) {
 //		for(Position<Aliado> posA: this.aliados.positions()) {
 //			if( (posA.element().getPos().getKey() == pos.getKey()) && (posA.element().getPos().getValue() == pos.getValue()) ) {
 //				try {
@@ -82,7 +82,7 @@ public class MapaLogico {
 //		}
 	}
 	
-	public void Eliminar(Pair<Integer,Integer> pos, Enemigo e) {
+	public void eliminar(Pair<Integer,Integer> pos, Enemigo e) {
 //		for(Position<Enemigo> posE: this.enemigos.positions()) {
 //			if( (posE.element().getPos().getKey() == pos.getKey()) && (posE.element().getPos().getValue() == pos.getValue()) ) {
 //				try {
@@ -94,7 +94,7 @@ public class MapaLogico {
 //		}
 	}
 	
-	public void Eliminar(Pair<Integer,Integer> pos, Objeto o) {
+	public void eliminar(Pair<Integer,Integer> pos, Objeto o) {
 //		for(Position<Objeto> posO: this.objetos.positions()) {
 //			if( (posO.element().getPos().getKey() == pos.getKey()) && (posO.element().getPos().getValue() == pos.getValue()) ) {
 //				try {
@@ -106,7 +106,7 @@ public class MapaLogico {
 //		}
 	}
 	
-	public void Accionar(String s) {
+	public void accionar(String s) {
 		//vendiendo, jugando, comprando.
 		if(s.equals("comprando")) {
 			
@@ -120,7 +120,7 @@ public class MapaLogico {
 		
 	}
 		
- 	public void Actualizar() {
+ 	public void actualizar() {
  		//Recorre toda la lista y llamo a los accionar de las clases.
  		for(Entidad e: entidades) {
 // 			e.mover();

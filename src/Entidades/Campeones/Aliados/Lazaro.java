@@ -1,5 +1,6 @@
 package Entidades.Campeones.Aliados;
 
+import Entidades.Disparos.Disparo;
 import Entidades.Disparos.Aliados.DisparoAliado;
 import Entidades.Disparos.Enemigos.DisparoEnemigo;
 import Entidades.Objetos.Magias.Magia;
@@ -59,6 +60,18 @@ public class Lazaro extends Aliado{
 	
 	public LazaroGrafico getGrafica() {
 		return lazaroGrafico;
+	}
+
+	
+	public void recibir(Disparo d) {
+		d.disparoAliado(this);		
+	}
+
+	@Override
+	public void restarVida(int d) {
+		this.vida-= d;
+		//Si llega la vida a 0 hay q ver como modelar para que desaparezca.
+		
 	}
 
 	

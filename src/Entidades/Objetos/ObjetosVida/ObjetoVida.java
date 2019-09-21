@@ -1,5 +1,6 @@
 package Entidades.Objetos.ObjetosVida;
 
+import Entidades.Disparos.Disparo;
 import Entidades.Objetos.Objeto;
 
 public abstract class ObjetoVida extends Objeto{
@@ -13,5 +14,14 @@ public abstract class ObjetoVida extends Objeto{
 		super(x, y);
 	}
 
+	public void restarVida(int n) {
+		vida-= n;
+	}
+
+	public abstract void recibir(Disparo d);
 
 }
+
+
+
+

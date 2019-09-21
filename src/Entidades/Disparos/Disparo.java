@@ -1,6 +1,10 @@
 package Entidades.Disparos;
 
 import Entidades.Entidad;
+import Entidades.Campeones.Aliados.Aliado;
+import Entidades.Campeones.Enemigos.Enemigo;
+import Entidades.Objetos.Objeto;
+import Entidades.Objetos.ObjetosVida.ObjetoVida;
 
 public abstract class Disparo extends Entidad{
 	//fila 	  --> Entidad;
@@ -15,4 +19,9 @@ public abstract class Disparo extends Entidad{
 	public int getFuerza() {
 		return fuerza;
 	}
+	
+	public abstract void disparoAliado(Aliado a);
+	public abstract void disparoEnemigo(Enemigo e);
+	public abstract void disparoObjeto(ObjetoVida o);
+	
 }
