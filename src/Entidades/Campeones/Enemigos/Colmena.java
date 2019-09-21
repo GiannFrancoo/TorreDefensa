@@ -4,6 +4,7 @@ import Entidades.Disparos.Disparo;
 import Entidades.Disparos.Aliados.DisparoAliado;
 import Entidades.Disparos.Enemigos.DisparoEnemigo;
 import Entidades.Objetos.Magias.Magia;
+import Main.Visitante;
 
 public class Colmena extends Enemigo {
 
@@ -70,6 +71,11 @@ public class Colmena extends Enemigo {
 
 	public void recibir(Disparo d) {
 		d.disparoEnemigo(this);
+	}
+
+	@Override
+	public void visitado(Visitante v) {
+		v.visita(this);
 	}
 
 }

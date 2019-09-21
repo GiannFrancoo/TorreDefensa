@@ -4,6 +4,7 @@ import Entidades.Disparos.Disparo;
 import Entidades.Disparos.Aliados.DisparoAliado;
 import Entidades.Disparos.Enemigos.DisparoEnemigo;
 import Entidades.Objetos.Magias.Magia;
+import Main.Visitante;
 
 public class Lazaro extends Aliado{
 	//pos	  --> Entidad
@@ -72,6 +73,11 @@ public class Lazaro extends Aliado{
 		this.vida-= d;
 		//Si llega la vida a 0 hay q ver como modelar para que desaparezca.
 		
+	}
+
+	
+	public void visitado(Visitante v) {
+		v.visita(this);
 	}
 
 	

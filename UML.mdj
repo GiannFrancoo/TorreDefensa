@@ -1166,7 +1166,7 @@
 											"top": 297,
 											"width": 249.65966796875,
 											"height": 13,
-											"text": "+Eliminar(Pair p, Enemigo e)",
+											"text": "+Eliminar(Pair p, Entidad e)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -15129,7 +15129,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFs3jF2h8t1Lmg="
 							},
-							"name": "MapaLogico mapaLogico"
+							"name": "MapaLogico mapaLogico",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -15137,7 +15138,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFs3jF2h8t1Lmg="
 							},
-							"name": "Tienda tienda"
+							"name": "Tienda tienda",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -15145,7 +15147,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFs3jF2h8t1Lmg="
 							},
-							"name": "ClickeablePanel contentPane"
+							"name": "ClickeablePanel contentPane",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -15153,7 +15156,8 @@
 							"_parent": {
 								"$ref": "AAAAAAFs3jF2h8t1Lmg="
 							},
-							"name": "JlayeredPane panel"
+							"name": "JlayeredPane panel",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -15245,7 +15249,8 @@
 									"_parent": {
 										"$ref": "AAAAAAFtVYeUlknVkbk="
 									},
-									"name": "Jlabel lbl"
+									"name": "Jlabel lbl",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
@@ -15253,7 +15258,8 @@
 									"_parent": {
 										"$ref": "AAAAAAFtVYeUlknVkbk="
 									},
-									"name": "int x"
+									"name": "int x",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
@@ -15261,7 +15267,8 @@
 									"_parent": {
 										"$ref": "AAAAAAFtVYeUlknVkbk="
 									},
-									"name": "int y"
+									"name": "int y",
+									"type": ""
 								}
 							]
 						},
@@ -15676,7 +15683,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFtI0QWYfuaScM="
 									},
-									"name": "Enemigo e",
+									"name": "Entidad e",
 									"type": ""
 								}
 							]

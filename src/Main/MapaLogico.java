@@ -70,7 +70,7 @@ public class MapaLogico {
 	}
 	
 	//Eliminar: Metodo que se encarga de eliminar la entidad en la lista.
-	public void eliminar(Pair<Integer,Integer> pos, Aliado a) {
+	public void eliminar(Pair<Integer,Integer> pos, Entidad e) {
 //		for(Position<Aliado> posA: this.aliados.positions()) {
 //			if( (posA.element().getPos().getKey() == pos.getKey()) && (posA.element().getPos().getValue() == pos.getValue()) ) {
 //				try {
@@ -82,7 +82,7 @@ public class MapaLogico {
 //		}
 	}
 	
-	public void eliminar(Pair<Integer,Integer> pos, Enemigo e) {
+	//public void eliminar(Pair<Integer,Integer> pos, Enemigo e) {
 //		for(Position<Enemigo> posE: this.enemigos.positions()) {
 //			if( (posE.element().getPos().getKey() == pos.getKey()) && (posE.element().getPos().getValue() == pos.getValue()) ) {
 //				try {
@@ -92,9 +92,9 @@ public class MapaLogico {
 //				}
 //			}
 //		}
-	}
+//	}
 	
-	public void eliminar(Pair<Integer,Integer> pos, Objeto o) {
+	//public void eliminar(Pair<Integer,Integer> pos, Objeto o) {
 //		for(Position<Objeto> posO: this.objetos.positions()) {
 //			if( (posO.element().getPos().getKey() == pos.getKey()) && (posO.element().getPos().getValue() == pos.getValue()) ) {
 //				try {
@@ -104,7 +104,7 @@ public class MapaLogico {
 //				}
 //			}
 //		}
-	}
+	//}
 	
 	public void accionar(String s) {
 		//vendiendo, jugando, comprando.
@@ -124,6 +124,7 @@ public class MapaLogico {
  		//Recorre toda la lista y llamo a los accionar de las clases.
  		for(Entidad e: entidades) {
 // 			e.mover();
+ 			
  		}
  		
 	}
