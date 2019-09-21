@@ -4,7 +4,24 @@ import Entidades.Entidad;
 
 public class Tienda {
 	
-	protected Entidad [] arreglo ;
+	private Entidad [] arreglo;
+	private Jugador jugador;
+	private MapaLogico mapaLogico;
+	
+	
+	public Tienda(MapaLogico mapaLogico, Jugador jugador) {
+		this.mapaLogico = mapaLogico;
+		this.jugador = jugador;
+	}
+	
+	public void comprar(int codigo) {
+//		jugador.disminuirMonedas(arreglo[codigo].getPrecio());
+//		mapaLogico.setEstado("comprando");
+	}
+	
+	public void vender() {
+		
+	}
 	
 	//public Tienda() {}
 	//public Entidad comprar(int n);

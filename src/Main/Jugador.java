@@ -12,6 +12,10 @@ public class Jugador {
 		monedas+=n;
 	}
 	
+	public void disminuirMonedas(int n) {
+		monedas-=n;
+	}
+	
 	public int getMonedas(){
 		return monedas;
 	}
