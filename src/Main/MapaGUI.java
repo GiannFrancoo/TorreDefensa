@@ -16,6 +16,7 @@ public class MapaGUI extends JFrame {
 	private Jugador jugador;
 	private JLayeredPane panel;
 	private ClickeablePanel contentPane;
+	private JPanel monedas;
 
 	/**
 	 * Launch the application.
@@ -37,7 +38,6 @@ public class MapaGUI extends JFrame {
 	 * Create the frame.
 	 */
 	public MapaGUI(MapaLogico mapaLogico, Tienda tienda, Jugador jugador) {
-//	public MapaGUI() {
 		
 		this.mapaLogico = mapaLogico;
 		this.tienda = tienda;
@@ -59,7 +59,20 @@ public class MapaGUI extends JFrame {
 		lblFondo.setSize(panel.getSize());
 		lblFondo.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/fondo_nivel1.png")).getImage().getScaledInstance(lblFondo.getWidth(), lblFondo.getHeight(), Image.SCALE_SMOOTH)));
 		panel.add(lblFondo, 1, 0); 
+		
 		inicializarTienda();
+		
+		monedas = new JPanel();
+		monedas.setLayout(new FlowLayout());
+		monedas.setBounds(12, 540, 150, 40);
+		monedas.setOpaque(false);
+		panel.add(monedas, 10, 3);
+		JLabel monedaImagen = new JLabel();
+		monedaImagen.setOpaque(false);
+		monedaImagen.setBounds(new Rectangle(((monedas.getHeight()*27)/16), monedas.getHeight()));
+		monedaImagen.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/Aliados/monedas.gif")).getImage().getScaledInstance(monedaImagen.getHeight(), monedaImagen.getHeight(), Image.SCALE_SMOOTH)));
+		monedas.add(monedaImagen);
+		actualizarMonedas(jugador.getMonedas());
 		
 //		Coordenadas de la grilla (229, 40, 848, 490);
 //		Cooredenadas de una celda (241, 45, 75, 75);
