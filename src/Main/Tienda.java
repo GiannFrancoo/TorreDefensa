@@ -16,7 +16,8 @@ public class Tienda {
 	
 	public void comprar(int codigo) {
 //		jugador.disminuirMonedas(arreglo[codigo].getPrecio());
-//		mapaLogico.setEstado("comprando");
+		mapaLogico.setEstado("comprando");
+		jugador.disminuirMonedas(5);
 	}
 	
 	public void vender() {
