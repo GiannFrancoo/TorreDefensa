@@ -2,7 +2,7 @@ package Main;
 
 public class Jugador {
 
-	protected int monedas;
+	private int monedas;
 	
 	public Jugador(int monedas) {
 		this.monedas = monedas;
@@ -10,6 +10,7 @@ public class Jugador {
 	
 	public void agregarMonedas(int n) {
 		monedas+=n;
+		
 	}
 	
 	public void disminuirMonedas(int n) {
