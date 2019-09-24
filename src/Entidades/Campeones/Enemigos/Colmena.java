@@ -22,6 +22,7 @@ public class Colmena extends Enemigo {
 	//cantMonedas --> Enemigo;
 	protected final int monedas = 10;
 	protected ColmenaGrafico colmenaGrafico;
+	protected Position<Entidad> posEnLista;
 	
 	public Colmena(int x, int y) {
 		super(x,y);
@@ -84,16 +85,14 @@ public class Colmena extends Enemigo {
 		return this.monedas;
 	}
 
-	@Override
+	
 	public Position<Entidad> getPosEnLista() {
-		// TODO Auto-generated method stub
-		return null;
+		return this.posEnLista;
 	}
 
-	@Override
+	
 	public void setPosEnLista(Position<Entidad> pos) {
-		// TODO Auto-generated method stub
-		
+		this.posEnLista = pos;
 	}
 
 }
