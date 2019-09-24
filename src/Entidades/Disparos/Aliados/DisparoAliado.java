@@ -19,7 +19,7 @@ public class DisparoAliado extends Disparo{
 		super(x,y);
 		this.fuerza = fuerza;
 		
-		disparoAliadoGrafico = new DisparoAliadoGrafico(this);
+		disparoAliadoGrafico = new DisparoAliadoGrafico(this, x, y);
 	}
 
 	public void mover() {

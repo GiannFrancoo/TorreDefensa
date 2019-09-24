@@ -32,7 +32,7 @@ public class Colmena extends Enemigo {
 		this.rango = 3;
 		this.cantMonedas = 30; // Random puede ser;
 		
-		colmenaGrafico = new ColmenaGrafico(this);
+		colmenaGrafico = new ColmenaGrafico(this, x, y);
 	}
 
 	@Override

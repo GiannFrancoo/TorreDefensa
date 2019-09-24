@@ -7,8 +7,9 @@ public class DisparoAliadoGrafico extends EntidadGrafica {
 
 	protected DisparoAliado disparoAliado;
 	
-	public DisparoAliadoGrafico(Entidad e) {
-		super(e);
+	public DisparoAliadoGrafico(DisparoAliado e, int x, int y) {
+		super(e, x, y);
+		disparoAliado = e;
 		
 		//cargar imagenes;
 		

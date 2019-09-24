@@ -5,8 +5,11 @@ import Entidades.EntidadGrafica;
 
 public class DisparoEnemigoGrafico extends EntidadGrafica{
 
-	public DisparoEnemigoGrafico(Entidad e) {
-		super(e);
+	protected DisparoEnemigo disparoEnemigo;
+	
+	public DisparoEnemigoGrafico(DisparoEnemigo e, int x, int y) {
+		super(e, x, y);
+		disparoEnemigo = e;
 	
 		//Carga las imagenes;
 	}

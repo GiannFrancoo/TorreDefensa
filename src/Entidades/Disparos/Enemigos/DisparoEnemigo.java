@@ -19,7 +19,7 @@ public class DisparoEnemigo extends Disparo {
 		super(x,y);
 		this.fuerza = f;
 		
-		disparoEnemigoGrafico = new DisparoEnemigoGrafico(this);
+		disparoEnemigoGrafico = new DisparoEnemigoGrafico(this, x, y);
 	}
 
 	
