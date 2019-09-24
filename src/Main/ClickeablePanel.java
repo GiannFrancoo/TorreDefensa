@@ -9,10 +9,12 @@ import javax.swing.JPanel;
 public class ClickeablePanel extends JPanel implements MouseListener, MouseMotionListener {
 
 	private MapaLogico mapaLogico;
+	private Tienda tienda;
     
-    public ClickeablePanel(MapaLogico mapaLogico) {
+    public ClickeablePanel(MapaLogico mapaLogico, Tienda tienda) {
     	
     	this.mapaLogico = mapaLogico;
+    	this.tienda = tienda;
     	this.addMouseListener(this);
     	this.addMouseMotionListener(this);
     	
@@ -44,8 +46,7 @@ public class ClickeablePanel extends JPanel implements MouseListener, MouseMotio
 		if (((arg0.getX() > 233) && (arg0.getX() < (233 + 841))) && ((arg0.getY() > 42) && (arg0.getY() < (42 + 487)))) {
 			int x = (((arg0.getX() - 233) * 10)/ 841);
 			int y = (((arg0.getY() - 42) * 6)/ 487);
-//			mapaLogico.accionar(x, y);
-			System.out.println("(" + x + "," + y + ")");
+			mapaLogico.accionar(x, y, tienda.getComprado());
 		}	
 
 	}

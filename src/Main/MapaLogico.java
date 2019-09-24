@@ -5,6 +5,7 @@ import Utilidad.Lista.*;
 import Entidades.Entidad;
 import Entidades.Campeones.Campeon;
 import Entidades.Campeones.Aliados.Aliado;
+import Entidades.Campeones.Aliados.Lazaro;
 import Entidades.Campeones.Enemigos.Enemigo;
 import Entidades.Objetos.Objeto;
 import Entidades.Objetos.Magias.Magia;
@@ -18,9 +19,14 @@ public class MapaLogico {
 	protected Tienda tienda;
 	protected Jugador jugador;
 	private String estadoJuego;
+	private MapaGUI mapaGUI;
 	private Visitante visitante;
 	
-	public MapaLogico() {		
+	public MapaLogico() {
+		this.jugador = new Jugador(20);
+		this.tienda = new Tienda(this, jugador);
+		this.mapaGUI = new MapaGUI(this, tienda, jugador);
+		mapaGUI.setVisible(true);
 		entidades = new DoubleLinkedList<Entidad>();
 		jugador = new Jugador(100);
 		tienda = new Tienda(this, jugador);
@@ -70,13 +76,15 @@ public class MapaLogico {
 		}
 	}
 	
-	public void accionar(String s) {
+	public void accionar(int x, int y, Entidad e) {
 		//vendiendo, jugando, comprando.
-		if(s.equals("comprando")) {
-			
+		if(estadoJuego.equals("comprando")) {
+			Lazaro l = new Lazaro(x, y);
+			mapaGUI.insertar(l.getGrafica().getGrafica());
+			estadoJuego = ("jugando");
 		}
 		
-		if(s.equals("vendiendo")) {
+		if(estadoJuego.equals("vendiendo")) {
 			
 		}
 		

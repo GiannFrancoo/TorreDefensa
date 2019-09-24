@@ -22,7 +22,7 @@ public class Lazaro extends Aliado{
 	public Lazaro(int x, int y){
 		super(x,y); // Campeon;
 		
-		lazaroGrafico = new LazaroGrafico(this);
+		lazaroGrafico = new LazaroGrafico(this, posicion.getKey(), posicion.getValue());
 				
 		this.vida = 100;
 		this.fuerza = 15;

@@ -7,9 +7,11 @@ import Entidades.EntidadGrafica;
 public class ColmenaGrafico extends EntidadGrafica {
 
 	protected Colmena colmena;
+	private int ancho = 75;
+	private int alto = 75;
 	
-	public ColmenaGrafico(Colmena c) {
-		super(c);
+	public ColmenaGrafico(Colmena c, int x, int y) {
+		super(c, x, y);
 		
 		colmena = c;
 		
@@ -21,7 +23,7 @@ public class ColmenaGrafico extends EntidadGrafica {
 		
 		grafica.setIcon(imagenes[0]); // Arranca con la imagen estatica;;
 		
-		grafica.setBounds(colmena.getPos().getKey(), colmena.getPos().getValue(), alto, ancho);
+		grafica.setBounds(xGrafica, yGrafica, alto, ancho);
 	}
 	
 	
