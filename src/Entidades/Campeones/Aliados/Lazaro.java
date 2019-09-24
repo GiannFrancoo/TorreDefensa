@@ -5,7 +5,8 @@ import Entidades.Disparos.Disparo;
 import Entidades.Disparos.Aliados.DisparoAliado;
 import Entidades.Disparos.Enemigos.DisparoEnemigo;
 import Entidades.Objetos.Magias.Magia;
-import Main.Visitante;
+import Main.MapaLogico;
+import Main.VisitanteDisparo;
 import Utilidad.Lista.Position;
 
 public class Lazaro extends Aliado{
@@ -19,8 +20,8 @@ public class Lazaro extends Aliado{
 	protected final int monedas = 100;
 	protected Position<Entidad> posEnLista;
 	
-	public Lazaro(int x, int y){
-		super(x,y); // Campeon;
+	public Lazaro(int x, int y, MapaLogico m){
+		super(x,y,m); // Campeon;
 		
 		lazaroGrafico = new LazaroGrafico(this, posicion.getKey(), posicion.getValue());
 				
@@ -36,7 +37,7 @@ public class Lazaro extends Aliado{
 		//Si hay magia se afecta + fuerza;
 		
 		int n = 0;
-		DisparoAliado d = new DisparoAliado(posicion.getKey(), posicion.getValue(),n);
+		DisparoAliado d = new DisparoAliado(posicion.getKey(), posicion.getValue(), n, mapaLogico);
 		
 		
 		lazaroGrafico.disparar();
@@ -78,7 +79,7 @@ public class Lazaro extends Aliado{
 		
 	}
 	
-	public void visitado(Visitante v) {
+	public void visitado(VisitanteDisparo v) {
 		v.visita(this);
 	}
 

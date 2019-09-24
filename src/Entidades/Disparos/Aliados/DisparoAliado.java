@@ -4,9 +4,8 @@ import Entidades.Entidad;
 import Entidades.Campeones.Aliados.Aliado;
 import Entidades.Campeones.Enemigos.Enemigo;
 import Entidades.Disparos.Disparo;
-import Entidades.Objetos.Objeto;
-import Entidades.Objetos.ObjetosVida.ObjetoVida;
-import Main.Visitante;
+import Main.MapaLogico;
+import Main.VisitanteDisparo;
 import Utilidad.Lista.Position;
 
 public class DisparoAliado extends Disparo{
@@ -15,16 +14,19 @@ public class DisparoAliado extends Disparo{
 	protected DisparoAliadoGrafico disparoAliadoGrafico;
 	protected Position<Entidad> posEnLista;
 	
-	public DisparoAliado(int x, int y, int fuerza) {
-		super(x,y);
+	public DisparoAliado(int x, int y, int fuerza, MapaLogico m) {
+		super(x, y, m);
 		this.fuerza = fuerza;
 		
 		disparoAliadoGrafico = new DisparoAliadoGrafico(this, x, y);
 	}
 
 	public void mover() {
-		// logico
+		// Ve si choco con algo!
+		
 		disparoAliadoGrafico.mover();
+		
+		
 	}
 
 	
@@ -38,14 +40,9 @@ public class DisparoAliado extends Disparo{
 	public void disparoEnemigo(Enemigo e) {
 		//No se hace nada aca.
 	}
-
 	
-	public void disparoObjeto(ObjetoVida o) {
-		//No se hace nada aca.
-	}
-
 	
-	public void visitado(Visitante v) {
+	public void visitado(VisitanteDisparo v) {
 		//ver que hacer aca.
 	}
 

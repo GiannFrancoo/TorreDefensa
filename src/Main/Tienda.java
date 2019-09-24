@@ -2,10 +2,11 @@ package Main;
 
 import Entidades.Entidad;
 import Entidades.Campeones.Aliados.Lazaro;
+import Utilidad.Pair;
 
 public class Tienda {
 	
-	private Entidad [] arreglo;
+	private Pair<Entidad,Integer> [] arreglo;
 	private Jugador jugador;
 	private MapaLogico mapaLogico;
 	private Entidad comprado;
@@ -14,12 +15,28 @@ public class Tienda {
 	public Tienda(MapaLogico mapaLogico, Jugador jugador) {
 		this.mapaLogico = mapaLogico;
 		this.jugador = jugador;
+		
+		arreglo = (Pair<Entidad, Integer>[])new Pair[10];
+		//Creacion de 10 entidades; (Puede ser por archivo);
 	}
 	
 	public void comprar(int codigo) {
-//		jugador.disminuirMonedas(arreglo[codigo].getMonedas());
+		
+		//Se chequea si jugador tiene la moneda para comprarlo;
+		
+		
 		mapaLogico.setEstado("comprando");
-		jugador.disminuirMonedas(5);
+
+		
+		//arreglo[codigo]; //Hago un copy de eso; [Prototype]
+		
+		
+		jugador.disminuirMonedas(100);
+
+		//entidad = a la copia de eso;
+		
+		
+		
 		
 	}
 	

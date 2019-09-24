@@ -5,6 +5,7 @@ import Entidades.Campeones.Aliados.Aliado;
 import Entidades.Campeones.Enemigos.Enemigo;
 import Entidades.Objetos.Objeto;
 import Entidades.Objetos.ObjetosVida.ObjetoVida;
+import Main.MapaLogico;
 
 public abstract class Disparo extends Entidad{
 	//fila 	  --> Entidad;
@@ -12,8 +13,9 @@ public abstract class Disparo extends Entidad{
 	
 	protected int fuerza;
 
-	public Disparo(int x, int y) {
-		super(x, y);
+
+	public Disparo(int x, int y, MapaLogico m) {
+		super(x, y, m);
 	}
 
 	public int getFuerza() {
@@ -22,6 +24,5 @@ public abstract class Disparo extends Entidad{
 	
 	public abstract void disparoAliado(Aliado a);
 	public abstract void disparoEnemigo(Enemigo e);
-	public abstract void disparoObjeto(ObjetoVida o);
 	
 }

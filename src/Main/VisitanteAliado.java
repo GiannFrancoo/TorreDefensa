@@ -3,26 +3,27 @@ package Main;
 import Entidades.Campeones.Aliados.Aliado;
 import Entidades.Campeones.Enemigos.Enemigo;
 import Entidades.Objetos.Objeto;
-import Entidades.Objetos.ObjetosVida.ObjetoVida;
 
-public class VisitarEnemigo implements VisitanteDisparo{
+public class VisitanteAliado implements VisitanteDisparo{
 
-	private MapaLogico mapaLogico;
-	
-	
+	@Override
 	public void visita(Enemigo e) {
-		//Aca no hace nada.
+		// TODO Auto-generated method stub
+		
 	}
 
-	
+	@Override
 	public void visita(Aliado a) {
-		mapaLogico.eliminarPosta(a.getPosEnLista());
+		// TODO Auto-generated method stub
+		
 	}
 
-	
+	@Override
 	public void visita(Objeto o) {
-		//Aca no hace nada.
+		// TODO Auto-generated method stub
+		
 	}
-
 	
+	
+
 }

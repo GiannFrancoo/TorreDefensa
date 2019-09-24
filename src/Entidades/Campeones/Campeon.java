@@ -8,6 +8,7 @@ import Entidades.Disparos.Disparo;
 import Entidades.Disparos.Aliados.DisparoAliado;
 import Entidades.Disparos.Enemigos.DisparoEnemigo;
 import Entidades.Objetos.Magias.Magia;
+import Main.MapaLogico;
 
 public abstract class Campeon extends Entidad{
 	//fila 	  --> Entidad;
@@ -20,8 +21,8 @@ public abstract class Campeon extends Entidad{
 	protected int rango;
 	protected List<Magia> magias;
 	
-	public Campeon(int x,int y) {
-		super(x,y); // Entidad;
+	public Campeon(int x,int y, MapaLogico m) {
+		super(x, y, m); // Entidad;
 		magias = new LinkedList<Magia>();
 	}
 	

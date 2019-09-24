@@ -14,12 +14,13 @@ public class ColmenaGrafico extends EntidadGrafica {
 		super(c, x, y);
 		
 		colmena = c;
-		
+
 		this.imagenes[0] = new ImageIcon(this.getClass().getResource("/BattleCity/up.png")); // Estatico;
 		this.imagenes[1] = new ImageIcon(this.getClass().getResource("/BattleCity/down.png")); // Disparando;
 		this.imagenes[2] = new ImageIcon(this.getClass().getResource("/BattleCity/left.png")); // Sufriendo;
 		this.imagenes[3] = new ImageIcon(this.getClass().getResource("/BattleCity/right.png")); // Corriendo;
 		
+		this.imagenes[9] = new ImageIcon(this.getClass().getResource("/BattleCity/up.png")); // Tienda;
 		
 		grafica.setIcon(imagenes[0]); // Arranca con la imagen estatica;;
 		
