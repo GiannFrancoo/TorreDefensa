@@ -1,7 +1,6 @@
 package Entidades;
 
 
-import Entidades.Disparos.Disparo;
 import Main.MapaLogico;
 import Main.VisitanteDisparo;
 import Utilidad.Pair;
