@@ -1,5 +1,7 @@
 package Entidades.Campeones.Aliados;
 
+import java.awt.Rectangle;
+
 import javax.swing.ImageIcon;
 
 import Entidades.EntidadGrafica;
@@ -10,8 +12,8 @@ public class LazaroGrafico extends EntidadGrafica{
 	private int ancho = 75;
 	private int alto = 75;
 
-	public LazaroGrafico(Lazaro l, int x, int y) {
-		super(l, x, y);
+	public LazaroGrafico(Lazaro l) {
+		super(l);
 		
 		lazaro = l;
 		
@@ -24,7 +26,7 @@ public class LazaroGrafico extends EntidadGrafica{
 		
 		grafica.setIcon(imagenes[0]); // Arranca con la imagen estatica;;
 		
-		grafica.setBounds(xGrafica, yGrafica, ancho, alto);
+		grafica.setBounds(new Rectangle(alto,ancho));
 		
 	}
 

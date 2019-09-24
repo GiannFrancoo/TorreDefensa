@@ -49,7 +49,16 @@ public class ColmenaGrafico extends EntidadGrafica {
 		grafica.setIcon(imagenes[0]);
 	}
 	
-	public void correr() {
+	public void mover() {
+		int xGraficaAnterior = xGrafica;
+		this.convertirCoordenadas(colmena.getPos());
+		
+		while(xGraficaAnterior != xGrafica) {
+			Thread.sleep(arg0);
+			xGraficaAnterior += 5;
+		}
+		
+		
 		grafica.setIcon(imagenes[3]);
 		
 		try {

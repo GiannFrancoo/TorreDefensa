@@ -51,9 +51,15 @@ public class Tienda {
 		return comprado;
 	}
 	
-	public JPanel getGrafica() {
-		tiendaGrafica.getGrafica();
+	public void setComprado(Entidad e) {
+		comprado = e;
 	}
+	
+	public TiendaGrafica getGrafica() {
+		return tiendaGrafica;
+	}
+	
+	
 	
 	//public Tienda() {}
 	//public Entidad comprar(int n);
