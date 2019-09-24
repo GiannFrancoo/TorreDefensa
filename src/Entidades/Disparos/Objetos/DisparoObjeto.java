@@ -11,6 +11,8 @@ import Utilidad.Lista.Position;
 
 public class DisparoObjeto extends Disparo{
 
+	protected Position<Entidad> posEnLista;
+	
 	public DisparoObjeto(int x, int y) {
 		super(x, y);
 	}
@@ -34,29 +36,22 @@ public class DisparoObjeto extends Disparo{
 	}
 
 	public void mover() {
-		
-		
+	
 	}
 
-
-	@Override
+	
 	public void visitado(Visitante v) {
-		// TODO Auto-generated method stub
-		
+		//ver que hacer aca.
 	}
 
-
-	@Override
 	public Position<Entidad> getPosEnLista() {
-		// TODO Auto-generated method stub
-		return null;
+		return this.posEnLista;
 	}
 
 
-	@Override
+	
 	public void setPosEnLista(Position<Entidad> pos) {
-		// TODO Auto-generated method stub
-		
+		this.posEnLista = pos;
 	}
 
 

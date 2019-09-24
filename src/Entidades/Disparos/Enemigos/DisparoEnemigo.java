@@ -13,6 +13,7 @@ public class DisparoEnemigo extends Disparo {
 	//Fuerza de disparo;
 	
 	protected DisparoEnemigoGrafico disparoEnemigoGrafico;
+	protected Position<Entidad> posEnLista;
 	
 	public DisparoEnemigo(int x, int y, int f) {
 		super(x,y);
@@ -36,35 +37,26 @@ public class DisparoEnemigo extends Disparo {
 
 	
 	public void disparoAliado(Aliado a) {
-		
-		
+		//Aca no hace nada.	
 	}
 
 	
 	public void disparoObjeto(ObjetoVida o) {
-		
-		
+		//Aca no hace nada.
 	}
 
-
-	@Override
 	public void visitado(Visitante v) {
-		// TODO Auto-generated method stub
-		
+		// ver que hacer aca.
 	}
 
 
-	@Override
+	
 	public Position<Entidad> getPosEnLista() {
-		// TODO Auto-generated method stub
-		return null;
+		return this.posEnLista;
 	}
 
-
-	@Override
 	public void setPosEnLista(Position<Entidad> pos) {
-		// TODO Auto-generated method stub
-		
+		this.posEnLista = pos;
 	}
 
 }
