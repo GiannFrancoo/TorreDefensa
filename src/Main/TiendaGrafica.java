@@ -61,9 +61,9 @@ public class TiendaGrafica extends JPanel {
 			lblObj1.addActionListener(new ActionListener() {
 	            @Override
 	            public void actionPerformed(ActionEvent e) {
-	            	
+	            	mapaLogico.setEstado("comprando");
 	            	Lazaro l = new Lazaro();
-	            	tienda.setComprado(l);      	
+	            	tienda.setComprado(l);
 	            }
 	        });
 			
