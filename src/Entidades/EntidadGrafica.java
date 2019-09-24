@@ -3,6 +3,8 @@ package Entidades;
 import javax.swing.Icon;
 import javax.swing.JLabel;
 
+import Utilidad.Pair;
+
 public abstract class EntidadGrafica {
 	
 	//Atributos grafica;
@@ -13,16 +15,24 @@ public abstract class EntidadGrafica {
 	
 	protected Entidad entidad;
 	
-	public EntidadGrafica(Entidad e, int x, int y) {
+	public EntidadGrafica(Entidad e) {
 		grafica = new JLabel();
 		imagenes = new Icon[10];
 		entidad = e;
-		xGrafica = ((x + 233) * 10) / 841;
-		yGrafica = ((y + 42) * 6) / 487;
 	}
 	
 	public JLabel getGrafica(){
 		return grafica;
+	}
+	
+	public void setPos(Pair<Integer,Integer> pos) {
+		this.convertirCoordenadas(pos);
+		grafica.setLocation(xGrafica, yGrafica);
+	}
+	
+	public void convertirCoordenadas(Pair<Integer,Integer> pos) {
+		xGrafica = ((pos.getKey() + 233) * 10) / 841;
+		yGrafica = ((pos.getValue() + 42) * 6) / 487;
 	}
 	
 	/*

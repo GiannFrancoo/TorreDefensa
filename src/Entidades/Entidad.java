@@ -13,13 +13,13 @@ public abstract class Entidad {
 	protected EntidadGrafica entidadGrafica;
 	protected MapaLogico mapaLogico;
 	
-	public Entidad(int x, int y, MapaLogico m) {
-		posicion = new Pair<Integer,Integer>(x,y);
+	public Entidad(MapaLogico m) {
 		mapaLogico = m;
 	}
 	
 	public void setPos(Pair<Integer,Integer> pos){
 			this.posicion = pos;
+			entidadGrafica.setPos(pos);
 	}
 	
 	public Pair<Integer,Integer> getPos(){

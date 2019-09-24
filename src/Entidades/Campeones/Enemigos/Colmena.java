@@ -63,7 +63,8 @@ public class Colmena extends Enemigo {
 	public void restarVida(DisparoEnemigo e) {}
 
 	public void mover() {
-		colmenaGrafico.correr();
+		//Si se puede mover, cambio xy logicos y despues graficas;
+		colmenaGrafico.mover();
 	}
 
 	public void restarVida(int d) {
