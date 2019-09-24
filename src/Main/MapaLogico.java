@@ -76,12 +76,21 @@ public class MapaLogico {
 		}
 	}
 	
-	public void accionar(int x, int y, Entidad e) {
+	public void accionar(int x, int y) {
 		//vendiendo, jugando, comprando.
 		if(estadoJuego.equals("comprando")) {
-			Lazaro l = new Lazaro(x, y, this);
-			mapaGUI.insertar(l.getGrafica().getGrafica());
+			
+			Entidad e = tienda.getComprado();
+			e.setPos(new Pair<Integer, Integer>(x, y));
+			
+			this.entidades.addLast(e);
+			try {
+				e.setPosEnLista(this.entidades.last());
+			} catch (EmptyListException e1) {
+				e1.printStackTrace();
+			}
 			estadoJuego = ("jugando");
+		
 		}
 		
 		if(estadoJuego.equals("vendiendo")) {
