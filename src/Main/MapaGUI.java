@@ -46,7 +46,7 @@ public class MapaGUI extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(1130, 710);
 		this.setResizable(false);
-		contentPane = new ClickeablePanel(mapaLogico);
+		contentPane = new ClickeablePanel(mapaLogico, tienda);
 		contentPane.setSize(this.getSize());
 		contentPane.setOpaque(false);
 		contentPane.setLayout(null);
@@ -142,7 +142,7 @@ public class MapaGUI extends JFrame {
 	}
 	
 	public void insertar(JLabel lbl) {
-		panel.add(lbl);
+		panel.add(lbl, 10, 2);
 	}
 	
 	public void remover(JLabel lbl) {

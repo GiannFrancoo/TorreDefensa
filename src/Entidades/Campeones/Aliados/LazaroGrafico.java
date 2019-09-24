@@ -7,19 +7,21 @@ import Entidades.EntidadGrafica;
 public class LazaroGrafico extends EntidadGrafica{
 	
 	protected Lazaro lazaro;
+	private int ancho = 75;
+	private int alto = 75;
 
-	public LazaroGrafico(Lazaro l) {
-		super(l);
+	public LazaroGrafico(Lazaro l, int x, int y) {
+		super(l, x, y);
 		
 		lazaro = l;
 		
-		this.imagenes[0] = new ImageIcon(getClass().getClassLoader().getResource("texturas/Aliados/lazarus_estatico.png")); // Estatico;
-		this.imagenes[1] = new ImageIcon(getClass().getClassLoader().getResource("texturas/Aliados/lazarus_disparando.png")); // Disparando;
-		this.imagenes[2] = new ImageIcon(getClass().getClassLoader().getResource("texturas/Aliados/lazarus_sufriendo.png")); // Sufriendo;
+		this.imagenes[0] = new ImageIcon(getClass().getClassLoader().getResource("texturas/Aliados/Lazaro/lazaro_estatico.png")); // Estatico;
+		this.imagenes[1] = new ImageIcon(getClass().getClassLoader().getResource("texturas/Aliados/Lazaro/lazaro_disparando.png")); // Disparando;
+		this.imagenes[2] = new ImageIcon(getClass().getClassLoader().getResource("texturas/Aliados/Lazaro/lazaro_sufriendo.png")); // Sufriendo;
 		
 		grafica.setIcon(imagenes[0]); // Arranca con la imagen estatica;;
 		
-		grafica.setBounds(lazaro.getPos().getKey(), lazaro.getPos().getValue(), alto, ancho);
+		grafica.setBounds(xGrafica, yGrafica, ancho, alto);
 		
 	}
 

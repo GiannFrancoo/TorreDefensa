@@ -8,19 +8,20 @@ public abstract class EntidadGrafica {
 	//Atributos grafica;
 	protected JLabel grafica; // Estado actual de la imagen
 	protected Icon imagenes[]; // Conjunto de imagenes;
-	protected final int alto = 40; // Tamaño;
-	protected final int ancho = 40; // Tamaño;
+	protected int xGrafica;
+	protected int yGrafica;
 	
 	protected Entidad entidad;
 	
-	public EntidadGrafica(Entidad e) {
+	public EntidadGrafica(Entidad e, int x, int y) {
 		grafica = new JLabel();
 		imagenes = new Icon[10];
 		entidad = e;
+		xGrafica = ((x + 233) * 10) / 841;
+		yGrafica = ((y + 42) * 6) / 487;
 	}
 	
 	public JLabel getGrafica(){
-		grafica.setBounds(entidad.getPos().getKey(), entidad.getPos().getValue(), alto, ancho);
 		return grafica;
 	}
 	

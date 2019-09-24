@@ -9,12 +9,12 @@ public class Jugador {
 	}
 	
 	public void agregarMonedas(int n) {
-		monedas+=n;
+		monedas += n;
 		
 	}
 	
 	public void disminuirMonedas(int n) {
-		monedas-=n;
+		monedas -= n;
 	}
 	
 	public int getMonedas(){
