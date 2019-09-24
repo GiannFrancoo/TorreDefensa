@@ -5,7 +5,8 @@ import Entidades.Disparos.Disparo;
 import Entidades.Disparos.Aliados.DisparoAliado;
 import Entidades.Disparos.Enemigos.DisparoEnemigo;
 import Entidades.Objetos.Magias.Magia;
-import Main.Visitante;
+import Main.MapaLogico;
+import Main.VisitanteDisparo;
 import Utilidad.Lista.Position;
 
 public class Colmena extends Enemigo {
@@ -24,8 +25,8 @@ public class Colmena extends Enemigo {
 	protected ColmenaGrafico colmenaGrafico;
 	protected Position<Entidad> posEnLista;
 	
-	public Colmena(int x, int y) {
-		super(x,y);
+	public Colmena(int x, int y, MapaLogico m) {
+		super(x, y, m);
 		this.velocidad = 4;
 		this.vida = 100;
 		this.fuerza = 100;
@@ -41,7 +42,7 @@ public class Colmena extends Enemigo {
 		//Si hay magia se afecta + fuerza;
 		int n = 0;
 		
-		DisparoEnemigo d = new DisparoEnemigo(posicion.getKey(), posicion.getValue(), n);
+		DisparoEnemigo d = new DisparoEnemigo(posicion.getKey(), posicion.getValue(), n, mapaLogico);
 		
 		
 		//Grafica
@@ -76,7 +77,7 @@ public class Colmena extends Enemigo {
 	}
 
 	
-	public void visitado(Visitante v) {
+	public void visitado(VisitanteDisparo v) {
 		v.visita(this);
 	}
 

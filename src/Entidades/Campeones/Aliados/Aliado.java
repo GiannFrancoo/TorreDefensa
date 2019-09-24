@@ -2,6 +2,7 @@ package Entidades.Campeones.Aliados;
 
 import Entidades.Campeones.Campeon;
 import Entidades.Disparos.Aliados.DisparoAliado;
+import Main.MapaLogico;
 
 public abstract class Aliado extends Campeon{
 	
@@ -12,8 +13,8 @@ public abstract class Aliado extends Campeon{
 	//rango   --> Campeon;
 	//magias  --> Campeon;
 	
-	public Aliado(int x, int y) {
-		super(x,y);
+	public Aliado(int x, int y, MapaLogico m) {
+		super(x, y, m);
 	}
 	
 	public abstract DisparoAliado disparar();

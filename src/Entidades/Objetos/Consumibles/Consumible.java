@@ -1,6 +1,7 @@
 package Entidades.Objetos.Consumibles;
 
 import Entidades.Objetos.Objeto;
+import Main.MapaLogico;
 
 public abstract class Consumible extends Objeto{
 	
@@ -9,8 +10,8 @@ public abstract class Consumible extends Objeto{
 
 	protected int fuerza;
 	
-	public Consumible(int x, int y) {
-		super(x,y);
+	public Consumible(int x, int y, MapaLogico m) {
+		super(x, y, m);
 	}
 
 	

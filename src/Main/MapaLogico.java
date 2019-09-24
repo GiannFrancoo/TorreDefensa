@@ -20,7 +20,7 @@ public class MapaLogico {
 	protected Jugador jugador;
 	private String estadoJuego;
 	private MapaGUI mapaGUI;
-	private Visitante visitante;
+	private VisitanteDisparo visitante;
 	
 	public MapaLogico() {
 		this.jugador = new Jugador(20);
@@ -79,7 +79,7 @@ public class MapaLogico {
 	public void accionar(int x, int y, Entidad e) {
 		//vendiendo, jugando, comprando.
 		if(estadoJuego.equals("comprando")) {
-			Lazaro l = new Lazaro(x, y);
+			Lazaro l = new Lazaro(x, y, this);
 			mapaGUI.insertar(l.getGrafica().getGrafica());
 			estadoJuego = ("jugando");
 		}

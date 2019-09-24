@@ -6,7 +6,8 @@ import Entidades.Campeones.Enemigos.Enemigo;
 import Entidades.Disparos.Disparo;
 import Entidades.Objetos.Objeto;
 import Entidades.Objetos.ObjetosVida.ObjetoVida;
-import Main.Visitante;
+import Main.MapaLogico;
+import Main.VisitanteDisparo;
 import Utilidad.Lista.Position;
 
 public class DisparoEnemigo extends Disparo {
@@ -15,8 +16,8 @@ public class DisparoEnemigo extends Disparo {
 	protected DisparoEnemigoGrafico disparoEnemigoGrafico;
 	protected Position<Entidad> posEnLista;
 	
-	public DisparoEnemigo(int x, int y, int f) {
-		super(x,y);
+	public DisparoEnemigo(int x, int y, int f, MapaLogico m) {
+		super(x, y, m);
 		this.fuerza = f;
 		
 		disparoEnemigoGrafico = new DisparoEnemigoGrafico(this, x, y);
@@ -45,7 +46,7 @@ public class DisparoEnemigo extends Disparo {
 		//Aca no hace nada.
 	}
 
-	public void visitado(Visitante v) {
+	public void visitado(VisitanteDisparo v) {
 		// ver que hacer aca.
 	}
 

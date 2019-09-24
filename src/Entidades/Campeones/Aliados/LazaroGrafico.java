@@ -19,6 +19,9 @@ public class LazaroGrafico extends EntidadGrafica{
 		this.imagenes[1] = new ImageIcon(getClass().getClassLoader().getResource("texturas/Aliados/Lazaro/lazaro_disparando.png")); // Disparando;
 		this.imagenes[2] = new ImageIcon(getClass().getClassLoader().getResource("texturas/Aliados/Lazaro/lazaro_sufriendo.png")); // Sufriendo;
 		
+		this.imagenes[9] = new ImageIcon(this.getClass().getResource("/BattleCity/up.png")); // Tienda;
+		
+		
 		grafica.setIcon(imagenes[0]); // Arranca con la imagen estatica;;
 		
 		grafica.setBounds(xGrafica, yGrafica, ancho, alto);

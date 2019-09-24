@@ -3,13 +3,14 @@ package Entidades.Objetos.Magias.MagiaDefensas;
 import Entidades.Entidad;
 import Entidades.Disparos.Disparo;
 import Entidades.Objetos.Magias.Magia;
-import Main.Visitante;
+import Main.MapaLogico;
+import Main.VisitanteDisparo;
 import Utilidad.Lista.Position;
 
 public class MagiaDefensa extends Magia {
 
-	public MagiaDefensa(int x, int y) {
-		super(x, y);
+	public MagiaDefensa(int x, int y, MapaLogico m) {
+		super(x, y, m);
 	}
 
 	@Override
@@ -19,7 +20,7 @@ public class MagiaDefensa extends Magia {
 	}
 
 	@Override
-	public void visitado(Visitante v) {
+	public void visitado(VisitanteDisparo v) {
 		// TODO Auto-generated method stub
 		
 	}

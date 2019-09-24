@@ -2,6 +2,7 @@ package Entidades.Campeones.Enemigos;
 
 import Entidades.Campeones.Campeon;
 import Entidades.Disparos.Enemigos.DisparoEnemigo;
+import Main.MapaLogico;
 import Utilidad.Pair;
 
 public abstract class Enemigo extends Campeon{
@@ -16,8 +17,8 @@ public abstract class Enemigo extends Campeon{
 	protected int velocidad;
 	protected int cantMonedas;
 	
-	public Enemigo(int x, int y) {
-		super(x,y);
+	public Enemigo(int x, int y, MapaLogico m) {
+		super(x, y, m);
 	}
 
 	public abstract void mover();
