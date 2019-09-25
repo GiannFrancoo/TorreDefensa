@@ -6,6 +6,7 @@ import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -32,8 +33,24 @@ public class TiendaGrafica extends JPanel {
 		JLabel lblMonedas = new JLabel();
 		lblMonedas.setBounds(1000, 10, 51, 29);
 		lblMonedas.setOpaque(false);
-		lblMonedas.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/aliados/coin1.png")).getImage().getScaledInstance(lblMonedas.getWidth(), lblMonedas.getHeight(), Image.SCALE_SMOOTH)));
+		//lblMonedas.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/aliados/moneda.png")).getImage().getScaledInstance(lblMonedas.getWidth(), lblMonedas.getHeight(), Image.SCALE_SMOOTH)));
+		
+		
+		/* Codigo nuevo */
+		
+		//Creo el image icon NORMAL
+		ImageIcon monedasGif = new ImageIcon(this.getClass().getClassLoader().getResource("texturas/aliados/monedas.gif")); 
+		
+		//Le seteo la imagen, la misma pero re escalada con el BOTON; (NO funca con el SCALE_SMOOTH)
+		monedasGif.setImage(monedasGif.getImage().getScaledInstance(lblMonedas.getWidth(), lblMonedas.getHeight(), Image.SCALE_DEFAULT));
+		
+		//Le seteo en el label;
+		lblMonedas.setIcon(monedasGif);
+	
+		//Lo termino agregando al panel;
 		this.add(lblMonedas);
+		
+		
 		
 		lblCantMonedas = new JLabel();
 		lblCantMonedas.setBounds(1053, 10, 60, 29);
