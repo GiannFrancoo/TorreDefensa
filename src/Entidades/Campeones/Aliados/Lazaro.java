@@ -1,5 +1,7 @@
 package Entidades.Campeones.Aliados;
 
+import javax.swing.JLabel;
+
 import Entidades.Entidad;
 import Entidades.Disparos.Disparo;
 import Entidades.Disparos.Aliados.DisparoAliado;
@@ -10,25 +12,24 @@ import Main.VisitanteDisparo;
 import Utilidad.Lista.Position;
 
 public class Lazaro extends Aliado{
-	//pos	  --> Entidad
-	//vida 	  --> Campeon;
-	//fuerza  --> Campeon;
-	//rango   --> Campeon;
-	//magias  --> Campeon;
 	
-	protected LazaroGrafico lazaroGrafico;
-	protected final int monedas = 100;
 	protected Position<Entidad> posEnLista;
+	protected LazaroGrafico lazaroGrafico;
 	
-	public Lazaro(int x, int y, MapaLogico m){
-		super(x,y,m); // Campeon;
-		
-		lazaroGrafico = new LazaroGrafico(this, posicion.getKey(), posicion.getValue());
-				
+	private int ancho = 75;
+	private int alto = 75;
+	
+	public Lazaro(MapaLogico m){
+		super(m);
+						
 		this.vida = 100;
 		this.fuerza = 15;
 		this.rango = 5;		
+		this.monedas = 100;
+		
 
+		LazaroGrafico lazaroGrafico= new LazaroGrafico(this, ancho, alto);
+		entidadGrafica = lazaroGrafico;
 	}
 
 	@Override
@@ -37,7 +38,7 @@ public class Lazaro extends Aliado{
 		//Si hay magia se afecta + fuerza;
 		
 		int n = 0;
-		DisparoAliado d = new DisparoAliado(posicion.getKey(), posicion.getValue(), n, mapaLogico);
+		DisparoAliado d = new DisparoAliado(x, y, n, mapaLogico);
 		
 		
 		lazaroGrafico.disparar();
@@ -62,11 +63,6 @@ public class Lazaro extends Aliado{
 	public void mover() {
 		//Tick de lazaro;
 	}
-	
-	public LazaroGrafico getGrafica() {
-		return lazaroGrafico;
-	}
-
 	
 	public void recibir(Disparo d) {
 		d.disparoAliado(this);		

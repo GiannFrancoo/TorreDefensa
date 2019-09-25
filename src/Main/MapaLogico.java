@@ -1,13 +1,10 @@
 package Main;
-import java.util.List;
 
 import Utilidad.Lista.*;
 import Entidades.Entidad;
 import Entidades.Campeones.Campeon;
 import Entidades.Campeones.Aliados.Aliado;
-import Entidades.Campeones.Aliados.Lazaro;
 import Entidades.Campeones.Enemigos.Enemigo;
-import Entidades.Objetos.Objeto;
 import Entidades.Objetos.Magias.Magia;
 
 import Utilidad.Pair;
@@ -23,13 +20,11 @@ public class MapaLogico {
 	private VisitanteDisparo visitante;
 	
 	public MapaLogico() {
-		this.jugador = new Jugador(20);
+		this.jugador = new Jugador(100);
 		this.tienda = new Tienda(this, jugador);
 		this.mapaGUI = new MapaGUI(this, tienda, jugador);
 		mapaGUI.setVisible(true);
 		entidades = new DoubleLinkedList<Entidad>();
-		jugador = new Jugador(100);
-		tienda = new Tienda(this, jugador);
 	}
 	
 	
@@ -61,7 +56,7 @@ public class MapaLogico {
 	
 	public void eliminar(Pair<Integer,Integer> pos) {
 		for(Entidad e: this.entidades) {
-			if(pos.getKey().equals(e.getPos().getKey()) && pos.getValue().equals(e.getPos().getValue())) {
+			if(pos.getKey().equals(e.getX()) && pos.getValue().equals(e.getY())) {
 				e.visitado(visitante);	
 			}
 		}
@@ -80,15 +75,20 @@ public class MapaLogico {
 		//vendiendo, jugando, comprando.
 		if(estadoJuego.equals("comprando")) {
 			
+	
 			Entidad e = tienda.getComprado();
-			e.setPos(new Pair<Integer, Integer>(x, y));
+			e.setX(((x * 841) / 10 ) + 233);
+			e.setY(((y * 487) / 6) + 42 );
+
+			mapaGUI.insertar(e.getGrafica());
 			
 			this.entidades.addLast(e);
 			try {
 				e.setPosEnLista(this.entidades.last());
-			} catch (EmptyListException e1) {
-				e1.printStackTrace();
-			}
+			} catch (EmptyListException e1) { System.out.println("Se partio el hilo");}
+			
+			
+			
 			estadoJuego = ("jugando");
 		
 		}
@@ -112,6 +112,12 @@ public class MapaLogico {
 	//AplicarMagia: Metodo que aplica la magia a el campeon pasado por parametro.
 	public void aplicarMagia(Campeon c, Magia m) {
 		c.agregarMagia(m);
+	}
+	
+	
+	public boolean colisione(int x, int y) {
+		//Recorro todas las entidades, y voy viendo si X >= x entonces ahi colisione
+		return false;
 	}
 	
 }

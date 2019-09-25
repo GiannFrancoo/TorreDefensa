@@ -15,10 +15,12 @@ public class DisparoAliado extends Disparo{
 	protected Position<Entidad> posEnLista;
 	
 	public DisparoAliado(int x, int y, int fuerza, MapaLogico m) {
-		super(x, y, m);
+		super(m);
 		this.fuerza = fuerza;
+		this.x = x;
+		this.y = y;
 		
-		disparoAliadoGrafico = new DisparoAliadoGrafico(this, x, y);
+		disparoAliadoGrafico = new DisparoAliadoGrafico(this);
 	}
 
 	public void mover() {

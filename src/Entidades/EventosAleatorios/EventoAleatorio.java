@@ -10,8 +10,8 @@ public abstract class EventoAleatorio extends Entidad {
 	protected int fuerza;
 	protected Position<Entidad> posEnLista;
 	
-	public EventoAleatorio(int x, int y, MapaLogico m) {
-		super(x, y, m);
+	public EventoAleatorio(MapaLogico m) {
+		super(m);
 	}
 	
 	

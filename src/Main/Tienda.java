@@ -19,7 +19,7 @@ public class Tienda {
 		this.mapaLogico = mapaLogico;
 		this.jugador = jugador;
 		
-		tiendaGrafica = new TiendaGrafica();
+		tiendaGrafica = new TiendaGrafica(mapaLogico, this);
 		tiendaGrafica.actualizarMonedas(jugador.getMonedas());
 		
 		arreglo = (Pair<Entidad, Integer>[])new Pair[10];
@@ -47,12 +47,13 @@ public class Tienda {
 		
 	}
 	
+	
 	public Entidad getComprado() {
-		return comprado;
+		return this.comprado;
 	}
 	
 	public void setComprado(Entidad e) {
-		comprado = e;
+		this.comprado = e;
 	}
 	
 	public TiendaGrafica getGrafica() {

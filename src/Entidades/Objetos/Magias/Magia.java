@@ -6,7 +6,7 @@ import Main.MapaLogico;
 public abstract class Magia extends Objeto{
 
 	public Magia(int x, int y, MapaLogico m) {
-		super(x, y, m);
+		super(m);
 	}
 
 }

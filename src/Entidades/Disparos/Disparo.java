@@ -14,8 +14,8 @@ public abstract class Disparo extends Entidad{
 	protected int fuerza;
 
 
-	public Disparo(int x, int y, MapaLogico m) {
-		super(x, y, m);
+	public Disparo(MapaLogico m) {
+		super(m);
 	}
 
 	public int getFuerza() {
