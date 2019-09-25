@@ -12,6 +12,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import Entidades.Campeones.Aliados.Lazaro;
+import Entidades.Campeones.Enemigos.Colmena;
 
 public class TiendaGrafica extends JPanel {
 	
@@ -31,13 +32,15 @@ public class TiendaGrafica extends JPanel {
 		JLabel lblMonedas = new JLabel();
 		lblMonedas.setBounds(1000, 10, 51, 29);
 		lblMonedas.setOpaque(false);
-		lblMonedas.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/Aliados/coin1.png")).getImage().getScaledInstance(lblMonedas.getWidth(), lblMonedas.getHeight(), Image.SCALE_SMOOTH)));
+		lblMonedas.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/aliados/coin1.png")).getImage().getScaledInstance(lblMonedas.getWidth(), lblMonedas.getHeight(), Image.SCALE_SMOOTH)));
 		this.add(lblMonedas);
 		
 		lblCantMonedas = new JLabel();
 		lblCantMonedas.setBounds(1053, 10, 60, 29);
 		lblCantMonedas.setOpaque(true);
 		this.add(lblCantMonedas);
+		
+		inicializarTienda();
 	}
 	
 	public void actualizarMonedas(int m) {
@@ -57,12 +60,12 @@ public class TiendaGrafica extends JPanel {
 			lblObj1.setBackground(Color.ORANGE);
 			lblObj1.setBounds(12, 10, 90, 90);
 			this.add(lblObj1);
-			lblObj1.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/Aliados/Lazaro/lazaro_tienda.png")).getImage().getScaledInstance(lblObj1.getWidth(), lblObj1.getHeight(), Image.SCALE_SMOOTH)));
+			lblObj1.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/aliados/Lazaro/lazaro_tienda.png")).getImage().getScaledInstance(lblObj1.getWidth(), lblObj1.getHeight(), Image.SCALE_SMOOTH)));
 			lblObj1.addActionListener(new ActionListener() {
 	            @Override
 	            public void actionPerformed(ActionEvent e) {
 	            	mapaLogico.setEstado("comprando");
-	            	Lazaro l = new Lazaro();
+	            	Colmena l = new Colmena(mapaLogico);
 	            	tienda.setComprado(l);
 	            }
 	        });

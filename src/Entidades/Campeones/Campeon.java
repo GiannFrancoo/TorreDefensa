@@ -5,25 +5,24 @@ import java.util.List;
 
 import Entidades.Entidad;
 import Entidades.Disparos.Disparo;
-import Entidades.Disparos.Aliados.DisparoAliado;
-import Entidades.Disparos.Enemigos.DisparoEnemigo;
 import Entidades.Objetos.Magias.Magia;
 import Main.MapaLogico;
 
 public abstract class Campeon extends Entidad{
-	//fila 	  --> Entidad;
-	//columna --> Entidad;
-	//grafica ---> Entidad;
-	
-	
+
 	protected int vida;
 	protected int fuerza;
 	protected int rango;
+	protected int monedas;
 	protected List<Magia> magias;
 	
-	public Campeon(int x,int y, MapaLogico m) {
-		super(x, y, m); // Entidad;
+	public Campeon(MapaLogico m) {
+		super(m); // Entidad;
 		magias = new LinkedList<Magia>();
+	}
+
+	public int getMonedas() {
+		return monedas;
 	}
 	
 	//public abstract void restarVida(DisparoEnemigo d);
@@ -31,6 +30,5 @@ public abstract class Campeon extends Entidad{
 	public abstract void restarVida(int d);
 	public abstract void recibir(Disparo d);
 	public abstract void agregarMagia(Magia m);
-	public abstract int getMonedas();
 	
 }

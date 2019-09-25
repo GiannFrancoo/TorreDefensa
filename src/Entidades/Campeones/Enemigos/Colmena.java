@@ -1,5 +1,6 @@
 package Entidades.Campeones.Enemigos;
 
+import javax.swing.JLabel;
 import Entidades.Entidad;
 import Entidades.Disparos.Disparo;
 import Entidades.Disparos.Aliados.DisparoAliado;
@@ -10,30 +11,25 @@ import Main.VisitanteDisparo;
 import Utilidad.Lista.Position;
 
 public class Colmena extends Enemigo {
-
 	
-	//fila    --> Entidad;
-	//columna --> Entidad;
-	//vida	  --> Campeon;
-	//fuerza  --> Campeon;
-	//rango   --> Campeon;
-	//magias  --> Campeon;
-
-	//velocidad --> Enemigo;
-	//cantMonedas --> Enemigo;
-	protected final int monedas = 10;
 	protected ColmenaGrafico colmenaGrafico;
 	protected Position<Entidad> posEnLista;
 	
-	public Colmena(int x, int y, MapaLogico m) {
-		super(x, y, m);
-		this.velocidad = 4;
+	private int ancho = 75;
+	private int alto = 75;
+
+	
+	public Colmena(MapaLogico m) {
+		super(m);
+		
+		this.velocidad = 1;
 		this.vida = 100;
 		this.fuerza = 100;
 		this.rango = 3;
-		this.cantMonedas = 30; // Random puede ser;
+		this.monedas = 30; // Random puede ser;
 		
-		colmenaGrafico = new ColmenaGrafico(this, x, y);
+		colmenaGrafico = new ColmenaGrafico(this, ancho, alto);
+		entidadGrafica = colmenaGrafico;
 	}
 
 	@Override
@@ -42,7 +38,7 @@ public class Colmena extends Enemigo {
 		//Si hay magia se afecta + fuerza;
 		int n = 0;
 		
-		DisparoEnemigo d = new DisparoEnemigo(posicion.getKey(), posicion.getValue(), n, mapaLogico);
+		DisparoEnemigo d = new DisparoEnemigo(x, y, n, mapaLogico);
 		
 		
 		//Grafica
@@ -63,8 +59,16 @@ public class Colmena extends Enemigo {
 	public void restarVida(DisparoEnemigo e) {}
 
 	public void mover() {
-		//Si se puede mover, cambio xy logicos y despues graficas;
-		colmenaGrafico.mover();
+		
+		if (mapaLogico.colisione(x-velocidad, y) ){
+			//Colisiono!
+			//colmena.disparar();
+		}
+		else {
+			//if si esta a rango, disparar;
+			x = x - velocidad; //Se mueve;
+			colmenaGrafico.mover(); //Cambio el label;
+		}
 	}
 
 	public void restarVida(int d) {
@@ -85,6 +89,10 @@ public class Colmena extends Enemigo {
 	
 	public int getMonedas() {
 		return this.monedas;
+	}
+	
+	public int getVelocidad() {
+		return this.velocidad;
 	}
 
 	

@@ -14,7 +14,7 @@ public abstract class ObjetoVida extends Objeto{
 	protected int cantMonedas;
 	
 	public ObjetoVida(int x, int y, MapaLogico m) {
-		super(x, y, m);
+		super(m);
 	}
 
 	public void restarVida(int n) {

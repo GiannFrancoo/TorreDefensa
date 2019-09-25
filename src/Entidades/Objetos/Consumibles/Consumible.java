@@ -10,8 +10,8 @@ public abstract class Consumible extends Objeto{
 
 	protected int fuerza;
 	
-	public Consumible(int x, int y, MapaLogico m) {
-		super(x, y, m);
+	public Consumible(MapaLogico m) {
+		super(m);
 	}
 
 	
