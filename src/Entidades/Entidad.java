@@ -9,6 +9,8 @@ import Utilidad.Lista.*;
 public abstract class Entidad {
 	
 	//Atributos logica;
+	protected int ancho;
+	protected int alto;
 	protected int x;
 	protected int y;
 	protected EntidadGrafica entidadGrafica;
@@ -23,6 +25,14 @@ public abstract class Entidad {
 			this.y = y;
 	}
 	
+	public int getAncho() {
+		return ancho;
+	}
+	
+	public int getAlto() {
+		return alto;
+	}
+	
 	public int getX(){
 		return this.x;
 	}
@@ -33,10 +43,13 @@ public abstract class Entidad {
 	
 	public void setX(int x) {
 		this.x = x;
+		entidadGrafica.getLabel().setLocation(x, y);
 	}
 	
 	public void setY(int y) {
 		this.y = y;
+		entidadGrafica.getLabel().setLocation(x, y);
+
 	}
 		
 	public JLabel getGrafica(){

@@ -22,6 +22,7 @@ public class ColmenaGrafico extends EntidadGrafica {
 		
 		grafica.setBounds(new Rectangle(ancho, alto));
 		grafica.setIcon(new ImageIcon(imagenes[3].getImage().getScaledInstance(grafica.getWidth(), grafica.getHeight(), Image.SCALE_DEFAULT))); // Arranca con la imagen estatica;		
+		grafica.setLocation(99999999, 999999999);
 
 	}
 	

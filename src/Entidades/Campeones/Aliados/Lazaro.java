@@ -16,12 +16,11 @@ public class Lazaro extends Aliado{
 	protected Position<Entidad> posEnLista;
 	protected LazaroGrafico lazaroGrafico;
 	
-	private int ancho = 75;
-	private int alto = 75;
-	
 	public Lazaro(MapaLogico m){
 		super(m);
-						
+		
+		this.ancho = 75;
+		this.alto = 75;
 		this.vida = 100;
 		this.fuerza = 15;
 		this.rango = 5;		

@@ -84,14 +84,12 @@ public class MapaGUI extends JFrame {
 		
 	
 	public void insertar(JLabel lbl) {
-//		if (lbl.getX() == 0 && lbl.getY() == 0) {
-//			lbl.setLocation(9999999, 9999999);
-//		}
 		panel.add(lbl, 10, 2);
 	}
 	
 	public void remover(JLabel lbl) {
 		panel.remove(lbl);
+		this.repaint();
 	}
 	
 }

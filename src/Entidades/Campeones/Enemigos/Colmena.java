@@ -15,13 +15,11 @@ public class Colmena extends Enemigo {
 	protected ColmenaGrafico colmenaGrafico;
 	protected Position<Entidad> posEnLista;
 	
-	private int ancho = 65; //34 por regla de 3 (39 -> 75)
-	private int alto = 75; //39                 (34 ->  X)
-
-	
 	public Colmena(MapaLogico m) {
 		super(m);
 		
+		this.ancho = 65; //34 por regla de 3 (39 -> 75)
+		this.alto = 75;  //39                (34 ->  X)
 		this.velocidad = 1;
 		this.vida = 100;
 		this.fuerza = 100;
