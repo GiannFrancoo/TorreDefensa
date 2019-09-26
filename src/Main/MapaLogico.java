@@ -35,11 +35,14 @@ public class MapaLogico {
 	public void accionar(int x, int y) {
 		//vendiendo, jugando, comprando.
 		if(estadoJuego.equals("comprando")) {
-			
+			//SE PASA DE COORDENADAS GRAFICAS A COORDENADAS LOGICAS
+			int xx = (((x - 233) * 10)/ 841);
+			int yy = (((y - 42) * 6)/ 487);
 			
 			Entidad e = tienda.getComprado();
-			e.setX(((x * 841) / 10 ) + 233);
-			e.setY(((y * 487) / 6) + 42 );
+			//SE SETEA COORDENADAS GRAFICAS "NORMALIZADAS"
+			e.setX(((xx * 841) / 10 ) + 233);
+			e.setY(((yy * 487) / 6) + 42 );
 			
 			mapaGUI.insertar(e.getGrafica());
 			
@@ -90,7 +93,7 @@ public class MapaLogico {
 	public void eliminar(int x, int y) {
 		for(Entidad e: this.entidades) {
 			if ((x >= e.getX() && x <= e.getX()+e.getAncho())  &&  (y >= e.getY() && y <= e.getY()+e.getAlto())) {
-				e.visitado(visitante);	
+				e.visitado(new VisitarEnemigo(this));	
 			}
 		}
 		

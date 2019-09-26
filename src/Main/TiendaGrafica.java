@@ -6,6 +6,7 @@ import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.BorderFactory;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -75,7 +76,7 @@ public class TiendaGrafica extends JPanel {
 			JButton btnObj1 = new JButton();
 			btnObj1.setOpaque(true);
 			btnObj1.setContentAreaFilled(false);
-			btnObj1.setBackground(Color.ORANGE);
+			btnObj1.setBorder(BorderFactory.createLineBorder(Color.BLACK, 3));
 			btnObj1.setBounds(12, 10, 90, 90);
 			this.add(btnObj1);
 			btnObj1.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/aliados/Lazaro/lazaro_tienda.png")).getImage().getScaledInstance(btnObj1.getWidth(), btnObj1.getHeight(), Image.SCALE_SMOOTH)));
@@ -88,41 +89,47 @@ public class TiendaGrafica extends JPanel {
 	            }
 	        });
 			
-			JLabel lblObj2 = new JLabel();
-			lblObj2.setOpaque(true);
-			lblObj2.setBackground(Color.ORANGE);
-			lblObj2.setBounds(107, 10, 90, 90);
-			this.add(lblObj2);
+			JButton btnObj2 = new JButton();
+			btnObj2.setOpaque(true);
+			btnObj2.setContentAreaFilled(false);
+			btnObj2.setBorder(BorderFactory.createLineBorder(Color.BLACK, 3));			
+			btnObj2.setBounds(107, 10, 90, 90);
+			this.add(btnObj2);
 			
-			JLabel lblObj3 = new JLabel();
-			lblObj3.setOpaque(true);
-			lblObj3.setBackground(Color.ORANGE);
-			lblObj3.setBounds(202, 10, 90, 90);
-			this.add(lblObj3);
+			JButton btnObj3 = new JButton();
+			btnObj3.setOpaque(true);
+			btnObj3.setContentAreaFilled(false);
+			btnObj3.setBorder(BorderFactory.createLineBorder(Color.BLACK, 3));		
+			btnObj3.setBounds(202, 10, 90, 90);
+			this.add(btnObj3);
 			
-			JLabel lblObj4 = new JLabel();
-			lblObj4.setOpaque(true);
-			lblObj4.setBackground(Color.ORANGE);
-			lblObj4.setBounds(297, 10, 90, 90);
-			this.add(lblObj4);
+			JButton btnObj4 = new JButton();	
+			btnObj4.setOpaque(true);
+			btnObj4.setContentAreaFilled(false);
+			btnObj4.setBorder(BorderFactory.createLineBorder(Color.BLACK, 3));		
+			btnObj4.setBounds(297, 10, 90, 90);
+			this.add(btnObj4);
 			
-			JLabel lblObj5 = new JLabel();
-			lblObj5.setOpaque(true);
-			lblObj5.setBackground(Color.ORANGE);
-			lblObj5.setBounds(392, 10, 90, 90);
-			this.add(lblObj5);
+			JButton btnObj5 = new JButton();	
+			btnObj5.setOpaque(true);
+			btnObj5.setContentAreaFilled(false);
+			btnObj5.setBorder(BorderFactory.createLineBorder(Color.BLACK, 3));		
+			btnObj5.setBounds(392, 10, 90, 90);
+			this.add(btnObj5);
 			
-			JLabel lblObj6 = new JLabel();
-			lblObj6.setOpaque(true);
-			lblObj6.setBackground(Color.ORANGE);
-			lblObj6.setBounds(487, 10, 90, 90);
-			this.add(lblObj6);
+			JButton btnObj6 = new JButton();
+			btnObj6.setOpaque(true);
+			btnObj6.setContentAreaFilled(false);
+			btnObj6.setBorder(BorderFactory.createLineBorder(Color.BLACK, 3));		
+			btnObj6.setBounds(487, 10, 90, 90);
+			this.add(btnObj6);
 			
-			JLabel lblObj7 = new JLabel();
-			lblObj7.setOpaque(true);
-			lblObj7.setBackground(Color.ORANGE);
-			lblObj7.setBounds(582, 10, 90, 90);
-			this.add(lblObj7);
+			JButton btnObj7 = new JButton();
+			btnObj7.setOpaque(true);
+			btnObj7.setContentAreaFilled(false);
+			btnObj7.setBorder(BorderFactory.createLineBorder(Color.BLACK, 3));		
+			btnObj7.setBounds(582, 10, 90, 90);
+			this.add(btnObj7);
 		}
 		
 	}

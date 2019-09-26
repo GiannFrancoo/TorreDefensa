@@ -44,9 +44,9 @@ public class ClickeablePanel extends JPanel implements MouseListener, MouseMotio
 	public void mouseReleased(MouseEvent arg0) {
 		//Si las coordenadas del click estan dentro de la grilla -> then
 		if (((arg0.getX() > 233) && (arg0.getX() < (233 + 841))) && ((arg0.getY() > 42) && (arg0.getY() < (42 + 487)))) {
-			int x = (((arg0.getX() - 233) * 10)/ 841);
-			int y = (((arg0.getY() - 42) * 6)/ 487);
-			mapaLogico.accionar(x, y);
+//			int x = (((arg0.getX() - 233) * 10)/ 841);
+//			int y = (((arg0.getY() - 42) * 6)/ 487);
+			mapaLogico.accionar(arg0.getX(), arg0.getY());
 		}	
 
 	}

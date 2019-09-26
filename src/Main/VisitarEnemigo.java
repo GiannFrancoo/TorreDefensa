@@ -9,14 +9,18 @@ public class VisitarEnemigo implements VisitanteDisparo{
 
 	private MapaLogico mapaLogico;
 	
+	public VisitarEnemigo(MapaLogico mapaLogico) {
+		this.mapaLogico = mapaLogico;
+	}
+	
 	
 	public void visita(Enemigo e) {
-		//Aca no hace nada.
+		mapaLogico.eliminarPosta(e.getPosEnLista());
 	}
 
 	
 	public void visita(Aliado a) {
-		mapaLogico.eliminarPosta(a.getPosEnLista());
+		
 	}
 
 	
