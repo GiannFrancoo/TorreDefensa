@@ -95,6 +95,16 @@ public class TiendaGrafica extends JPanel {
 			btnObj2.setBorder(BorderFactory.createLineBorder(Color.BLACK, 3));			
 			btnObj2.setBounds(107, 10, 90, 90);
 			this.add(btnObj2);
+			btnObj2.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/aliados/Apollyon/apollyon_tienda.png")).getImage().getScaledInstance(btnObj1.getWidth(), btnObj1.getHeight(), Image.SCALE_SMOOTH)));
+			btnObj2.addActionListener(new ActionListener() {
+	            @Override
+	            public void actionPerformed(ActionEvent e) {
+	            	mapaLogico.setEstado("comprando");
+	            	Lazaro l = new Lazaro(mapaLogico);
+	            	tienda.setComprado(l);
+	            }
+	        });
+			
 			
 			JButton btnObj3 = new JButton();
 			btnObj3.setOpaque(true);
@@ -102,6 +112,15 @@ public class TiendaGrafica extends JPanel {
 			btnObj3.setBorder(BorderFactory.createLineBorder(Color.BLACK, 3));		
 			btnObj3.setBounds(202, 10, 90, 90);
 			this.add(btnObj3);
+			btnObj3.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/aliados/Lilith/lilith_tienda.png")).getImage().getScaledInstance(btnObj1.getWidth(), btnObj1.getHeight(), Image.SCALE_SMOOTH)));
+			btnObj3.addActionListener(new ActionListener() {
+	            @Override
+	            public void actionPerformed(ActionEvent e) {
+	            	mapaLogico.setEstado("comprando");
+	            	Lazaro l = new Lazaro(mapaLogico);
+	            	tienda.setComprado(l);
+	            }
+	        });
 			
 			JButton btnObj4 = new JButton();	
 			btnObj4.setOpaque(true);

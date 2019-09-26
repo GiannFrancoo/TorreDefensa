@@ -4,7 +4,7 @@ import Entidades.Campeones.Aliados.Aliado;
 import Entidades.Campeones.Enemigos.Enemigo;
 import Entidades.Objetos.Objeto;
 
-public class VisitanteAliado implements VisitanteDisparo{
+public class VisitarAliado implements VisitanteDisparo{
 
 	@Override
 	public void visita(Enemigo e) {
