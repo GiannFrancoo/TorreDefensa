@@ -20,6 +20,7 @@ public class LazaroGrafico extends EntidadGrafica{
 		
 		grafica.setIcon(imagenes[0]); // Arranca con la imagen estatica;;
 		grafica.setBounds(new Rectangle(ancho, alto));
+//		grafica.setLocation(lazaro.getX(), lazaro.getY());
 		
 	}
 

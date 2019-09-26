@@ -31,21 +31,21 @@ public class TiendaGrafica extends JPanel {
 		this.setLayout(null);
 		
 		JLabel lblMonedas = new JLabel();
-		lblMonedas.setBounds(1000, 10, 51, 29);
+		lblMonedas.setBounds(1000, 10, 52, 29);
 		lblMonedas.setOpaque(false);
-		//lblMonedas.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/aliados/moneda.png")).getImage().getScaledInstance(lblMonedas.getWidth(), lblMonedas.getHeight(), Image.SCALE_SMOOTH)));
+		lblMonedas.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/aliados/monedas.gif")).getImage().getScaledInstance(lblMonedas.getWidth(), lblMonedas.getHeight(), Image.SCALE_DEFAULT)));
 		
-		
-		/* Codigo nuevo */
-		
-		//Creo el image icon NORMAL
-		ImageIcon monedasGif = new ImageIcon(this.getClass().getClassLoader().getResource("texturas/aliados/monedas.gif")); 
-		
-		//Le seteo la imagen, la misma pero re escalada con el BOTON; (NO funca con el SCALE_SMOOTH)
-		monedasGif.setImage(monedasGif.getImage().getScaledInstance(lblMonedas.getWidth(), lblMonedas.getHeight(), Image.SCALE_DEFAULT));
-		
-		//Le seteo en el label;
-		lblMonedas.setIcon(monedasGif);
+//		
+//		/* Codigo nuevo */
+//		
+//		//Creo el image icon NORMAL
+//		ImageIcon monedasGif = new ImageIcon(this.getClass().getClassLoader().getResource("texturas/aliados/monedas.gif")); 
+//		
+//		//Le seteo la imagen, la misma pero re escalada con el BOTON; (NO funca con el SCALE_SMOOTH)
+//		monedasGif.setImage(monedasGif.getImage().getScaledInstance(lblMonedas.getWidth(), lblMonedas.getHeight(), Image.SCALE_DEFAULT));
+//		
+//		//Le seteo en el label;
+//		lblMonedas.setIcon(monedasGif);
 	
 		//Lo termino agregando al panel;
 		this.add(lblMonedas);
@@ -72,17 +72,18 @@ public class TiendaGrafica extends JPanel {
 	//		fondoTienda.setBounds(7, 588, 1266, 100);
 	//		contentPane.add(fondoTienda, 5, 1);
 			
-			JButton lblObj1 = new JButton();
-			lblObj1.setOpaque(true);
-			lblObj1.setBackground(Color.ORANGE);
-			lblObj1.setBounds(12, 10, 90, 90);
-			this.add(lblObj1);
-			lblObj1.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/aliados/Lazaro/lazaro_tienda.png")).getImage().getScaledInstance(lblObj1.getWidth(), lblObj1.getHeight(), Image.SCALE_SMOOTH)));
-			lblObj1.addActionListener(new ActionListener() {
+			JButton btnObj1 = new JButton();
+			btnObj1.setOpaque(true);
+			btnObj1.setContentAreaFilled(false);
+			btnObj1.setBackground(Color.ORANGE);
+			btnObj1.setBounds(12, 10, 90, 90);
+			this.add(btnObj1);
+			btnObj1.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/aliados/Lazaro/lazaro_tienda.png")).getImage().getScaledInstance(btnObj1.getWidth(), btnObj1.getHeight(), Image.SCALE_SMOOTH)));
+			btnObj1.addActionListener(new ActionListener() {
 	            @Override
 	            public void actionPerformed(ActionEvent e) {
 	            	mapaLogico.setEstado("comprando");
-	            	Colmena l = new Colmena(mapaLogico);
+	            	Lazaro l = new Lazaro(mapaLogico);
 	            	tienda.setComprado(l);
 	            }
 	        });

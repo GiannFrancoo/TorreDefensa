@@ -16,13 +16,13 @@ public class ColmenaGrafico extends EntidadGrafica {
 		this.imagenes[0] = new ImageIcon(this.getClass().getClassLoader().getResource("texturas/enemigos/colmena/colmena_estatico.png")); // Estatico;
 		this.imagenes[1] = new ImageIcon(this.getClass().getClassLoader().getResource("texturas/enemigos/colmena/colmena_disparando.png")); // Disparando;
 		//this.imagenes[2] = new ImageIcon(this.getClass().getClassLoader().getResource("texturas/Enemigos/colmena/colmena_sufriendo.png")); // Sufriendo;
-		this.imagenes[3] = new ImageIcon(this.getClass().getClassLoader().getResource("texturas/enemigos/colmena/colmena_caminando.png")); // Corriendo (GIF);
+		this.imagenes[3] = new ImageIcon(this.getClass().getClassLoader().getResource("texturas/enemigos/colmena/colmena_caminando.gif")); // Corriendo (GIF);
 		//this.imagenes[9] = new ImageIcon(this.getClass().getClassLoader().getResource("texturas/Enemigos/colmena/colmena_tienda.png")); // Tienda;
 		
 		
 		grafica.setBounds(new Rectangle(ancho, alto));
-		//grafica.setIcon(new ImageIcon(imagenes[0].getImage().getScaledInstance(ancho, alto, Image.SCALE_SMOOTH))); // Arranca con la imagen estatica;
-	
+		grafica.setIcon(new ImageIcon(imagenes[3].getImage().getScaledInstance(grafica.getWidth(), grafica.getHeight(), Image.SCALE_DEFAULT))); // Arranca con la imagen estatica;		
+
 	}
 	
 	
@@ -44,7 +44,7 @@ public class ColmenaGrafico extends EntidadGrafica {
 
 		grafica.setLocation(colmena.getX(), colmena.getY());
 		
-		grafica.setIcon(new ImageIcon(imagenes[3].getImage().getScaledInstance(grafica.getWidth(), grafica.getHeight(), Image.SCALE_SMOOTH))); // Arranca con la imagen estatica;		
+//		grafica.setIcon(new ImageIcon(imagenes[3].getImage().getScaledInstance(grafica.getWidth(), grafica.getHeight(), Image.SCALE_SMOOTH))); // Arranca con la imagen estatica;		
 		//grafica.setIcon(new ImageIcon(imagenes[0].getImage().getScaledInstance(ancho, alto, Image.SCALE_SMOOTH))); // Arranca con la imagen estatica;
 
 	}

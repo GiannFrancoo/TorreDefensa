@@ -15,8 +15,8 @@ public class Colmena extends Enemigo {
 	protected ColmenaGrafico colmenaGrafico;
 	protected Position<Entidad> posEnLista;
 	
-	private int ancho = 75;
-	private int alto = 75;
+	private int ancho = 65; //34 por regla de 3 (39 -> 75)
+	private int alto = 75; //39                 (34 ->  X)
 
 	
 	public Colmena(MapaLogico m) {
@@ -26,7 +26,7 @@ public class Colmena extends Enemigo {
 		this.vida = 100;
 		this.fuerza = 100;
 		this.rango = 3;
-		this.monedas = 30; // Random puede ser;
+		this.monedas = 30;
 		
 		colmenaGrafico = new ColmenaGrafico(this, ancho, alto);
 		entidadGrafica = colmenaGrafico;
