@@ -32,6 +32,36 @@ public class MapaLogico {
 		estadoJuego = s;
 	}
 	
+	public void accionar(int x, int y) {
+		//vendiendo, jugando, comprando.
+		if(estadoJuego.equals("comprando")) {
+			
+			
+			Entidad e = tienda.getComprado();
+			e.setX(((x * 841) / 10 ) + 233);
+			e.setY(((y * 487) / 6) + 42 );
+			
+			mapaGUI.insertar(e.getGrafica());
+			
+			this.entidades.addLast(e);
+			try {
+				e.setPosEnLista(this.entidades.last());
+			} catch (EmptyListException e1) { 
+				e1.printStackTrace();
+			}
+			estadoJuego = ("jugando");
+		}
+		
+		if(estadoJuego.equals("vendiendo")) {
+			this.eliminar(x, y);
+			estadoJuego = ("jugando");
+
+		}
+		
+		//Si llega a este punto es porque esta en el estado jugando("Aqui no paso nada").
+		
+	}
+	
 	public boolean disponible(Pair<Integer,Integer> pos) {
 		//Retorna true si en esa posicion no existe ninguna entidad.
 		 return true;
@@ -45,25 +75,30 @@ public class MapaLogico {
 		
 	}
 	
-	public void insertar(Pair<Integer,Integer> p, Entidad e) {
+	public void insertar(Entidad e) {
 		this.entidades.addLast(e);
 		try {
 			e.setPosEnLista(this.entidades.last());
 		} catch (EmptyListException e1) {
 			e1.printStackTrace();
 		}
+		/////NO SE SI SE VA A QUEDAR, ES PARA PRUEBA////////////////////////////////////////////////////////////////////////////////////////////////////////
+		mapaGUI.insertar(e.getGrafica());
+		////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	}
 	
-	public void eliminar(Pair<Integer,Integer> pos) {
+	public void eliminar(int x, int y) {
 		for(Entidad e: this.entidades) {
-			if(pos.getKey().equals(e.getX()) && pos.getValue().equals(e.getY())) {
+			if ((x >= e.getX() && x <= e.getX()+e.getAncho())  &&  (y >= e.getY() && y <= e.getY()+e.getAlto())) {
 				e.visitado(visitante);	
 			}
 		}
 		
 	}
+	
 	//eliminarPosta: Metodo que se encarga de eliminar la entidad en la lista.
 	public void eliminarPosta(Position<Entidad> pos) {
+		mapaGUI.remover(pos.element().getGrafica());
 		try {
 			this.entidades.remove(pos);
 		} catch (InvalidPositionException e) {
@@ -71,36 +106,6 @@ public class MapaLogico {
 		}
 	}
 	
-	public void accionar(int x, int y) {
-		//vendiendo, jugando, comprando.
-		if(estadoJuego.equals("comprando")) {
-			
-	
-			Entidad e = tienda.getComprado();
-			e.setX(((x * 841) / 10 ) + 233);
-			e.setY(((y * 487) / 6) + 42 );
-
-			mapaGUI.insertar(e.getGrafica());
-			
-			this.entidades.addLast(e);
-			try {
-				e.setPosEnLista(this.entidades.last());
-			} catch (EmptyListException e1) { System.out.println("Se partio el hilo");}
-			
-			
-			
-			estadoJuego = ("jugando");
-		
-		}
-		
-		if(estadoJuego.equals("vendiendo")) {
-			
-		}
-		
-		//Si llega a este punto es porque esta en el estado jugando("Aqui no paso nada").
-		
-	}
-		
  	public void actualizar() {
  		//Recorre toda la lista y llamo a los accionar de las clases.
  		for(Entidad e: entidades) {

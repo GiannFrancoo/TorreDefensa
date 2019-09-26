@@ -8,6 +8,7 @@ import javax.swing.*;
 import javax.swing.border.Border;
 
 import Entidades.Campeones.Aliados.Lazaro;
+import Entidades.Campeones.Enemigos.Colmena;
 
 public class MapaGUI extends JFrame {
 
@@ -65,11 +66,27 @@ public class MapaGUI extends JFrame {
 		tiendaGrafica.setLocation(0, 548);
 		panel.add(tiendaGrafica, 10, 2);
 //		tiendaGrafica.setBounds(0, 548, 1130, 162);
+		
+		///////////////////////////////////////////////////////////////////////////////////
+		//BOTON PARA ELIMINAR
+		JButton btnEliminar = new JButton("Eliminar Enemigo");
+		btnEliminar.setBounds(10, 10, 150, 20);
+		btnEliminar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            	mapaLogico.setEstado("vendiendo");
+            }
+        });
+		panel.add(btnEliminar, 10, 2);
+		///////////////////////////////////////////////////////////////////////////////////
 						
 	}
 		
 	
 	public void insertar(JLabel lbl) {
+//		if (lbl.getX() == 0 && lbl.getY() == 0) {
+//			lbl.setLocation(9999999, 9999999);
+//		}
 		panel.add(lbl, 10, 2);
 	}
 	
