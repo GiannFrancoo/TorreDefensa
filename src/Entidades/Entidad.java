@@ -20,11 +20,6 @@ public abstract class Entidad {
 		mapaLogico = m;
 	}
 	
-	public void setPos(int x, int y){
-			this.x = x;
-			this.y = y;
-	}
-	
 	public int getAncho() {
 		return ancho;
 	}

@@ -17,7 +17,6 @@ public class MapaLogico {
 	protected Jugador jugador;
 	private String estadoJuego;
 	private MapaGUI mapaGUI;
-	private VisitanteDisparo visitante;
 	
 	public MapaLogico() {
 		this.jugador = new Jugador(100);
@@ -25,6 +24,7 @@ public class MapaLogico {
 		this.mapaGUI = new MapaGUI(this, tienda, jugador);
 		mapaGUI.setVisible(true);
 		entidades = new DoubleLinkedList<Entidad>();
+		estadoJuego = ("jugando");
 	}
 	
 	
@@ -44,14 +44,8 @@ public class MapaLogico {
 			e.setX(((xx * 841) / 10 ) + 233);
 			e.setY(((yy * 487) / 6) + 42 );
 			
-			mapaGUI.insertar(e.getGrafica());
+			this.insertar(e);
 			
-			this.entidades.addLast(e);
-			try {
-				e.setPosEnLista(this.entidades.last());
-			} catch (EmptyListException e1) { 
-				e1.printStackTrace();
-			}
 			estadoJuego = ("jugando");
 		}
 		
@@ -85,15 +79,14 @@ public class MapaLogico {
 		} catch (EmptyListException e1) {
 			e1.printStackTrace();
 		}
-		/////NO SE SI SE VA A QUEDAR, ES PARA PRUEBA////////////////////////////////////////////////////////////////////////////////////////////////////////
 		mapaGUI.insertar(e.getGrafica());
-		////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	}
 	
 	public void eliminar(int x, int y) {
+		VisitanteDisparo visitante = new VisitarEnemigo(this);
 		for(Entidad e: this.entidades) {
 			if ((x >= e.getX() && x <= e.getX()+e.getAncho())  &&  (y >= e.getY() && y <= e.getY()+e.getAlto())) {
-				e.visitado(new VisitarEnemigo(this));	
+				e.visitado(visitante);	
 			}
 		}
 		
