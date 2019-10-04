@@ -1,17 +1,19 @@
 package Entidades.Campeones.Aliados;
 
+import Entidades.Entidad;
 import Entidades.Disparos.Disparo;
 import Entidades.Disparos.Aliados.DisparoAliado;
 import Entidades.Disparos.Enemigos.DisparoEnemigo;
 import Entidades.Objetos.Magias.Magia;
 import Main.MapaLogico;
 import Main.VisitanteDisparo;
+import Utilidad.Lista.Position;
 
-public class Lazaro extends Aliado{
-		
-	protected LazaroGrafico lazaroGrafico;
+public class Lilith extends Aliado{
+
+	protected LilithGrafico lilithGrafico;
 	
-	public Lazaro(MapaLogico m){
+	public Lilith(MapaLogico m){
 		super(m);
 		
 		this.ancho = 75;
@@ -22,8 +24,8 @@ public class Lazaro extends Aliado{
 		this.monedas = 100;
 		
 
-		LazaroGrafico lazaroGrafico= new LazaroGrafico(this, ancho, alto);
-		entidadGrafica = lazaroGrafico;
+		LilithGrafico lilithGrafico= new LilithGrafico(this, ancho, alto);
+		entidadGrafica = lilithGrafico;
 	}
 
 	@Override
@@ -35,7 +37,7 @@ public class Lazaro extends Aliado{
 		DisparoAliado d = new DisparoAliado(x, y, n, mapaLogico);
 		
 		
-		lazaroGrafico.disparar();
+		lilithGrafico.disparar();
 	
 		return d;
 	}
@@ -47,7 +49,7 @@ public class Lazaro extends Aliado{
 	
 	public void restarVida(DisparoEnemigo e) {
 		//Parte logica de restar vida;
-		lazaroGrafico.restarVida();
+		lilithGrafico.restarVida();
 	}
 	
 	public void restarVida(DisparoAliado a) {
@@ -73,6 +75,5 @@ public class Lazaro extends Aliado{
 		v.visita(this);
 	}
 
-	
 
 }

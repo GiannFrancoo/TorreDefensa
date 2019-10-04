@@ -9,6 +9,8 @@ import javax.swing.border.Border;
 
 import Entidades.Campeones.Aliados.Lazaro;
 import Entidades.Campeones.Enemigos.Colmena;
+import Main.Tienda.Tienda;
+import Main.Tienda.TiendaGrafica;
 
 public class MapaGUI extends JFrame {
 

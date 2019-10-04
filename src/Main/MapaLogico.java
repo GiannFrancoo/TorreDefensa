@@ -6,7 +6,7 @@ import Entidades.Campeones.Campeon;
 import Entidades.Campeones.Aliados.Aliado;
 import Entidades.Campeones.Enemigos.Enemigo;
 import Entidades.Objetos.Magias.Magia;
-
+import Main.Tienda.Tienda;
 import Utilidad.Pair;
 
 public class MapaLogico {

@@ -1,4 +1,4 @@
-package Main;
+package Main.Tienda;
 
 import java.awt.Color;
 import java.awt.Image;
@@ -15,16 +15,20 @@ import javax.swing.JPanel;
 
 import Entidades.Campeones.Aliados.Lazaro;
 import Entidades.Campeones.Enemigos.Colmena;
+import Main.MapaLogico;
 
 public class TiendaGrafica extends JPanel {
 	
 	private MapaLogico mapaLogico;
 	private Tienda tienda;
 	private JLabel lblCantMonedas;
+	private BotonTienda []botones;
+	
 
 	public TiendaGrafica(MapaLogico mapaLogico, Tienda tienda) {
 		this.mapaLogico = mapaLogico;
 		this.tienda = tienda;
+		botones = new BotonTienda[3];
 		
 		this.setBounds(new Rectangle(1130, 162));
 		this.setBackground(Color.MAGENTA);
@@ -36,22 +40,7 @@ public class TiendaGrafica extends JPanel {
 		lblMonedas.setOpaque(false);
 		lblMonedas.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/aliados/monedas.gif")).getImage().getScaledInstance(lblMonedas.getWidth(), lblMonedas.getHeight(), Image.SCALE_DEFAULT)));
 		
-//		
-//		/* Codigo nuevo */
-//		
-//		//Creo el image icon NORMAL
-//		ImageIcon monedasGif = new ImageIcon(this.getClass().getClassLoader().getResource("texturas/aliados/monedas.gif")); 
-//		
-//		//Le seteo la imagen, la misma pero re escalada con el BOTON; (NO funca con el SCALE_SMOOTH)
-//		monedasGif.setImage(monedasGif.getImage().getScaledInstance(lblMonedas.getWidth(), lblMonedas.getHeight(), Image.SCALE_DEFAULT));
-//		
-//		//Le seteo en el label;
-//		lblMonedas.setIcon(monedasGif);
-	
-		//Lo termino agregando al panel;
 		this.add(lblMonedas);
-		
-		
 		
 		lblCantMonedas = new JLabel();
 		lblCantMonedas.setBounds(1053, 10, 60, 29);
@@ -66,7 +55,25 @@ public class TiendaGrafica extends JPanel {
 	}
 	
 	public void inicializarTienda() {
-			
+		
+		botones[0] = new BotonLazaro(mapaLogico, tienda);
+		botones[1] = new BotonLilith(mapaLogico, tienda);
+		botones[2] = new BotonApollyon(mapaLogico, tienda);
+		
+		//Agrego los botones
+		for(int i = 0; i < botones.length; ++i) {
+			this.add(botones[i]);
+		}
+		
+	}
+	
+}
+	
+	
+	/*	 CODIGO DE FAUSTO;
+	
+	
+	
 	//		JLabel fondoTienda = new JLabel();
 	//		fondoTienda.setOpaque(true);
 	//		fondoTienda.setBackground(Color.CYAN);
@@ -128,6 +135,15 @@ public class TiendaGrafica extends JPanel {
 			btnObj4.setBorder(BorderFactory.createLineBorder(Color.BLACK, 3));		
 			btnObj4.setBounds(297, 10, 90, 90);
 			this.add(btnObj4);
+			btnObj4.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/aliados/Samson/samson_tienda.png")).getImage().getScaledInstance(btnObj1.getWidth(), btnObj1.getHeight(), Image.SCALE_SMOOTH)));
+			btnObj4.addActionListener(new ActionListener() {
+	            @Override
+	            public void actionPerformed(ActionEvent e) {
+	            	mapaLogico.setEstado("comprando");
+	            	Lazaro l = new Lazaro(mapaLogico);
+	            	tienda.setComprado(l);
+	            }
+	        });
 			
 			JButton btnObj5 = new JButton();	
 			btnObj5.setOpaque(true);
@@ -151,4 +167,4 @@ public class TiendaGrafica extends JPanel {
 			this.add(btnObj7);
 		}
 		
-	}
+	*/
