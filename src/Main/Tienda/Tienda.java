@@ -1,9 +1,9 @@
-package Main;
+package Main.Tienda;
 
-import javax.swing.JPanel;
 
 import Entidades.Entidad;
-import Entidades.Campeones.Aliados.Lazaro;
+import Main.Jugador;
+import Main.MapaLogico;
 import Utilidad.Pair;
 
 public class Tienda {

@@ -6,6 +6,8 @@ import java.awt.event.MouseMotionListener;
 
 import javax.swing.JPanel;
 
+import Main.Tienda.Tienda;
+
 public class ClickeablePanel extends JPanel implements MouseListener, MouseMotionListener {
 
 	private MapaLogico mapaLogico;
