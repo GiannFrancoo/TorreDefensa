@@ -118,6 +118,13 @@ public class MapaLogico {
 	
 	public boolean colisione(int x, int y) {
 		//Recorro todas las entidades, y voy viendo si X >= x entonces ahi colisione
+		//PRUEBA: SOLO VA A DETECTAR COLISIONES CON ALIADOS
+		VisitanteDisparo visitante = new VisitarAliado(this);
+		for(Entidad e: this.entidades) {
+			if ((x >= e.getX() && x <= e.getX()+e.getAncho())  &&  (y >= e.getY() && y <= e.getY()+e.getAlto())) {
+				e.visitado(visitante);	
+			}
+		}
 		return false;
 	}
 	

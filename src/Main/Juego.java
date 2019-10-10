@@ -35,7 +35,7 @@ public class Juego extends Thread{
 			mapaLogico.actualizar();
 			//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			Random r = new Random();
-			if (r.nextInt(10) == 0) {
+			if (r.nextInt(100) == 0) {
 				
 				Colmena e = new Colmena(mapaLogico);
 				int y = r.nextInt(6);
