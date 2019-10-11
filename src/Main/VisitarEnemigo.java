@@ -25,7 +25,7 @@ public class VisitarEnemigo implements VisitanteDisparo{
 
 	
 	public void visita(Objeto o) {
-		//Aca no hace nada.
+		
 	}
 
 	

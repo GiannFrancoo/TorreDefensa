@@ -6,21 +6,21 @@ import Entidades.Objetos.Objeto;
 
 public class VisitarAliado implements VisitanteDisparo{
 
-	@Override
+	private MapaLogico mapaLogico;
+	
+	public VisitarAliado(MapaLogico mapaLogico) {
+		this.mapaLogico = mapaLogico;
+	}
+	
 	public void visita(Enemigo e) {
-		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
 	public void visita(Aliado a) {
-		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
 	public void visita(Objeto o) {
-		// TODO Auto-generated method stub
 		
 	}
 	
