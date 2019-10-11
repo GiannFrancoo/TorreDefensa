@@ -115,17 +115,22 @@ public class MapaLogico {
 		c.agregarMagia(m);
 	}
 	
+	void colisione(){
+		
+	}
 	
-	public boolean colisione(int x, int y) {
+	public PositionList<Entidad> colisione(int x, int y) {
 		//Recorro todas las entidades, y voy viendo si X >= x entonces ahi colisione
 		//PRUEBA: SOLO VA A DETECTAR COLISIONES CON ALIADOS
 		VisitanteDisparo visitante = new VisitarAliado(this);
+		PositionList<Entidad> listaColisionados = new DoubleLinkedList<Entidad>();
 		for(Entidad e: this.entidades) {
 			if ((x >= e.getX() && x <= e.getX()+e.getAncho())  &&  (y >= e.getY() && y <= e.getY()+e.getAlto())) {
-				e.visitado(visitante);	
+				//e.visitado(visitante);	
+				listaColisionados.addLast(e);
 			}
 		}
-		return false;
+		return listaColisionados;
 	}
 	
 }

@@ -10,6 +10,7 @@ public class VisitarAliado implements VisitanteDisparo{
 	
 	public VisitarAliado(MapaLogico mapaLogico) {
 		this.mapaLogico = mapaLogico;
+		
 	}
 	
 	public void visita(Enemigo e) {

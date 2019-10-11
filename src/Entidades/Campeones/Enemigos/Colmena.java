@@ -56,19 +56,6 @@ public class Colmena extends Enemigo {
 	
 	public void restarVida(DisparoEnemigo e) {}
 
-	public void mover() {
-		
-		if (mapaLogico.colisione(x-velocidad, y) ){
-			//Colisiono!
-			//colmena.disparar();
-		}
-		else {
-			//if si esta a rango, disparar;
-			x = x - velocidad; //Se mueve;
-			colmenaGrafico.mover(); //Cambio el label;
-		}
-	}
-
 	public void restarVida(int d) {
 		this.vida-= d;
 		//Chequear cuando la vida llega a 0.
