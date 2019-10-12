@@ -15,7 +15,8 @@ public class MapaLogico {
 	protected PositionList<Entidad> entidades;
 	protected Tienda tienda;
 	protected Jugador jugador;
-	private String estadoJuego;
+	//private String estadoJuego;
+	private EstadoJuego estadoJuego;
 	private MapaGUI mapaGUI;
 	
 	public MapaLogico() {
@@ -24,17 +25,19 @@ public class MapaLogico {
 		this.mapaGUI = new MapaGUI(this, tienda, jugador);
 		mapaGUI.setVisible(true);
 		entidades = new DoubleLinkedList<Entidad>();
-		estadoJuego = ("jugando");
+		this.setEstado(new Jugando());
+		//estadoJuego = ("jugando");
 	}
 	
 	
-	public void setEstado(String s) {
-		estadoJuego = s;
+	public void setEstado(EstadoJuego e) {
+		//estadoJuego = s;
+		this.estadoJuego = e;
 	}
 	
 	public void accionar(int x, int y) {
 		//vendiendo, jugando, comprando.
-		if(estadoJuego.equals("comprando")) {
+		/*if(estadoJuego.equals("comprando")) {
 			//SE PASA DE COORDENADAS GRAFICAS A COORDENADAS LOGICAS
 			int xx = (((x - 233) * 10)/ 841);
 			int yy = (((y - 42) * 6)/ 487);
@@ -53,9 +56,10 @@ public class MapaLogico {
 			this.eliminar(x, y);
 			estadoJuego = ("jugando");
 
-		}
+		}*/
 		
 		//Si llega a este punto es porque esta en el estado jugando("Aqui no paso nada").
+		this.estadoJuego.actua(x, y, this);
 		
 	}
 	

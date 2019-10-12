@@ -69,19 +69,19 @@ public class MapaGUI extends JFrame {
 		panel.add(tiendaGrafica, 10, 2);
 //		tiendaGrafica.setBounds(0, 548, 1130, 162);
 		
-		///////////////////////////////////////////////////////////////////////////////////
-		//BOTON PARA ELIMINAR
-		JButton btnEliminar = new JButton("Eliminar Enemigo");
-		btnEliminar.setBounds(10, 10, 150, 20);
-		btnEliminar.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-            	mapaLogico.setEstado("vendiendo");
-            }
-        });
-		panel.add(btnEliminar, 10, 2);
-		///////////////////////////////////////////////////////////////////////////////////
-						
+//		///////////////////////////////////////////////////////////////////////////////////
+//		//BOTON PARA ELIMINAR
+//		JButton btnEliminar = new JButton("Eliminar Enemigo");
+//		btnEliminar.setBounds(10, 10, 150, 20);
+//		btnEliminar.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//            	mapaLogico.setEstado("vendiendo");
+//            }
+//        });
+//		panel.add(btnEliminar, 10, 2);
+//		///////////////////////////////////////////////////////////////////////////////////
+//						
 	}
 		
 	
