@@ -4,9 +4,6 @@ import Entidades.Objetos.Objeto;
 import Main.MapaLogico;
 
 public abstract class Consumible extends Objeto{
-	
-	//fila	  --> Entidad;
-	//columna --> Entidad;
 
 	protected int fuerza;
 	
