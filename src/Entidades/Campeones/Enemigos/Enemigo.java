@@ -2,11 +2,10 @@ package Entidades.Campeones.Enemigos;
 
 import Entidades.Entidad;
 import Entidades.Campeones.Campeon;
+import Entidades.Disparos.Disparo;
 import Entidades.Disparos.Enemigos.DisparoEnemigo;
 import Main.MapaLogico;
 import Main.VisitanteBooleano;
-import Main.VisitanteDisparo;
-import Main.VisitarAliado;
 import Main.VisitarBarricadaAliado;
 import Utilidad.Lista.PositionList;
 
@@ -30,7 +29,7 @@ public abstract class Enemigo extends Campeon{
 		boolean puedoMoverme = true;
 		
 		for(Entidad e: listaColisionados) {
-			puedoMoverme = !(e.visitadoBooleano(visitante)); //De vuelve true si es aliado o barrica (Se niega después);
+			puedoMoverme = !(e.visitadoBooleano(visitante)); //De vuelve true si es aliado o barrica (Se niega despues);
 			if (!puedoMoverme)
 				break;
 		}
@@ -41,6 +40,13 @@ public abstract class Enemigo extends Campeon{
 		
 	}
 	
+	public void intentarDisparar() {
+		
+		
+		
+		//Falta implementar;
+	}
+	
 	
 	public void mover() {
 			this.setX(x-velocidad);
@@ -48,6 +54,11 @@ public abstract class Enemigo extends Campeon{
 	}
 	
 	public abstract DisparoEnemigo disparar();
+	
+	
+	public void golpear(Disparo a) { // Siempre llegarian DisparoAliados
+		this.vida = vida - a.getFuerza();	
+	}
 	
 	
 }

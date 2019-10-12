@@ -4,7 +4,6 @@ import java.util.LinkedList;
 import java.util.List;
 
 import Entidades.Entidad;
-import Entidades.Disparos.Disparo;
 import Entidades.Objetos.Magias.Magia;
 import Main.MapaLogico;
 
@@ -24,11 +23,11 @@ public abstract class Campeon extends Entidad{
 	public int getMonedas() {
 		return monedas;
 	}
+
+	public void recibirGolpe(int d) {
+		vida = vida - d;
+	}
 	
-	//public abstract void restarVida(DisparoEnemigo d);
-	
-	public abstract void restarVida(int d);
-	public abstract void recibir(Disparo d);
 	public abstract void agregarMagia(Magia m);
 	
 }
