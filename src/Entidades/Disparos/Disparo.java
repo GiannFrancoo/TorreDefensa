@@ -1,28 +1,36 @@
 package Entidades.Disparos;
 
-import Entidades.Entidad;
-import Entidades.Campeones.Aliados.Aliado;
-import Entidades.Campeones.Enemigos.Enemigo;
-import Entidades.Objetos.Objeto;
-import Entidades.Objetos.ObjetosVida.ObjetoVida;
+import javax.swing.JLabel;
+
 import Main.MapaLogico;
 
-public abstract class Disparo extends Entidad{
-	//fila 	  --> Entidad;
-	//columna --> Entidad;
+public abstract class Disparo{
 	
 	protected int fuerza;
-
+	protected int velocidad;
+	protected int x;
+	protected int y;
+	protected int ancho;
+	protected int alto;
+	protected JLabel grafica;
+	protected MapaLogico mapaLogico;
 
 	public Disparo(MapaLogico m) {
-		super(m);
+		mapaLogico = m;
+		velocidad = 1; //En la que recorre el mapa;
 	}
 
 	public int getFuerza() {
 		return fuerza;
 	}
 	
-	public abstract void disparoAliado(Aliado a);
-	public abstract void disparoEnemigo(Enemigo e);
+	public void setX(int x) {
+		this.x = x;
+	}
+	
+	public void setY(int y) {
+		this.y = y;
+	}
+
 	
 }

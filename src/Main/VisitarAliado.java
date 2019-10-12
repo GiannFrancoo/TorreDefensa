@@ -5,26 +5,17 @@ import Entidades.Campeones.Enemigos.Enemigo;
 import Entidades.Objetos.Objeto;
 
 public class VisitarAliado implements VisitanteDisparo{
-
-	private MapaLogico mapaLogico;
 	
-	public VisitarAliado(MapaLogico mapaLogico) {
-		this.mapaLogico = mapaLogico;
-		
-	}
-	
-	public void visita(Enemigo e) {
-		
+	public boolean visita(Enemigo e) {
+		return false;
 	}
 
-	public void visita(Aliado a) {
-		
+	public boolean visita(Aliado a) { // Aliado;
+		return true;
 	}
 
-	public void visita(Objeto o) {
-		
+	public boolean visita(Objeto o) { // Barricada;
+		return true;
 	}
 	
-	
-
 }

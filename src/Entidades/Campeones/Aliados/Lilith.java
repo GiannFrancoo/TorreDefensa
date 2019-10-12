@@ -1,6 +1,5 @@
 package Entidades.Campeones.Aliados;
 
-import Entidades.Entidad;
 import Entidades.Disparos.Disparo;
 import Entidades.Disparos.Aliados.DisparoAliado;
 import Entidades.Disparos.Enemigos.DisparoEnemigo;
@@ -8,7 +7,6 @@ import Entidades.Objetos.Magias.Magia;
 import Main.MapaLogico;
 import Main.VisitanteBooleano;
 import Main.VisitanteDisparo;
-import Utilidad.Lista.Position;
 
 public class Lilith extends Aliado{
 
@@ -60,25 +58,17 @@ public class Lilith extends Aliado{
 	public void accionar() {
 		//Tick de lazaro;
 	}
-	
-	public void recibir(Disparo d) {
-		d.disparoAliado(this);		
-	}
-
-	
-	public void restarVida(int d) {
-		this.vida-= d;
-		//Si llega la vida a 0 hay q ver como modelar para que desaparezca.
 		
-	}
-	
-	public void visitado(VisitanteDisparo v) {
-		v.visita(this);
-	}	
-	
+	// Para el manejo de colisiones;
 	public boolean visitadoBooleano(VisitanteBooleano a) {
 		return a.visita(this);
 				
+	}
+
+	
+	// Para el manejo de disparos;
+	public boolean visitadoDisparo(VisitanteDisparo d) {
+		return d.visita(this);
 	}
 
 

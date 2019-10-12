@@ -6,8 +6,8 @@ import Entidades.Objetos.Objeto;
 
 public interface VisitanteDisparo {
 
-	void visita(Enemigo e);
-	void visita(Aliado a);
-	void visita(Objeto o);
+	public boolean visita(Enemigo e);
+	public boolean visita(Aliado a);
+	public boolean visita(Objeto o);
 
 }

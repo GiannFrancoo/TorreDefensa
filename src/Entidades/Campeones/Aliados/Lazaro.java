@@ -46,36 +46,25 @@ public class Lazaro extends Aliado{
 		this.magias.add(m);
 	}
 	
-	public void restarVida(DisparoEnemigo e) {
+	// Sujeto a cmabio;
+	public void recibirGolpe(int d) {
 		//Parte logica de restar vida;
 		lazaroGrafico.restarVida();
 	}
-	
-	public void restarVida(DisparoAliado a) {
-		
-	}
 
-	public void accionar() {
-		//Tick de lazaro;
-	}
-	
-	public void recibir(Disparo d) {
-		d.disparoAliado(this);		
-	}
-
-	
-	public void restarVida(int d) {
-		this.vida-= d;
-		//Si llega la vida a 0 hay q ver como modelar para que desaparezca.
-		
-	}
-	
+	// Nose para que esta;
 	public void visitado(VisitanteDisparo v) {
 		v.visita(this);
 	}
 
+	// Para las colisiones;
 	public boolean visitadoBooleano(VisitanteBooleano a) {
 		return a.visita(this);
+	}
+
+	// Para el visitante disparo;
+	public boolean visitadoDisparo(VisitanteDisparo vd) {
+		return vd.visita(this);
 	}
 
 	

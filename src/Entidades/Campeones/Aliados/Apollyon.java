@@ -33,37 +33,19 @@ public class Apollyon extends Aliado {
 	}
 
 	@Override
-	public void restarVida(int d) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void accionar() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void recibir(Disparo d) {
-		d.disparoAliado(this);	
-	}
-
-	@Override
 	public void agregarMagia(Magia m) {
 		// TODO Auto-generated method stub
 
 	}
 
-
-	@Override
-	public void visitado(VisitanteDisparo v) {
-		v.visita(this);
-	}
-
 	public boolean visitadoBooleano(VisitanteBooleano a) {
 		return a.visita(this);
 				
+	}
+
+	@Override
+	public boolean visitadoDisparo(Main.VisitanteDisparo vd) {
+		return vd.visita(this);
 	}
 	
 

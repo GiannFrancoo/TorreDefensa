@@ -2,6 +2,10 @@ package Entidades;
 
 
 import javax.swing.JLabel;
+
+import Entidades.Disparos.Disparo;
+import Entidades.Disparos.Aliados.DisparoAliado;
+import Entidades.Disparos.Enemigos.DisparoEnemigo;
 import Main.MapaLogico;
 import Main.VisitanteBooleano;
 import Main.VisitanteDisparo;
@@ -17,6 +21,7 @@ public abstract class Entidad {
 	protected int y;
 	protected EntidadGrafica entidadGrafica;
 	protected MapaLogico mapaLogico;
+	protected Position<Entidad> posEnLista;
 	
 	public Entidad(MapaLogico m) {
 		mapaLogico = m;
@@ -53,11 +58,22 @@ public abstract class Entidad {
 		return entidadGrafica.getLabel();
 	}
 	
-	public abstract Position<Entidad> getPosEnLista();
-	public abstract void setPosEnLista(Position<Entidad> pos);
-	public abstract void accionar();
+	public Position<Entidad> getPosEnLista(){
+		return posEnLista;
+	}
 	
-	public abstract void visitado(VisitanteDisparo v);
-	public abstract boolean visitadoBooleano(VisitanteBooleano a);
+	public void setPosEnLista(Position<Entidad> pos) {
+		posEnLista = pos;
+	}
+	
+	public abstract void accionar(); // Accionar de cada entidad
+	
+	
+	public abstract boolean visitadoBooleano(VisitanteBooleano a); // Colisiones
+	public abstract boolean visitadoDisparo(VisitanteDisparo vd); // Disparos
+
+	public abstract void recibirGolpe(int d);
+	
+	
 }
 

@@ -4,11 +4,13 @@ import Entidades.Entidad;
 import Entidades.Campeones.Aliados.Aliado;
 import Entidades.Campeones.Enemigos.Enemigo;
 import Entidades.Disparos.Disparo;
+import Entidades.Disparos.Aliados.DisparoAliado;
 import Entidades.Objetos.ObjetosVida.ObjetoVida;
 import Main.MapaLogico;
 import Main.VisitanteBooleano;
 import Main.VisitanteDisparo;
 import Utilidad.Lista.Position;
+import Utilidad.Lista.PositionList;
 
 public class DisparoEnemigo extends Disparo {
 	//Fuerza de disparo;
@@ -28,40 +30,38 @@ public class DisparoEnemigo extends Disparo {
 	
 	public void accionar() {
 		// logico
-		disparoEnemigoGrafico.mover();
+		//disparoEnemigoGrafico.mover();
+		this.intentarMoverse();
 		
 	}
 	
-	public void disparoEnemigo(Enemigo e) {
-		e.restarVida(fuerza);
-		//this.mover();
-		//deberia llamar a disparoGrafico para que cambie la imagen o algo.
-	}
-
-	
-	public void disparoAliado(Aliado a) {
-		//Aca no hace nada.	
-	}
-
-	
-	public void disparoObjeto(ObjetoVida o) {
-		//Aca no hace nada.
-	}
-
-	public void visitado(VisitanteDisparo v) {
-		// ver que hacer aca.
-	}
-
-
-	
-	public Position<Entidad> getPosEnLista() {
-		return this.posEnLista;
-	}
-
-	public void setPosEnLista(Position<Entidad> pos) {
-		this.posEnLista = pos;
+	public void intentarMoverse() {
+		PositionList<Entidad> listaColisionados = mapaLogico.colisione(x - velocidad, y);
+		VisitanteDisparo visitante = new VisitanteD_AliadoBarricada();
+		boolean lePegue = false;
+		
+		for(Entidad e: listaColisionados) {
+			lePegue = e.visitadoDisparo(visitante); // De vuelve true si es aliado o barrica (Se niega despues);
+			
+			if (lePegue) { // Le pega sea aliado o barricada y despues corta
+				e.recibirGolpe(fuerza);
+				break;
+			}
+		}
+		
+		if(!lePegue) { // Si se puede mover...
+			this.mover();
+		}
+		else {
+			// Deberia borarse;
+		}
 	}
 	
+	public void mover() {
+		this.setX(x - velocidad);
+	}
+	
+	// Para las colisiones
 	public boolean visitadoBooleano(VisitanteBooleano a) {
 		return a.visita(this);
 	}

@@ -1,6 +1,5 @@
 package Entidades.Campeones.Enemigos;
 
-import javax.swing.JLabel;
 import Entidades.Entidad;
 import Entidades.Disparos.Disparo;
 import Entidades.Disparos.Aliados.DisparoAliado;
@@ -8,7 +7,6 @@ import Entidades.Disparos.Enemigos.DisparoEnemigo;
 import Entidades.Objetos.Magias.Magia;
 import Main.MapaLogico;
 import Main.VisitanteDisparo;
-import Main.VisitarAliado;
 import Main.VisitanteBooleano;
 import Utilidad.Lista.Position;
 
@@ -52,45 +50,25 @@ public class Colmena extends Enemigo {
 		this.magias.add(m);
 	}
 	
-	public void restarVida(DisparoAliado a) {
-		colmenaGrafico.restarVida();
-	}
-	
-	public void restarVida(DisparoEnemigo e) {}
-
-	public void restarVida(int d) {
-		this.vida-= d;
-		//Chequear cuando la vida llega a 0.
-		
-	}
-
-	public void recibir(Disparo d) {
-		d.disparoEnemigo(this);
-	}
-
-	public int getMonedas() {
-		return this.monedas;
-	}
-	
 	public int getVelocidad() {
 		return this.velocidad;
 	}
 
-	public Position<Entidad> getPosEnLista() {
-		return this.posEnLista;
+
+	// Nose para que esta;
+	public void visitado(VisitanteDisparo v) {
+		v.visita(this);
 	}
 
-	public void setPosEnLista(Position<Entidad> pos) {
-		this.posEnLista = pos;
-	}
-
-	
+	// Para las colisiones;
 	public boolean visitadoBooleano(VisitanteBooleano a) {
 		return a.visita(this);
 	}
 	
-	public void visitado(VisitanteDisparo v) {
-		v.visita(this);
+	// Para los disparo;
+	public boolean visitadoDisparo(VisitanteDisparo d) {
+		return d.visita(this);
 	}
+
 
 }
