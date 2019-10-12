@@ -105,7 +105,7 @@ public class MapaLogico {
  	public void actualizar() {
  		//Recorre toda la lista y llamo a los accionar de las clases.
  		for(Entidad e: entidades) {
-			e.mover();
+			e.accionar();
  		}
  		
 	}

@@ -3,7 +3,9 @@ package Entidades;
 
 import javax.swing.JLabel;
 import Main.MapaLogico;
+import Main.VisitanteBooleano;
 import Main.VisitanteDisparo;
+import Main.VisitarAliado;
 import Utilidad.Lista.*;
 
 public abstract class Entidad {
@@ -50,10 +52,12 @@ public abstract class Entidad {
 	public JLabel getGrafica(){
 		return entidadGrafica.getLabel();
 	}
-
+	
 	public abstract Position<Entidad> getPosEnLista();
 	public abstract void setPosEnLista(Position<Entidad> pos);
-	public abstract void mover();
+	public abstract void accionar();
+	
 	public abstract void visitado(VisitanteDisparo v);
+	public abstract boolean visitadoBooleano(VisitanteBooleano a);
 }
 

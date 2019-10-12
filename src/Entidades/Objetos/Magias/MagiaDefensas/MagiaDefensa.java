@@ -4,6 +4,7 @@ import Entidades.Entidad;
 import Entidades.Disparos.Disparo;
 import Entidades.Objetos.Magias.Magia;
 import Main.MapaLogico;
+import Main.VisitanteBooleano;
 import Main.VisitanteDisparo;
 import Utilidad.Lista.Position;
 
@@ -14,7 +15,7 @@ public class MagiaDefensa extends Magia {
 	}
 
 	@Override
-	public void mover() {
+	public void accionar() {
 		// TODO Auto-generated method stub
 		
 	}
@@ -35,6 +36,11 @@ public class MagiaDefensa extends Magia {
 	public void setPosEnLista(Position<Entidad> pos) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public boolean visitadoBooleano(VisitanteBooleano a) {
+		return a.visita(this);
 	}
 
 }
