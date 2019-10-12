@@ -6,12 +6,15 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import Entidades.Entidad;
+import Main.Comprando;
+import Main.EstadoJuego;
 import Main.MapaLogico;
 
 public abstract class BotonTienda extends JButton{
 	
 	protected MapaLogico mapaLogico;
 	protected Tienda tienda;
+	protected EstadoJuego estadoJuego;
 	
 	protected BotonTienda(MapaLogico m, Tienda t){
 		mapaLogico = m;
@@ -25,9 +28,11 @@ public abstract class BotonTienda extends JButton{
 	
 	public class miListener implements ActionListener  {
 		public void actionPerformed(ActionEvent e) {
-	    	mapaLogico.setEstado("comprando");
+	    	mapaLogico.setEstado(new Comprando());
+	    	
 	    	Entidad l = crear();
 	    	tienda.setComprado(l);
+	    	
 		}
 	}
 	

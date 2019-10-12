@@ -2,6 +2,7 @@ package Main.Tienda;
 
 
 import Entidades.Entidad;
+import Main.EstadoJuego;
 import Main.Jugador;
 import Main.MapaLogico;
 import Utilidad.Pair;
@@ -26,18 +27,20 @@ public class Tienda {
 		//Creacion de 10 entidades; (Puede ser por archivo);
 	}
 	
-	public void comprar(int codigo) {
-		
-		//Se chequea si jugador tiene la moneda para comprarlo;
-		if (jugador.getMonedas() >= arreglo[codigo].getValue()) {
-			
-			mapaLogico.setEstado("comprando"); // Cambio el estado;
-			
-			comprado = arreglo[codigo].getKey(); // Habria que hacer una copia; y lo guardo en el atributo;
-			
-			jugador.disminuirMonedas(arreglo[codigo].getValue());
-			
-		}
+	public void comprar(int codigo, EstadoJuego e, Pair<Integer,Integer>[]arreglo, Jugador jugador, Entidad comprado) {
+		//mapaLogico.accionar();
+		e.comprar(codigo, arreglo, jugador, comprado);
+		//e.actua(x, y, m);
+//		//Se chequea si jugador tiene la moneda para comprarlo;
+//		if (jugador.getMonedas() >= arreglo[codigo].getValue()) {
+//			
+//			mapaLogico.setEstado("comprando"); // Cambio el estado;
+//			
+//			comprado = arreglo[codigo].getKey(); // Habria que hacer una copia; y lo guardo en el atributo;
+//			
+//			jugador.disminuirMonedas(arreglo[codigo].getValue());
+//			
+//		}
 				
 	}
 	
