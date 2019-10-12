@@ -5,6 +5,7 @@ import Entidades.Campeones.Aliados.Aliado;
 import Entidades.Campeones.Enemigos.Enemigo;
 import Entidades.Disparos.Disparo;
 import Main.MapaLogico;
+import Main.VisitanteBooleano;
 import Main.VisitanteDisparo;
 import Utilidad.Lista.Position;
 
@@ -23,7 +24,7 @@ public class DisparoAliado extends Disparo{
 		disparoAliadoGrafico = new DisparoAliadoGrafico(this);
 	}
 
-	public void mover() {
+	public void accionar() {
 		// Ve si choco con algo!
 		
 		disparoAliadoGrafico.mover();
@@ -56,6 +57,11 @@ public class DisparoAliado extends Disparo{
 	
 	public void setPosEnLista(Position<Entidad> pos) {
 		this.posEnLista = pos;
+	}
+
+	@Override
+	public boolean visitadoBooleano(VisitanteBooleano a) {
+		return a.visita(this);
 	}
 
 }

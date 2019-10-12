@@ -5,6 +5,7 @@ import Entidades.Disparos.Aliados.DisparoAliado;
 import Entidades.Disparos.Enemigos.DisparoEnemigo;
 import Entidades.Objetos.Magias.Magia;
 import Main.MapaLogico;
+import Main.VisitanteBooleano;
 import Main.VisitanteDisparo;
 
 public class Lazaro extends Aliado{
@@ -14,7 +15,7 @@ public class Lazaro extends Aliado{
 	public Lazaro(MapaLogico m){
 		super(m);
 		
-		this.ancho = 75;
+		this.ancho = 63; //75
 		this.alto = 75;
 		this.vida = 100;
 		this.fuerza = 15;
@@ -54,7 +55,7 @@ public class Lazaro extends Aliado{
 		
 	}
 
-	public void mover() {
+	public void accionar() {
 		//Tick de lazaro;
 	}
 	
@@ -71,6 +72,10 @@ public class Lazaro extends Aliado{
 	
 	public void visitado(VisitanteDisparo v) {
 		v.visita(this);
+	}
+
+	public boolean visitadoBooleano(VisitanteBooleano a) {
+		return a.visita(this);
 	}
 
 	

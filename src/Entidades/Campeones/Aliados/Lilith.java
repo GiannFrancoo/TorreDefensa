@@ -6,6 +6,7 @@ import Entidades.Disparos.Aliados.DisparoAliado;
 import Entidades.Disparos.Enemigos.DisparoEnemigo;
 import Entidades.Objetos.Magias.Magia;
 import Main.MapaLogico;
+import Main.VisitanteBooleano;
 import Main.VisitanteDisparo;
 import Utilidad.Lista.Position;
 
@@ -56,7 +57,7 @@ public class Lilith extends Aliado{
 		
 	}
 
-	public void mover() {
+	public void accionar() {
 		//Tick de lazaro;
 	}
 	
@@ -73,6 +74,11 @@ public class Lilith extends Aliado{
 	
 	public void visitado(VisitanteDisparo v) {
 		v.visita(this);
+	}	
+	
+	public boolean visitadoBooleano(VisitanteBooleano a) {
+		return a.visita(this);
+				
 	}
 
 
