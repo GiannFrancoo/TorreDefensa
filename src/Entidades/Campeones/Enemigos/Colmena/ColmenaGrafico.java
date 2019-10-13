@@ -4,8 +4,9 @@ import java.awt.Image;
 import java.awt.Rectangle;
 import javax.swing.ImageIcon;
 import Entidades.EntidadGrafica;
+import Entidades.Campeones.CampeonGrafica;
 
-public class ColmenaGrafico extends EntidadGrafica {
+public class ColmenaGrafico extends CampeonGrafica {
 
 	protected Colmena colmena;
 	
@@ -27,27 +28,16 @@ public class ColmenaGrafico extends EntidadGrafica {
 	}
 	
 	
-	public void disparar() {
-		grafica.setIcon(imagenes[1]);
-		
-		
+	public void golpear() {
+		grafica.setIcon(imagenes[1]);	
 		grafica.setIcon(imagenes[0]);
 		
 	}
 
-	public void restarVida() {
+	public void recibirGolpe() {
 		grafica.setIcon(imagenes[2]);
-
 		grafica.setIcon(imagenes[0]);
 	}
-	
-	public void mover() {
 
-		grafica.setLocation(colmena.getX(), colmena.getY());
-		
-//		grafica.setIcon(new ImageIcon(imagenes[3].getImage().getScaledInstance(grafica.getWidth(), grafica.getHeight(), Image.SCALE_SMOOTH))); // Arranca con la imagen estatica;		
-		//grafica.setIcon(new ImageIcon(imagenes[0].getImage().getScaledInstance(ancho, alto, Image.SCALE_SMOOTH))); // Arranca con la imagen estatica;
-
-	}
 	
 }

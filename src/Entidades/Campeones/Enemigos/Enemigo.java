@@ -41,24 +41,14 @@ public abstract class Enemigo extends Campeon{
 	}
 	
 	public void intentarDisparar() {
-		
-		
-		
 		//Falta implementar;
 	}
 	
 	
 	public void mover() {
 			this.setX(x-velocidad);
-			//colmenaGrafico.mover(); //Cambio el label;
+			//grafica.mover(); //Cambio el label;
 	}
-	
-	public abstract DisparoEnemigo disparar();
-	
-	
-	public void golpear(Disparo a) { // Siempre llegarian DisparoAliados
-		this.vida = vida - a.getFuerza();	
-	}
-	
-	
+		
+		
 }

@@ -28,17 +28,16 @@ public class Lilith extends Aliado{
 	}
 
 	@Override
-	public DisparoAliado disparar() {
+	public void golpear() { // GOlpea melee
 		//Se recorre la lista de magias, y por cada magia de ataque se incrementa fuerza;
 		//Si hay magia se afecta + fuerza;
 		
 		int n = 0;
 		DisparoAliado d = new DisparoAliado(x, y, n, mapaLogico);
+		mapaLogico.insertar(d);
 		
-		
-		lilithGrafico.disparar();
+		lilithGrafico.golpear();
 	
-		return d;
 	}
 
 	
@@ -46,23 +45,20 @@ public class Lilith extends Aliado{
 		this.magias.add(m);
 	}
 	
-	public void restarVida(DisparoEnemigo e) {
-		//Parte logica de restar vida;
-		lilithGrafico.restarVida();
-	}
-	
-	public void restarVida(DisparoAliado a) {
-		
-	}
-
 	public void accionar() {
 		//Tick de lazaro;
 	}
 		
 	// Para el manejo de colisiones;
 	public boolean visitadoBooleano(VisitanteBooleano a) {
-		return a.visita(this);
-				
+		return a.visita(this);			
+	}
+
+	
+	// Recibe un golpe de un enemigo;
+	public void recibirGolpe(int d) {
+		vida = vida - d;
+		lilithGrafico.recibirGolpe();
 	}
 	
 

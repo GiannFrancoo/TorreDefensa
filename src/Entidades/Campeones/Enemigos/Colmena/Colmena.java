@@ -31,7 +31,7 @@ public class Colmena extends Enemigo {
 	}
 
 	@Override
-	public DisparoEnemigo disparar() {
+	public void golpear() {
 		//Se recorre la lista de magias, y por cada magia de ataque se incrementa fuerza;
 		//Si hay magia se afecta + fuerza;
 		int n = 0;
@@ -40,12 +40,11 @@ public class Colmena extends Enemigo {
 		
 		
 		//Grafica
-		colmenaGrafico.disparar(); //Disparando
+		colmenaGrafico.golpear(); //Disparando
 	
-		return d;
 	}
 
-	@Override
+	// Agregar magia a la lista;
 	public void agregarMagia(Magia m) {
 		this.magias.add(m);
 	}
@@ -57,6 +56,12 @@ public class Colmena extends Enemigo {
 	// Para las colisiones;
 	public boolean visitadoBooleano(VisitanteBooleano a) {
 		return a.visita(this);
+	}
+
+	@Override
+	public void recibirGolpe(int d) {
+		vida = vida - d;
+		
 	}
 
 }

@@ -44,17 +44,16 @@ public class DisparoEnemigo extends Disparo {
 		
 		// Barricadas
 		for(Entidad e: listaColisionados) {
-			lePegue = e.visitadoBooleano(visitanteBarricada); // De vuelve true si es aliado o barrica (Se niega despues);
+			lePegue = e.visitadoBooleano(visitanteBarricada); // Ve si esa entidad es una Barricada;
+			
+			if(!lePegue) { // Si no encuentra una barricada
+				lePegue = e.visitadoBooleano(visitanteAliado); // Ve si esa entidad es un Aliado;
+			}
 			
 			if (lePegue) { // Le pega sea aliado o barricada y despues corta
 				e.recibirGolpe(fuerza);
 				break;
-			}
-			
-			lePegue = e.visitadoBooleano(visitanteAliado);
-			
-			
-			
+			}	
 		}
 		
 		if(!lePegue) { // Si se puede mover...
@@ -74,12 +73,7 @@ public class DisparoEnemigo extends Disparo {
 		return a.visita(this);
 	}
 
-
-	@Override
-	public void recibirGolpe(int d) {
-		// TODO Auto-generated method stub
-		
-	}
-
+	// Metodo que no hace nada, por heredad de entidad;
+	public void recibirGolpe(int d) {}
 
 }
