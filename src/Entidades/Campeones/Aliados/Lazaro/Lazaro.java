@@ -1,13 +1,10 @@
-package Entidades.Campeones.Aliados;
+package Entidades.Campeones.Aliados.Lazaro;
 
-import Entidades.Disparos.Disparo;
+import Entidades.Campeones.Aliados.Aliado;
 import Entidades.Disparos.Aliados.DisparoAliado;
-import Entidades.Disparos.Enemigos.DisparoEnemigo;
 import Entidades.Objetos.Magias.Magia;
 import Main.MapaLogico;
-import Main.VisitanteBooleano;
-import Main.VisitanteDisparo;
-import Main.VisitanteTienda;
+import Main.Visitantes.VisitanteBooleano;
 
 public class Lazaro extends Aliado{
 		
@@ -53,24 +50,9 @@ public class Lazaro extends Aliado{
 		lazaroGrafico.restarVida();
 	}
 
-	// Nose para que esta;
-	public void visitado(VisitanteDisparo v) {
-		v.visita(this);
-	}
-
 	// Para las colisiones;
 	public boolean visitadoBooleano(VisitanteBooleano a) {
 		return a.visita(this);
-	}
-
-	// Para el visitante disparo;
-	public boolean visitadoDisparo(VisitanteDisparo vd) {
-		return vd.visita(this);
-	}
-
-	
-	public void visitaVender(VisitanteTienda vt) {
-		vt.visitaVender(this);	
 	}
 
 	

@@ -13,8 +13,8 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import Entidades.Campeones.Aliados.Lazaro;
-import Entidades.Campeones.Enemigos.Colmena;
+import Entidades.Campeones.Aliados.Lazaro.Lazaro;
+import Entidades.Campeones.Enemigos.Colmena.Colmena;
 import Main.MapaLogico;
 
 public class TiendaGrafica extends JPanel {

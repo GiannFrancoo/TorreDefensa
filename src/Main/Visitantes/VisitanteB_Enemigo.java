@@ -1,4 +1,4 @@
-package Main;
+package Main.Visitantes;
 
 import Entidades.Campeones.Aliados.Aliado;
 import Entidades.Campeones.Enemigos.Enemigo;

@@ -6,9 +6,9 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import Entidades.Entidad;
-import Main.Comprando;
-import Main.EstadoJuego;
 import Main.MapaLogico;
+import Main.Estados.Comprando;
+import Main.Estados.EstadoJuego;
 
 public abstract class BotonTienda extends JButton{
 	

@@ -3,7 +3,7 @@ package Main;
 import java.awt.EventQueue;
 import java.util.Random;
 
-import Entidades.Campeones.Enemigos.Colmena;
+import Entidades.Campeones.Enemigos.Colmena.Colmena;
 
 
 public class Juego extends Thread{

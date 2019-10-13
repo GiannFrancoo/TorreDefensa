@@ -1,4 +1,4 @@
-package Entidades.Campeones.Aliados;
+package Entidades.Campeones.Aliados.Lilith;
 
 import java.awt.Image;
 import java.awt.Rectangle;

@@ -1,4 +1,6 @@
-package Main;
+package Main.Estados;
+
+import Main.MapaLogico;
 
 public class Jugando extends EstadoJuego{
 	

@@ -2,21 +2,17 @@ package Entidades.Disparos;
 
 import javax.swing.JLabel;
 
+import Entidades.Entidad;
 import Main.MapaLogico;
 
-public abstract class Disparo{
+public abstract class Disparo extends Entidad{
 	
 	protected int fuerza;
-	protected int velocidad;
-	protected int x;
-	protected int y;
-	protected int ancho;
-	protected int alto;
-	protected JLabel grafica;
+	protected int velocidad;;
 	protected MapaLogico mapaLogico;
 
 	public Disparo(MapaLogico m) {
-		mapaLogico = m;
+		super(m);
 		velocidad = 1; //En la que recorre el mapa;
 	}
 

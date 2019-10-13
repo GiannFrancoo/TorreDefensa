@@ -1,13 +1,12 @@
-package Entidades.Campeones.Aliados;
+package Entidades.Campeones.Aliados.Lilith;
 
+import Entidades.Campeones.Aliados.Aliado;
 import Entidades.Disparos.Disparo;
 import Entidades.Disparos.Aliados.DisparoAliado;
 import Entidades.Disparos.Enemigos.DisparoEnemigo;
 import Entidades.Objetos.Magias.Magia;
 import Main.MapaLogico;
-import Main.VisitanteBooleano;
-import Main.VisitanteDisparo;
-import Main.VisitanteTienda;
+import Main.Visitantes.VisitanteBooleano;
 
 public class Lilith extends Aliado{
 
@@ -65,18 +64,7 @@ public class Lilith extends Aliado{
 		return a.visita(this);
 				
 	}
-
 	
-	// Para el manejo de disparos;
-	public boolean visitadoDisparo(VisitanteDisparo d) {
-		return d.visita(this);
-	}
-
-	
-	public void visitaVender(VisitanteTienda vt) {
-		vt.visitaVender(this);
-		
-	}
 
 
 }

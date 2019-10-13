@@ -1,21 +1,21 @@
-package Entidades.Campeones.Aliados;
+package Entidades.Campeones.Aliados.Apollyon;
 
 import java.awt.Image;
 import java.awt.Rectangle;
 import javax.swing.ImageIcon;
 import Entidades.EntidadGrafica;
 
-public class LazaroGrafico extends EntidadGrafica{
-	
-	protected Lazaro lazaro;
+public class ApollyonGrafico extends EntidadGrafica {
 
-	public LazaroGrafico(Lazaro l, int ancho, int alto) {
+	protected Apollyon apollyon;
+
+	public ApollyonGrafico(Apollyon a, int ancho, int alto) {
 		super();
-		lazaro = l;
+		apollyon = a;
 		
-		this.imagenes[0] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Lazaro/lazaro_estatico.png")); // Estatico;
-		this.imagenes[1] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Lazaro/lazaro_disparando.png")); // Disparando;
-		this.imagenes[2] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Lazaro/lazaro_sufriendo.png")); // Sufriendo;
+		this.imagenes[0] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Apollyon/apollyon_estatico.png")); // Estatico;
+		this.imagenes[1] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Apollyon/apollyon_sufriendo.png")); // Disparando;
+		this.imagenes[2] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Apollyon/apollyon_sufriendo.png")); // Sufriendo;
 		
 		//this.imagenes[9] = new ImageIcon(this.getClass().getResource("/BattleCity/up.png")); // Tienda;
 		
@@ -44,8 +44,4 @@ public class LazaroGrafico extends EntidadGrafica{
 		
 		grafica.setIcon(imagenes[0]); 
 	}
-
-	
-	
 }
-

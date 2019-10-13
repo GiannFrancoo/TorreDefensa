@@ -3,9 +3,7 @@ package Entidades;
 
 import javax.swing.JLabel;
 import Main.MapaLogico;
-import Main.VisitanteBooleano;
-import Main.VisitanteDisparo;
-import Main.VisitanteTienda;
+import Main.Visitantes.VisitanteBooleano;
 import Utilidad.Lista.*;
 
 public abstract class Entidad {
@@ -66,8 +64,6 @@ public abstract class Entidad {
 	
 	
 	public abstract boolean visitadoBooleano(VisitanteBooleano a); // Colisiones
-	public abstract boolean visitadoDisparo(VisitanteDisparo vd); // Disparos
-	public abstract void visitaVender(VisitanteTienda vt); // Tienda
 	
 	public abstract void recibirGolpe(int d);
 	
