@@ -2,10 +2,12 @@ package Main.Tienda;
 
 
 import Entidades.Entidad;
+import Entidades.Campeones.Aliados.Aliado;
 import Main.Jugador;
 import Main.MapaLogico;
 import Main.Estados.Comprando;
-import Main.Visitantes.VisitanteTienda;
+import Main.Visitantes.VisitanteB_Aliado;
+import Main.Visitantes.VisitanteB_Barricada;
 import Utilidad.Pair;
 
 public class Tienda {
@@ -29,8 +31,8 @@ public class Tienda {
 	}
 	
 	public void comprar(int codigo) {
-//Se chequea si jugador tiene la moneda para comprarlo;
-		if (jugador.getMonedas() >= arreglo[codigo].getValue()) {
+		//Se chequea si jugador tiene la moneda para comprarlo;
+		//if (jugador.getMonedas() >= arreglo[codigo].getValue()) {
 			
 			mapaLogico.setEstado(new Comprando()); // Cambio el estado;
 			
@@ -39,15 +41,13 @@ public class Tienda {
 			jugador.disminuirMonedas(arreglo[codigo].getValue());//Aca habria q actualizar el label de la moneda en la gui.
 			
 			
-		}
+		//}
 		
 				
 	}
 	
-	public void vender(Entidad e) {
-		//Chequea que no sea un enemigo;
-		//y despues hace todo;
-		e.visitaVender(new VisitarVenta());// Delego todo el trabajo al patron electoral.
+	public void vender(Aliado a) {
+		jugador.agregarMonedas(a.getMonedas());
 	}
 	
 	
