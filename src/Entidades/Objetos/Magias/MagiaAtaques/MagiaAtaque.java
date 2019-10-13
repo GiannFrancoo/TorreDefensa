@@ -6,6 +6,7 @@ import Entidades.Objetos.Magias.Magia;
 import Main.MapaLogico;
 import Main.VisitanteBooleano;
 import Main.VisitanteDisparo;
+import Main.VisitanteTienda;
 import Utilidad.Lista.Position;
 
 public class MagiaAtaque extends Magia {
@@ -20,11 +21,11 @@ public class MagiaAtaque extends Magia {
 		
 	}
 
-	@Override
-	public void visitado(VisitanteDisparo v) {
-		// TODO Auto-generated method stub
-		
-	}
+//	@Override
+//	public void visitado(VisitanteDisparo v) {
+//		// TODO Auto-generated method stub
+//		
+//	}
 
 	@Override
 	public void setPosEnLista(Position<Entidad> pos) {
@@ -41,6 +42,24 @@ public class MagiaAtaque extends Magia {
 	@Override
 	public boolean visitadoBooleano(VisitanteBooleano a) {
 		return a.visita(this);
+	}
+
+	@Override
+	public boolean visitadoDisparo(VisitanteDisparo vd) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void recibirGolpe(int d) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void visitaVender(VisitanteTienda vt) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }

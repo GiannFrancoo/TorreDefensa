@@ -7,6 +7,7 @@ import Entidades.Objetos.Magias.Magia;
 import Main.MapaLogico;
 import Main.VisitanteBooleano;
 import Main.VisitanteDisparo;
+import Main.VisitanteTienda;
 
 public class Lilith extends Aliado{
 
@@ -69,6 +70,12 @@ public class Lilith extends Aliado{
 	// Para el manejo de disparos;
 	public boolean visitadoDisparo(VisitanteDisparo d) {
 		return d.visita(this);
+	}
+
+	
+	public void visitaVender(VisitanteTienda vt) {
+		vt.visitaVender(this);
+		
 	}
 
 

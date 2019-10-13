@@ -7,6 +7,7 @@ import Entidades.Objetos.Magias.Magia;
 import Main.MapaLogico;
 import Main.VisitanteBooleano;
 import Main.VisitanteDisparo;
+import Main.VisitanteTienda;
 
 public class Lazaro extends Aliado{
 		
@@ -65,6 +66,11 @@ public class Lazaro extends Aliado{
 	// Para el visitante disparo;
 	public boolean visitadoDisparo(VisitanteDisparo vd) {
 		return vd.visita(this);
+	}
+
+	
+	public void visitaVender(VisitanteTienda vt) {
+		vt.visitaVender(this);	
 	}
 
 	

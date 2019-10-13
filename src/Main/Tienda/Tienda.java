@@ -2,9 +2,11 @@ package Main.Tienda;
 
 
 import Entidades.Entidad;
-import Main.EstadoJuego;
+import Main.Comprando;
 import Main.Jugador;
 import Main.MapaLogico;
+import Main.VisitanteTienda;
+import Main.VisitarVenta;
 import Utilidad.Pair;
 
 public class Tienda {
@@ -27,27 +29,29 @@ public class Tienda {
 		//Creacion de 10 entidades; (Puede ser por archivo);
 	}
 	
-	public void comprar(int codigo, EstadoJuego e, Pair<Integer,Integer>[]arreglo, Jugador jugador, Entidad comprado) {
-		//mapaLogico.accionar();
-		e.comprar(codigo, arreglo, jugador, comprado);
+	public void comprar(int codigo) {
+//		mapaLogico.accionar();
+		//e.comprar(codigo, arreglo, jugador, comprado);
 		//e.actua(x, y, m);
 //		//Se chequea si jugador tiene la moneda para comprarlo;
-//		if (jugador.getMonedas() >= arreglo[codigo].getValue()) {
-//			
-//			mapaLogico.setEstado("comprando"); // Cambio el estado;
-//			
-//			comprado = arreglo[codigo].getKey(); // Habria que hacer una copia; y lo guardo en el atributo;
-//			
-//			jugador.disminuirMonedas(arreglo[codigo].getValue());
-//			
-//		}
+		if (jugador.getMonedas() >= arreglo[codigo].getValue()) {
+			
+			mapaLogico.setEstado(new Comprando()); // Cambio el estado;
+			
+			comprado = arreglo[codigo].getKey(); // Habria que hacer una copia; y lo guardo en el atributo;
+			
+			jugador.disminuirMonedas(arreglo[codigo].getValue());//Aca habria q actualizar el label de la moneda en la gui.
+			
+			
+		}
+		
 				
 	}
 	
 	public void vender(Entidad e) {
 		//Chequea que no sea un enemigo;
 		//y despues hace todo;
-		
+		e.visitaVender(new VisitarVenta());// Delego todo el trabajo al patron electoral.
 	}
 	
 	

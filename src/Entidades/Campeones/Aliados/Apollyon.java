@@ -6,6 +6,7 @@ import Entidades.Objetos.Magias.Magia;
 import Main.MapaLogico;
 import Main.VisitanteBooleano;
 import Main.VisitanteDisparo;
+import Main.VisitanteTienda;
 
 public class Apollyon extends Aliado {
 	
@@ -46,6 +47,11 @@ public class Apollyon extends Aliado {
 	@Override
 	public boolean visitadoDisparo(Main.VisitanteDisparo vd) {
 		return vd.visita(this);
+	}
+
+	
+	public void visitaVender(VisitanteTienda vt) {
+		vt.visitaVender(this);
 	}
 	
 
