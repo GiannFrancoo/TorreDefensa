@@ -36,25 +36,25 @@ public class DisparoEnemigo extends Disparo {
 	}
 	
 	public void intentarMoverse() {
-		PositionList<Entidad> listaColisionados = mapaLogico.colisione(x - velocidad, y);
-		VisitanteDisparo visitante = new VisitanteD_AliadoBarricada();
-		boolean lePegue = false;
-		
-		for(Entidad e: listaColisionados) {
-			lePegue = e.visitadoDisparo(visitante); // De vuelve true si es aliado o barrica (Se niega despues);
-			
-			if (lePegue) { // Le pega sea aliado o barricada y despues corta
-				e.recibirGolpe(fuerza);
-				break;
-			}
-		}
-		
-		if(!lePegue) { // Si se puede mover...
-			this.mover();
-		}
-		else {
-			// Deberia borarse;
-		}
+//		PositionList<Entidad> listaColisionados = mapaLogico.colisione(x - velocidad, y);
+//		VisitanteDisparo visitante = new VisitanteD_AliadoBarricada();
+//		boolean lePegue = false;
+//		
+//		for(Entidad e: listaColisionados) {
+//			lePegue = e.visitadoDisparo(visitante); // De vuelve true si es aliado o barrica (Se niega despues);
+//			
+//			if (lePegue) { // Le pega sea aliado o barricada y despues corta
+//				e.recibirGolpe(fuerza);
+//				break;
+//			}
+//		}
+//		
+//		if(!lePegue) { // Si se puede mover...
+//			this.mover();
+//		}
+//		else {
+//			// Deberia borarse;
+//		}
 	}
 	
 	public void mover() {

@@ -2,14 +2,10 @@ package Entidades;
 
 
 import javax.swing.JLabel;
-
-import Entidades.Disparos.Disparo;
-import Entidades.Disparos.Aliados.DisparoAliado;
-import Entidades.Disparos.Enemigos.DisparoEnemigo;
 import Main.MapaLogico;
 import Main.VisitanteBooleano;
 import Main.VisitanteDisparo;
-import Main.VisitarAliado;
+import Main.VisitanteTienda;
 import Utilidad.Lista.*;
 
 public abstract class Entidad {
@@ -71,7 +67,8 @@ public abstract class Entidad {
 	
 	public abstract boolean visitadoBooleano(VisitanteBooleano a); // Colisiones
 	public abstract boolean visitadoDisparo(VisitanteDisparo vd); // Disparos
-
+	public abstract void visitaVender(VisitanteTienda vt); // Tienda
+	
 	public abstract void recibirGolpe(int d);
 	
 	

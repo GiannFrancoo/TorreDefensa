@@ -13,9 +13,9 @@ public class MapaLogico {
 	
 	//Atributos de instancia ndeahh re IPOO.
 	protected PositionList<Entidad> entidades;
+	protected PositionList<Entidad> aBorrar;
 	protected Tienda tienda;
 	protected Jugador jugador;
-	//private String estadoJuego;
 	private EstadoJuego estadoJuego;
 	private MapaGUI mapaGUI;
 	
@@ -25,43 +25,19 @@ public class MapaLogico {
 		this.mapaGUI = new MapaGUI(this, tienda, jugador);
 		mapaGUI.setVisible(true);
 		entidades = new DoubleLinkedList<Entidad>();
-		this.setEstado(new Jugando());
-		//estadoJuego = ("jugando");
+		aBorrar = new DoubleLinkedList<Entidad>();
+		estadoJuego = new Jugando();
 	}
 	
 	
 	public void setEstado(EstadoJuego e) {
-		//estadoJuego = s;
 		this.estadoJuego = e;
 	}
 	
 	public void accionar(int x, int y) {
-		//vendiendo, jugando, comprando.
-		/*if(estadoJuego.equals("comprando")) {
-			//SE PASA DE COORDENADAS GRAFICAS A COORDENADAS LOGICAS
-			int xx = (((x - 233) * 10)/ 841);
-			int yy = (((y - 42) * 6)/ 487);
-			
-			Entidad e = tienda.getComprado();
-			//SE SETEA COORDENADAS GRAFICAS "NORMALIZADAS"
-			e.setX(((xx * 841) / 10 ) + 233);
-			e.setY(((yy * 487) / 6) + 42 );
-			
-			this.insertar(e);
-			
-			estadoJuego = ("jugando");
-		}
-		
-		if(estadoJuego.equals("vendiendo")) {
-			this.eliminar(x, y);
-			estadoJuego = ("jugando");
-
-		}*/
-		
-		//Si llega a este punto es porque esta en el estado jugando("Aqui no paso nada").
-		this.estadoJuego.actua(x, y, this);
-		
+		this.estadoJuego.actua(this, x, y); //Delego todo el quilombo al patron electoral.
 	}
+
 	
 	public boolean disponible(Pair<Integer,Integer> pos) {
 		//Retorna true si en esa posicion no existe ninguna entidad.
@@ -87,12 +63,12 @@ public class MapaLogico {
 	}
 	
 	public void eliminar(int x, int y) {
-		VisitanteDisparo visitante = new VisitarEnemigo(this);
-		for(Entidad e: this.entidades) {
-			if ((x >= e.getX() && x <= e.getX()+e.getAncho())  &&  (y >= e.getY() && y <= e.getY()+e.getAlto())) {
-				e.visitado(visitante);	
-			}
-		}
+//		VisitanteDisparo visitante = new VisitarEnemigo(this);
+//		for(Entidad e: this.entidades) {
+//			if ((x >= e.getX() && x <= e.getX()+e.getAncho())  &&  (y >= e.getY() && y <= e.getY()+e.getAlto())) {
+//				e.visitado(visitante);	
+//			}
+//		}
 		
 	}
 	
@@ -126,7 +102,7 @@ public class MapaLogico {
 	public PositionList<Entidad> colisione(int x, int y) {
 		//Recorro todas las entidades, y voy viendo si X >= x entonces ahi colisione
 		//PRUEBA: SOLO VA A DETECTAR COLISIONES CON ALIADOS
-		VisitanteDisparo visitante = new VisitarAliado(this);
+		VisitanteDisparo visitante = new VisitarAliado();
 		PositionList<Entidad> listaColisionados = new DoubleLinkedList<Entidad>();
 		for(Entidad e: this.entidades) {
 			if ((x >= e.getX() && x <= e.getX()+e.getAncho())  &&  (y >= e.getY() && y <= e.getY()+e.getAlto())) {
@@ -135,6 +111,7 @@ public class MapaLogico {
 			}
 		}
 		return listaColisionados;
+		//return null;
 	}
 	
 }

@@ -7,6 +7,7 @@ import Entidades.Disparos.Enemigos.DisparoEnemigo;
 import Entidades.Objetos.Magias.Magia;
 import Main.MapaLogico;
 import Main.VisitanteDisparo;
+import Main.VisitanteTienda;
 import Main.VisitanteBooleano;
 import Utilidad.Lista.Position;
 
@@ -68,6 +69,11 @@ public class Colmena extends Enemigo {
 	// Para los disparo;
 	public boolean visitadoDisparo(VisitanteDisparo d) {
 		return d.visita(this);
+	}
+
+	
+	public void visitaVender(VisitanteTienda vt) {
+		vt.visitaVender(this);
 	}
 
 
