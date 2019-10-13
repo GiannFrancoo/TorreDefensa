@@ -1,14 +1,26 @@
 package Main.Estados;
 
 
+import Entidades.Entidad;
+import Entidades.Campeones.Aliados.Aliado;
 import Main.MapaLogico;
+import Main.Visitantes.VisitanteB_Aliado;
 
 public class Vendiendo extends EstadoJuego{
 
 	
 	public void actua(MapaLogico m, int x, int y) {
 		//LLAMAR A VISITOR DE ALIADOS Y BARRICADAS
-		m.eliminarPosta(new Position(x, y));
+		for(Entidad e: m.getListaEntidades()) {
+			if((x >= e.getX() && x <= e.getX()+e.getAncho()) &&  (y >= e.getY() && y <= e.getY()+e.getAlto())) {
+				if(e.visitadoBooleano(new VisitanteB_Aliado())) {
+					m.getTienda().vender((Aliado) e);
+					m.eliminarPosta(e.getPosEnLista());
+					break;
+				}
+			}
+		}
+		
 		m.setEstado(new Jugando());
 	}
 
