@@ -23,7 +23,5 @@ public abstract class Aliado extends Campeon{
 		
 	}
 	
-	public abstract DisparoAliado disparar();
-	
 
 }

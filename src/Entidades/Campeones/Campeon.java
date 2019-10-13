@@ -24,9 +24,10 @@ public abstract class Campeon extends Entidad{
 		return monedas;
 	}
 
-	public void recibirGolpe(int d) {
-		vida = vida - d;
-	}
+	
+	public abstract void recibirGolpe(int d);
+	
+	public abstract void golpear(); // Golpear
 	
 	public abstract void agregarMagia(Magia m);
 	

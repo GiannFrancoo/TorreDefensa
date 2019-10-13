@@ -25,8 +25,8 @@ public class Lazaro extends Aliado{
 		entidadGrafica = lazaroGrafico;
 	}
 
-	@Override
-	public DisparoAliado disparar() {
+	// Dispara a rango;
+	public void golpear() {
 		//Se recorre la lista de magias, y por cada magia de ataque se incrementa fuerza;
 		//Si hay magia se afecta + fuerza;
 		
@@ -34,27 +34,24 @@ public class Lazaro extends Aliado{
 		DisparoAliado d = new DisparoAliado(x, y, n, mapaLogico);
 		
 		
-		lazaroGrafico.disparar();
+		lazaroGrafico.golpear();
 	
-		return d;
 	}
 
-	
+	// Se agrega una magia a la lista;
 	public void agregarMagia(Magia m) {
 		this.magias.add(m);
 	}
 	
-	// Sujeto a cmabio;
+	// Recibe un golpe de un enemigo;
 	public void recibirGolpe(int d) {
-		//Parte logica de restar vida;
-		lazaroGrafico.restarVida();
+		vida = vida - d;
+		lazaroGrafico.recibirGolpe();
 	}
 
 	// Para las colisiones;
 	public boolean visitadoBooleano(VisitanteBooleano a) {
 		return a.visita(this);
 	}
-
-	
 
 }

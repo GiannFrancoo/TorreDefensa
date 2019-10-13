@@ -4,8 +4,9 @@ import java.awt.Image;
 import java.awt.Rectangle;
 import javax.swing.ImageIcon;
 import Entidades.EntidadGrafica;
+import Entidades.Campeones.CampeonGrafica;
 
-public class LazaroGrafico extends EntidadGrafica{
+public class LazaroGrafico extends CampeonGrafica{
 	
 	protected Lazaro lazaro;
 
@@ -25,7 +26,7 @@ public class LazaroGrafico extends EntidadGrafica{
 		
 	}
 
-	public void disparar() {
+	public void golpear() {
 		grafica.setIcon(imagenes[1]);
 		
 		try {
@@ -35,7 +36,7 @@ public class LazaroGrafico extends EntidadGrafica{
 		grafica.setIcon(imagenes[0]);
 	}
 
-	public void restarVida() {
+	public void recibirGolpe() {
 		grafica.setIcon(imagenes[2]);
 		
 		try {

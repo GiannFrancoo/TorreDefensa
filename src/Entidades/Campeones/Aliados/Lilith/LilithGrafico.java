@@ -27,7 +27,7 @@ public class LilithGrafico extends EntidadGrafica {
 		
 	}
 
-	public void disparar() {
+	public void golpear() {
 		grafica.setIcon(imagenes[1]);
 		
 		try {
@@ -37,7 +37,7 @@ public class LilithGrafico extends EntidadGrafica {
 		grafica.setIcon(imagenes[0]);
 	}
 
-	public void restarVida() {
+	public void recibirGolpe() {
 		grafica.setIcon(imagenes[2]);
 		
 		try {

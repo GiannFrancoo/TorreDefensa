@@ -28,7 +28,6 @@ public class DisparoAliado extends Disparo{
 	public void accionar() {
 		this.intentarMoverse(); // Intenta pegarle a algo;
 		//disparoAliadoGrafico.mover();
-	
 	}
 	
 	public void intentarMoverse() {
