@@ -6,7 +6,10 @@ import Entidades.Campeones.Campeon;
 import Entidades.Campeones.Aliados.Aliado;
 import Entidades.Campeones.Enemigos.Enemigo;
 import Entidades.Objetos.Magias.Magia;
+import Main.Estados.EstadoJuego;
+import Main.Estados.Jugando;
 import Main.Tienda.Tienda;
+import Main.Visitantes.VisitanteBooleano;
 import Utilidad.Pair;
 
 public class MapaLogico {
@@ -37,19 +40,9 @@ public class MapaLogico {
 	public void accionar(int x, int y) {
 		this.estadoJuego.actua(this, x, y); //Delego todo el quilombo al patron electoral.
 	}
-
 	
-	public boolean disponible(Pair<Integer,Integer> pos) {
-		//Retorna true si en esa posicion no existe ninguna entidad.
-		 return true;
-	}
-	
-	public void recibir(Aliado a) {	
-		
-	}
-	
-	public void recibir(Enemigo e) {
-		
+	public PositionList<Entidad> getListaEntidades(){
+		return entidades;
 	}
 	
 	public void insertar(Entidad e) {
@@ -60,16 +53,6 @@ public class MapaLogico {
 			e1.printStackTrace();
 		}
 		mapaGUI.insertar(e.getGrafica());
-	}
-	
-	public void eliminar(int x, int y) {
-//		VisitanteDisparo visitante = new VisitarEnemigo(this);
-//		for(Entidad e: this.entidades) {
-//			if ((x >= e.getX() && x <= e.getX()+e.getAncho())  &&  (y >= e.getY() && y <= e.getY()+e.getAlto())) {
-//				e.visitado(visitante);	
-//			}
-//		}
-		
 	}
 	
 	//eliminarPosta: Metodo que se encarga de eliminar la entidad en la lista.
@@ -95,23 +78,28 @@ public class MapaLogico {
 		c.agregarMagia(m);
 	}
 	
-	void colisione(){
-		
-	}
-	
-	public PositionList<Entidad> colisione(int x, int y) {
-		//Recorro todas las entidades, y voy viendo si X >= x entonces ahi colisione
-		//PRUEBA: SOLO VA A DETECTAR COLISIONES CON ALIADOS
-		VisitanteDisparo visitante = new VisitarAliado();
+	public PositionList<Entidad> colisioneDerecha(int x, int y, int ancho) {
 		PositionList<Entidad> listaColisionados = new DoubleLinkedList<Entidad>();
 		for(Entidad e: this.entidades) {
-			if ((x >= e.getX() && x <= e.getX()+e.getAncho())  &&  (y >= e.getY() && y <= e.getY()+e.getAlto())) {
-				//e.visitado(visitante);	
+			if ((x+ancho >= e.getX() && x+ancho <= e.getX()+e.getAncho())  &&  (y >= e.getY() && y <= e.getY()+e.getAlto())) {
 				listaColisionados.addLast(e);
 			}
 		}
 		return listaColisionados;
-		//return null;
+	}
+	
+	public PositionList<Entidad> colisioneIzquierda(int x, int y) {
+		PositionList<Entidad> listaColisionados = new DoubleLinkedList<Entidad>();
+		for(Entidad e: this.entidades) {
+			if ((x >= e.getX() && x <= e.getX()+e.getAncho())  &&  (y >= e.getY() && y <= e.getY()+e.getAlto())) {
+				listaColisionados.addLast(e);
+			}
+		}
+		return listaColisionados;
+	}
+	
+	public Tienda getTienda() {
+		return tienda;
 	}
 	
 }

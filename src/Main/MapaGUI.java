@@ -7,8 +7,8 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 import javax.swing.border.Border;
 
-import Entidades.Campeones.Aliados.Lazaro;
-import Entidades.Campeones.Enemigos.Colmena;
+import Entidades.Campeones.Aliados.Lazaro.Lazaro;
+import Entidades.Campeones.Enemigos.Colmena.Colmena;
 import Main.Tienda.Tienda;
 import Main.Tienda.TiendaGrafica;
 
@@ -20,22 +20,6 @@ public class MapaGUI extends JFrame {
 	private JLayeredPane panel;
 	private ClickeablePanel contentPane;
 	private TiendaGrafica tiendaGrafica;
-
-	/**
-	 * Launch the application.
-	 */
-//	public static void main(String[] args) {
-//		EventQueue.invokeLater(new Runnable() {
-//			public void run() {
-//				try {
-//					MapaGUI frame = new MapaGUI();
-//					frame.setVisible(true);
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		});
-//	}
 
 	/**
 	 * Create the frame.

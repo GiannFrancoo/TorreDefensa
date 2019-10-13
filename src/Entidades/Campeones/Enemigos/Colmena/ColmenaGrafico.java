@@ -1,4 +1,4 @@
-package Entidades.Campeones.Enemigos;
+package Entidades.Campeones.Enemigos.Colmena;
 
 import java.awt.Image;
 import java.awt.Rectangle;

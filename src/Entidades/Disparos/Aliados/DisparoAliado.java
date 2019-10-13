@@ -5,9 +5,8 @@ import Entidades.Campeones.Aliados.Aliado;
 import Entidades.Campeones.Enemigos.Enemigo;
 import Entidades.Disparos.Disparo;
 import Main.MapaLogico;
-import Main.VisitanteB_Enemigo;
-import Main.VisitanteBooleano;
-import Main.VisitanteDisparo;
+import Main.Visitantes.VisitanteB_Enemigo;
+import Main.Visitantes.VisitanteBooleano;
 import Utilidad.Lista.Position;
 import Utilidad.Lista.PositionList;
 
@@ -33,25 +32,25 @@ public class DisparoAliado extends Disparo{
 	}
 	
 	public void intentarMoverse() {
-//		PositionList<Entidad> listaColisionados = mapaLogico.colisione(x - velocidad, y);
-//		VisitanteDisparo visitante = new VisitanteD_Enemigo();
-//		boolean lePegue = false;
-//		
-//		for(Entidad e: listaColisionados) {
-//			lePegue = e.visitadoDisparo(visitante); //De vuelve true si es Enemigo
-//			
-//			if (lePegue) { // Siempre cuando visite un enemigo va a pegarle;
-//				e.recibirGolpe(fuerza);
-//				break;
-//			}
-//		}
-//		
-//		if(!lePegue) { // Si se puede mover...
-//			this.mover();
-//		}
-//		else {
-//			// Deberia borarse;
-//		}
+		PositionList<Entidad> listaColisionados = mapaLogico.colisioneDerecha(x - velocidad, y, ancho);
+		VisitanteBooleano visitanteEnemigo = new VisitanteB_Enemigo();
+		boolean lePegue = false;
+		
+		for(Entidad e: listaColisionados) {
+			lePegue = e.visitadoBooleano(visitanteEnemigo); //De vuelve true si es Enemigo
+			
+			if (lePegue) { // Siempre cuando visite un enemigo va a pegarle;
+				e.recibirGolpe(fuerza);
+				break;
+			}
+		}
+		
+		if(!lePegue) { // Si se puede mover...
+			this.mover();
+		}
+		else {
+			// Deberia borrarse;
+		}
 	}
 	
 	public void mover() {
@@ -61,6 +60,12 @@ public class DisparoAliado extends Disparo{
 	// Para las colisiones;
 	public boolean visitadoBooleano(VisitanteBooleano a) {
 		return a.visita(this);
+	}
+
+	@Override
+	public void recibirGolpe(int d) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

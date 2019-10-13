@@ -1,6 +1,7 @@
-package Main;
+package Main.Estados;
 
 import Entidades.Entidad;
+import Main.MapaLogico;
 
 
 public class Comprando extends EstadoJuego{
@@ -10,8 +11,8 @@ public class Comprando extends EstadoJuego{
 		
 		int xx = (((x - 233) * 10)/ 841);
 		int yy = (((y - 42) * 6)/ 487);
-	
-		Entidad e = m.tienda.getComprado();
+		
+		Entidad e = m.getTienda().getComprado();
 //		//SE SETEA COORDENADAS GRAFICAS "NORMALIZADAS"
 		e.setX(((xx * 841) / 10 ) + 233);
 		e.setY(((yy * 487) / 6) + 42 );

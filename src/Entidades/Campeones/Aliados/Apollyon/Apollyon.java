@@ -1,12 +1,11 @@
-package Entidades.Campeones.Aliados;
+package Entidades.Campeones.Aliados.Apollyon;
 
+import Entidades.Campeones.Aliados.Aliado;
 import Entidades.Disparos.Disparo;
 import Entidades.Disparos.Aliados.DisparoAliado;
 import Entidades.Objetos.Magias.Magia;
 import Main.MapaLogico;
-import Main.VisitanteBooleano;
-import Main.VisitanteDisparo;
-import Main.VisitanteTienda;
+import Main.Visitantes.VisitanteBooleano;
 
 public class Apollyon extends Aliado {
 	
@@ -43,16 +42,5 @@ public class Apollyon extends Aliado {
 		return a.visita(this);
 				
 	}
-
-	@Override
-	public boolean visitadoDisparo(Main.VisitanteDisparo vd) {
-		return vd.visita(this);
-	}
-
-	
-	public void visitaVender(VisitanteTienda vt) {
-		vt.visitaVender(this);
-	}
-	
 
 }

@@ -2,11 +2,10 @@ package Main.Tienda;
 
 
 import Entidades.Entidad;
-import Main.Comprando;
 import Main.Jugador;
 import Main.MapaLogico;
-import Main.VisitanteTienda;
-import Main.VisitarVenta;
+import Main.Estados.Comprando;
+import Main.Visitantes.VisitanteTienda;
 import Utilidad.Pair;
 
 public class Tienda {
@@ -30,10 +29,7 @@ public class Tienda {
 	}
 	
 	public void comprar(int codigo) {
-//		mapaLogico.accionar();
-		//e.comprar(codigo, arreglo, jugador, comprado);
-		//e.actua(x, y, m);
-//		//Se chequea si jugador tiene la moneda para comprarlo;
+//Se chequea si jugador tiene la moneda para comprarlo;
 		if (jugador.getMonedas() >= arreglo[codigo].getValue()) {
 			
 			mapaLogico.setEstado(new Comprando()); // Cambio el estado;

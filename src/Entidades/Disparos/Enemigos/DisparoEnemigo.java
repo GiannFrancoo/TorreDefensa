@@ -7,8 +7,9 @@ import Entidades.Disparos.Disparo;
 import Entidades.Disparos.Aliados.DisparoAliado;
 import Entidades.Objetos.ObjetosVida.ObjetoVida;
 import Main.MapaLogico;
-import Main.VisitanteBooleano;
-import Main.VisitanteDisparo;
+import Main.Visitantes.VisitanteB_Aliado;
+import Main.Visitantes.VisitanteB_Barricada;
+import Main.Visitantes.VisitanteBooleano;
 import Utilidad.Lista.Position;
 import Utilidad.Lista.PositionList;
 
@@ -36,25 +37,32 @@ public class DisparoEnemigo extends Disparo {
 	}
 	
 	public void intentarMoverse() {
-//		PositionList<Entidad> listaColisionados = mapaLogico.colisione(x - velocidad, y);
-//		VisitanteDisparo visitante = new VisitanteD_AliadoBarricada();
-//		boolean lePegue = false;
-//		
-//		for(Entidad e: listaColisionados) {
-//			lePegue = e.visitadoDisparo(visitante); // De vuelve true si es aliado o barrica (Se niega despues);
-//			
-//			if (lePegue) { // Le pega sea aliado o barricada y despues corta
-//				e.recibirGolpe(fuerza);
-//				break;
-//			}
-//		}
-//		
-//		if(!lePegue) { // Si se puede mover...
-//			this.mover();
-//		}
-//		else {
-//			// Deberia borarse;
-//		}
+		PositionList<Entidad> listaColisionados = mapaLogico.colisioneIzquierda(x - velocidad, y);
+		VisitanteBooleano visitanteBarricada = new VisitanteB_Barricada();
+		VisitanteBooleano visitanteAliado = new VisitanteB_Aliado();
+		boolean lePegue = false;
+		
+		// Barricadas
+		for(Entidad e: listaColisionados) {
+			lePegue = e.visitadoBooleano(visitanteBarricada); // De vuelve true si es aliado o barrica (Se niega despues);
+			
+			if (lePegue) { // Le pega sea aliado o barricada y despues corta
+				e.recibirGolpe(fuerza);
+				break;
+			}
+			
+			lePegue = e.visitadoBooleano(visitanteAliado);
+			
+			
+			
+		}
+		
+		if(!lePegue) { // Si se puede mover...
+			this.mover();
+		}
+		else {
+			// Deberia borarse;
+		}
 	}
 	
 	public void mover() {
@@ -64,6 +72,13 @@ public class DisparoEnemigo extends Disparo {
 	// Para las colisiones
 	public boolean visitadoBooleano(VisitanteBooleano a) {
 		return a.visita(this);
+	}
+
+
+	@Override
+	public void recibirGolpe(int d) {
+		// TODO Auto-generated method stub
+		
 	}
 
 
