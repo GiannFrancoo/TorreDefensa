@@ -8,5 +8,10 @@ public abstract class AliadoMelee extends Aliado{
 	public AliadoMelee(MapaLogico m) {
 		super(m);
 	}
-
+	
+	
+	public void golpear() {
+		
+	}
+	
 }

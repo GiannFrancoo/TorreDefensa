@@ -59,6 +59,7 @@ public class MapaGUI extends JFrame {
 	
 	public void insertar(JLabel lbl) {
 		panel.add(lbl, 10, 2);
+		//this.repaint();
 	}
 	
 	public void remover(JLabel lbl) {

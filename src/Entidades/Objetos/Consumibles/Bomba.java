@@ -1,7 +1,8 @@
 package Entidades.Objetos.Consumibles;
 
 import Entidades.Entidad;
-import Entidades.Campeones.Aliados.Lazaro.LazaroGrafico;
+import Entidades.Campeones.Aliados.Aliado;
+import Entidades.Campeones.Enemigos.Enemigo;
 import Main.MapaLogico;
 import Main.Visitantes.VisitanteB_Aliado;
 import Main.Visitantes.VisitanteB_Enemigo;
@@ -48,9 +49,13 @@ public class Bomba extends Consumible {
 				int topY =  e.getY();
 				int botY =  e.getY()+e.getAlto();
 				if (((leftX >= rX && leftX <= rX+anchoC) && (topY >= rY && topY <= rY+altoC)) || ((leftX >= rX && leftX <= rX+anchoC) && (botY >= rY && botY <= rY+altoC)) || ((rightX >= rX && rightX <= rX+anchoC) && (topY >= rY && topY <= rY+altoC)) || ((rightX >= rX && rightX <= rX+anchoC) && (botY >= rY && botY <= rY+altoC))) {
-					if (e.visitadoBooleano(visitoEnemigo) || e.visitadoBooleano(visitoAliado)) {
-						e.recibirGolpe(fuerza);
-						
+					if (e.visitadoBooleano(visitoEnemigo)) {
+						Enemigo a = (Enemigo) e;
+						a.recibirGolpe(fuerza);
+					}
+					if(e.visitadoBooleano(visitoAliado)){
+						Aliado a = (Aliado) e;
+						a.recibirGolpe(fuerza);
 					}
 				}
 			}
@@ -65,12 +70,6 @@ public class Bomba extends Consumible {
 	@Override
 	public boolean visitadoBooleano(VisitanteBooleano a) {
 		return a.visita(this);
-	}
-
-	@Override
-	public void recibirGolpe(int d) {
-		// TODO Auto-generated method stub
-		
 	}
 
 }

@@ -38,20 +38,16 @@ public class DisparoEnemigo extends Disparo {
 	
 	public void intentarMoverse() {
 		PositionList<Entidad> listaColisionados = mapaLogico.colisioneIzquierda(x - velocidad, y);
-		VisitanteBooleano visitanteBarricada = new VisitanteB_Barricada();
 		VisitanteBooleano visitanteAliado = new VisitanteB_Aliado();
 		boolean lePegue = false;
 		
 		// Barricadas
 		for(Entidad e: listaColisionados) {
-			lePegue = e.visitadoBooleano(visitanteBarricada); // Ve si esa entidad es una Barricada;
-			
-			if(!lePegue) { // Si no encuentra una barricada
-				lePegue = e.visitadoBooleano(visitanteAliado); // Ve si esa entidad es un Aliado;
-			}
+			lePegue = e.visitadoBooleano(visitanteAliado); // Ve si esa entidad es una Aliado
 			
 			if (lePegue) { // Le pega sea aliado o barricada y despues corta
-				e.recibirGolpe(fuerza);
+				Aliado a = (Aliado) e;
+				a.recibirGolpe(fuerza);
 				break;
 			}	
 		}

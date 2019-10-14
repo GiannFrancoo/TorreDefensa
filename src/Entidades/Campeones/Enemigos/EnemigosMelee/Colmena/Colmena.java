@@ -2,6 +2,7 @@ package Entidades.Campeones.Enemigos.EnemigosMelee.Colmena;
 
 import Entidades.Entidad;
 import Entidades.Campeones.Enemigos.Enemigo;
+import Entidades.Campeones.Enemigos.EnemigosMelee.EnemigoMelee;
 import Entidades.Disparos.Disparo;
 import Entidades.Disparos.Aliados.DisparoAliado;
 import Entidades.Disparos.Enemigos.DisparoEnemigo;
@@ -10,7 +11,7 @@ import Main.MapaLogico;
 import Main.Visitantes.VisitanteBooleano;
 import Utilidad.Lista.Position;
 
-public class Colmena extends Enemigo {
+public class Colmena extends EnemigoMelee {
 	
 	protected ColmenaGrafico colmenaGrafico;
 	protected Position<Entidad> posEnLista;
@@ -57,10 +58,5 @@ public class Colmena extends Enemigo {
 		return a.visita(this);
 	}
 
-	@Override
-	public void recibirGolpe(int d) {
-		vida = vida - d;
-		
-	}
 
 }
