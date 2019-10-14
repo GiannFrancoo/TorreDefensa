@@ -1,6 +1,7 @@
 package Entidades.Objetos.Consumibles;
 
 import Entidades.Entidad;
+import Entidades.Campeones.Aliados.Lazaro.LazaroGrafico;
 import Main.MapaLogico;
 import Main.Visitantes.VisitanteBooleano;
 import Utilidad.Lista.Position;
@@ -18,7 +19,10 @@ public class Bomba extends Consumible {
 		this.fuerza = 999999;
 		this.tiempoExplocion = 4000;
 		this.tiempoActual = 4000;
-		this.radio = 100;
+		this.radio = 50;
+		
+		BombaGrafico bombaGrafico= new BombaGrafico(this, ancho, alto);
+		entidadGrafica = bombaGrafico;
 	}
 
 	@Override
@@ -31,7 +35,7 @@ public class Bomba extends Consumible {
 			boolean alcanzado = false;
 			for (Entidad e : mapaLogico.getListaEntidades()) {
 				if ((e.getX() >= cX && e.getX()+e.getAncho() <= cX+this.radio*2)  &&  (e.getY() >= cY && e.getY()+e.getAlto() <= cY+this.radio*2)) {
-					alcanzado = e.visitado(visitante); //Tiene que visitar Aliados, Enemigos y barricadas.
+					alcanzado = e.visitado(visitante); //Tiene que visitar Aliados y Enemigos.
 					if (alcanzado) {
 						e.recibirGolpe(fuerza);
 					}
