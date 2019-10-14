@@ -3,6 +3,7 @@ package Entidades.Campeones.Enemigos.EnemigosMelee;
 import Entidades.Entidad;
 import Entidades.Campeones.Enemigos.Enemigo;
 import Main.MapaLogico;
+import Main.Visitantes.VisitanteB_Aliado;
 import Main.Visitantes.VisitanteB_Barricada;
 import Main.Visitantes.VisitanteBooleano;
 import Utilidad.Lista.PositionList;
@@ -21,7 +22,7 @@ public abstract class EnemigoMelee extends Enemigo {
 	
 	public void intentarMoverse() {
 		PositionList<Entidad> listaColisionados = mapaLogico.colisioneIzquierda(x - velocidad, y);
-		VisitanteBooleano visitante = new VisitanteB_Barricada();
+		VisitanteBooleano visitante = new VisitanteB_Aliado();
 		boolean puedoMoverme = true;
 		
 		for(Entidad e: listaColisionados) {

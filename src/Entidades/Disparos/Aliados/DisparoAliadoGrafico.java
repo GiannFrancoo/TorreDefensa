@@ -15,7 +15,8 @@ public class DisparoAliadoGrafico extends EntidadGrafica {
 		super();
 		disparoAliado = e;
 		
-		this.imagenes[0] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Lazaro/lazaro_estatico.png")); // Estatico;
+//		this.imagenes[0] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Lazaro/lazaro_estatico.png")); // Estatico;
+		this.imagenes[0] = new ImageIcon(getClass().getClassLoader().getResource("texturas/disparos/femur.png")); // Estatico;
 		
 		
 		grafica.setBounds(new Rectangle(ancho, alto));
