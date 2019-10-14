@@ -1,4 +1,4 @@
-package Entidades.Campeones.Aliados.Apollyon;
+package Entidades.Campeones.Aliados.AliadosRango.Apollyon;
 
 import Entidades.Campeones.Aliados.Aliado;
 import Entidades.Disparos.Disparo;

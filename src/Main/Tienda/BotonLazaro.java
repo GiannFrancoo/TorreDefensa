@@ -7,7 +7,7 @@ import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 
 import Entidades.Entidad;
-import Entidades.Campeones.Aliados.Lazaro.Lazaro;
+import Entidades.Campeones.Aliados.AliadosRango.Lazaro.Lazaro;
 import Main.MapaLogico;
 
 public class BotonLazaro extends BotonTienda{
