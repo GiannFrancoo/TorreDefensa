@@ -1,4 +1,4 @@
-package Entidades.Campeones.Enemigos.Colmena;
+package Entidades.Campeones.Enemigos.EnemigosMelee.Colmena;
 
 import Entidades.Entidad;
 import Entidades.Campeones.Enemigos.Enemigo;
@@ -23,7 +23,6 @@ public class Colmena extends Enemigo {
 		this.velocidad = 1;
 		this.vida = 100;
 		this.fuerza = 100;
-		this.rango = 3;
 		this.monedas = 30;
 		
 		colmenaGrafico = new ColmenaGrafico(this, ancho, alto);

@@ -5,7 +5,7 @@ import java.awt.Image;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import Entidades.Entidad;
-import Entidades.Campeones.Aliados.Apollyon.Apollyon;
+import Entidades.Campeones.Aliados.AliadosRango.Apollyon.Apollyon;
 import Main.MapaLogico;
 
 public class BotonApollyon extends BotonTienda {

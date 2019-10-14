@@ -1,4 +1,4 @@
-package Entidades.Campeones.Aliados.Apollyon;
+package Entidades.Campeones.Aliados.AliadosRango.Apollyon;
 
 import java.awt.Image;
 import java.awt.Rectangle;
