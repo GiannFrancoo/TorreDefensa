@@ -26,11 +26,6 @@ public class Apollyon extends Aliado {
 		entidadGrafica = apollyonGrafico;
 	}
 
-	@Override
-	public DisparoAliado disparar() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	@Override
 	public void agregarMagia(Magia m) {
@@ -41,6 +36,18 @@ public class Apollyon extends Aliado {
 	public boolean visitadoBooleano(VisitanteBooleano a) {
 		return a.visita(this);
 				
+	}
+
+	@Override
+	public void recibirGolpe(int d) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void golpear() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
