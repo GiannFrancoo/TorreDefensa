@@ -9,6 +9,7 @@ import javax.swing.border.Border;
 
 import Entidades.Campeones.Aliados.Lazaro.Lazaro;
 import Entidades.Campeones.Enemigos.Colmena.Colmena;
+import Main.Estados.Vendiendo;
 import Main.Tienda.Tienda;
 import Main.Tienda.TiendaGrafica;
 
@@ -65,7 +66,19 @@ public class MapaGUI extends JFrame {
 //        });
 //		panel.add(btnEliminar, 10, 2);
 //		///////////////////////////////////////////////////////////////////////////////////
-//						
+//		
+		
+		
+		//BOTON PARA vender
+		JButton btnVender = new JButton("Vendiendo endo");
+		btnVender.setBounds(10, 10, 150, 20);
+		btnVender.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+            	mapaLogico.setEstado(new Vendiendo());
+            }
+        });
+		panel.add(btnVender, 10, 2);
+		
 	}
 		
 	
