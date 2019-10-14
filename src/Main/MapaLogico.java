@@ -3,14 +3,10 @@ package Main;
 import Utilidad.Lista.*;
 import Entidades.Entidad;
 import Entidades.Campeones.Campeon;
-import Entidades.Campeones.Aliados.Aliado;
-import Entidades.Campeones.Enemigos.Enemigo;
 import Entidades.Objetos.Magias.Magia;
 import Main.Estados.EstadoJuego;
 import Main.Estados.Jugando;
 import Main.Tienda.Tienda;
-import Main.Visitantes.VisitanteBooleano;
-import Utilidad.Pair;
 
 public class MapaLogico {
 	
