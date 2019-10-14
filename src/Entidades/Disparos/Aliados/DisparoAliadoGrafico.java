@@ -1,22 +1,26 @@
 package Entidades.Disparos.Aliados;
 
+import java.awt.Image;
+import java.awt.Rectangle;
+
+import javax.swing.ImageIcon;
+
 import Entidades.EntidadGrafica;
 
 public class DisparoAliadoGrafico extends EntidadGrafica {
 
 	protected DisparoAliado disparoAliado;
 	
-	public DisparoAliadoGrafico(DisparoAliado e) {
+	public DisparoAliadoGrafico(DisparoAliado e, int ancho, int alto) {
 		super();
 		disparoAliado = e;
 		
-		//cargar imagenes;
+		this.imagenes[0] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Lazaro/lazaro_estatico.png")); // Estatico;
 		
-	}
-	
-	public void mover() {
-		//Cambia la imagen;
-		//Mueve para la izquierda;
+		
+		grafica.setBounds(new Rectangle(ancho, alto));
+		grafica.setIcon(new ImageIcon(imagenes[0].getImage().getScaledInstance(grafica.getWidth(), grafica.getHeight(), Image.SCALE_SMOOTH))); // Arranca con la imagen estatica;
+		grafica.setLocation(99999999, 9999999);
 	}
 
 	

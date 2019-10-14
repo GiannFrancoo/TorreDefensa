@@ -14,24 +14,23 @@ public class DisparoAliado extends Disparo{
 	//Fuerza de disparo;
 	
 	protected DisparoAliadoGrafico disparoAliadoGrafico;
-	protected Position<Entidad> posEnLista;
 	
 	public DisparoAliado(int x, int y, int fuerza, MapaLogico m) {
 		super(m);
 		this.fuerza = fuerza;
 		this.x = x;
 		this.y = y;
-		
-		disparoAliadoGrafico = new DisparoAliadoGrafico(this);
+	
+		disparoAliadoGrafico = new DisparoAliadoGrafico(this, ancho, alto);
+		entidadGrafica = disparoAliadoGrafico;
 	}
 
 	public void accionar() {
 		this.intentarMoverse(); // Intenta pegarle a algo;
-		//disparoAliadoGrafico.mover();
 	}
 	
 	public void intentarMoverse() {
-		PositionList<Entidad> listaColisionados = mapaLogico.colisioneDerecha(x - velocidad, y, ancho);
+		PositionList<Entidad> listaColisionados = mapaLogico.colisioneDerecha(x + velocidad, y, ancho);
 		VisitanteBooleano visitanteEnemigo = new VisitanteB_Enemigo();
 		boolean lePegue = false;
 		
@@ -39,7 +38,8 @@ public class DisparoAliado extends Disparo{
 			lePegue = e.visitadoBooleano(visitanteEnemigo); //De vuelve true si es Enemigo
 			
 			if (lePegue) { // Siempre cuando visite un enemigo va a pegarle;
-				e.recibirGolpe(fuerza);
+				Enemigo a = (Enemigo) e;
+				a.recibirGolpe(fuerza);
 				break;
 			}
 		}
@@ -47,13 +47,13 @@ public class DisparoAliado extends Disparo{
 		if(!lePegue) { // Si se puede mover...
 			this.mover();
 		}
-		else {
-			// Deberia borrarse;
+		else { // Aca se borra;
+			mapaLogico.eliminarPosta(this.getPosEnLista());
 		}
 	}
 	
 	public void mover() {
-		this.setX(x - velocidad);
+		this.setX(x + velocidad);
 	}
 
 	// Para las colisiones;
@@ -61,10 +61,7 @@ public class DisparoAliado extends Disparo{
 		return a.visita(this);
 	}
 
-	@Override
-	public void recibirGolpe(int d) {
-		// TODO Auto-generated method stub
-		
-	}
+	// Por heredar de entidad;
+	public void recibirGolpe(int d) {}
 
 }

@@ -14,5 +14,11 @@ public abstract class AliadoRango extends Aliado {
 	public int getRango() {
 		return rango;
 	}
-
+	
+	
+	public void golpear() {
+		
+	}
+	
+	
 }

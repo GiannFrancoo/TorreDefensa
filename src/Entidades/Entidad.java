@@ -62,11 +62,7 @@ public abstract class Entidad {
 	
 	public abstract void accionar(); // Accionar de cada entidad
 	
-	
 	public abstract boolean visitadoBooleano(VisitanteBooleano a); // Colisiones
-	
-	public abstract void recibirGolpe(int d);
-	
 	
 }
 
