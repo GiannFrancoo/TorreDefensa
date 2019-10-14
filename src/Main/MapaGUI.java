@@ -7,8 +7,6 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 import javax.swing.border.Border;
 
-import Entidades.Campeones.Aliados.Lazaro.Lazaro;
-import Entidades.Campeones.Enemigos.Colmena.Colmena;
 import Main.Estados.Vendiendo;
 import Main.Tienda.Tienda;
 import Main.Tienda.TiendaGrafica;
