@@ -16,6 +16,7 @@ import javax.swing.JPanel;
 import Entidades.Campeones.Aliados.Lazaro.Lazaro;
 import Entidades.Campeones.Enemigos.Colmena.Colmena;
 import Main.MapaLogico;
+import Main.Estados.Vendiendo;
 
 public class TiendaGrafica extends JPanel {
 	
@@ -47,7 +48,22 @@ public class TiendaGrafica extends JPanel {
 		lblCantMonedas.setOpaque(true);
 		this.add(lblCantMonedas);
 		
+		JButton btnVender = new JButton("Vender");
+		btnVender.setBounds(950, 50, 150, 20);
+		btnVender.addActionListener(new ActionListener() {
+		    public void actionPerformed(ActionEvent e) {
+		    	mapaLogico.setEstado(new Vendiendo());
+		    }
+		});
+		
+		this.add(btnVender, 10, 2);
+		
+		
+		
 		inicializarTienda();
+		
+		
+		
 	}
 	
 	public void actualizarMonedas(int m) {
@@ -61,6 +77,9 @@ public class TiendaGrafica extends JPanel {
 		botones[2] = new BotonApollyon(mapaLogico, tienda);
 		botones[3] = new BotonBomba(mapaLogico, tienda);
 		
+	
+		
+		
 		//Agrego los botones
 		for(int i = 0; i < botones.length; ++i) {
 			this.add(botones[i]);
@@ -69,6 +88,11 @@ public class TiendaGrafica extends JPanel {
 	}
 	
 }
+
+
+
+
+
 	
 	
 	/*	 CODIGO DE FAUSTO;
