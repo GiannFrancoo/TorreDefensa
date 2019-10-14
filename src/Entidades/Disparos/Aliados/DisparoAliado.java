@@ -5,6 +5,7 @@ import Entidades.Campeones.Aliados.Aliado;
 import Entidades.Campeones.Enemigos.Enemigo;
 import Entidades.Disparos.Disparo;
 import Main.MapaLogico;
+import Main.Sonido;
 import Main.Visitantes.VisitanteB_Enemigo;
 import Main.Visitantes.VisitanteBooleano;
 import Utilidad.Lista.Position;
@@ -40,6 +41,9 @@ public class DisparoAliado extends Disparo{
 			if (lePegue) { // Siempre cuando visite un enemigo va a pegarle;
 				Enemigo a = (Enemigo) e;
 				a.recibirGolpe(fuerza);
+				///////   PRUEBA   ////////////////////////////////////////////////////////////////////////////////////////////////////
+				Sonido.DISPARO_FEMUR1.play();
+				///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 				break;
 			}
 		}

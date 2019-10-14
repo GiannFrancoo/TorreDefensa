@@ -14,8 +14,8 @@ public class Lazaro extends AliadoRango{
 	public Lazaro(MapaLogico m){
 		super(m);
 		
-		this.ancho = 63; //75
-		this.alto = 75;
+		this.ancho = 67; 
+		this.alto = 80;
 		this.vida = 100;
 		this.fuerza = 15;
 		this.rango = 5;		
