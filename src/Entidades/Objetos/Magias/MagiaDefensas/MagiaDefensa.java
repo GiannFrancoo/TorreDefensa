@@ -1,11 +1,8 @@
 package Entidades.Objetos.Magias.MagiaDefensas;
 
-import Entidades.Entidad;
-import Entidades.Disparos.Disparo;
 import Entidades.Objetos.Magias.Magia;
 import Main.MapaLogico;
 import Main.Visitantes.VisitanteBooleano;
-import Utilidad.Lista.Position;
 
 public class MagiaDefensa extends Magia {
 
@@ -22,12 +19,6 @@ public class MagiaDefensa extends Magia {
 	@Override
 	public boolean visitadoBooleano(VisitanteBooleano a) {
 		return a.visita(this);
-	}
-
-	@Override
-	public void recibirGolpe(int d) {
-		// TODO Auto-generated method stub
-		
 	}
 
 }
