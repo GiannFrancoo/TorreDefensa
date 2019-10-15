@@ -11,7 +11,7 @@ public class Sonido {
 	
 
 //	public static final AudioClip BACK_MENU = Applet.newAudioClip(Sonido.class.getClassLoader().getResource("sonidos/.wav"));
-//	public static final AudioClip BACK_LVL1 = Applet.newAudioClip(Sonido.class.getClassLoader().getResource("sonidos/juego/basement.mp3"));
+	public static final AudioClip BACK_LVL1 = Applet.newAudioClip(Sonido.class.getClassLoader().getResource("sonidos/juego/basement.wav"));
 //	public static final AudioClip GAMEOVER = Applet.newAudioClip(Sonido.class.getClassLoader().getResource("sonidos/.wav"));
 
 	
@@ -20,6 +20,7 @@ public class Sonido {
 ////////////////////////////////////  DISPAROS  ////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////
 	
+	public static final AudioClip BOMBA = Applet.newAudioClip(Sonido.class.getClassLoader().getResource("sonidos/bomba.wav"));
 	public static final AudioClip DISPARO_FEMUR1 = Applet.newAudioClip(Sonido.class.getClassLoader().getResource("sonidos/disparo/femur1.wav"));
 	public static final AudioClip DISPARO_FEMUR2 = Applet.newAudioClip(Sonido.class.getClassLoader().getResource("sonidos/disparo/femur2.wav"));
 

@@ -22,7 +22,8 @@ public class Juego extends Thread{
 	}
 	
 	public Juego() {
-		this.mapaLogico = new MapaLogico();		
+		this.mapaLogico = new MapaLogico();
+//		Sonido.BACK_LVL1.loop();
 		this.start();
 	}
 	
