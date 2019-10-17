@@ -6,13 +6,14 @@ import java.awt.Rectangle;
 import javax.swing.ImageIcon;
 
 import Entidades.EntidadGrafica;
+import Main.MapaLogico;
 
 public class LilithGrafico extends EntidadGrafica {
 
 	protected Lilith lilith;
 
-	public LilithGrafico(Lilith l, int ancho, int alto) {
-		super();
+	public LilithGrafico(MapaLogico mapaLogico, Lilith l, int ancho, int alto) {
+		super(mapaLogico);
 		lilith = l;
 		
 		this.imagenes[0] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Lilith/lilith_estatico.png")); // Estatico;

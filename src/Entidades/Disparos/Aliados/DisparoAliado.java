@@ -22,7 +22,7 @@ public class DisparoAliado extends Disparo{
 		this.x = x;
 		this.y = y;
 	
-		disparoAliadoGrafico = new DisparoAliadoGrafico(this, ancho, alto);
+		disparoAliadoGrafico = new DisparoAliadoGrafico(mapaLogico, this, ancho, alto);
 		entidadGrafica = disparoAliadoGrafico;
 	}
 

@@ -5,13 +5,14 @@ import java.awt.Rectangle;
 import javax.swing.ImageIcon;
 import Entidades.EntidadGrafica;
 import Entidades.Campeones.CampeonGrafica;
+import Main.MapaLogico;
 
 public class ApollyonGrafico extends CampeonGrafica {
 
 	protected Apollyon apollyon;
 
-	public ApollyonGrafico(Apollyon a, int ancho, int alto) {
-		super();
+	public ApollyonGrafico(MapaLogico mapaLogico, Apollyon a, int ancho, int alto) {
+		super(mapaLogico);
 		apollyon = a;
 		
 		this.imagenes[0] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Apollyon/apollyon_estatico.png")); // Estatico;

@@ -5,13 +5,14 @@ import java.awt.Rectangle;
 import javax.swing.ImageIcon;
 import Entidades.EntidadGrafica;
 import Entidades.Campeones.CampeonGrafica;
+import Main.MapaLogico;
 
 public class ColmenaGrafico extends CampeonGrafica {
 
 	protected Colmena colmena;
 	
-	public ColmenaGrafico(Colmena c, int ancho, int alto) {
-		super();
+	public ColmenaGrafico(MapaLogico mapaLogico, Colmena c, int ancho, int alto) {
+		super(mapaLogico);
 		colmena = c;
 
 		this.imagenes[0] = new ImageIcon(this.getClass().getClassLoader().getResource("texturas/enemigos/colmena/colmena_estatico.png")); // Estatico;
