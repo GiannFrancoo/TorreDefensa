@@ -5,13 +5,14 @@ import java.awt.Rectangle;
 import javax.swing.ImageIcon;
 import Entidades.EntidadGrafica;
 import Entidades.Campeones.CampeonGrafica;
+import Main.MapaLogico;
 
 public class LazaroGrafico extends CampeonGrafica{
 	
 	protected Lazaro lazaro;
 
-	public LazaroGrafico(Lazaro l, int ancho, int alto) {
-		super();
+	public LazaroGrafico(MapaLogico mapaLogico, Lazaro l, int ancho, int alto) {
+		super(mapaLogico);
 		lazaro = l;
 		
 		this.imagenes[0] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Lazaro/lazaro_estatico.png")); // Estatico;

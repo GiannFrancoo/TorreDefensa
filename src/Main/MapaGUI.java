@@ -1,21 +1,12 @@
 package Main;
 
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
 import javax.swing.*;
-import javax.swing.border.Border;
-
-import Main.Estados.Vendiendo;
 import Main.Tienda.Tienda;
 import Main.Tienda.TiendaGrafica;
 
 public class MapaGUI extends JFrame {
 
-	private MapaLogico mapaLogico;
-	private Tienda tienda;
-	private Jugador jugador;
 	private JLayeredPane panel;
 	private ClickeablePanel contentPane;
 	private TiendaGrafica tiendaGrafica;
@@ -25,9 +16,6 @@ public class MapaGUI extends JFrame {
 	 */
 	public MapaGUI(MapaLogico mapaLogico, Tienda tienda, Jugador jugador) {
 		
-		this.mapaLogico = mapaLogico;
-		this.tienda = tienda;
-		this.jugador = jugador;
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(1130, 710);
 		this.setResizable(false);

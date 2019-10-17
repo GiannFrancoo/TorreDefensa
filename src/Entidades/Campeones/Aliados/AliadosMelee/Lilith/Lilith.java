@@ -12,8 +12,8 @@ public class Lilith extends Aliado{
 
 	protected LilithGrafico lilithGrafico;
 	
-	public Lilith(MapaLogico m){
-		super(m);
+	public Lilith(MapaLogico mapaLogico){
+		super(mapaLogico);
 		
 		this.ancho = 75;
 		this.alto = 75;
@@ -22,7 +22,7 @@ public class Lilith extends Aliado{
 		this.monedas = 100;
 		
 
-		LilithGrafico lilithGrafico= new LilithGrafico(this, ancho, alto);
+		LilithGrafico lilithGrafico= new LilithGrafico(mapaLogico, this, ancho, alto);
 		entidadGrafica = lilithGrafico;
 	}
 

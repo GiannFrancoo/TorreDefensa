@@ -3,15 +3,19 @@ package Entidades;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
+import Main.MapaLogico;
+
 public abstract class EntidadGrafica {
 	
 	//Atributos grafica;
 	protected JLabel grafica; // Estado actual de la imagen
 	protected ImageIcon imagenes[]; // Conjunto de imagenes;
+	protected MapaLogico mapaLogico;
 	
-	public EntidadGrafica() {
+	public EntidadGrafica(MapaLogico mapaLogico) {
 		grafica = new JLabel();
 		imagenes = new ImageIcon[10];
+		this.mapaLogico = mapaLogico;
 	}
 	
 	public JLabel getLabel(){

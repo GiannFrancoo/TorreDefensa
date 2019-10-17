@@ -19,13 +19,13 @@ public class DisparoEnemigo extends Disparo {
 	protected DisparoEnemigoGrafico disparoEnemigoGrafico;
 	protected Position<Entidad> posEnLista;
 	
-	public DisparoEnemigo(int x, int y, int fuerza, MapaLogico m){
-		super(m);
+	public DisparoEnemigo(int x, int y, int fuerza, MapaLogico mapaLogico){
+		super(mapaLogico);
 		this.fuerza = fuerza;
 		this.x = x;
 		this.y = y;
 		
-		disparoEnemigoGrafico = new DisparoEnemigoGrafico(this);
+		disparoEnemigoGrafico = new DisparoEnemigoGrafico(mapaLogico, this);
 	}
 
 	

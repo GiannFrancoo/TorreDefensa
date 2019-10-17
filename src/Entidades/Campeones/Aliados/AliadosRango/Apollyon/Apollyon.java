@@ -12,8 +12,8 @@ public class Apollyon extends AliadoRango {
 	
 	protected ApollyonGrafico apollyonGrafico;
 	
-	public Apollyon(MapaLogico m) {
-		super(m);
+	public Apollyon(MapaLogico mapaLogico) {
+		super(mapaLogico);
 		
 		this.ancho = 75;
 		this.alto = 75;
@@ -23,7 +23,7 @@ public class Apollyon extends AliadoRango {
 		this.monedas = 100;
 		
 
-		ApollyonGrafico apollyonGrafico= new ApollyonGrafico(this, ancho, alto);
+		ApollyonGrafico apollyonGrafico= new ApollyonGrafico(mapaLogico, this, ancho, alto);
 		entidadGrafica = apollyonGrafico;
 	}
 

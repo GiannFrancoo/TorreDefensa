@@ -16,8 +16,8 @@ public class Colmena extends EnemigoMelee {
 	protected ColmenaGrafico colmenaGrafico;
 	protected Position<Entidad> posEnLista;
 	
-	public Colmena(MapaLogico m) {
-		super(m);
+	public Colmena(MapaLogico mapaLogico) {
+		super(mapaLogico);
 		
 		this.ancho = 65; //34 por regla de 3 (39 -> 75)
 		this.alto = 75;  //39                (34 ->  X)
@@ -26,7 +26,7 @@ public class Colmena extends EnemigoMelee {
 		this.fuerza = 100;
 		this.monedas = 30;
 		
-		colmenaGrafico = new ColmenaGrafico(this, ancho, alto);
+		colmenaGrafico = new ColmenaGrafico(mapaLogico, this, ancho, alto);
 		entidadGrafica = colmenaGrafico;
 	}
 

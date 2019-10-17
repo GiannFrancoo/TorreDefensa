@@ -11,8 +11,8 @@ public class Lazaro extends AliadoRango{
 		
 	protected LazaroGrafico lazaroGrafico;
 	
-	public Lazaro(MapaLogico m){
-		super(m);
+	public Lazaro(MapaLogico mapaLogico){
+		super(mapaLogico);
 		
 		this.ancho = 67; 
 		this.alto = 80;
@@ -23,7 +23,7 @@ public class Lazaro extends AliadoRango{
 		this.dps = 35;
 		
 
-		lazaroGrafico = new LazaroGrafico(this, ancho, alto);
+		lazaroGrafico = new LazaroGrafico(mapaLogico, this, ancho, alto);
 		entidadGrafica = lazaroGrafico;
 	}
 

@@ -11,7 +11,7 @@ public class Sonido {
 	
 
 //	public static final AudioClip BACK_MENU = Applet.newAudioClip(Sonido.class.getClassLoader().getResource("sonidos/.wav"));
-	public static final AudioClip BACK_LVL1 = Applet.newAudioClip(Sonido.class.getClassLoader().getResource("sonidos/juego/basement.wav"));
+	//public static final AudioClip BACK_LVL1 = Applet.newAudioClip(Sonido.class.getClassLoader().getResource("sonidos/juego/basement.wav"));
 //	public static final AudioClip GAMEOVER = Applet.newAudioClip(Sonido.class.getClassLoader().getResource("sonidos/.wav"));
 
 	

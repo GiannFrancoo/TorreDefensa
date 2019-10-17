@@ -98,4 +98,8 @@ public class MapaLogico {
 		return tienda;
 	}
 	
+	public MapaGUI getMapaGUI() {
+		return mapaGUI;
+	}
+	
 }
