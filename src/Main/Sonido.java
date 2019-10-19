@@ -1,18 +1,47 @@
 package Main;
 
-import java.applet.Applet;
-import java.applet.AudioClip;
+import java.io.IOException;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.FloatControl;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 
 public class Sonido {
+	
+
+	
+	public static void play(String AudioName) {
+		try {
+			AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(Sonido.class.getClassLoader().getResource(AudioName));
+			Clip clip = AudioSystem.getClip();
+		    clip.open(audioInputStream);	    	
+		    
+		    FloatControl gainControl = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
+			double gain = 0.05;   
+			float dB = (float) (Math.log(gain) / Math.log(10.0) * 20.0);
+			gainControl.setValue(dB);
+			
+			clip.start();
+			
+		} catch (LineUnavailableException | IOException | UnsupportedAudioFileException e) {
+			e.printStackTrace();
+		}
+	}
+    
+	
+	// If you want the sound to loop infinitely, then put: clip.loop(Clip.LOOP_CONTINUOUSLY); 
+    // If you want to stop the sound, then use clip.stop();
 
 ////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////  JUEGO  //////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////	
 	
 
-//	public static final AudioClip BACK_MENU = Applet.newAudioClip(Sonido.class.getClassLoader().getResource("sonidos/.wav"));
-	//public static final AudioClip BACK_LVL1 = Applet.newAudioClip(Sonido.class.getClassLoader().getResource("sonidos/juego/basement.wav"));
-//	public static final AudioClip GAMEOVER = Applet.newAudioClip(Sonido.class.getClassLoader().getResource("sonidos/.wav"));
+	public static final String BACK_MENU = ("sonidos/.wav");
+	public static final String BACK_LVL1 = ("sonidos/juego/basement.wav");
+	public static final String GAMEOVER = ("sonidos/.wav");
 
 	
 
@@ -20,17 +49,16 @@ public class Sonido {
 ////////////////////////////////////  DISPAROS  ////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////
 	
-	public static final AudioClip BOMBA = Applet.newAudioClip(Sonido.class.getClassLoader().getResource("sonidos/bomba.wav"));
-	public static final AudioClip DISPARO_FEMUR1 = Applet.newAudioClip(Sonido.class.getClassLoader().getResource("sonidos/disparo/femur1.wav"));
-	public static final AudioClip DISPARO_FEMUR2 = Applet.newAudioClip(Sonido.class.getClassLoader().getResource("sonidos/disparo/femur2.wav"));
-
+	public static final String BOMBA = ("sonidos/bomba.wav");
+	public static final String DISPARO_FEMUR1 = ("sonidos/disparo/femur1.wav");
+	public static final String DISPARO_FEMUR2 = ("sonidos/disparo/femur2.wav");
 
 	
 ////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////  JUEGO  //////////////////////////////////////////////
+/////////////////////////////////////  DAÑO  ///////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////
 	
-	public static final AudioClip RECIBIRGOLPE_COLMENA = Applet.newAudioClip(Sonido.class.getClassLoader().getResource("sonidos/recibirgolpe/hurt_2.wav"));
+	public static final String RECIBIRGOLPE_COLMENA = ("sonidos/recibirgolpe/hurt_2.wav");
 
 	
 ////////////////////////////////////////////////////////////////////////////////////////////

@@ -2,6 +2,7 @@ package Entidades.Campeones.Aliados;
 
 import Entidades.Campeones.Campeon;
 import Main.MapaLogico;
+import Main.Visitantes.Visitante;
 
 public abstract class Aliado extends Campeon{
 	
@@ -10,7 +11,14 @@ public abstract class Aliado extends Campeon{
 	}
 	
 	public void accionar() {
-		this.intentarGolpear();
+		if (this.estaVivo) {
+			this.intentarGolpear();
+		}
 	}
 	
+	public void visitar(Visitante a) {
+		if (this.estaVivo) {
+			a.visita(this);
+		}
+	}
 }

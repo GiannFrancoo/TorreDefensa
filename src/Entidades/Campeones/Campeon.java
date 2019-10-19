@@ -11,7 +11,6 @@ public abstract class Campeon extends Entidad{
 
 	protected int dps;
 	protected int dpsTiming = dps;
-	protected int vida;
 	protected int fuerza;
 	protected int monedas;
 	protected List<Magia> magias;
@@ -33,13 +32,6 @@ public abstract class Campeon extends Entidad{
 		}
 		else {
 			--dpsTiming;
-		}
-	}
-		
-	public  void recibirGolpe(int d) {
-		vida = vida - d;
-		if(vida <= 0) {
-			mapaLogico.eliminarPosta(this.getPosEnLista());
 		}
 	}
 	

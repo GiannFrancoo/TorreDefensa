@@ -5,7 +5,7 @@ import Entidades.Disparos.Disparo;
 import Entidades.Disparos.Aliados.DisparoAliado;
 import Entidades.Objetos.Magias.Magia;
 import Main.MapaLogico;
-import Main.Visitantes.VisitanteBooleano;
+import Main.Visitantes.Visitante;
 
 public class Lazaro extends AliadoRango{
 		
@@ -40,11 +40,6 @@ public class Lazaro extends AliadoRango{
 	// Se agrega una magia a la lista;
 	public void agregarMagia(Magia m) {
 		this.magias.add(m);
-	}
-	
-	// Para las colisiones;
-	public boolean visitadoBooleano(VisitanteBooleano a) {
-		return a.visita(this);
 	}
 
 }

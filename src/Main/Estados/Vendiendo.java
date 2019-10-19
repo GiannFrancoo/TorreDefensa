@@ -13,9 +13,9 @@ public class Vendiendo extends EstadoJuego{
 		//LLAMAR A VISITOR DE ALIADOS Y BARRICADAS
 		for(Entidad e: m.getListaEntidades()) {
 			if((x >= e.getX() && x <= e.getX()+e.getAncho()) &&  (y >= e.getY() && y <= e.getY()+e.getAlto())) {
-				if(e.visitadoBooleano(new VisitanteB_Aliado())) {
+				if(e.visitar(new VisitanteB_Aliado())) {
 					m.getTienda().vender((Aliado) e);
-					m.eliminarPosta(e.getPosEnLista());
+					m.eliminar(e.getPosEnLista());
 					break;
 				}
 			}

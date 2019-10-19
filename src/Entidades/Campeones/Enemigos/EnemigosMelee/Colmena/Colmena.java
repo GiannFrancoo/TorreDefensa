@@ -8,7 +8,7 @@ import Entidades.Disparos.Aliados.DisparoAliado;
 import Entidades.Disparos.Enemigos.DisparoEnemigo;
 import Entidades.Objetos.Magias.Magia;
 import Main.MapaLogico;
-import Main.Visitantes.VisitanteBooleano;
+import Main.Visitantes.Visitante;
 import Utilidad.Lista.Position;
 
 public class Colmena extends EnemigoMelee {
@@ -51,11 +51,6 @@ public class Colmena extends EnemigoMelee {
 	
 	public int getVelocidad() {
 		return this.velocidad;
-	}
-
-	// Para las colisiones;
-	public boolean visitadoBooleano(VisitanteBooleano a) {
-		return a.visita(this);
 	}
 
 

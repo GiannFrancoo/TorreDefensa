@@ -7,7 +7,7 @@ import Main.MapaLogico;
 import Main.Sonido;
 import Main.Visitantes.VisitanteB_Aliado;
 import Main.Visitantes.VisitanteB_Enemigo;
-import Main.Visitantes.VisitanteBooleano;
+import Main.Visitantes.Visitante;
 
 public class Bomba extends Consumible {
 	
@@ -43,28 +43,28 @@ public class Bomba extends Consumible {
 			int altoC = this.radio * 2;
 			
 			//Explotar
-			VisitanteBooleano visitoEnemigo = new VisitanteB_Enemigo();
-			VisitanteBooleano visitoAliado = new VisitanteB_Aliado();
+			Visitante visitoEnemigo = new VisitanteB_Enemigo();
+			Visitante visitoAliado = new VisitanteB_Aliado();
 			for (Entidad e : mapaLogico.getListaEntidades()) {
 				int leftX = e.getX() ;
 				int rightX = e.getX()+e.getAncho();
 				int topY =  e.getY();
 				int botY =  e.getY()+e.getAlto();
 				if (((leftX >= rX && leftX <= rX+anchoC) && (topY >= rY && topY <= rY+altoC)) || ((leftX >= rX && leftX <= rX+anchoC) && (botY >= rY && botY <= rY+altoC)) || ((rightX >= rX && rightX <= rX+anchoC) && (topY >= rY && topY <= rY+altoC)) || ((rightX >= rX && rightX <= rX+anchoC) && (botY >= rY && botY <= rY+altoC))) {
-					if (e.visitadoBooleano(visitoEnemigo)) {
+					if (e.visitar(visitoEnemigo)) {
 						Enemigo a = (Enemigo) e;
 						a.recibirGolpe(fuerza);
 					}
-					if(e.visitadoBooleano(visitoAliado)){
+					if(e.visitar(visitoAliado)){
 						Aliado a = (Aliado) e;
 						a.recibirGolpe(fuerza);
 					}
 				}
 			}
 			//Auto-Eliminarse
-			Sonido.BOMBA.play();
+			Sonido.play(Sonido.BOMBA);
 			this.bombaG.explotar();
-			mapaLogico.eliminarPosta(this.getPosEnLista());
+			mapaLogico.eliminar(this.getPosEnLista());
 		} else {
 			--tiempoActual;
 		}
@@ -72,8 +72,10 @@ public class Bomba extends Consumible {
 
 
 	@Override
-	public boolean visitadoBooleano(VisitanteBooleano a) {
-		return a.visita(this);
+	public void visitar(Visitante a) {
+		if (this.estaVivo) {
+			a.visita(this);
+		}
 	}
 
 }
