@@ -6,8 +6,6 @@ import Entidades.Campeones.Aliados.Aliado;
 import Main.Jugador;
 import Main.MapaLogico;
 import Main.Estados.Comprando;
-import Main.Visitantes.VisitanteB_Aliado;
-import Main.Visitantes.VisitanteB_Barricada;
 import Utilidad.Pair;
 
 public class Tienda {

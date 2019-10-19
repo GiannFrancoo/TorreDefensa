@@ -1,12 +1,8 @@
 package Entidades.Campeones.Aliados.AliadosRango.Apollyon;
 
-import Entidades.Campeones.Aliados.Aliado;
 import Entidades.Campeones.Aliados.AliadosRango.AliadoRango;
-import Entidades.Disparos.Disparo;
-import Entidades.Disparos.Aliados.DisparoAliado;
 import Entidades.Objetos.Magias.Magia;
 import Main.MapaLogico;
-import Main.Visitantes.VisitanteBooleano;
 
 public class Apollyon extends AliadoRango {
 	
@@ -32,11 +28,6 @@ public class Apollyon extends AliadoRango {
 	public void agregarMagia(Magia m) {
 		// TODO Auto-generated method stub
 
-	}
-
-	public boolean visitadoBooleano(VisitanteBooleano a) {
-		return a.visita(this);
-				
 	}
 
 	@Override

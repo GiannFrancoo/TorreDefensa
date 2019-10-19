@@ -3,12 +3,15 @@ package Entidades;
 
 import javax.swing.JLabel;
 import Main.MapaLogico;
-import Main.Visitantes.VisitanteBooleano;
+import Main.Visitantes.Visitante;
 import Utilidad.Lista.*;
 
 public abstract class Entidad {
 	
 	//Atributos logica;
+	protected int vida;
+
+	protected boolean estaVivo = true;
 	protected int ancho;
 	protected int alto;
 	protected int x;
@@ -60,9 +63,17 @@ public abstract class Entidad {
 		posEnLista = pos;
 	}
 	
+	public  void recibirGolpe(int d) {
+		vida = vida - d;
+		if(vida <= 0) {
+			this.estaVivo = false;
+			mapaLogico.eliminar(this.getPosEnLista());
+		}
+	}
+	
 	public abstract void accionar(); // Accionar de cada entidad
 	
-	public abstract boolean visitadoBooleano(VisitanteBooleano a); // Colisiones
+	public abstract void visitar(Visitante a); // Colisiones
 	
 }
 

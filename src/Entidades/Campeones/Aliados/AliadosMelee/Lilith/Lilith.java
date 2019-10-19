@@ -6,7 +6,7 @@ import Entidades.Disparos.Aliados.DisparoAliado;
 import Entidades.Disparos.Enemigos.DisparoEnemigo;
 import Entidades.Objetos.Magias.Magia;
 import Main.MapaLogico;
-import Main.Visitantes.VisitanteBooleano;
+import Main.Visitantes.Visitante;
 
 public class Lilith extends Aliado{
 
@@ -43,16 +43,6 @@ public class Lilith extends Aliado{
 	public void agregarMagia(Magia m) {
 		this.magias.add(m);
 	}
-	
-	public void accionar() {
-		//Tick de lazaro;
-	}
-		
-	// Para el manejo de colisiones;
-	public boolean visitadoBooleano(VisitanteBooleano a) {
-		return a.visita(this);			
-	}
-
 	
 	// Recibe un golpe de un enemigo;
 	public void recibirGolpe(int d) {

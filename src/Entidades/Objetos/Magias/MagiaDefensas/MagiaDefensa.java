@@ -2,7 +2,7 @@ package Entidades.Objetos.Magias.MagiaDefensas;
 
 import Entidades.Objetos.Magias.Magia;
 import Main.MapaLogico;
-import Main.Visitantes.VisitanteBooleano;
+import Main.Visitantes.Visitante;
 
 public class MagiaDefensa extends Magia {
 
@@ -17,8 +17,10 @@ public class MagiaDefensa extends Magia {
 	}
 
 	@Override
-	public boolean visitadoBooleano(VisitanteBooleano a) {
-		return a.visita(this);
+	public void visitar(Visitante a) {
+		if (this.estaVivo) {
+			a.visita(this);
+		}
 	}
 
 }

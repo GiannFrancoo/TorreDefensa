@@ -35,6 +35,12 @@ public class MapaGUI extends JFrame {
 		panel.add(lblFondo, 1, 0); 
 		
 		
+		JLabel lblIsaac = new JLabel();
+		lblIsaac.setBounds(45, 220, 150, 150);
+		lblIsaac.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/utilidades/isaac.gif")).getImage().getScaledInstance(lblIsaac.getWidth(), lblIsaac.getHeight(), Image.SCALE_DEFAULT)));
+		panel.add(lblIsaac, 10, 2); 
+		
+		
 		tiendaGrafica = tienda.getGrafica();
 		tiendaGrafica.setLocation(0, 548);
 		panel.add(tiendaGrafica, 10, 2);
