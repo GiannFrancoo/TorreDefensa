@@ -7,6 +7,7 @@ import Main.Visitantes.Visitante;
 public abstract class Disparo extends Entidad{
 	
 	protected int fuerza;
+	protected int rango;
 	protected int velocidad;
 	protected Visitante visitante;
 

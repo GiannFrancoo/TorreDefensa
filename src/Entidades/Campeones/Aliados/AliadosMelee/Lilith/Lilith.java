@@ -31,9 +31,6 @@ public class Lilith extends Aliado{
 		//Se recorre la lista de magias, y por cada magia de ataque se incrementa fuerza;
 		//Si hay magia se afecta + fuerza;
 		
-		int n = 0;
-		DisparoAliado d = new DisparoAliado(x, y, n, mapaLogico);
-		mapaLogico.insertar(d);
 		
 		lilithGrafico.golpear();
 	

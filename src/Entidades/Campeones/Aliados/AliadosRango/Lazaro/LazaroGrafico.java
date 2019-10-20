@@ -28,8 +28,9 @@ public class LazaroGrafico extends CampeonGrafica{
 	}
 
 	public void golpear() {
-		grafica.setIcon(imagenes[1]);
-		grafica.setIcon(imagenes[0]);
+		grafica.setIcon(new ImageIcon(imagenes[1].getImage().getScaledInstance(grafica.getWidth(), grafica.getHeight(), Image.SCALE_SMOOTH)));
+		System.out.println("hola");
+		grafica.setIcon(new ImageIcon(imagenes[0].getImage().getScaledInstance(grafica.getWidth(), grafica.getHeight(), Image.SCALE_SMOOTH)));
 	}
 
 	public void recibirGolpe() {

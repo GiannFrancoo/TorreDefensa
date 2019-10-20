@@ -12,9 +12,10 @@ public class DisparoEnemigo extends Disparo {
 	//Fuerza de disparo;
 	protected DisparoEnemigoGrafico disparoEnemigoGrafico;
 	
-	public DisparoEnemigo(int x, int y, int fuerza, MapaLogico mapaLogico){
+	public DisparoEnemigo(int x, int y, int fuerza, int rango, MapaLogico mapaLogico) {
 		super(mapaLogico);
 		this.fuerza = fuerza;
+		this.rango = rango;
 		this.x = x;
 		this.y = y;
 		
@@ -37,7 +38,7 @@ public class DisparoEnemigo extends Disparo {
 
 		for(Entidad e: listaColisionados) {
 			
-			//Hace daño al primer enemigo y muere.
+			//Hace daï¿½o al primer enemigo y muere.
 			e.visitar(visitante);
 		}
 		
@@ -47,6 +48,10 @@ public class DisparoEnemigo extends Disparo {
 	
 	public void mover() {
 		this.setX(x - velocidad);
+		this.rango -= velocidad;
+		if (rango <= 0) {
+			this.eliminar();
+		}
 	}
 	
 	// Para las colisiones

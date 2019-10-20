@@ -17,10 +17,10 @@ public class Lazaro extends AliadoRango{
 		this.ancho = 67; 
 		this.alto = 80;
 		this.vidaActual = 100;
-		this.fuerza = 15;
-		this.rango = 5;		
-		this.monedas = 100;
+		this.fuerza = 25;
+		this.rango = 550;		
 		this.dps = 35;
+		monedas = 100;
 		
 
 		lazaroGrafico = new LazaroGrafico(mapaLogico, this, ancho, alto);
@@ -29,12 +29,12 @@ public class Lazaro extends AliadoRango{
 
 	// Dispara a rango;
 	public void golpear() {	
-		int n = 25; // Fuerza
-		DisparoAliado d = new DisparoAliado(x, y, n, mapaLogico);
+		//Aplicar magia
+		DisparoAliado d = new DisparoAliado(x, y, this.fuerza, this.rango, mapaLogico);
 		mapaLogico.insertar(d);
 		d.setX(this.x);
 		d.setY(this.y);
-		//lazaroGrafico.golpear();
+		lazaroGrafico.golpear();
 	}
 
 	// Se agrega una magia a la lista;

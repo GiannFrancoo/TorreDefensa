@@ -11,18 +11,18 @@ import Utilidad.Lista.PositionList;
 public class DisparoAliado extends Disparo{
 	//Fuerza de disparo;
 	
-	protected DisparoAliadoGrafico disparoAliadoGrafico;
 	
-	public DisparoAliado(int x, int y, int fuerza, MapaLogico m) {
+	public DisparoAliado(int x, int y, int fuerza, int rango, MapaLogico m) {
 		super(m);
 		this.fuerza = fuerza;
+		this.rango = rango;
 		this.x = x;
 		this.y = y;
 	
 		this.visitante = new VisitanteDisparoA_Enemigo(this);
 
 		
-		disparoAliadoGrafico = new DisparoAliadoGrafico(mapaLogico, this, ancho, alto);
+		DisparoAliadoGrafico disparoAliadoGrafico = new DisparoAliadoGrafico(mapaLogico, this, ancho, alto);
 		entidadGrafica = disparoAliadoGrafico;
 	}
 
@@ -38,7 +38,7 @@ public class DisparoAliado extends Disparo{
 		
 		for(Entidad e: listaColisionados) {
 			
-			//Hace daño al primer enemigo y muere.
+			//Hace danio al primer enemigo y muere.
 			e.visitar(visitante);
 			
 			///////   PRUEBA   ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -52,6 +52,10 @@ public class DisparoAliado extends Disparo{
 	
 	public void mover() {
 		this.setX(x + velocidad);
+		this.rango -= velocidad;
+		if (rango <= 0) {
+			this.eliminar();
+		}
 	}
 
 	public void visitar(Visitante a) {

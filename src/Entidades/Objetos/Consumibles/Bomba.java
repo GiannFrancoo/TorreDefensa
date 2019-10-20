@@ -10,9 +10,9 @@ import Main.Visitantes.VisitanteBomba;
 
 public class Bomba extends Consumible {
 	
-	protected int tiempoExplocion;
+	protected int tiempoExplosion;
 	protected int tiempoActual;
-	protected int radio; //De explocion (ES UN CUADRADO)
+	protected int radio; //De explosion (ES UN CUADRADO)
 	protected BombaGrafico bombaG;
 
 	public Bomba(MapaLogico m) {
@@ -20,8 +20,8 @@ public class Bomba extends Consumible {
 		this.alto = 85;
 		this.ancho = 85;
 		this.fuerza = 999999;
-		this.tiempoExplocion = 50;
-		this.tiempoActual = tiempoExplocion;
+		this.tiempoExplosion = 50;
+		this.tiempoActual = tiempoExplosion;
 		this.radio = 50;
 		
 		this.visitante = new VisitanteBomba(this);
@@ -57,7 +57,7 @@ public class Bomba extends Consumible {
 					int topY =  e.getY();
 					int botY =  e.getY()+e.getAlto();
 					if (((leftX >= rX && leftX <= rX+anchoC) && (topY >= rY && topY <= rY+altoC)) || ((leftX >= rX && leftX <= rX+anchoC) && (botY >= rY && botY <= rY+altoC)) || ((rightX >= rX && rightX <= rX+anchoC) && (topY >= rY && topY <= rY+altoC)) || ((rightX >= rX && rightX <= rX+anchoC) && (botY >= rY && botY <= rY+altoC))) {
-						//Hace daño a cada aliado y enemigo en el area.
+						//Hace daï¿½o a cada aliado y enemigo en el area.
 						e.visitar(visitante);
 					}
 				}
