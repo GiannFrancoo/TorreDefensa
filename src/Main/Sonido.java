@@ -16,7 +16,8 @@ public class Sonido {
 		try {
 			AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(Sonido.class.getClassLoader().getResource(AudioName));
 			Clip clip = AudioSystem.getClip();
-		    clip.open(audioInputStream);	    	
+		    clip.open(audioInputStream);	
+		    audioInputStream.close();
 		    
 		    FloatControl gainControl = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
 			double gain = 0.05;   
@@ -38,7 +39,6 @@ public class Sonido {
 /////////////////////////////////////  JUEGO  //////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////	
 	
-
 	public static final String BACK_MENU = ("sonidos/.wav");
 	public static final String BACK_LVL1 = ("sonidos/juego/basement.wav");
 	public static final String GAMEOVER = ("sonidos/.wav");

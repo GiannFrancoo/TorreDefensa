@@ -1,11 +1,10 @@
 package Entidades.Disparos.Aliados;
 
 import Entidades.Entidad;
-import Entidades.Campeones.Enemigos.Enemigo;
 import Entidades.Disparos.Disparo;
 import Main.MapaLogico;
 import Main.Sonido;
-import Main.Visitantes.VisitanteB_Enemigo;
+import Main.Visitantes.VisitanteDisparoA_Enemigo;
 import Main.Visitantes.Visitante;
 import Utilidad.Lista.PositionList;
 
@@ -20,6 +19,9 @@ public class DisparoAliado extends Disparo{
 		this.x = x;
 		this.y = y;
 	
+		this.visitante = new VisitanteDisparoA_Enemigo(this);
+
+		
 		disparoAliadoGrafico = new DisparoAliadoGrafico(mapaLogico, this, ancho, alto);
 		entidadGrafica = disparoAliadoGrafico;
 	}
@@ -30,42 +32,35 @@ public class DisparoAliado extends Disparo{
 		}
 	}
 	
+	//Va a mover el disparo, y si se encuentra con un ememido lo golpea y se autodestruye.
 	public void intentarMoverse() {
 		PositionList<Entidad> listaColisionados = mapaLogico.colisioneDerecha(x + velocidad, y, ancho);
-		Visitante visitanteEnemigo = new VisitanteB_Enemigo();
-		boolean lePegue = false;
 		
 		for(Entidad e: listaColisionados) {
-			lePegue = e.visitar(visitanteEnemigo); //De vuelve true si es Enemigo
 			
-			if (lePegue) { // Siempre cuando visite un enemigo va a pegarle;
-				Enemigo a = (Enemigo) e;
-				a.recibirGolpe(fuerza);
-				///////   PRUEBA   ////////////////////////////////////////////////////////////////////////////////////////////////////
-				Sonido.play(Sonido.DISPARO_FEMUR1);
-				///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-				break;
-			}
+			//Hace daño al primer enemigo y muere.
+			e.visitar(visitante);
+			
+			///////   PRUEBA   ////////////////////////////////////////////////////////////////////////////////////////////////////
+			//Debe ir en cada disparo concreto
+			Sonido.play(Sonido.DISPARO_FEMUR1);
+			///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		}
 		
-		if(!lePegue) { // Si se puede mover...
-			this.mover();
-		}
-		else { // Aca se borra;
-			this.estaVivo = false;
-			mapaLogico.eliminar(this.getPosEnLista());
-		}
+		this.mover();
 	}
 	
 	public void mover() {
 		this.setX(x + velocidad);
 	}
 
-	// Para las colisiones;
 	public void visitar(Visitante a) {
 		if (this.estaVivo) {
 			a.visita(this);
 		}
+	}
+
+	public void recibirGolpe(int d) {
 	}
 
 }

@@ -22,7 +22,7 @@ public class Colmena extends EnemigoMelee {
 		this.ancho = 65; //34 por regla de 3 (39 -> 75)
 		this.alto = 75;  //39                (34 ->  X)
 		this.velocidad = 1;
-		this.vida = 100;
+		this.vidaActual = 100;
 		this.fuerza = 100;
 		this.monedas = 30;
 		

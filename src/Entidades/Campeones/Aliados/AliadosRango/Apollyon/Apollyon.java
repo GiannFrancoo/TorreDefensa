@@ -13,7 +13,7 @@ public class Apollyon extends AliadoRango {
 		
 		this.ancho = 75;
 		this.alto = 75;
-		this.vida = 100;
+		this.vidaActual = 100;
 		this.fuerza = 15;
 		this.rango = 5;		
 		this.monedas = 100;

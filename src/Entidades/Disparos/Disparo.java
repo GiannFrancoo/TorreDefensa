@@ -2,11 +2,13 @@ package Entidades.Disparos;
 
 import Entidades.Entidad;
 import Main.MapaLogico;
+import Main.Visitantes.Visitante;
 
 public abstract class Disparo extends Entidad{
 	
 	protected int fuerza;
 	protected int velocidad;
+	protected Visitante visitante;
 
 	public Disparo(MapaLogico m) {
 		super(m);
@@ -16,7 +18,7 @@ public abstract class Disparo extends Entidad{
 	}
 
 	public int getFuerza() {
-		return fuerza;
+		return this.fuerza;
 	}
 	
 	public abstract void mover();

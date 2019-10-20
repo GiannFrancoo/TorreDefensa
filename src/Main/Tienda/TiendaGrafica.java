@@ -6,8 +6,6 @@ import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.BorderFactory;
-import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -50,7 +48,7 @@ public class TiendaGrafica extends JPanel {
 		btnVender.setBounds(950, 50, 150, 20);
 		btnVender.addActionListener(new ActionListener() {
 		    public void actionPerformed(ActionEvent e) {
-		    	mapaLogico.setEstado(new Vendiendo());
+		    	mapaLogico.setEstado(new Vendiendo(mapaLogico));
 		    }
 		});
 		

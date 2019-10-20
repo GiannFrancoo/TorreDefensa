@@ -9,8 +9,6 @@ import Utilidad.Lista.*;
 public abstract class Entidad {
 	
 	//Atributos logica;
-	protected int vida;
-
 	protected boolean estaVivo = true;
 	protected int ancho;
 	protected int alto;
@@ -19,6 +17,8 @@ public abstract class Entidad {
 	protected EntidadGrafica entidadGrafica;
 	protected MapaLogico mapaLogico;
 	protected Position<Entidad> posEnLista;
+	
+	protected Visitante visitante;
 	
 	public Entidad(MapaLogico m) {
 		mapaLogico = m;
@@ -63,13 +63,15 @@ public abstract class Entidad {
 		posEnLista = pos;
 	}
 	
-	public  void recibirGolpe(int d) {
-		vida = vida - d;
-		if(vida <= 0) {
-			this.estaVivo = false;
-			mapaLogico.eliminar(this.getPosEnLista());
-		}
+	public void setVivo(boolean v) {
+		this.estaVivo = v;
 	}
+	
+	public void eliminar() {
+		mapaLogico.eliminar(this.getPosEnLista());
+	}
+	
+	public abstract void recibirGolpe(int d);
 	
 	public abstract void accionar(); // Accionar de cada entidad
 	
