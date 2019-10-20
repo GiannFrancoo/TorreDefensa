@@ -14,6 +14,7 @@ public abstract class Campeon extends Entidad{
 	protected int dps;
 	protected int dpsTiming = dps;
 	protected int fuerza;
+	protected int rango;
 	protected List<Magia> magias;
 	protected CampeonGrafica campeonGrafico; // VER
 	protected static int monedas;
@@ -29,6 +30,10 @@ public abstract class Campeon extends Entidad{
 		} else {
 			return monedas/2;
 		}
+	}
+	
+	public int getRango() {
+		return this.rango;
 	}
 	
 	public int getFueza() {

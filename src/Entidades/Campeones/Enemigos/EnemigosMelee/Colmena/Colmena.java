@@ -34,13 +34,9 @@ public class Colmena extends EnemigoMelee {
 	public void golpear() {
 		//Se recorre la lista de magias, y por cada magia de ataque se incrementa fuerza;
 		//Si hay magia se afecta + fuerza;
-		int n = 0;
-		
-		DisparoEnemigo d = new DisparoEnemigo(x, y, n, mapaLogico);
-		
 		
 		//Grafica
-		colmenaGrafico.golpear(); //Disparando
+//		colmenaGrafico.golpear(); //Disparando
 	
 	}
 

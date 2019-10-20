@@ -16,26 +16,22 @@ public class VisitanteMovimientoEnemigo implements Visitante {
 	}
 	
 	public void visita(Enemigo e) {
-		enemigo.mover();
 	}
 
 	public void visita(Aliado a) {
+		enemigo.setMoverme(false);
 	}
 
 	public void visita(ObjetoVida o) {
-		enemigo.mover();
 	}
 
 	public void visita(Consumible c) {
-		enemigo.mover();
 	}
 
 	public void visita(Disparo d) {
-		enemigo.mover();
 	}
 
 	public void visita(Magia m) {
-		enemigo.mover();
 	}
 
 }
