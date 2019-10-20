@@ -4,13 +4,12 @@ import Entidades.Entidad;
 import Entidades.Campeones.Aliados.Aliado;
 import Entidades.Disparos.Disparo;
 import Main.MapaLogico;
-import Main.Visitantes.VisitanteB_Aliado;
+import Main.Visitantes.VisitanteDisparoA_Aliado;
 import Main.Visitantes.Visitante;
 import Utilidad.Lista.PositionList;
 
 public class DisparoEnemigo extends Disparo {
 	//Fuerza de disparo;
-	
 	protected DisparoEnemigoGrafico disparoEnemigoGrafico;
 	
 	public DisparoEnemigo(int x, int y, int fuerza, MapaLogico mapaLogico){
@@ -18,6 +17,8 @@ public class DisparoEnemigo extends Disparo {
 		this.fuerza = fuerza;
 		this.x = x;
 		this.y = y;
+		
+		this.visitante = new VisitanteDisparoA_Aliado(this);
 		
 		disparoEnemigoGrafico = new DisparoEnemigoGrafico(mapaLogico, this);
 		entidadGrafica = disparoEnemigoGrafico;
@@ -30,29 +31,18 @@ public class DisparoEnemigo extends Disparo {
 		}
 	}
 	
+	//Va a mover el disparo, y si se encuentra con un ememido lo golpea y se autodestruye.
 	public void intentarMoverse() {
 		PositionList<Entidad> listaColisionados = mapaLogico.colisioneIzquierda(x - velocidad, y);
-		Visitante visitanteAliado = new VisitanteB_Aliado();
-		boolean lePegue = false;
-		
-		// Barricadas
+
 		for(Entidad e: listaColisionados) {
-			lePegue = e.visitar(visitanteAliado); // Ve si esa entidad es una Aliado
 			
-			if (lePegue) { // Le pega sea aliado o barricada y despues corta
-				Aliado a = (Aliado) e;
-				a.recibirGolpe(fuerza);
-				break;
-			}	
+			//Hace daño al primer enemigo y muere.
+			e.visitar(visitante);
 		}
 		
-		if(!lePegue) { // Si se puede mover...
-			this.mover();
-		}
-		else {
-			this.estaVivo = false;
-			mapaLogico.eliminar(this.getPosEnLista());
-		}
+		this.mover();
+		
 	}
 	
 	public void mover() {
@@ -64,6 +54,10 @@ public class DisparoEnemigo extends Disparo {
 		if (this.estaVivo) {
 			a.visita(this);
 		}
+	}
+
+
+	public void recibirGolpe(int d) {
 	}
 
 }

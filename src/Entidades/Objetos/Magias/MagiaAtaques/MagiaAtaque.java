@@ -22,5 +22,8 @@ public class MagiaAtaque extends Magia {
 			a.visita(this);
 		}
 	}
+
+	public void recibirGolpe(int d) {
+	}
 	
 }

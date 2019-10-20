@@ -32,7 +32,7 @@ public class Tienda {
 		//Se chequea si jugador tiene la moneda para comprarlo;
 		//if (jugador.getMonedas() >= arreglo[codigo].getValue()) {
 			
-			mapaLogico.setEstado(new Comprando()); // Cambio el estado;
+			mapaLogico.setEstado(new Comprando(mapaLogico)); // Cambio el estado;
 			
 			comprado = arreglo[codigo].getKey(); // Habria que hacer una copia; y lo guardo en el atributo;
 			
@@ -46,6 +46,8 @@ public class Tienda {
 	
 	public void vender(Aliado a) {
 		jugador.agregarMonedas(a.getMonedas());
+		tiendaGrafica.actualizarMonedas(jugador.getMonedas());
+		mapaLogico.eliminar(a.getPosEnLista());
 	}
 	
 	

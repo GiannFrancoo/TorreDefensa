@@ -28,7 +28,7 @@ public class MapaLogico {
 		entidades = new DoubleLinkedList<Entidad>();
 		aBorrar = new DoubleLinkedList<Position<Entidad>>();
 		aInsertar = new DoubleLinkedList<Entidad>();
-		estadoJuego = new Jugando();
+		estadoJuego = new Jugando(this);
 	}
 	
 	
@@ -37,7 +37,7 @@ public class MapaLogico {
 	}
 	
 	public void accionar(int x, int y) {
-		this.estadoJuego.actua(this, x, y); //Delego todo el quilombo al patron electoral.
+		this.estadoJuego.actua(x, y); //Delego todo el quilombo al patron electoral.
 	}
 	
 	public PositionList<Entidad> getListaEntidades(){
@@ -50,6 +50,7 @@ public class MapaLogico {
 	
 	//eliminarPosta: Metodo que se encarga de eliminar la entidad en la lista.
 	public void eliminar(Position<Entidad> pos) {
+		pos.element().setVivo(false);
 		mapaGUI.remover(pos.element().getGrafica());
 		this.aBorrar.addLast(pos);
 	}

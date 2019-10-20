@@ -17,7 +17,7 @@ public class Lilith extends Aliado{
 		
 		this.ancho = 75;
 		this.alto = 75;
-		this.vida = 100;
+		this.vidaActual = 100;
 		this.fuerza = 15;	
 		this.monedas = 100;
 		
@@ -46,7 +46,7 @@ public class Lilith extends Aliado{
 	
 	// Recibe un golpe de un enemigo;
 	public void recibirGolpe(int d) {
-		vida = vida - d;
+		vidaActual = vidaActual - d;
 		lilithGrafico.recibirGolpe();
 	}
 	

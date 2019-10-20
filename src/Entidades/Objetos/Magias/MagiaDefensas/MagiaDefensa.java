@@ -23,4 +23,7 @@ public class MagiaDefensa extends Magia {
 		}
 	}
 
+	public void recibirGolpe(int d) {
+	}
+
 }

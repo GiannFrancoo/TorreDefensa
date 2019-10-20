@@ -16,7 +16,7 @@ public class Lazaro extends AliadoRango{
 		
 		this.ancho = 67; 
 		this.alto = 80;
-		this.vida = 100;
+		this.vidaActual = 100;
 		this.fuerza = 15;
 		this.rango = 5;		
 		this.monedas = 100;

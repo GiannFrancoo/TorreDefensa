@@ -3,6 +3,7 @@ package Entidades.Campeones.Enemigos;
 import Entidades.Campeones.Campeon;
 import Main.MapaLogico;
 import Main.Visitantes.Visitante;
+import Main.Visitantes.VisitanteMovimientoEnemigo;
 
 public abstract class Enemigo extends Campeon{
 	
