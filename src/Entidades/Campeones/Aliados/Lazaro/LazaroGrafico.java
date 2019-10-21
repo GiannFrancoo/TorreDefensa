@@ -1,4 +1,4 @@
-package Entidades.Campeones.Aliados.AliadosRango.Lazaro;
+package Entidades.Campeones.Aliados.Lazaro;
 
 import java.awt.Image;
 import java.awt.Rectangle;

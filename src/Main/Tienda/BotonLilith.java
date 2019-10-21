@@ -7,7 +7,7 @@ import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 
 import Entidades.Entidad;
-import Entidades.Campeones.Aliados.AliadosMelee.Lilith.Lilith;
+import Entidades.Campeones.Aliados.Lilith.Lilith;
 import Main.MapaLogico;
 
 public class BotonLilith extends BotonTienda{

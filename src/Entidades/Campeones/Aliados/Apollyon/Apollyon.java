@@ -1,10 +1,10 @@
-package Entidades.Campeones.Aliados.AliadosRango.Apollyon;
+package Entidades.Campeones.Aliados.Apollyon;
 
-import Entidades.Campeones.Aliados.AliadosRango.AliadoRango;
+import Entidades.Campeones.Aliados.Aliado;
 import Entidades.Objetos.Magias.Magia;
 import Main.MapaLogico;
 
-public class Apollyon extends AliadoRango {
+public class Apollyon extends Aliado {
 	
 	protected ApollyonGrafico apollyonGrafico;
 	
@@ -16,7 +16,7 @@ public class Apollyon extends AliadoRango {
 		this.vidaActual = 100;
 		this.fuerza = 15;
 		this.rango = 5;		
-		this.monedas = 100;
+		monedas = 100;
 		
 
 		ApollyonGrafico apollyonGrafico= new ApollyonGrafico(mapaLogico, this, ancho, alto);
@@ -24,22 +24,13 @@ public class Apollyon extends AliadoRango {
 	}
 
 
-	@Override
+	
 	public void agregarMagia(Magia m) {
-		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public void recibirGolpe(int d) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void golpear() {
-		// TODO Auto-generated method stub
-		
+	public void golpearRango() {
 	}
 
 }

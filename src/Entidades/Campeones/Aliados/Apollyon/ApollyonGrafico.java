@@ -1,24 +1,23 @@
-package Entidades.Campeones.Aliados.AliadosMelee.Lilith;
+package Entidades.Campeones.Aliados.Apollyon;
 
 import java.awt.Image;
 import java.awt.Rectangle;
-
 import javax.swing.ImageIcon;
-
 import Entidades.EntidadGrafica;
+import Entidades.Campeones.CampeonGrafica;
 import Main.MapaLogico;
 
-public class LilithGrafico extends EntidadGrafica {
+public class ApollyonGrafico extends CampeonGrafica {
 
-	protected Lilith lilith;
+	protected Apollyon apollyon;
 
-	public LilithGrafico(MapaLogico mapaLogico, Lilith l, int ancho, int alto) {
+	public ApollyonGrafico(MapaLogico mapaLogico, Apollyon a, int ancho, int alto) {
 		super(mapaLogico);
-		lilith = l;
+		apollyon = a;
 		
-		this.imagenes[0] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Lilith/lilith_estatico.png")); // Estatico;
-		this.imagenes[1] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Lilith/lilith_disparando.png")); // Disparando;
-		this.imagenes[2] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Lilith/lilith_sufriendo.png")); // Sufriendo;
+		this.imagenes[0] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Apollyon/apollyon_estatico.png")); // Estatico;
+		this.imagenes[1] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Apollyon/apollyon_sufriendo.png")); // Disparando;
+		this.imagenes[2] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Apollyon/apollyon_sufriendo.png")); // Sufriendo;
 		
 		//this.imagenes[9] = new ImageIcon(this.getClass().getResource("/BattleCity/up.png")); // Tienda;
 		
@@ -47,4 +46,5 @@ public class LilithGrafico extends EntidadGrafica {
 		
 		grafica.setIcon(imagenes[0]); 
 	}
+	
 }
