@@ -44,6 +44,14 @@ public abstract class Campeon extends Entidad{
 		return this.fuerza;
 	}
 	
+	public int getVidaActual() {
+		return this.vidaActual;
+	}
+	
+	public int getVidaMaxima() {
+		return this.vidaMaxima;
+	}
+	
 	public void recibirGolpe(int d) {
 		vidaActual = vidaActual - d;
 		if(vidaActual <= 0) {

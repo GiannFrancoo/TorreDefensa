@@ -10,12 +10,19 @@ public abstract class Disparo extends Entidad{
 	protected int rango;
 	protected int velocidad;
 	protected Visitante visitante;
+	
+	//Cada disparo concreto debe asignar su sonido
+	protected String sonido;
 
 	public Disparo(MapaLogico m) {
 		super(m);
 		this.alto = 75;
 		this.ancho = 75;
 		this.velocidad = 5; //En la que recorre el mapa;
+	}
+	
+	public String getSonido() {
+		return this.sonido;
 	}
 
 	public int getFuerza() {

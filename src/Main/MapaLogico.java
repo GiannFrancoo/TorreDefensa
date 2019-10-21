@@ -90,17 +90,17 @@ public class MapaLogico {
 		c.agregarMagia(m);
 	}
 	
-	public PositionList<Entidad> colisioneDerecha(int x, int y, int ancho) {
-		PositionList<Entidad> listaColisionados = new DoubleLinkedList<Entidad>();
-		for(Entidad e: this.entidades) {
-			if ((x+ancho >= e.getX() && x+ancho <= e.getX()+e.getAncho())  &&  (y >= e.getY() && y <= e.getY()+e.getAlto())) {
-				listaColisionados.addLast(e);
-			}
-		}
-		return listaColisionados;
-	}
+//	public PositionList<Entidad> colisioneDerecha(int x, int y, int ancho) {
+//		PositionList<Entidad> listaColisionados = new DoubleLinkedList<Entidad>();
+//		for(Entidad e: this.entidades) {
+//			if ((x+ancho >= e.getX() && x+ancho <= e.getX()+e.getAncho())  &&  (y >= e.getY() && y <= e.getY()+e.getAlto())) {
+//				listaColisionados.addLast(e);
+//			}
+//		}
+//		return listaColisionados;
+//	}
 	
-	public PositionList<Entidad> colisioneIzquierda(int x, int y) {
+	public PositionList<Entidad> colisione(int x, int y) {
 		PositionList<Entidad> listaColisionados = new DoubleLinkedList<Entidad>();
 		for(Entidad e: this.entidades) {
 			if ((x >= e.getX() && x <= e.getX()+e.getAncho())  &&  (y >= e.getY() && y <= e.getY()+e.getAlto())) {
@@ -109,6 +109,20 @@ public class MapaLogico {
 		}
 		return listaColisionados;
 	}
+	
+	
+	//Detecta entidades entre x1 y x2 (x1 coordenada mas a la izquierda del mapaGUI, x2 coordenada mas a la derecha del mapaGUI).
+	public PositionList<Entidad> colisioneRango(int x1, int x2, int y) {
+		PositionList<Entidad> listaColisionados = new DoubleLinkedList<Entidad>();
+		for(Entidad e: this.entidades) {
+			
+			if ((e.getX() >= x1 && e.getX() <= x2) &&  (y >= e.getY() && y <= e.getY()+e.getAlto())) {
+				listaColisionados.addLast(e);
+			}
+		}
+		return listaColisionados;
+	}
+	
 	
 	public Tienda getTienda() {
 		return tienda;

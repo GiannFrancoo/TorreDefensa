@@ -7,6 +7,7 @@ import javax.swing.ImageIcon;
 
 import Entidades.EntidadGrafica;
 import Main.MapaLogico;
+import Main.Animaciones.AtaqueLilith;
 
 public class LilithGrafico extends EntidadGrafica {
 
@@ -16,9 +17,9 @@ public class LilithGrafico extends EntidadGrafica {
 		super(mapaLogico);
 		lilith = l;
 		
-		this.imagenes[0] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Lilith/lilith_estatico.png")); // Estatico;
-		this.imagenes[1] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Lilith/lilith_disparando.png")); // Disparando;
-		this.imagenes[2] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Lilith/lilith_sufriendo.png")); // Sufriendo;
+		this.imagenes[0] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Lilith/lilith.png")); // Estatico;
+		//this.imagenes[1] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Lilith/lilith_disparando.png")); // Disparando;
+		//this.imagenes[2] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Lilith/lilith_sufriendo.png")); // Sufriendo;
 		
 		//this.imagenes[9] = new ImageIcon(this.getClass().getResource("/BattleCity/up.png")); // Tienda;
 		
@@ -28,23 +29,20 @@ public class LilithGrafico extends EntidadGrafica {
 		
 	}
 
-	public void golpear() {
-		grafica.setIcon(imagenes[1]);
-		
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {System.out.println("Se partio el hilo");}
-		
-		grafica.setIcon(imagenes[0]);
+	public void golpearMelee() {	
+		AtaqueLilith al = new AtaqueLilith(mapaLogico, lilith.getX(), lilith.getY());
+		al.start();
+	}
+	
+	public void golpearRango() {
+	}
+	
+	public void recibirGolpe() {
 	}
 
-	public void recibirGolpe() {
-		grafica.setIcon(imagenes[2]);
+	@Override
+	public void eliminar() {
+		// TODO Auto-generated method stub
 		
-		try {
-			Thread.sleep(1000);
-		} catch(InterruptedException e) {System.out.println("Se partio el hilo");}
-		
-		grafica.setIcon(imagenes[0]); 
 	}
 }

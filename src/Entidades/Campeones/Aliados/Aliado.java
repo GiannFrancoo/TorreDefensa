@@ -25,24 +25,28 @@ public abstract class Aliado extends Campeon{
 	public void intentarGolpear() {
 
 		if (this.dpsTiming == 0) {
-			PositionList<Entidad> listaColisionados = mapaLogico.colisioneDerecha(x + this.rango, y, this.getAncho());
+			PositionList<Entidad> listaColisionados = mapaLogico.colisioneRango(x, x + this.rango + this.getAncho(), y);
 			for (Entidad e : listaColisionados) {
 				if (this.dpsTiming == 0) {
 					e.visitar(visitanteAlcance);
+				} 
+				else {
+					break;
 				}
 			}
-			this.dpsTiming = dps;
 		}
 		else {
 			--this.dpsTiming;
 		}
 	}
 	
-	public void golpearMelee() {
-		
+	public void golpearMelee() {	
 		this.dpsTiming = dps;
-
-//		lilithGrafico.golpear();
+		PositionList<Entidad> listaColisionados = mapaLogico.colisioneRango(x, x + this.rango + this.getAncho(), y);
+		for (Entidad e : listaColisionados) {
+			e.visitar(visitante);
+		}
+		this.entidadGrafica.golpearMelee();
 	}
 	
 	public void visitar(Visitante a) {

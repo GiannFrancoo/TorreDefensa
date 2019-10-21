@@ -13,7 +13,7 @@ public class ExplosionBomba extends HiloAnimacion {
 		super(mapaLogico);
 		this.label.setBounds(x-100, y-130, 285, 285);
 		this.label.setIcon(new ImageIcon(new ImageIcon(getClass().getClassLoader().getResource("texturas/objetos/bomba_explosion.gif")).getImage().getScaledInstance(label.getWidth(), label.getHeight(), Image.SCALE_DEFAULT)));
-		this.tiempo = 940;
+		this.tiempo = 1000;
 	}
 
 }

@@ -46,13 +46,15 @@ public abstract class Enemigo extends Campeon{
 	
 	public void intentarGolpear() {
 		if (this.dpsTiming == 0) {
-			PositionList<Entidad> listaColisionados = mapaLogico.colisioneIzquierda(x - this.rango, y);
+			PositionList<Entidad> listaColisionados = mapaLogico.colisioneRango(x - this.rango, x, y);
 			for (Entidad e : listaColisionados) {
 				if (this.dpsTiming == 0) {
 					e.visitar(visitanteAlcance);
 				}
+				else {
+					break;
+				}
 			}
-			this.dpsTiming = dps;
 		}
 		else {
 			--this.dpsTiming;
@@ -60,14 +62,16 @@ public abstract class Enemigo extends Campeon{
 	}
 	
 	public void golpearMelee() {
-		
 		this.dpsTiming = dps;
-
-//		lilithGrafico.golpear();
+		PositionList<Entidad> listaColisionados = mapaLogico.colisioneRango(x, x + this.rango + this.getAncho(), y);
+		for (Entidad e : listaColisionados) {
+			e.visitar(visitante);
+		}
+		//this.entidadGrafica.golpearMelee();
 	}
 	
 	public void intentarMoverse() {
-		PositionList<Entidad> listaColisionados = mapaLogico.colisioneIzquierda(x - velocidad, y);
+		PositionList<Entidad> listaColisionados = mapaLogico.colisione(x - velocidad, y);
 		
 		for(Entidad e: listaColisionados) {
 			e.visitar(visitante);

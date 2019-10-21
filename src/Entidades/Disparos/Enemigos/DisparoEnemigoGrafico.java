@@ -19,6 +19,20 @@ public class DisparoEnemigoGrafico extends EntidadGrafica{
 		//Cambia la imagen;
 		//Mueve para la derecha;
 	}
+
+	@Override
+	public void golpearMelee() {
+	}
+
+	@Override
+	public void golpearRango() {
+	}
+
+	@Override
+	public void eliminar() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 

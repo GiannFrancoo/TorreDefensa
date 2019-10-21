@@ -40,5 +40,18 @@ public class ColmenaGrafico extends CampeonGrafica {
 		grafica.setIcon(imagenes[0]);
 	}
 
+	public void golpearMelee() {	
+	}
+
+	public void golpearRango() {	
+	}
+
+
+	@Override
+	public void eliminar() {
+		// TODO Auto-generated method stub
+		
+	}
+
 	
 }
