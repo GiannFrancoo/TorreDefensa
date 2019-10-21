@@ -34,7 +34,7 @@ public class DisparoEnemigo extends Disparo {
 	
 	//Va a mover el disparo, y si se encuentra con un ememido lo golpea y se autodestruye.
 	public void intentarMoverse() {
-		PositionList<Entidad> listaColisionados = mapaLogico.colisioneIzquierda(x - velocidad, y);
+		PositionList<Entidad> listaColisionados = mapaLogico.colisione(x - velocidad, y);
 
 		for(Entidad e: listaColisionados) {
 			

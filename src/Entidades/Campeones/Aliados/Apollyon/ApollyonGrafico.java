@@ -26,25 +26,33 @@ public class ApollyonGrafico extends CampeonGrafica {
 		grafica.setLocation(99999999, 999999999);
 		
 	}
-
-	public void golpear() {
-		grafica.setIcon(imagenes[1]);
+	
+	@Override
+	public void golpearMelee() {
 		
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {System.out.println("Se partio el hilo");}
-		
-		grafica.setIcon(imagenes[0]);
 	}
 
+	@Override
+	public void golpearRango() {
+		
+	}
+
+	@Override
+	public void golpear() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
 	public void recibirGolpe() {
-		grafica.setIcon(imagenes[2]);
+		// TODO Auto-generated method stub
 		
-		try {
-			Thread.sleep(1000);
-		} catch(InterruptedException e) {System.out.println("Se partio el hilo");}
+	}
+
+	@Override
+	public void eliminar() {
+		// TODO Auto-generated method stub
 		
-		grafica.setIcon(imagenes[0]); 
 	}
 	
 }

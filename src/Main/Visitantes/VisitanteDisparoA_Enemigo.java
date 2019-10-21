@@ -6,6 +6,7 @@ import Entidades.Disparos.Disparo;
 import Entidades.Objetos.Consumibles.Consumible;
 import Entidades.Objetos.Magias.Magia;
 import Entidades.Objetos.ObjetosVida.ObjetoVida;
+import Main.Sonido;
 
 public class VisitanteDisparoA_Enemigo implements Visitante {
 
@@ -17,6 +18,8 @@ private Disparo disparo;
 	
 	public void visita(Enemigo e) {
 		e.recibirGolpe(disparo.getFuerza());
+		//Sonido.playSound(disparo.getSonido());
+		disparo.getEntidadGrafica().eliminar();
 		disparo.eliminar();
 	}
 

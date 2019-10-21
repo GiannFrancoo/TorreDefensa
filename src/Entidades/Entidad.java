@@ -24,6 +24,10 @@ public abstract class Entidad {
 		mapaLogico = m;
 	}
 	
+	public EntidadGrafica getEntidadGrafica() {
+		return this.entidadGrafica;
+	}
+	
 	public int getAncho() {
 		return ancho;
 	}

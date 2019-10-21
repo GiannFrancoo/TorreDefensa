@@ -20,8 +20,17 @@ public class BombaGrafico extends EntidadGrafica{
 		
 	}
 	
-	public void explotar() {
+	public void golpearMelee() {
 		ExplosionBomba b = new ExplosionBomba(mapaLogico, bomba.getX(), bomba.getY());
 		b.start();
+	}
+
+	public void golpearRango() {
+	}
+
+	@Override
+	public void eliminar() {
+		// TODO Auto-generated method stub
+		
 	}
 }

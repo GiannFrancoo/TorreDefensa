@@ -11,12 +11,13 @@ public class Lilith extends Aliado{
 	public Lilith(MapaLogico mapaLogico){
 		super(mapaLogico);
 		
-		this.ancho = 75;
-		this.alto = 75;
+		this.ancho = 67; 
+		this.alto = 80;
 		this.vidaActual = 100;
-		this.fuerza = 15;	
+		this.fuerza = 50;	
+		this.rango = 15;
+		this.dps = 35;
 		monedas = 100;
-		
 
 		LilithGrafico lilithGrafico= new LilithGrafico(mapaLogico, this, ancho, alto);
 		entidadGrafica = lilithGrafico;
@@ -24,12 +25,6 @@ public class Lilith extends Aliado{
 	
 	public void agregarMagia(Magia m) {
 		this.magias.add(m);
-	}
-	
-	// Recibe un golpe de un enemigo;
-	public void recibirGolpe(int d) {
-		vidaActual = vidaActual - d;
-		lilithGrafico.recibirGolpe();
 	}
 
 	public void golpearRango() {		
