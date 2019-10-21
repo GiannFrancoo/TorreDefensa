@@ -1,4 +1,4 @@
-package Entidades.Campeones.Enemigos.EnemigosMelee.Colmena;
+package Entidades.Campeones.Enemigos.Colmena;
 
 import java.awt.Image;
 import java.awt.Rectangle;

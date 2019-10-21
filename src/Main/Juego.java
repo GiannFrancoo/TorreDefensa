@@ -3,7 +3,7 @@ package Main;
 import java.awt.EventQueue;
 import java.util.Random;
 
-import Entidades.Campeones.Enemigos.EnemigosMelee.Colmena.Colmena;
+import Entidades.Campeones.Enemigos.Colmena.Colmena;
 
 
 

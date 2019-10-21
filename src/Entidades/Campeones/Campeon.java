@@ -6,6 +6,7 @@ import java.util.List;
 import Entidades.Entidad;
 import Entidades.Objetos.Magias.Magia;
 import Main.MapaLogico;
+import Main.Visitantes.Visitante;
 
 public abstract class Campeon extends Entidad{
 
@@ -18,6 +19,9 @@ public abstract class Campeon extends Entidad{
 	protected List<Magia> magias;
 	protected CampeonGrafica campeonGrafico; // VER
 	protected static int monedas;
+	
+	protected Visitante visitanteAlcance;
+
 	
 	public Campeon(MapaLogico m) {
 		super(m); // Entidad;
@@ -39,16 +43,6 @@ public abstract class Campeon extends Entidad{
 	public int getFueza() {
 		return this.fuerza;
 	}
-		
-	public void intentarGolpear() {
-		if (dpsTiming == 0) {
-			this.golpear(); // Depende si es Melee o Rango
-			dpsTiming = dps;
-		}
-		else {
-			--dpsTiming;
-		}
-	}
 	
 	public void recibirGolpe(int d) {
 		vidaActual = vidaActual - d;
@@ -58,7 +52,8 @@ public abstract class Campeon extends Entidad{
 		}
 	}
 	
-	public abstract void golpear();
+	public abstract void golpearRango();
+	public abstract void golpearMelee();
 	public abstract void agregarMagia(Magia m);
 	
 }

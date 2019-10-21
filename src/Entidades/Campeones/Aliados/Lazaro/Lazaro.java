@@ -1,13 +1,11 @@
-package Entidades.Campeones.Aliados.AliadosRango.Lazaro;
+package Entidades.Campeones.Aliados.Lazaro;
 
-import Entidades.Campeones.Aliados.AliadosRango.AliadoRango;
-import Entidades.Disparos.Disparo;
+import Entidades.Campeones.Aliados.Aliado;
 import Entidades.Disparos.Aliados.DisparoAliado;
 import Entidades.Objetos.Magias.Magia;
 import Main.MapaLogico;
-import Main.Visitantes.Visitante;
 
-public class Lazaro extends AliadoRango{
+public class Lazaro extends Aliado {
 		
 	protected LazaroGrafico lazaroGrafico;
 	
@@ -28,13 +26,13 @@ public class Lazaro extends AliadoRango{
 	}
 
 	// Dispara a rango;
-	public void golpear() {	
+	public void golpearRango() {	
 		//Aplicar magia
 		DisparoAliado d = new DisparoAliado(x, y, this.fuerza, this.rango, mapaLogico);
 		mapaLogico.insertar(d);
 		d.setX(this.x);
 		d.setY(this.y);
-		lazaroGrafico.golpear();
+//		lazaroGrafico.golpear();
 	}
 
 	// Se agrega una magia a la lista;
