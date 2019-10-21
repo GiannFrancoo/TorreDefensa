@@ -25,7 +25,7 @@ public class TiendaGrafica extends JPanel {
 	public TiendaGrafica(MapaLogico mapaLogico, Tienda tienda) {
 		this.mapaLogico = mapaLogico;
 		this.tienda = tienda;
-		botones = new BotonTienda[4];
+		botones = new BotonTienda[5];
 		
 		this.setBounds(new Rectangle(1130, 162));
 		this.setBackground(Color.MAGENTA);
@@ -72,6 +72,7 @@ public class TiendaGrafica extends JPanel {
 		botones[1] = new BotonLilith(mapaLogico, tienda);
 		botones[2] = new BotonApollyon(mapaLogico, tienda);
 		botones[3] = new BotonBomba(mapaLogico, tienda);
+		botones[4] = new BotonPoop(mapaLogico, tienda);
 		
 	
 		
@@ -101,13 +102,6 @@ public class TiendaGrafica extends JPanel {
 	//		fondoTienda.setBounds(7, 588, 1266, 100);
 	//		contentPane.add(fondoTienda, 5, 1);
 			
-			
-			JButton btnObj5 = new JButton();	
-			btnObj5.setOpaque(true);
-			btnObj5.setContentAreaFilled(false);
-			btnObj5.setBorder(BorderFactory.createLineBorder(Color.BLACK, 3));		
-			btnObj5.setBounds(392, 10, 90, 90);
-			this.add(btnObj5);
 			
 			JButton btnObj6 = new JButton();
 			btnObj6.setOpaque(true);
