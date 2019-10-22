@@ -8,11 +8,9 @@ import Main.MapaLogico;
 
 public class PoopGrafico extends CampeonGrafica{
 	
-	protected Poop poop;
-	
 	public PoopGrafico(MapaLogico mapaLogico, Poop p, int ancho, int alto) {
 		super(mapaLogico);
-		poop = p;
+		entidad = p;
 		
 		this.imagenes[0] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Poop/poop_1.png"));
 		this.imagenes[1] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Poop/poop_2.png"));
@@ -29,8 +27,8 @@ public class PoopGrafico extends CampeonGrafica{
 	}
 
 	public void recibirGolpe() {
-		int n = poop.getVidaMaxima() / 5;
-		int vida = poop.getVidaActual();
+		int n = entidad.getVidaMaxima() / 5;
+		int vida = entidad.getVidaActual();
 		
 		
 		if(vida >= 5 * n) {

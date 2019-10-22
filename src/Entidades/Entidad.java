@@ -14,6 +14,8 @@ public abstract class Entidad {
 	protected int alto;
 	protected int x;
 	protected int y;
+	protected int vidaMaxima;
+	protected int vidaActual;
 	protected EntidadGrafica entidadGrafica;
 	protected MapaLogico mapaLogico;
 	protected Position<Entidad> posEnLista;
@@ -42,6 +44,14 @@ public abstract class Entidad {
 	
 	public int getY() {
 		return this.y;
+	}
+	
+	public int getVidaMaxima() {
+		return vidaMaxima;
+	}
+	
+	public int getVidaActual() {
+		return vidaActual;
 	}
 	
 	public void setX(int x) {

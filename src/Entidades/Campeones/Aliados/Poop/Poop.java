@@ -6,20 +6,18 @@ import Main.MapaLogico;
 
 public class Poop extends Aliado{
 	
-	protected PoopGrafico poopGrafico;
-	
 	public Poop(MapaLogico mapaLogico) {
 		super(mapaLogico);
 	
-		this.ancho = 75;
+		this.ancho = 63;
 		this.alto = 75;
 		this.vidaActual = 100;
 		this.fuerza = 15;	
 		monedas = 100;
 		
 	
-		poopGrafico = new PoopGrafico(mapaLogico, this, ancho, alto);
-		entidadGrafica = poopGrafico;
+		PoopGrafico p = new PoopGrafico(mapaLogico, this, ancho, alto);
+		entidadGrafica = p;
 	}
 
 	@Override

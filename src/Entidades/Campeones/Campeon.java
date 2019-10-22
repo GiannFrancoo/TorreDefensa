@@ -10,14 +10,11 @@ import Main.Visitantes.Visitante;
 
 public abstract class Campeon extends Entidad{
 
-	protected int vidaActual;
-	protected int vidaMaxima;
 	protected int dps;
 	protected int dpsTiming = dps;
 	protected int fuerza;
 	protected int rango;
 	protected List<Magia> magias;
-	protected CampeonGrafica campeonGrafico; // VER
 	protected static int monedas;
 	
 	protected Visitante visitanteAlcance;
@@ -29,7 +26,7 @@ public abstract class Campeon extends Entidad{
 	}
 
 	public int getMonedas() {
-		if (vidaActual == vidaMaxima) {
+		if (this.vidaActual == this.vidaMaxima) {
 			return monedas;
 		} else {
 			return monedas/2;
@@ -42,14 +39,6 @@ public abstract class Campeon extends Entidad{
 	
 	public int getFueza() {
 		return this.fuerza;
-	}
-	
-	public int getVidaActual() {
-		return this.vidaActual;
-	}
-	
-	public int getVidaMaxima() {
-		return this.vidaMaxima;
 	}
 	
 	public void recibirGolpe(int d) {

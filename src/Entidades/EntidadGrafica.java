@@ -11,6 +11,7 @@ public abstract class EntidadGrafica {
 	protected JLabel grafica; // Estado actual de la imagen
 	protected ImageIcon imagenes[]; // Conjunto de imagenes;
 	protected MapaLogico mapaLogico;
+	protected Entidad entidad;
 	
 	public EntidadGrafica(MapaLogico mapaLogico) {
 		grafica = new JLabel();

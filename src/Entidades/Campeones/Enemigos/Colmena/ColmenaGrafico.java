@@ -8,12 +8,10 @@ import Entidades.Campeones.CampeonGrafica;
 import Main.MapaLogico;
 
 public class ColmenaGrafico extends CampeonGrafica {
-
-	protected Colmena colmena;
 	
 	public ColmenaGrafico(MapaLogico mapaLogico, Colmena c, int ancho, int alto) {
 		super(mapaLogico);
-		colmena = c;
+		entidad = c;
 
 		this.imagenes[0] = new ImageIcon(this.getClass().getClassLoader().getResource("texturas/enemigos/colmena/colmena_estatico.png")); // Estatico;
 		this.imagenes[1] = new ImageIcon(this.getClass().getClassLoader().getResource("texturas/enemigos/colmena/colmena_disparando.png")); // Disparando;

@@ -1,68 +1,33 @@
 package Main;
 
-import java.io.File;
-import java.io.FileInputStream;
-import javazoom.jl.player.Player;
+import java.applet.Applet;
+import java.applet.AudioClip;
 
 public class Sonido {
-	
-	
-//	//No se como hacer el reproductor de musica
-//	private Player musicPlayer;
-//	
-//	//Falta el loop para la musica
-//	public void playMusic(String AudioName) {
-//		if (musicPlayer != null) {
-//			musicPlayer.close();
-//		}
-//		try{
-//			File file = new File(Sonido.class.getClassLoader().getResource(AudioName).toURI());
-//			FileInputStream audio = new FileInputStream(file);
-//			musicPlayer = new Player(audio);
-//			musicPlayer.play();
-//		} catch(Exception ex) {  
-//			System.out.println("Error del reproductor de musica");
-//			ex.printStackTrace();
-//		}
-//	}
-	
-	public static void playSound(String AudioName) {
-		try{
-			File file = new File(Sonido.class.getClassLoader().getResource(AudioName).toURI());
-			FileInputStream audio = new FileInputStream(file);
-			Player soundPlayer = new Player(audio);
-			soundPlayer.play();
-		} catch(Exception ex) {  
-			System.out.println("Error del reproductor de sonido");
-			ex.printStackTrace();
-		}
-	}
 
 ////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////  JUEGO  //////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////	
 	
-	public static final String BACK_MENU = ("sonidos/.mp3");
-	public static final String BACK_LVL1 = ("sonidos/juego/basement.mp3");
-	public static final String GAMEOVER = ("sonidos/.mp3");
-
-	
+	public static final String MENU = ("sonidos/.wav");
+	public static final String LVL1 = ("sonidos/juego/basement.wav");
+	public static final String GAMEOVER = ("sonidos/.wav");
 
 ////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////  DISPAROS  ////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////
 	
-	public static final String BOMBA = ("sonidos/bomba.mp3");
-	public static final String DISPARO_FEMUR1 = ("sonidos/disparo/femur1.mp3");
-	public static final String DISPARO_FEMUR2 = ("sonidos/disparo/femur2.mp3");
+	public static final AudioClip BOMBA = Applet.newAudioClip(Sonido.class.getClassLoader().getResource("sonidos/bomba.wav"));
+	public static final AudioClip DISPARO_FEMUR1 = Applet.newAudioClip(Sonido.class.getClassLoader().getResource("sonidos/disparo/lagrima_femur1.wav"));
+	public static final AudioClip DISPARO_FEMUR2 = Applet.newAudioClip(Sonido.class.getClassLoader().getResource("sonidos/disparo/lagrima_femur2.wav"));
+	public static final AudioClip DISPARO_NORMAL1 = Applet.newAudioClip(Sonido.class.getClassLoader().getResource("sonidos/disparo/lagrima_normal1.wav"));
+	public static final AudioClip DISPARO_NORMAL2 = Applet.newAudioClip(Sonido.class.getClassLoader().getResource("sonidos/disparo/lagrima_normal2.wav"));
 
-	
 ////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////  DAÑO  ///////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////
 	
-	public static final String RECIBIRGOLPE_COLMENA = ("sonidos/recibirgolpe/hurt_2.mp3");
-
+	public static final AudioClip RECIBIRGOLPE_COLMENA = Applet.newAudioClip(Sonido.class.getClassLoader().getResource("sonidos/recibirgolpe/hurt_2.wav"));
 	
 ////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////  MUERTE  /////////////////////////////////////////////

@@ -5,7 +5,6 @@ import Entidades.Campeones.Enemigos.Enemigo;
 import Entidades.Disparos.Disparo;
 import Entidades.Objetos.Consumibles.Consumible;
 import Entidades.Objetos.Magias.Magia;
-import Entidades.Objetos.ObjetosVida.ObjetoVida;
 
 public class VisitanteMovimientoEnemigo implements Visitante {
 
@@ -20,9 +19,6 @@ public class VisitanteMovimientoEnemigo implements Visitante {
 
 	public void visita(Aliado a) {
 		enemigo.setMoverme(false);
-	}
-
-	public void visita(ObjetoVida o) {
 	}
 
 	public void visita(Consumible c) {

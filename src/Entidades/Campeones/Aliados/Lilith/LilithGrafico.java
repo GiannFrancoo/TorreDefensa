@@ -11,11 +11,9 @@ import Main.Animaciones.AtaqueLilith;
 
 public class LilithGrafico extends EntidadGrafica {
 
-	protected Lilith lilith;
-
 	public LilithGrafico(MapaLogico mapaLogico, Lilith l, int ancho, int alto) {
 		super(mapaLogico);
-		lilith = l;
+		entidad = l;
 		
 		this.imagenes[0] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Lilith/lilith.png")); // Estatico;
 		//this.imagenes[1] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Lilith/lilith_disparando.png")); // Disparando;
@@ -30,7 +28,7 @@ public class LilithGrafico extends EntidadGrafica {
 	}
 
 	public void golpearMelee() {	
-		AtaqueLilith al = new AtaqueLilith(mapaLogico, lilith.getX(), lilith.getY());
+		AtaqueLilith al = new AtaqueLilith(mapaLogico, entidad.getX(), entidad.getY());
 		al.start();
 	}
 	
