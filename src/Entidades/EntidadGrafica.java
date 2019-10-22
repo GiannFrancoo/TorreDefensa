@@ -26,6 +26,7 @@ public abstract class EntidadGrafica {
 	public abstract void golpearMelee();
 	public abstract void golpearRango();
 	public abstract void eliminar();
+	public abstract void recibirGolpe();
 	
 	
 	/*

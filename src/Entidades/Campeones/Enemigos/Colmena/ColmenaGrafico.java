@@ -13,11 +13,9 @@ public class ColmenaGrafico extends CampeonGrafica {
 		super(mapaLogico);
 		entidad = c;
 
-		this.imagenes[0] = new ImageIcon(this.getClass().getClassLoader().getResource("texturas/enemigos/colmena/colmena_estatico.png")); // Estatico;
-		this.imagenes[1] = new ImageIcon(this.getClass().getClassLoader().getResource("texturas/enemigos/colmena/colmena_disparando.png")); // Disparando;
-		//this.imagenes[2] = new ImageIcon(this.getClass().getClassLoader().getResource("texturas/Enemigos/colmena/colmena_sufriendo.png")); // Sufriendo;
+//		this.imagenes[0] = new ImageIcon(this.getClass().getClassLoader().getResource("texturas/enemigos/colmena/colmena_estatico.png")); // Estatico;
+//		this.imagenes[1] = new ImageIcon(this.getClass().getClassLoader().getResource("texturas/enemigos/colmena/colmena_disparando.png")); // Disparando;
 		this.imagenes[3] = new ImageIcon(this.getClass().getClassLoader().getResource("texturas/enemigos/colmena/colmena_caminando.gif")); // Corriendo (GIF);
-		//this.imagenes[9] = new ImageIcon(this.getClass().getClassLoader().getResource("texturas/Enemigos/colmena/colmena_tienda.png")); // Tienda;
 		
 		
 		grafica.setBounds(new Rectangle(ancho, alto));
@@ -28,14 +26,9 @@ public class ColmenaGrafico extends CampeonGrafica {
 	
 	
 	public void golpear() {
-		grafica.setIcon(imagenes[1]);	
-		grafica.setIcon(imagenes[0]);
-		
 	}
 
 	public void recibirGolpe() {
-		grafica.setIcon(imagenes[2]);
-		grafica.setIcon(imagenes[0]);
 	}
 
 	public void golpearMelee() {	
@@ -44,11 +37,7 @@ public class ColmenaGrafico extends CampeonGrafica {
 	public void golpearRango() {	
 	}
 
-
-	@Override
-	public void eliminar() {
-		// TODO Auto-generated method stub
-		
+	public void eliminar() {		
 	}
 
 	

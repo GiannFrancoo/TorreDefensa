@@ -15,8 +15,8 @@ public class ApollyonGrafico extends CampeonGrafica {
 		entidad = a;
 		
 		this.imagenes[0] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Apollyon/apollyon_estatico.png")); // Estatico;
-		this.imagenes[1] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Apollyon/apollyon_sufriendo.png")); // Disparando;
-		this.imagenes[2] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Apollyon/apollyon_sufriendo.png")); // Sufriendo;
+//		this.imagenes[1] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Apollyon/apollyon_sufriendo.png")); // Disparando;
+//		this.imagenes[2] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Apollyon/apollyon_sufriendo.png")); // Sufriendo;
 		
 		//this.imagenes[9] = new ImageIcon(this.getClass().getResource("/BattleCity/up.png")); // Tienda;
 		
@@ -26,32 +26,19 @@ public class ApollyonGrafico extends CampeonGrafica {
 		
 	}
 	
-	@Override
 	public void golpearMelee() {
-		
 	}
 
-	@Override
 	public void golpearRango() {
-		
 	}
 
-	@Override
 	public void golpear() {
-		// TODO Auto-generated method stub
-		
 	}
 
-	@Override
 	public void recibirGolpe() {
-		// TODO Auto-generated method stub
-		
 	}
 
-	@Override
 	public void eliminar() {
-		// TODO Auto-generated method stub
-		
 	}
 	
 }

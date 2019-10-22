@@ -10,6 +10,5 @@ public abstract class CampeonGrafica extends EntidadGrafica {
 	}
 	
 	public abstract void golpear();
-	public abstract void recibirGolpe();
 	
 }

@@ -14,9 +14,9 @@ public class Colmena extends Enemigo {
 		this.velocidad = 1;
 		this.vidaMaxima = 100;
 		this.vidaActual = 100;
-		this.fuerza = 50;
+		this.fuerza = 20;
 		this.rango = 20;
-		this.dps = 10;
+		this.dps = 35;
 		monedas = 30;
 		
 		ColmenaGrafico c = new ColmenaGrafico(mapaLogico, this, ancho, alto);

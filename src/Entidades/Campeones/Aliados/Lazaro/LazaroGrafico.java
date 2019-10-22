@@ -16,8 +16,8 @@ public class LazaroGrafico extends CampeonGrafica{
 		lazaro = l;
 		
 		this.imagenes[0] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Lazaro/lazaro_estatico.png")); // Estatico;
-		this.imagenes[1] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Lazaro/lazaro_disparando.png")); // Disparando;
-		this.imagenes[2] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Lazaro/lazaro_sufriendo.png")); // Sufriendo;
+//		this.imagenes[1] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Lazaro/lazaro_disparando.png")); // Disparando;
+//		this.imagenes[2] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Lazaro/lazaro_sufriendo.png")); // Sufriendo;
 		
 		//this.imagenes[9] = new ImageIcon(this.getClass().getResource("/BattleCity/up.png")); // Tienda;
 		
@@ -28,14 +28,9 @@ public class LazaroGrafico extends CampeonGrafica{
 	}
 
 	public void golpear() {
-		grafica.setIcon(new ImageIcon(imagenes[1].getImage().getScaledInstance(grafica.getWidth(), grafica.getHeight(), Image.SCALE_SMOOTH)));
-		System.out.println("hola");
-		grafica.setIcon(new ImageIcon(imagenes[0].getImage().getScaledInstance(grafica.getWidth(), grafica.getHeight(), Image.SCALE_SMOOTH)));
 	}
 
 	public void recibirGolpe() {
-		grafica.setIcon(imagenes[2]);
-		grafica.setIcon(imagenes[0]); 
 	}
 
 

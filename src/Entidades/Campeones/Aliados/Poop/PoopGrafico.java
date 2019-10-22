@@ -27,27 +27,22 @@ public class PoopGrafico extends CampeonGrafica{
 	}
 
 	public void recibirGolpe() {
-		int n = entidad.getVidaMaxima() / 5;
+		float n = entidad.getVidaMaxima() / 5;
 		int vida = entidad.getVidaActual();
 		
-		
-		if(vida >= 5 * n) {
-			grafica.setIcon(new ImageIcon(imagenes[0].getImage().getScaledInstance(grafica.getWidth(), grafica.getHeight(), Image.SCALE_SMOOTH)));
-		}
-		
-		if(vida < 4 * n && vida > 3 * n) {
+		if(vida <= 4 * n && vida > 3 * n) {
 			grafica.setIcon(new ImageIcon(imagenes[1].getImage().getScaledInstance(grafica.getWidth(), grafica.getHeight(), Image.SCALE_SMOOTH)));
 		}
 		
-		if(vida < 3 * n && vida > 2 * n) {
+		if(vida <= 3 * n && vida > 2 * n) {
 			grafica.setIcon(new ImageIcon(imagenes[2].getImage().getScaledInstance(grafica.getWidth(), grafica.getHeight(), Image.SCALE_SMOOTH)));
 		}
 		
-		if(vida < 2 * n && vida > n) {
+		if(vida <= 2 * n && vida > n) {
 			grafica.setIcon(new ImageIcon(imagenes[3].getImage().getScaledInstance(grafica.getWidth(), grafica.getHeight(), Image.SCALE_SMOOTH)));
 		}
 		
-		if(vida < n) {
+		if(vida <= n) {
 			grafica.setIcon(new ImageIcon(imagenes[4].getImage().getScaledInstance(grafica.getWidth(), grafica.getHeight(), Image.SCALE_SMOOTH)));
 		}
 	}

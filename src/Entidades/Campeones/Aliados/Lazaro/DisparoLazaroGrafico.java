@@ -31,4 +31,8 @@ public class DisparoLazaroGrafico extends DisparoAliadoGrafico {
 		LagrimaNormal l = new LagrimaNormal(mapaLogico, entidad.getX(), entidad.getY());
 		l.start();
 	}
+
+
+	public void recibirGolpe() {
+	}
 }

@@ -15,7 +15,7 @@ public class Juego extends Thread{
 		
 		EventQueue.invokeLater(new Runnable() {
 				public void run() {
-					Juego juego = new Juego();					
+					new Juego();					
 				}
 		}
 		);

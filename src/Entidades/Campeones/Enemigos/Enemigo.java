@@ -34,12 +34,6 @@ public abstract class Enemigo extends Campeon{
 		return this.velocidad;
 	}
 	
-	public void visitar(Visitante a) {
-		if (this.estaVivo) {
-			a.visita(this);
-		}
-	}
-	
 	public void accionar() {
 		if (this.estaVivo) {
 			this.intentarMoverse();
@@ -47,17 +41,11 @@ public abstract class Enemigo extends Campeon{
 		}
 	}
 	
-	
-
-	
-
-	
 	public void intentarMoverse() {
 		PositionList<Entidad> listaColisionados = mapaLogico.colisione(x - velocidad, y);
 		
 		for(Entidad e: listaColisionados) {
 			e.visitar(visitanteMovimiento);
-			//e.visitar(visitante);
 		}
 		if (this.puedoMoverme) {
 			mover();
@@ -73,11 +61,6 @@ public abstract class Enemigo extends Campeon{
 	public void setMoverme(boolean b) {
 		this.puedoMoverme = b;
 	}
-	
-	
-	
-	
-	
 	
 	public void intentarGolpear() {
 		if (this.dpsTiming == 0) {
@@ -98,7 +81,6 @@ public abstract class Enemigo extends Campeon{
 	
 	
 	public void golpearMelee() {
-		System.out.println("golpear");
 		this.dpsTiming = dps;
 		PositionList<Entidad> listaColisionados = mapaLogico.colisioneRango(x - this.rango, x, y);
 		for (Entidad e : listaColisionados) {
@@ -108,4 +90,9 @@ public abstract class Enemigo extends Campeon{
 		//this.entidadGrafica.golpearMelee();
 	}
 	
+	public void visitar(Visitante a) {
+		if (this.estaVivo) {
+			a.visita(this);
+		}
+	}
 }

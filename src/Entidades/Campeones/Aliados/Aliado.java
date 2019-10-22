@@ -23,7 +23,6 @@ public abstract class Aliado extends Campeon{
 	}
 	
 	public void intentarGolpear() {
-		
 		if (this.dpsTiming == 0) {
 			PositionList<Entidad> listaColisionados = mapaLogico.colisioneRango(x, x + this.rango + this.getAncho(), y);
 			for (Entidad e : listaColisionados) {
@@ -38,7 +37,6 @@ public abstract class Aliado extends Campeon{
 		else {
 			--this.dpsTiming;
 		}
-		
 	}
 	
 	public void golpearMelee() {

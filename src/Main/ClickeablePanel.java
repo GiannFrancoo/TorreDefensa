@@ -11,12 +11,9 @@ import Main.Tienda.Tienda;
 public class ClickeablePanel extends JPanel implements MouseListener, MouseMotionListener {
 
 	private MapaLogico mapaLogico;
-	private Tienda tienda;
-    
-    public ClickeablePanel(MapaLogico mapaLogico, Tienda tienda) {
+	public ClickeablePanel(MapaLogico mapaLogico, Tienda tienda) {
     	
     	this.mapaLogico = mapaLogico;
-    	this.tienda = tienda;
     	this.addMouseListener(this);
     	this.addMouseMotionListener(this);
     	

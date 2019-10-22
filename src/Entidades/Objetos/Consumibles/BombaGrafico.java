@@ -28,9 +28,9 @@ public class BombaGrafico extends EntidadGrafica{
 	public void golpearRango() {
 	}
 
-	@Override
 	public void eliminar() {
-		// TODO Auto-generated method stub
-		
+	}
+
+	public void recibirGolpe() {
 	}
 }

@@ -14,9 +14,6 @@ public abstract class EventoAleatorio extends Entidad {
 		super(m);
 	}
 	
-	
-	public abstract Position<Entidad> getPosEnLista(); 
-	public abstract void setPosEnLista(Position<Entidad> pos);
 	public abstract int getFuerza();
 	public abstract void setFuerza(int f);
 }

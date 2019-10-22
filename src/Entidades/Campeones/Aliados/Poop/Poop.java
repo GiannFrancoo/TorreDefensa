@@ -9,10 +9,11 @@ public class Poop extends Aliado{
 	public Poop(MapaLogico mapaLogico) {
 		super(mapaLogico);
 	
-		this.ancho = 63;
+		this.ancho = 70;
 		this.alto = 75;
-		this.vidaActual = 100;
-		this.fuerza = 15;	
+		this.vidaMaxima = 150;
+		this.vidaActual = vidaMaxima;
+		this.fuerza = 0;	
 		monedas = 100;
 		
 	

@@ -1,13 +1,7 @@
 package Entidades.Disparos.Aliados;
 
-import java.awt.Image;
-import java.awt.Rectangle;
-
-import javax.swing.ImageIcon;
-
 import Entidades.EntidadGrafica;
 import Main.MapaLogico;
-import Main.Animaciones.LagrimaNormal;
 
 public abstract class DisparoAliadoGrafico extends EntidadGrafica {
 
