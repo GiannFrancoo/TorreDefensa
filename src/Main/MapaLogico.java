@@ -107,6 +107,7 @@ public class MapaLogico {
 				listaColisionados.addLast(e);
 			}
 		}
+		
 		return listaColisionados;
 	}
 	

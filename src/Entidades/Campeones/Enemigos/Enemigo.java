@@ -13,18 +13,25 @@ public abstract class Enemigo extends Campeon{
 	
 	protected int velocidad;
 	protected boolean puedoMoverme;
-	protected Visitante visitanteMelee;
+	//protected Visitante visitanteMelee;
+	protected Visitante visitanteMovimiento;
 	
 	public Enemigo(MapaLogico m) {
 		super(m);
 		this.puedoMoverme = true;
+		
+		//this.visitanteMelee = new VisitanteMeleeA_Aliado(this);
+		//this.visitante = new VisitanteMovimientoEnemigo(this);
+
 		this.visitanteAlcance = new VisitanteAlcanceGolpeA_Aliado(this);
-		this.visitanteMelee = new VisitanteMeleeA_Aliado(this);
-		this.visitante = new VisitanteMovimientoEnemigo(this);
-	}
+		this.visitante = new VisitanteMeleeA_Aliado(this);
+		this.visitanteMovimiento = new VisitanteMovimientoEnemigo(this);
+	}	
 	
-	public void mover() {
-		this.setX(x-velocidad);
+	
+	
+	public int getVelocidad() {
+		return this.velocidad;
 	}
 	
 	public void visitar(Visitante a) {
@@ -40,9 +47,37 @@ public abstract class Enemigo extends Campeon{
 		}
 	}
 	
+	
+
+	
+
+	
+	public void intentarMoverse() {
+		PositionList<Entidad> listaColisionados = mapaLogico.colisione(x - velocidad, y);
+		
+		for(Entidad e: listaColisionados) {
+			e.visitar(visitanteMovimiento);
+			//e.visitar(visitante);
+		}
+		if (this.puedoMoverme) {
+			mover();
+		}
+		this.puedoMoverme = true;
+		
+	}
+	
+	public void mover() {
+		this.setX(x-velocidad);
+	}
+	
 	public void setMoverme(boolean b) {
 		this.puedoMoverme = b;
 	}
+	
+	
+	
+	
+	
 	
 	public void intentarGolpear() {
 		if (this.dpsTiming == 0) {
@@ -61,28 +96,16 @@ public abstract class Enemigo extends Campeon{
 		}
 	}
 	
+	
 	public void golpearMelee() {
+		System.out.println("golpear");
 		this.dpsTiming = dps;
-		PositionList<Entidad> listaColisionados = mapaLogico.colisioneRango(x, x + this.rango + this.getAncho(), y);
+		PositionList<Entidad> listaColisionados = mapaLogico.colisioneRango(x - this.rango, x, y);
 		for (Entidad e : listaColisionados) {
 			e.visitar(visitante);
+			//e.visitar(visitanteMelee);
 		}
 		//this.entidadGrafica.golpearMelee();
 	}
-	
-	public void intentarMoverse() {
-		PositionList<Entidad> listaColisionados = mapaLogico.colisione(x - velocidad, y);
-		
-		for(Entidad e: listaColisionados) {
-			e.visitar(visitante);
-		}
-		if (this.puedoMoverme) {
-			mover();
-		}
-		this.puedoMoverme = true;
-		
-	}
-	
-	
 	
 }

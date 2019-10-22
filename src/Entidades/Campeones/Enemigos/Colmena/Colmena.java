@@ -1,14 +1,10 @@
 package Entidades.Campeones.Enemigos.Colmena;
 
-import Entidades.Entidad;
 import Entidades.Campeones.Enemigos.Enemigo;
 import Entidades.Objetos.Magias.Magia;
 import Main.MapaLogico;
-import Utilidad.Lista.Position;
 
 public class Colmena extends Enemigo {
-	
-	protected Position<Entidad> posEnLista;
 	
 	public Colmena(MapaLogico mapaLogico) {
 		super(mapaLogico);
@@ -17,21 +13,18 @@ public class Colmena extends Enemigo {
 		this.alto = 75;  //39                (34 ->  X)
 		this.velocidad = 1;
 		this.vidaMaxima = 100;
-		this.vidaActual = this.vidaMaxima;
-		this.fuerza = 100;
+		this.vidaActual = 100;
+		this.fuerza = 50;
+		this.rango = 20;
+		this.dps = 10;
 		monedas = 30;
 		
 		ColmenaGrafico c = new ColmenaGrafico(mapaLogico, this, ancho, alto);
 		entidadGrafica = c;
 	}
 
-	// Agregar magia a la lista;
 	public void agregarMagia(Magia m) {
 		this.magias.add(m);
-	}
-	
-	public int getVelocidad() {
-		return this.velocidad;
 	}
 
 	public void golpearRango() {

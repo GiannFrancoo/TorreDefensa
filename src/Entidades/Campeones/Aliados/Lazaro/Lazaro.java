@@ -28,6 +28,7 @@ public class Lazaro extends Aliado {
 	// Dispara a rango;
 	public void golpearRango() {	
 		//Aplicar magia
+		this.dpsTiming = dps;
 		DisparoLazaro d = new DisparoLazaro(x, y, this.fuerza, this.rango, mapaLogico);
 		mapaLogico.insertar(d);
 		d.setX(this.x);
