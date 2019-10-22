@@ -18,8 +18,10 @@ public class VisitanteAlcanceGolpeA_Aliado implements Visitante {
 	}
 
 	public void visita(Aliado a) {
-		enemigo.golpearRango();
-		enemigo.golpearMelee();
+		if(enemigo.getRango() >= 30)
+			enemigo.golpearRango();
+		else
+			enemigo.golpearMelee();
 	}
 
 	public void visita(Consumible c) {

@@ -9,9 +9,10 @@ public class Lilith extends Aliado{
 	public Lilith(MapaLogico mapaLogico){
 		super(mapaLogico);
 		
+		this.vidaMaxima = 100;
+		this.vidaActual = 100;
 		this.ancho = 67; 
 		this.alto = 80;
-		this.vidaActual = 100;
 		this.fuerza = 50;	
 		this.rango = 15;
 		this.dps = 35;
