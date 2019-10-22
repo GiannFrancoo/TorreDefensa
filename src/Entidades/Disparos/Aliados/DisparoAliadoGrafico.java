@@ -9,20 +9,17 @@ import Entidades.EntidadGrafica;
 import Main.MapaLogico;
 import Main.Animaciones.LagrimaNormal;
 
-public class DisparoAliadoGrafico extends EntidadGrafica {
+public abstract class DisparoAliadoGrafico extends EntidadGrafica {
 
-	protected DisparoAliado disparoAliado;
-	
 	public DisparoAliadoGrafico(MapaLogico mapaLogico, DisparoAliado e, int ancho, int alto) {
 		super(mapaLogico);
-		disparoAliado = e;
 		
 //		this.imagenes[0] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Lazaro/lazaro_estatico.png")); // Estatico;
-		this.imagenes[0] = new ImageIcon(getClass().getClassLoader().getResource("texturas/disparos/lagrima.png")); // Estatico;
-		
-		grafica.setBounds(new Rectangle(ancho, alto));
-		grafica.setIcon(new ImageIcon(imagenes[0].getImage().getScaledInstance(grafica.getWidth(), grafica.getHeight(), Image.SCALE_DEFAULT))); // Arranca con la imagen estatica;
-		grafica.setLocation(99999999, 9999999);
+//		this.imagenes[0] = new ImageIcon(getClass().getClassLoader().getResource("texturas/disparos/lagrima.png")); // Estatico;
+//		
+//		grafica.setBounds(new Rectangle(ancho, alto));
+//		grafica.setIcon(new ImageIcon(imagenes[0].getImage().getScaledInstance(grafica.getWidth(), grafica.getHeight(), Image.SCALE_DEFAULT))); // Arranca con la imagen estatica;
+//		grafica.setLocation(99999999, 9999999);
 	}
 
 	@Override
@@ -33,11 +30,6 @@ public class DisparoAliadoGrafico extends EntidadGrafica {
 	public void golpearRango() {
 	}
 
-	@Override
-	public void eliminar() {
-		LagrimaNormal l = new LagrimaNormal(mapaLogico, disparoAliado.getX(), disparoAliado.getY());
-		l.start();
-	}
 
 	
 	

@@ -9,11 +9,10 @@ import Main.MapaLogico;
 
 public class ApollyonGrafico extends CampeonGrafica {
 
-	protected Apollyon apollyon;
 
 	public ApollyonGrafico(MapaLogico mapaLogico, Apollyon a, int ancho, int alto) {
 		super(mapaLogico);
-		apollyon = a;
+		entidad = a;
 		
 		this.imagenes[0] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Apollyon/apollyon_estatico.png")); // Estatico;
 		this.imagenes[1] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Apollyon/apollyon_sufriendo.png")); // Disparando;

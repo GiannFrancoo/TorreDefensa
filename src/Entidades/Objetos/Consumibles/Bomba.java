@@ -62,7 +62,7 @@ public class Bomba extends Consumible {
 					}
 				}
 				//Auto-Eliminarse
-				//Sonido.playSound(Sonido.BOMBA);
+				Sonido.BOMBA.play();
 				this.entidadGrafica.golpearMelee();
 				this.eliminar();
 			} else {

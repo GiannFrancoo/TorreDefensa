@@ -1,5 +1,7 @@
 package Entidades.Disparos;
 
+import java.applet.AudioClip;
+
 import Entidades.Entidad;
 import Main.MapaLogico;
 import Main.Visitantes.Visitante;
@@ -12,7 +14,7 @@ public abstract class Disparo extends Entidad{
 	protected Visitante visitante;
 	
 	//Cada disparo concreto debe asignar su sonido
-	protected String sonido;
+	protected AudioClip sonido;
 
 	public Disparo(MapaLogico m) {
 		super(m);
@@ -21,7 +23,7 @@ public abstract class Disparo extends Entidad{
 		this.velocidad = 5; //En la que recorre el mapa;
 	}
 	
-	public String getSonido() {
+	public AudioClip getSonido() {
 		return this.sonido;
 	}
 

@@ -5,8 +5,6 @@ import Entidades.Objetos.Magias.Magia;
 import Main.MapaLogico;
 
 public class Lilith extends Aliado{
-
-	protected LilithGrafico lilithGrafico;
 	
 	public Lilith(MapaLogico mapaLogico){
 		super(mapaLogico);
@@ -19,7 +17,7 @@ public class Lilith extends Aliado{
 		this.dps = 35;
 		monedas = 100;
 
-		LilithGrafico lilithGrafico= new LilithGrafico(mapaLogico, this, ancho, alto);
+		LilithGrafico lilithGrafico = new LilithGrafico(mapaLogico, this, ancho, alto);
 		entidadGrafica = lilithGrafico;
 	}
 	

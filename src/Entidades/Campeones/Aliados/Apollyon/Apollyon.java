@@ -6,8 +6,6 @@ import Main.MapaLogico;
 
 public class Apollyon extends Aliado {
 	
-	protected ApollyonGrafico apollyonGrafico;
-	
 	public Apollyon(MapaLogico mapaLogico) {
 		super(mapaLogico);
 		
