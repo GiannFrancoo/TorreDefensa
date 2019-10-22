@@ -1,7 +1,6 @@
 package Entidades.Disparos.Enemigos;
 
 import Entidades.Entidad;
-import Entidades.Campeones.Aliados.Aliado;
 import Entidades.Disparos.Disparo;
 import Main.MapaLogico;
 import Main.Visitantes.VisitanteDisparoA_Aliado;
@@ -34,7 +33,7 @@ public class DisparoEnemigo extends Disparo {
 	
 	//Va a mover el disparo, y si se encuentra con un ememido lo golpea y se autodestruye.
 	public void intentarMoverse() {
-		PositionList<Entidad> listaColisionados = mapaLogico.colisione(x - velocidad, y);
+		PositionList<Entidad> listaColisionados = mapaLogico.colisione(x + this.getAncho()/2, y);
 
 		for(Entidad e: listaColisionados) {
 			

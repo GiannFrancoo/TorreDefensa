@@ -18,7 +18,6 @@ public class VisitanteMeleeA_Aliado implements Visitante {
 	}
 
 	public void visita(Aliado a) {
-		System.out.println("....");
 		a.recibirGolpe(enemigo.getFueza());
 	}
 

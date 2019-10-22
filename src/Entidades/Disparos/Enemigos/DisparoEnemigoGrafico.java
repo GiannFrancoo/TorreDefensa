@@ -1,6 +1,5 @@
 package Entidades.Disparos.Enemigos;
 
-import Entidades.Entidad;
 import Entidades.EntidadGrafica;
 import Main.MapaLogico;
 
@@ -20,18 +19,16 @@ public class DisparoEnemigoGrafico extends EntidadGrafica{
 		//Mueve para la derecha;
 	}
 
-	@Override
 	public void golpearMelee() {
 	}
 
-	@Override
 	public void golpearRango() {
 	}
 
-	@Override
 	public void eliminar() {
-		// TODO Auto-generated method stub
-		
+	}
+
+	public void recibirGolpe() {
 	}
 	
 	

@@ -3,7 +3,6 @@ package Entidades.Disparos.Aliados;
 import Entidades.Entidad;
 import Entidades.Disparos.Disparo;
 import Main.MapaLogico;
-import Main.Sonido;
 import Main.Visitantes.VisitanteDisparoA_Enemigo;
 import Main.Visitantes.Visitante;
 import Utilidad.Lista.PositionList;
@@ -32,8 +31,9 @@ public abstract class DisparoAliado extends Disparo{
 	}
 	
 	public void intentarMoverse() {
-//		PositionList<Entidad> listaColisionados = mapaLogico.colisioneDerecha(x + velocidad, y, ancho);
-		PositionList<Entidad> listaColisionados = mapaLogico.colisione(x + velocidad + ancho, y);
+//		PositionList<Entidad> listaColisionados = mapaLogico.colisione(x + velocidad + ancho, y);
+		PositionList<Entidad> listaColisionados = mapaLogico.colisione(x + ancho/2, y);
+
 		
 		for(Entidad e: listaColisionados) {
 			//Hace danio al primer enemigo y muere.

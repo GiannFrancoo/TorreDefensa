@@ -48,7 +48,6 @@ public class MapaLogico {
 		this.aInsertar.addLast(e);
 	}
 	
-	//eliminarPosta: Metodo que se encarga de eliminar la entidad en la lista.
 	public void eliminar(Position<Entidad> pos) {
 		pos.element().setVivo(false);
 		mapaGUI.remover(pos.element().getGrafica());
@@ -117,7 +116,7 @@ public class MapaLogico {
 		PositionList<Entidad> listaColisionados = new DoubleLinkedList<Entidad>();
 		for(Entidad e: this.entidades) {
 			
-			if ((e.getX() >= x1 && e.getX() <= x2) &&  (y >= e.getY() && y <= e.getY()+e.getAlto())) {
+			if (((e.getX() >= x1 && e.getX() <= x2) || (e.getX()+e.getAncho() >= x1 && e.getX()+e.getAncho() <= x2)) &&  (y >= e.getY() && y <= e.getY()+e.getAlto())) {
 				listaColisionados.addLast(e);
 			}
 		}

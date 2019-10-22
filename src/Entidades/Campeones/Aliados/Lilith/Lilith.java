@@ -10,11 +10,11 @@ public class Lilith extends Aliado{
 		super(mapaLogico);
 		
 		this.vidaMaxima = 100;
-		this.vidaActual = 100;
+		this.vidaActual = this.vidaMaxima;
 		this.ancho = 67; 
 		this.alto = 80;
-		this.fuerza = 50;	
-		this.rango = 15;
+		this.fuerza = 30;	
+		this.rango = 20;
 		this.dps = 35;
 		monedas = 100;
 

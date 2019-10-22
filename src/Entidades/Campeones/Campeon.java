@@ -42,11 +42,11 @@ public abstract class Campeon extends Entidad{
 	}
 	
 	public void recibirGolpe(int d) {
-		vidaActual = vidaActual - d;
+		vidaActual -= d;
 		if(vidaActual <= 0) {
-			this.estaVivo = false;
 			mapaLogico.eliminar(this.getPosEnLista());
 		}
+		this.entidadGrafica.recibirGolpe();
 	}
 	
 	public abstract void golpearRango();

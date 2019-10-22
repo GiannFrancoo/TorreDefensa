@@ -22,7 +22,7 @@ public class Bomba extends Consumible {
 		this.fuerza = 999999;
 		this.tiempoExplosion = 50;
 		this.tiempoActual = tiempoExplosion;
-		this.radio = 50;
+		this.radio = 60;
 		
 		this.visitante = new VisitanteBomba(this);
 		
@@ -41,7 +41,7 @@ public class Bomba extends Consumible {
 		if (this.estaVivo) {
 		
 			if (tiempoActual == 0) {
-				//Rango de explocion cuadrado. Coordenadas del extremo superior izquierdo.
+				//Rango de exploSion cuadrado. Coordenadas del extremo superior izquierdo.
 				int cX = (getX() + (getAncho()/2)); //Centro de la bomba.
 				int cY = (getY() + (getAlto()/2)); //Centro de la bomba.
 				

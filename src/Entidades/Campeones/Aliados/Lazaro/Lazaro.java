@@ -1,7 +1,6 @@
 package Entidades.Campeones.Aliados.Lazaro;
 
 import Entidades.Campeones.Aliados.Aliado;
-import Entidades.Disparos.Aliados.DisparoAliado;
 import Entidades.Objetos.Magias.Magia;
 import Main.MapaLogico;
 
@@ -12,10 +11,11 @@ public class Lazaro extends Aliado {
 	public Lazaro(MapaLogico mapaLogico){
 		super(mapaLogico);
 		
+		this.vidaMaxima = 100;
+		this.vidaActual = this.vidaMaxima;
 		this.ancho = 67; 
 		this.alto = 80;
-		this.vidaActual = 100;
-		this.fuerza = 25;
+		this.fuerza = 20;
 		this.rango = 550;		
 		this.dps = 35;
 		monedas = 100;
