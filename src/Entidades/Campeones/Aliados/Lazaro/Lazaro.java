@@ -38,14 +38,14 @@ public class Lazaro extends Aliado {
 	}
 
 	// Se agrega una magia a la lista;
-	public void agregarMagia(Magia m) {
-		this.magias.addLast(m);
-		
-		//Empieza a hacer efecto
-		
-		DuracionEscudo de = new DuracionEscudo(mapaLogico, this);
-		de.start();
-		
-	}
+//	public void agregarMagia(Magia m) {
+//		this.magias.addLast(m);
+//		
+//		//Empieza a hacer efecto
+//		
+//		DuracionEscudo de = new DuracionEscudo(mapaLogico, this);
+//		de.start();
+//		
+//	}
 
 }

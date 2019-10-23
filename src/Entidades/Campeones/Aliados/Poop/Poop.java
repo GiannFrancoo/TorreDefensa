@@ -21,12 +21,6 @@ public class Poop extends Aliado{
 		entidadGrafica = p;
 	}
 
-	@Override
-	public void golpearRango() {
-	}
-
-	@Override
-	public void agregarMagia(Magia m) {
-	}
+	public void golpearRango() {}
 
 }

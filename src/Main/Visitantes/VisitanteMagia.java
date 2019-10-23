@@ -16,16 +16,12 @@ public class VisitanteMagia implements Visitante{
 	}
 	
 	public void visita(Enemigo e) {}
-
 	
 	public void visita(Aliado a) {}
-
 	
 	public void visita(Consumible c) {}
-
 	
 	public void visita(Disparo d) {}
-
 
 	public void visita(Magia m) {
 		this.mapaLogico.setMagia(m);

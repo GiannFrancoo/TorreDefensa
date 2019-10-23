@@ -23,9 +23,10 @@ public class AplicarMagia extends EstadoJuego{
 		}
 		
 		//Podrias ponerle más eficiencia, si metes un break, pero haciendo la magia nula en el visitor;
-		
-		this.mapaLogico.getMapaGUI().remover(this.mapaLogico.getMagia().getGrafica()); // Sacas el drop!
-		this.mapaLogico.setMagia(null); // Volves a la magia null;
+		if (this.mapaLogico.getMagia() != null) {
+			this.mapaLogico.getMapaGUI().remover(this.mapaLogico.getMagia().getGrafica()); // Sacas el drop!
+			this.mapaLogico.setMagia(null); // Volves a la magia null;			
+		}
 		this.mapaLogico.setEstado(new Jugando(this.mapaLogico)); // Setea de nuevo el mapa;
 	}
 

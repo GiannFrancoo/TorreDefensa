@@ -17,13 +17,15 @@ public class Jugando extends EstadoJuego{
 		
 		Visitante visMagia = new VisitanteMagia(this.mapaLogico);
 		for(Entidad e: this.mapaLogico.getListaEntidades()) {
-			e.visitar(visMagia);
+			if((x >= e.getX() && x <= e.getX()+e.getAncho()) &&  (y >= e.getY() && y <= e.getY()+e.getAlto())) {
+				e.visitar(visMagia);
+			}
 			if(mapaLogico.getMagia() != null) { // Asi no agarra varias;
+				this.mapaLogico.setEstado(new AplicarMagia(this.mapaLogico));
 				break;
 			}
 		}
 		
-		this.mapaLogico.setEstado(new AplicarMagia(this.mapaLogico));
 	}
 
 }
