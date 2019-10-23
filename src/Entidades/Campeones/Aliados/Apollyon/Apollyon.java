@@ -21,12 +21,6 @@ public class Apollyon extends Aliado {
 		entidadGrafica = apollyonGrafico;
 	}
 
-
-	
-	public void agregarMagia(Magia m) {
-
-	}
-
 	@Override
 	public void golpearRango() {
 	}

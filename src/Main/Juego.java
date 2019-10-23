@@ -4,6 +4,7 @@ import java.awt.EventQueue;
 import java.util.Random;
 
 import Entidades.Campeones.Enemigos.Colmena.Colmena;
+import Entidades.Objetos.Magias.Magia;
 import Entidades.Objetos.Magias.MagiaDefensas.MagiaDefensa;
 import Entidades.Objetos.Magias.MagiaDefensas.MagiaEscudo;
 
@@ -12,7 +13,8 @@ import Entidades.Objetos.Magias.MagiaDefensas.MagiaEscudo;
 public class Juego extends Thread{
 	
 	private MapaLogico mapaLogico;
-
+	private boolean b = true;
+	
 	public static void main(String[] args) {
 		
 		EventQueue.invokeLater(new Runnable() {
@@ -26,6 +28,7 @@ public class Juego extends Thread{
 	public Juego() {
 		this.mapaLogico = new MapaLogico();
 //		Sonido.BACK_LVL1.loop();
+		
 		this.start();
 	}
 	
@@ -38,6 +41,17 @@ public class Juego extends Thread{
 			}
 			mapaLogico.actualizar();
 			//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+			
+			if (b) {
+				Magia md = new MagiaEscudo(9,9,mapaLogico);
+				md.setX(((9 * 841) / 10 ) + 233);
+				md.setY(((4 * 487) / 6) + 42 );
+				mapaLogico.insertar(md);
+				b = false;
+			}
+			
+			
+			
 			Random r = new Random();
 			if (r.nextInt(70) == 0) {
 				
@@ -86,14 +100,14 @@ public class Juego extends Thread{
 			}
 			
 			
-			if(r.nextInt(50) == 0) {
-				MagiaEscudo md = new MagiaEscudo(9,9,mapaLogico);
-					
-					md.setX(((9 * 841) / 10 ) + 233);
-					md.setY(((4 * 487) / 6) + 42 );
-				
-				mapaLogico.insertar(md);
-			}
+//			if(r.nextInt(50) == 0) {
+//				Magia md = new MagiaEscudo(9,9,mapaLogico);
+//					
+//				md.setX(((9 * 841) / 10 ) + 233);
+//				md.setY(((4 * 487) / 6) + 42 );
+//				
+//				mapaLogico.insertar(md);
+//			}
 			
 		}
 	}

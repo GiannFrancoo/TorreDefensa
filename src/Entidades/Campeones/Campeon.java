@@ -49,8 +49,11 @@ public abstract class Campeon extends Entidad{
 		this.entidadGrafica.recibirGolpe();
 	}
 	
+	public void agregarMagia(Magia m) {
+		m.setCampeon(this);
+	}
+	
 	public abstract void golpearRango();
 	public abstract void golpearMelee();
-	public abstract void agregarMagia(Magia m);
 	
 }

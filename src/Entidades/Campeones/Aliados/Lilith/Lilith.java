@@ -21,10 +21,6 @@ public class Lilith extends Aliado{
 		LilithGrafico lilithGrafico = new LilithGrafico(mapaLogico, this, ancho, alto);
 		entidadGrafica = lilithGrafico;
 	}
-	
-	public void agregarMagia(Magia m) {
-		this.magias.addLast(m);
-	}
 
 	public void golpearRango() {		
 	}

@@ -9,9 +9,9 @@ import Main.MapaLogico;
 
 public class MagiaEscudoGrafica extends EntidadGrafica{
 
-	public MagiaEscudoGrafica(MapaLogico mapaLogico, MagiaDefensa md, int ancho, int alto) {
+	public MagiaEscudoGrafica(MapaLogico mapaLogico, MagiaEscudo magiaEscudo, int ancho, int alto) {
 		super(mapaLogico);
-		entidad = md;
+		this.entidad = magiaEscudo;
 		
 
 		this.imagenes[0] = new ImageIcon(this.getClass().getClassLoader().getResource("texturas/escudo/escudo.gif")); // Corriendo (GIF);

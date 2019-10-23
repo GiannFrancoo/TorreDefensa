@@ -1,11 +1,11 @@
 Prioridad:
 
 - Ganar/perder
-- Hilo para magias
-- Magias en general
+- Magias (agregar más)
 - Crear Azazel
 - Aliados y enemigos restantes (un aliado que ocupa 2 celdas)
 - Oleadas (enemigos con magias aleatorias)
+- Limpiar la mierda que quedo con magias (ver clase EfectoMagia)
 
 =======================
 

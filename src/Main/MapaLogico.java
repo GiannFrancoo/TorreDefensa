@@ -30,6 +30,7 @@ public class MapaLogico {
 		aBorrar = new DoubleLinkedList<Position<Entidad>>();
 		aInsertar = new DoubleLinkedList<Entidad>();
 		estadoJuego = new Jugando(this);
+		magiaAplicada = null;
 	}
 	
 	
