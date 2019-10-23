@@ -54,6 +54,10 @@ public abstract class Entidad {
 		return vidaActual;
 	}
 	
+	public void setVidaActual(int vida) {
+		vidaActual = vida;
+	}
+	
 	public void setX(int x) {
 		this.x = x;
 		entidadGrafica.getLabel().setLocation(x, y);
