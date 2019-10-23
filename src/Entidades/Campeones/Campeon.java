@@ -41,6 +41,11 @@ public abstract class Campeon extends Entidad{
 		return this.fuerza;
 	}
 	
+	public void setFuerza(int fuerza) {
+		this.fuerza = fuerza;
+	}
+	
+	
 	public void recibirGolpe(int d) {
 		vidaActual -= d;
 		if(vidaActual <= 0) {
