@@ -11,7 +11,6 @@ public abstract class Disparo extends Entidad{
 	protected int fuerza;
 	protected int rango;
 	protected int velocidad;
-	protected Visitante visitante;
 	
 	//Cada disparo concreto debe asignar su sonido
 	protected AudioClip sonido;

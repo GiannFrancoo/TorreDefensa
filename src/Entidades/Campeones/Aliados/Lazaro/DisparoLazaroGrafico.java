@@ -8,6 +8,7 @@ import javax.swing.ImageIcon;
 import Entidades.Disparos.Aliados.DisparoAliado;
 import Entidades.Disparos.Aliados.DisparoAliadoGrafico;
 import Main.MapaLogico;
+import Main.Textura;
 import Main.Animaciones.LagrimaNormal;
 
 public class DisparoLazaroGrafico extends DisparoAliadoGrafico {
@@ -18,7 +19,7 @@ public class DisparoLazaroGrafico extends DisparoAliadoGrafico {
 		
 		entidad = e;
 		
-		this.imagenes[0] = new ImageIcon(getClass().getClassLoader().getResource("texturas/disparos/lagrima.png")); // Estatico;
+		this.imagenes[0] = new ImageIcon(Textura.class.getClassLoader().getResource("texturas/disparos/lagrima.png"));
 		
 		grafica.setBounds(new Rectangle(ancho, alto));
 		grafica.setIcon(new ImageIcon(imagenes[0].getImage().getScaledInstance(grafica.getWidth(), grafica.getHeight(), Image.SCALE_DEFAULT))); // Arranca con la imagen estatica;
