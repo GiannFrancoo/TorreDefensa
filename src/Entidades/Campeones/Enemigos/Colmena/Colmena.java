@@ -14,7 +14,7 @@ public class Colmena extends Enemigo {
 		this.velocidad = 1;
 		this.vidaMaxima = 100;
 		this.vidaActual = 100;
-		this.fuerza = 20;
+		this.fuerza = 100;
 		this.rango = 20;
 		this.dps = 35;
 		monedas = 30;
@@ -24,7 +24,7 @@ public class Colmena extends Enemigo {
 	}
 
 	public void agregarMagia(Magia m) {
-		this.magias.add(m);
+		this.magias.addLast(m);
 	}
 
 	public void golpearRango() {

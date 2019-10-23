@@ -1,7 +1,14 @@
 package Entidades.Objetos.Magias.MagiaDefensas;
 
+import java.awt.Image;
+import java.awt.Rectangle;
+
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
 import Entidades.Objetos.Magias.Magia;
 import Main.MapaLogico;
+import Main.Textura;
 import Main.Visitantes.Visitante;
 
 public class MagiaDefensa extends Magia {

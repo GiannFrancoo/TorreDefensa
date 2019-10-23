@@ -4,6 +4,8 @@ import java.awt.EventQueue;
 import java.util.Random;
 
 import Entidades.Campeones.Enemigos.Colmena.Colmena;
+import Entidades.Objetos.Magias.MagiaDefensas.MagiaDefensa;
+import Entidades.Objetos.Magias.MagiaDefensas.MagiaEscudo;
 
 
 
@@ -83,9 +85,16 @@ public class Juego extends Thread{
 
 			}
 			
-			//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+			
+			if(r.nextInt(50) == 0) {
+				MagiaEscudo md = new MagiaEscudo(9,9,mapaLogico);
+					
+					md.setX(((9 * 841) / 10 ) + 233);
+					md.setY(((4 * 487) / 6) + 42 );
+				
+				mapaLogico.insertar(md);
+			}
 			
 		}
 	}
-
 }

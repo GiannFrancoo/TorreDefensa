@@ -14,11 +14,19 @@ public class AplicarMagia extends EstadoJuego{
 
 	public void actua(int x, int y) {		
 		Visitante visMagia = new VisitanteAplicarMagia(this.mapaLogico.getMagia());
-		for(Entidad e: this.mapaLogico.getListaEntidades()) {
-			e.visitar(visMagia);
+		
+		// Buscar al primero aliado con esas coordenadas, para ponerle la magia;
+		for(Entidad e: mapaLogico.getListaEntidades()) {
+			if((x >= e.getX() && x <= e.getX()+e.getAncho()) &&  (y >= e.getY() && y <= e.getY()+e.getAlto())) {
+				e.visitar(visMagia);
+			}
 		}
-		this.mapaLogico.getMapaGUI().remover(this.mapaLogico.getMagia().getGrafica());
-		this.mapaLogico.setMagia(null);
+		
+		//Podrias ponerle más eficiencia, si metes un break, pero haciendo la magia nula en el visitor;
+		
+		this.mapaLogico.getMapaGUI().remover(this.mapaLogico.getMagia().getGrafica()); // Sacas el drop!
+		this.mapaLogico.setMagia(null); // Volves a la magia null;
+		this.mapaLogico.setEstado(new Jugando(this.mapaLogico)); // Setea de nuevo el mapa;
 	}
 
 }

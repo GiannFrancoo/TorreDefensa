@@ -23,7 +23,7 @@ public class Lilith extends Aliado{
 	}
 	
 	public void agregarMagia(Magia m) {
-		this.magias.add(m);
+		this.magias.addLast(m);
 	}
 
 	public void golpearRango() {		
