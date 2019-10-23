@@ -19,6 +19,7 @@ public class MapaLogico {
 	protected Jugador jugador;
 	private EstadoJuego estadoJuego;
 	private MapaGUI mapaGUI;
+	protected Magia magiaAplicada;
 	
 	public MapaLogico() {
 		this.jugador = new Jugador(100);
@@ -131,5 +132,14 @@ public class MapaLogico {
 	public MapaGUI getMapaGUI() {
 		return mapaGUI;
 	}
+	
+	public Magia getMagia(){
+		return this.magiaAplicada;
+	}
+	
+	public void setMagia(Magia m) {
+		this.magiaAplicada = m;
+	}
+	
 	
 }
