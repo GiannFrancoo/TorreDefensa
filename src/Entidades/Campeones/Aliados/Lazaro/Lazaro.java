@@ -2,7 +2,7 @@ package Entidades.Campeones.Aliados.Lazaro;
 
 import Entidades.Campeones.Aliados.Aliado;
 import Entidades.Objetos.Magias.Magia;
-import Entidades.Objetos.Magias.MagiaDefensas.DuracionEscudo;
+import Entidades.Objetos.Magias.Escudos.DuracionEscudo;
 import Main.MapaLogico;
 import Main.Animaciones.LagrimaNormal;
 

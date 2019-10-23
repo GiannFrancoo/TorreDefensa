@@ -1,4 +1,4 @@
-package Entidades.Objetos.Magias.MagiaDefensas;
+package Entidades.Objetos.Magias.Escudos;
 
 import java.awt.Image;
 import java.awt.Rectangle;
