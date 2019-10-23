@@ -1,4 +1,4 @@
-package Entidades.Objetos.Magias.MagiaDefensas;
+package Entidades.Objetos.Magias.Escudos;
 
 import Entidades.Campeones.Campeon;
 import Entidades.Objetos.Magias.Magia;

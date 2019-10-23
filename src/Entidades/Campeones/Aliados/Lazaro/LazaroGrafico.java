@@ -42,9 +42,9 @@ public class LazaroGrafico extends CampeonGrafica{
 		
 	}
 
-	@Override
+	
 	public void eliminar() {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
