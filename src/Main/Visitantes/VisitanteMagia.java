@@ -15,28 +15,16 @@ public class VisitanteMagia implements Visitante{
 		this.mapaLogico = m;
 	}
 	
-	public void visita(Enemigo e) {
-		
-		
-	}
+	public void visita(Enemigo e) {}
 
 	
-	public void visita(Aliado a) {
-		
-		
-	}
+	public void visita(Aliado a) {}
 
 	
-	public void visita(Consumible c) {
-		
-		
-	}
+	public void visita(Consumible c) {}
 
 	
-	public void visita(Disparo d) {
-		
-		
-	}
+	public void visita(Disparo d) {}
 
 
 	public void visita(Magia m) {

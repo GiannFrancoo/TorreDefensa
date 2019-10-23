@@ -11,10 +11,7 @@ public class MagiaAtaque extends Magia {
 	}
 
 	@Override
-	public void accionar() {
-		// TODO Auto-generated method stub
-		
-	}
+	public void accionar() {}
 
 	@Override
 	public void visitar(Visitante a) {

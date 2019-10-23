@@ -1,12 +1,12 @@
 package Entidades.Campeones;
 
-import java.util.LinkedList;
-import java.util.List;
 
 import Entidades.Entidad;
 import Entidades.Objetos.Magias.Magia;
 import Main.MapaLogico;
 import Main.Visitantes.Visitante;
+import Utilidad.Lista.DoubleLinkedList;
+import Utilidad.Lista.PositionList;
 
 public abstract class Campeon extends Entidad{
 
@@ -14,7 +14,7 @@ public abstract class Campeon extends Entidad{
 	protected int dpsTiming = dps;
 	protected int fuerza;
 	protected int rango;
-	protected List<Magia> magias;
+	protected PositionList<Magia> magias;
 	protected static int monedas;
 	
 	protected Visitante visitanteAlcance;
@@ -22,7 +22,7 @@ public abstract class Campeon extends Entidad{
 	
 	public Campeon(MapaLogico m) {
 		super(m); // Entidad;
-		magias = new LinkedList<Magia>();
+		magias = new DoubleLinkedList<Magia>();
 	}
 
 	public int getMonedas() {

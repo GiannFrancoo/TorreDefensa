@@ -2,7 +2,9 @@ package Entidades.Campeones.Aliados.Lazaro;
 
 import Entidades.Campeones.Aliados.Aliado;
 import Entidades.Objetos.Magias.Magia;
+import Entidades.Objetos.Magias.MagiaDefensas.DuracionEscudo;
 import Main.MapaLogico;
+import Main.Animaciones.LagrimaNormal;
 
 public class Lazaro extends Aliado {
 		
@@ -27,7 +29,6 @@ public class Lazaro extends Aliado {
 
 	// Dispara a rango;
 	public void golpearRango() {	
-		//Aplicar magia
 		this.dpsTiming = dps;
 		DisparoLazaro d = new DisparoLazaro(x, y, this.fuerza, this.rango, mapaLogico);
 		mapaLogico.insertar(d);
@@ -38,7 +39,13 @@ public class Lazaro extends Aliado {
 
 	// Se agrega una magia a la lista;
 	public void agregarMagia(Magia m) {
-		this.magias.add(m);
+		this.magias.addLast(m);
+		
+		//Empieza a hacer efecto
+		
+		DuracionEscudo de = new DuracionEscudo(mapaLogico, this);
+		de.start();
+		
 	}
 
 }

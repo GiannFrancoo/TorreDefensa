@@ -18,6 +18,9 @@ public class Jugando extends EstadoJuego{
 		Visitante visMagia = new VisitanteMagia(this.mapaLogico);
 		for(Entidad e: this.mapaLogico.getListaEntidades()) {
 			e.visitar(visMagia);
+			if(mapaLogico.getMagia() != null) { // Asi no agarra varias;
+				break;
+			}
 		}
 		
 		this.mapaLogico.setEstado(new AplicarMagia(this.mapaLogico));
