@@ -13,7 +13,10 @@ public abstract class Magia extends Objeto {
 
 	public Magia(int x, int y, MapaLogico m) {
 		super(m);
-		crono = new Cronometro(5000);
+	}
+	
+	public void contadorDespawn(){
+		crono = new Cronometro(5000); //5000
 		crono.start();
 	}
 	

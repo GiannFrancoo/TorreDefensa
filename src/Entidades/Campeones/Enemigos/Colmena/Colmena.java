@@ -1,12 +1,15 @@
 package Entidades.Campeones.Enemigos.Colmena;
 
 import Entidades.Campeones.Enemigos.Enemigo;
+import Entidades.Objetos.Magias.Magia;
 import Main.MapaLogico;
 
 public class Colmena extends Enemigo {
 	
-	public Colmena(MapaLogico mapaLogico) {
+	public Colmena(MapaLogico mapaLogico, Magia m) {
 		super(mapaLogico);
+
+		this.drop = m;
 		
 		this.ancho = 65; //34 por regla de 3 (39 -> 75)
 		this.alto = 75;  //39                (34 ->  X)
@@ -16,12 +19,12 @@ public class Colmena extends Enemigo {
 		this.fuerza = 25;
 		this.rango = 20;
 		this.dps = 35;
-		monedas = 30;
-		
-		ColmenaGrafico c = new ColmenaGrafico(mapaLogico, this, ancho, alto);
-		entidadGrafica = c;
-	}
+		monedas = 30;	
 
+		ColmenaGrafico c = new ColmenaGrafico(mapaLogico, this, ancho, alto);
+		entidadGrafica = c;	
+	}
+	
 	public void golpearRango() {
 	}
 

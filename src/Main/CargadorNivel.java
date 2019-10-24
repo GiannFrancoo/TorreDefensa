@@ -30,12 +30,12 @@ public class CargadorNivel extends Thread {
 				aInsertar = nivel.remove(nivel.first());
 			
 				if(aInsertar == null){ // Si termino la oleada
-					Thread.sleep(30000);
+					Thread.sleep(5000); // 30000
 				}
 				else {
 					mapaLogico.insertar(aInsertar);
 					setearleCoordenadas(aInsertar);
-					Thread.sleep(1000); // Entre enemigo y enemigo;
+					Thread.sleep(300); // Entre enemigo y enemigo; 1000
 				}
 				
 				

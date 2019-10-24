@@ -1,11 +1,12 @@
 package Entidades.Campeones.Enemigos.Cerebro;
 
 import Entidades.Campeones.Enemigos.Enemigo;
+import Entidades.Objetos.Magias.Magia;
 import Main.MapaLogico;
 
 public class Cerebro extends Enemigo{
 
-	public Cerebro(MapaLogico m) {
+	public Cerebro(MapaLogico m, Magia drop) {
 		super(m);
 		
 		this.ancho = 65; //34 por regla de 3 (39 -> 75)
@@ -17,6 +18,8 @@ public class Cerebro extends Enemigo{
 		this.rango = 20;
 		this.dps = 35;
 		monedas = 30;
+		
+		this.drop = drop;
 		
 		CerebroGrafico cer = new CerebroGrafico(mapaLogico, this, ancho, alto);
 		entidadGrafica = cer;
