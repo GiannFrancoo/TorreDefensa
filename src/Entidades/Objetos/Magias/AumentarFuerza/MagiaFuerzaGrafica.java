@@ -24,27 +24,15 @@ public class MagiaFuerzaGrafica extends EntidadGrafica{
 	}
 
 	
-	public void golpearMelee() {
-		
-		
-	}
+	public void golpearMelee() {}
 
 	
-	public void golpearRango() {
-		
-		
-	}
+	public void golpearRango() {}
 
 
-	public void eliminar() {
-		
-		
-	}
+	public void eliminar() {}
 
 	
-	public void recibirGolpe() {
-		
-		
-	}
+	public void recibirGolpe() {}
 
 }

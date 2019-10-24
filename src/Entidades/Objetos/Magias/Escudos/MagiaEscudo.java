@@ -18,12 +18,13 @@ public class MagiaEscudo extends Magia {
 		entidadGrafica = magiaEscudoGrafica;
 	}
 	
-	public void setCampeon(Campeon camp) {
-		this.camp = camp;
+	public void comenzarMagia(Campeon camp) { // Para pasarselo al hilo de efecto;
 		DuracionEscudo esc = new DuracionEscudo(mapaLogico, camp);
 		esc.start();
+		this.eliminar(); // Elimina la magia y queda el efecto andando;
 	}
 
 	public void recibirGolpe(int d) {}
+
 	
 }

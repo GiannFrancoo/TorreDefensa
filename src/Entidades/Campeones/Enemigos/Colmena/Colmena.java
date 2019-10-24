@@ -13,7 +13,7 @@ public class Colmena extends Enemigo {
 		this.velocidad = 1;
 		this.vidaMaxima = 100;
 		this.vidaActual = 100;
-		this.fuerza = 100;
+		this.fuerza = 25;
 		this.rango = 20;
 		this.dps = 35;
 		monedas = 30;
