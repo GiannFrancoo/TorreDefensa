@@ -56,6 +56,9 @@ public abstract class Enemigo extends Campeon{
 	
 	public void mover() {
 		this.setX(x-velocidad);
+		if (this.getX() < 233) {
+			mapaLogico.perderJuego();
+		}
 	}
 	
 	public void setMoverme(boolean b) {

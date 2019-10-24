@@ -28,12 +28,15 @@ public class MapaLogico {
 	protected int nivelMaximo = 2;
 	protected int nivelActual = 1;
 	protected boolean quedanEnemigos;
+	protected CargadorNivel cargadorNivel;
 	
 	
 	//Atributos de instancia ndeahh re IPOO.
 	protected PositionList<Entidad> entidades;
 	protected PositionList<Position<Entidad>> aBorrar;
 	protected PositionList<Entidad> aInsertar;
+	
+	protected boolean juegoTerminado;
 
 	protected Tienda tienda;
 	protected Jugador jugador;
@@ -51,6 +54,12 @@ public class MapaLogico {
 		aInsertar = new DoubleLinkedList<Entidad>();
 		estadoJuego = new Jugando(this);
 		magiaAplicada = null;
+		juegoTerminado = false;
+		
+		
+		PositionList<Entidad> nivel = generarNivel();
+		cargadorNivel = new CargadorNivel(this,nivel);
+		cargadorNivel.start();
 	}
 	
 	
@@ -77,63 +86,60 @@ public class MapaLogico {
 	}
 	
  	public void actualizar() {
-	
- 		//Recorre toda la lista y llamo a los accionar de las clases.
- 		for(Entidad e : this.entidades) {
-			e.accionar();
+ 		if (!this.juegoTerminado) {
+	 		//Recorre toda la lista y llamo a los accionar de las clases.
+	 		for(Entidad e : this.entidades) {
+				e.accionar();
+	 		}
+	 		
+	 		//Borra las entidades eliminadas.
+	 		for(Position<Entidad> p : this.aBorrar) {
+	 			try {
+					this.entidades.remove(p);
+				} catch (InvalidPositionException e1) {
+					e1.printStackTrace();
+				}
+	 		}
+	 		this.aBorrar = new DoubleLinkedList<Position<Entidad>>();
+	 		
+	 		//Inserta a la lista de entidades las nuevas entidades.
+	 		for (Entidad e : this.aInsertar) {
+	 			this.entidades.addLast(e);
+	 			try {
+	 				e.setPosEnLista(this.entidades.last());
+	 			} catch (EmptyListException e1) {
+	 				e1.printStackTrace();
+	 			}
+	 			mapaGUI.insertar(e.getGrafica());
+	 		}
+	 		this.aInsertar = new DoubleLinkedList<Entidad>();
+	 		
+	 		// PARA NIVELES !!!!!!!!! ARREGLAR EL InstansOf falso para detectar que no hay más enmigos;
+	 		/*
+	 		 * Si la lista esta vacia y no hay más enmigos en entidades, termino nivel; (Controlo con entero que no sea el ultimo nivel);
+	 		 * sino carga el siguiente nivel; ++nivelActual;
+	 		 */
+	 		
+	 		Visitante v = new VisitanteEnemigo(this);
+	 		quedanEnemigos = false; // Asumis que no quedan ninguno;
+	 		// Si depsues de recorrer todo quedanEnemigos es verdadero, hay vivos;
+	 		
+	 		for(Entidad e : this.entidades) {
+	 			e.visitar(v);
+	 		}
+	 		
+	 		if(nivel.isEmpty() && !quedanEnemigos) {
+	 			if(nivelActual == nivelMaximo) {
+	 				ganarJuego();
+	 			}
+	 			else {
+	 				++nivelActual;
+	 	 	 		generarNivel();	
+	 	 	 		cargadorNivel = new CargadorNivel(this,nivel);
+	 	 	 		cargadorNivel.start();
+	 			}
+	 		}	
  		}
- 		
- 		//Borra las entidades eliminadas.
- 		for(Position<Entidad> p : this.aBorrar) {
- 			try {
-				this.entidades.remove(p);
-			} catch (InvalidPositionException e1) {
-				e1.printStackTrace();
-			}
- 		}
- 		this.aBorrar = new DoubleLinkedList<Position<Entidad>>();
- 		
- 		//Inserta a la lista de entidades las nuevas entidades.
- 		for (Entidad e : this.aInsertar) {
- 			this.entidades.addLast(e);
- 			try {
- 				e.setPosEnLista(this.entidades.last());
- 			} catch (EmptyListException e1) {
- 				e1.printStackTrace();
- 			}
- 			mapaGUI.insertar(e.getGrafica());
- 		}
- 		this.aInsertar = new DoubleLinkedList<Entidad>();
- 		
- 		
- 		
- 		
- 		// PARA NIVELES !!!!!!!!! ARREGLAR EL InstansOf falso para detectar que no hay más enmigos;
- 		/*
- 		 * Si la lista esta vacia y no hay más enmigos en entidades, termino nivel; (Controlo con entero que no sea el ultimo nivel);
- 		 * sino carga el siguiente nivel; ++nivelActual;
- 		 */
- 		
- 		Visitante v = new VisitanteEnemigo(this);
- 		quedanEnemigos = false; // Asumis que no quedan ninguno;
- 		// Si depsues de recorrer todo quedanEnemigos es verdadero, hay vivos;
- 		
- 		for(Entidad e : this.entidades) {
- 			e.visitar(v);
- 		}
- 		
- 		if(nivel.isEmpty() && !quedanEnemigos) {
- 			if(nivelActual == nivelMaximo) {
- 				ganarJuego();
- 			}
- 			else {
- 				++nivelActual;
- 	 	 		generarNivel();	
- 	 	 		CargadorNivel c = new CargadorNivel(this,nivel);
- 	 	 		c.start();
- 			}
- 		}	
- 		
 	}
  	
  	public void hayEnemigos(boolean b) {
@@ -152,7 +158,6 @@ public class MapaLogico {
 				listaColisionados.addLast(e);
 			}
 		}
-		
 		return listaColisionados;
 	}
 	
@@ -187,7 +192,7 @@ public class MapaLogico {
 	public PositionList<Entidad> generarNivel() {
 		// Consite en generar 3 oleadas, con +2 enemigos en cada una;
 		
-		nivel = new DoubleLinkedList(); // Limpio lista por las dudas;
+		nivel = new DoubleLinkedList<Entidad>(); // Limpio lista por las dudas;
 		
 		for(int i = 0; i < 3; i++) {
 			generarOleada();
@@ -257,6 +262,30 @@ public class MapaLogico {
 		}	
 	}
 	
-	public void ganarJuego() {}
+	@SuppressWarnings("deprecation")
+	public void ganarJuego() {
+		for (Entidad e : this.entidades) {
+			e.eliminar();
+		}
+		this.aInsertar = new DoubleLinkedList<Entidad>();
+		this.juegoTerminado = true;
+		if (cargadorNivel.isAlive()) {
+			this.cargadorNivel.stop();
+		}
+		this.mapaGUI.ganarJuego();
+	}
+	
+	@SuppressWarnings("deprecation")
+	public void perderJuego() {
+		for (Entidad e : this.entidades) {
+			e.eliminar();
+		}
+		this.aInsertar = new DoubleLinkedList<Entidad>();
+		this.juegoTerminado = true;
+		if (cargadorNivel.isAlive()) {
+			this.cargadorNivel.stop();			
+		}
+		this.mapaGUI.perderJuego();
+	}
 	
 }
