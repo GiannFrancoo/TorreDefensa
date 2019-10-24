@@ -7,6 +7,7 @@ import javax.swing.ImageIcon;
 
 import Entidades.Campeones.CampeonGrafica;
 import Main.MapaLogico;
+import Main.Animaciones.AtaqueEnemigo;
 
 public class CerebroDemonioGrafico extends CampeonGrafica{
 
@@ -28,6 +29,8 @@ public class CerebroDemonioGrafico extends CampeonGrafica{
 
 	
 	public void golpearMelee() {
+		AtaqueEnemigo al = new AtaqueEnemigo(mapaLogico, entidad.getX(), entidad.getY());
+		al.start();
 	}
 
 	

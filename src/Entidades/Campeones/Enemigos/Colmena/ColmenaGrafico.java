@@ -6,6 +6,7 @@ import javax.swing.ImageIcon;
 import Entidades.EntidadGrafica;
 import Entidades.Campeones.CampeonGrafica;
 import Main.MapaLogico;
+import Main.Animaciones.AtaqueEnemigo;
 
 public class ColmenaGrafico extends CampeonGrafica {
 	
@@ -31,7 +32,9 @@ public class ColmenaGrafico extends CampeonGrafica {
 	public void recibirGolpe() {
 	}
 
-	public void golpearMelee() {	
+	public void golpearMelee() {
+		AtaqueEnemigo al = new AtaqueEnemigo(mapaLogico, entidad.getX(), entidad.getY());
+		al.start();	
 	}
 
 	public void golpearRango() {	

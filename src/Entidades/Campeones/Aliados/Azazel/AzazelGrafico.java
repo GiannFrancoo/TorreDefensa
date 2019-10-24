@@ -16,40 +16,25 @@ public class AzazelGrafico extends CampeonGrafica{
 		
 		azazel = a;
 		
-		this.imagenes[0] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Azazel/lazaro_estatico.png"));
-		//grafica.setBounds(new Rectangle(ancho, alto));
-		//grafica.setIcon(new ImageIcon(imagenes[0].getImage().getScaledInstance(grafica.getWidth(), grafica.getHeight(), Image.SCALE_SMOOTH))); // Arranca con la imagen estatica;
-		//grafica.setLocation(99999999, 999999999);
+		this.imagenes[0] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Azazel/azazel.gif"));
+		grafica.setBounds(new Rectangle(ancho, alto));
+		grafica.setIcon(new ImageIcon(imagenes[0].getImage().getScaledInstance(grafica.getWidth(), grafica.getHeight(), Image.SCALE_DEFAULT))); // Arranca con la imagen estatica;
+		grafica.setLocation(99999999, 999999999);
 	}
 
 	
-	public void golpear() {
-		
-		
-	}
+	public void golpear() {}
 
 	
-	public void golpearMelee() {
-		
-		
-	}
+	public void golpearMelee() {}
 
 	
-	public void golpearRango() {
-		
-		
-	}
+	public void golpearRango() {}
 
 	
-	public void eliminar() {
-		
-		
-	}
+	public void eliminar() {}
 
 	
-	public void recibirGolpe() {
-		
-		
-	}
+	public void recibirGolpe() {}
 
 }

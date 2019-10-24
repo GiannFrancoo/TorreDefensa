@@ -12,7 +12,7 @@ import Main.MapaLogico;
 public class DisparoBlueBabyGrafico extends DisparoAliadoGrafico{
 
 	public DisparoBlueBabyGrafico(MapaLogico mapaLogico, DisparoBlueBaby e, int ancho, int alto) {
-		super(mapaLogico, e, ancho, alto);
+		super(mapaLogico, e);
 		
 		entidad = e;
 		

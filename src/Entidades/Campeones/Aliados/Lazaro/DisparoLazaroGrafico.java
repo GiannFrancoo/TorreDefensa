@@ -15,7 +15,7 @@ public class DisparoLazaroGrafico extends DisparoAliadoGrafico {
 	
 	
 	public DisparoLazaroGrafico(MapaLogico mapaLogico, DisparoLazaro e, int ancho, int alto) {
-		super(mapaLogico, e, ancho, alto);
+		super(mapaLogico, e);
 		
 		entidad = e;
 		

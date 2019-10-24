@@ -13,9 +13,10 @@ public class BotonApollyon extends BotonTienda {
 	protected BotonApollyon(MapaLogico m, Tienda t) {
 		super(m, t);
 		
+		
 		this.setOpaque(true);
 		this.setContentAreaFilled(false);
-		this.setBorder(BorderFactory.createLineBorder(Color.BLACK, 3));
+		this.setBorder(BorderFactory.createLineBorder(Color.BLACK, 3));		
 		this.setBounds(202, 10, 90, 90);
 		
 		this.setImagenTienda();	
