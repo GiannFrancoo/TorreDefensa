@@ -5,7 +5,6 @@ import java.util.Random;
 
 import Entidades.Campeones.Enemigos.Colmena.Colmena;
 import Entidades.Objetos.Magias.Magia;
-import Entidades.Objetos.Magias.Escudos.MagiaDefensa;
 import Entidades.Objetos.Magias.Escudos.MagiaEscudo;
 
 
@@ -27,6 +26,7 @@ public class Juego extends Thread{
 	
 	public Juego() {
 		this.mapaLogico = new MapaLogico();
+		this.mapaLogico.generarNivel();
 //		Sonido.BACK_LVL1.loop();
 		
 		this.start();
@@ -36,11 +36,20 @@ public class Juego extends Thread{
 		while(true){
 			try {
 				Thread.sleep(50);
-			} catch (InterruptedException e) {
+			} catch (InterruptedException e) { 
 				e.printStackTrace();
 			}
+			
+			
+			
+			
 			mapaLogico.actualizar();
-			//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+			
+			
+			
+			
+			// -------------------- Comienza el juego;
+			
 			
 			if (b) {
 				Magia md = new MagiaEscudo(9,9,mapaLogico);
@@ -97,18 +106,7 @@ public class Juego extends Thread{
 				}
 				mapaLogico.insertar(e);
 
-			}
-			
-			
-//			if(r.nextInt(50) == 0) {
-//				Magia md = new MagiaEscudo(9,9,mapaLogico);
-//					
-//				md.setX(((9 * 841) / 10 ) + 233);
-//				md.setY(((4 * 487) / 6) + 42 );
-//				
-//				mapaLogico.insertar(md);
-//			}
-			
+			}			
 		}
 	}
 }

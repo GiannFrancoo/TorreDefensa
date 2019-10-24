@@ -8,7 +8,6 @@ import Main.Visitantes.Visitante;
 
 public abstract class Magia extends Objeto {
 	
-	protected Campeon camp;
 	private Cronometro crono;
 	protected EfectoMagia efecto;
 
@@ -21,7 +20,7 @@ public abstract class Magia extends Objeto {
 	//Comprueba si el cronometro terminó o el efecto de la magia ya fue aplicado a un campeón, si es así elimina la entidad.
 	public void accionar() {
 		if (this.estaVivo) {
-			if (!crono.isAlive() || camp != null) {
+			if (!crono.isAlive()) {
 				this.eliminar();
 			}
 		}
@@ -34,6 +33,6 @@ public abstract class Magia extends Objeto {
 		}
 	}
 	
-	public abstract void setCampeon(Campeon camp);
+	public abstract void comenzarMagia(Campeon camp);
 
 }

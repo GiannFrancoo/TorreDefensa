@@ -29,10 +29,7 @@ public class MagiaEscudoGrafica extends EntidadGrafica{
 	public void golpearRango() {}
 
 	@Override
-	public void eliminar() {
-		// TODO Auto-generated method stub
-		
-	}
+	public void eliminar() {}
 
 	@Override
 	public void recibirGolpe() {}

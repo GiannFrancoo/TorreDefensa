@@ -12,10 +12,32 @@ public abstract class EfectoMagia extends Thread {
 	protected JLabel label;
 	protected Campeon camp;
 	
-	public EfectoMagia(MapaLogico mapaLogico) {
+	public EfectoMagia(MapaLogico mapaLogico, Campeon camp) {
 		this.mapaLogico = mapaLogico;
 		this.label = new JLabel();
+		this.camp = camp;
 	}
 	
-	public abstract void run();
+	@SuppressWarnings("deprecation")
+	public void run() {
+		mapaLogico.getMapaGUI().insertar(label);
+		this.aplicarEfectoMagia();
+		
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
+		this.revertirEfectoMagia();
+		
+		mapaLogico.getMapaGUI().remover(label);
+		this.stop();
+	}
+	
+	public abstract void aplicarEfectoMagia();
+	
+	public abstract void revertirEfectoMagia();
+	
+	
 }

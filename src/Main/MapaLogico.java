@@ -1,14 +1,25 @@
 package Main;
 
 import Utilidad.Lista.*;
+
+import java.util.Random;
+
 import Entidades.Entidad;
 import Entidades.Campeones.Campeon;
+import Entidades.Campeones.Enemigos.Colmena.Colmena;
 import Entidades.Objetos.Magias.Magia;
 import Main.Estados.EstadoJuego;
 import Main.Estados.Jugando;
 import Main.Tienda.Tienda;
 
 public class MapaLogico {
+	
+	// Para los niveles;
+	protected PositionList<Entidad> nivel;
+	protected int cantEnemigos = 2;
+	protected int nivelMaximo = 2;
+	protected int nivelActual = 1;
+	
 	
 	//Atributos de instancia ndeahh re IPOO.
 	protected PositionList<Entidad> entidades;
@@ -57,7 +68,7 @@ public class MapaLogico {
 	}
 	
  	public void actualizar() {
- 		
+	
  		//Recorre toda la lista y llamo a los accionar de las clases.
  		for(Entidad e : this.entidades) {
 			e.accionar();
@@ -84,22 +95,34 @@ public class MapaLogico {
  			mapaGUI.insertar(e.getGrafica());
  		}
  		this.aInsertar = new DoubleLinkedList<Entidad>();
+ 		
+ 		
+ 		
+ 		
+ 		// PARA NIVELES
+ 		/*
+ 		 * Si la lista esta vacia y no hay más enmigos en entidades, termino nivel; (Controlo con entero que no sea el ultimo nivel);
+ 		 * sino carga el siguiente nivel; ++nivelActual;
+ 		 */
+ 		boolean enemigos = false;
+ 		
+ 		
+
+ 		if(nivel.isEmpty() && !enemigos) {
+ 			if(nivelActual == nivelMaximo) {
+ 				ganarJuego();
+ 			}
+ 			else {
+ 				++nivelActual;
+ 	 	 		generarNivel();			
+ 			}
+ 		}	
 	}
 	
 	//AplicarMagia: Metodo que aplica la magia a el campeon pasado por parametro.
 	public void aplicarMagia(Campeon c, Magia m) {
 		c.agregarMagia(m);
 	}
-	
-//	public PositionList<Entidad> colisioneDerecha(int x, int y, int ancho) {
-//		PositionList<Entidad> listaColisionados = new DoubleLinkedList<Entidad>();
-//		for(Entidad e: this.entidades) {
-//			if ((x+ancho >= e.getX() && x+ancho <= e.getX()+e.getAncho())  &&  (y >= e.getY() && y <= e.getY()+e.getAlto())) {
-//				listaColisionados.addLast(e);
-//			}
-//		}
-//		return listaColisionados;
-//	}
 	
 	public PositionList<Entidad> colisione(int x, int y) {
 		PositionList<Entidad> listaColisionados = new DoubleLinkedList<Entidad>();
@@ -112,7 +135,6 @@ public class MapaLogico {
 		return listaColisionados;
 	}
 	
-	
 	//Detecta entidades entre x1 y x2 (x1 coordenada mas a la izquierda del mapaGUI, x2 coordenada mas a la derecha del mapaGUI).
 	public PositionList<Entidad> colisioneRango(int x1, int x2, int y) {
 		PositionList<Entidad> listaColisionados = new DoubleLinkedList<Entidad>();
@@ -124,7 +146,6 @@ public class MapaLogico {
 		}
 		return listaColisionados;
 	}
-	
 	
 	public Tienda getTienda() {
 		return tienda;
@@ -141,6 +162,58 @@ public class MapaLogico {
 	public void setMagia(Magia m) {
 		this.magiaAplicada = m;
 	}
+
+	public void generarNivel() {
+		// Consite en generar 3 oleadas, con +2 enemigos en cada una;
+		
+		nivel = null; // Limpio lista por las dudas;
+		
+		for(int i = 0; i < 3; i++) {
+			generarOleada();
+			nivel.addLast(null); // Esta la bandera
+			cantEnemigos = cantEnemigos + 2;
+		}
+		
+		
+		
+	}
 	
+	private void generarOleada() {
+		int numEnemigo = 0;
+		Entidad enemigo = null; // Enemigo a meter a la lista;
+		
+		Random r = new Random();		
+		
+		for(int i = 0; i < cantEnemigos; i++) {
+		
+			numEnemigo = r.nextInt(5);
+			switch(numEnemigo) {
+				case(0):{
+					enemigo = new Colmena(this);
+					break;
+				}
+				case(1):{
+					enemigo = new Colmena(this);
+					break;
+				}
+				case(2):{
+					enemigo = new Colmena(this);
+					break;
+				}
+				case(3):{
+					enemigo = new Colmena(this);
+					break;
+				}
+				case(4):{
+					enemigo = new Colmena(this);
+					break;
+				}
+			}
+			
+			nivel.addLast(enemigo);
+		}	
+	}
+	
+	public void ganarJuego() {}
 	
 }

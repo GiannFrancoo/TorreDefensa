@@ -55,7 +55,7 @@ public abstract class Campeon extends Entidad{
 	}
 	
 	public void agregarMagia(Magia m) {
-		m.setCampeon(this);
+		m.comenzarMagia(this);
 	}
 	
 	public abstract void golpearRango();

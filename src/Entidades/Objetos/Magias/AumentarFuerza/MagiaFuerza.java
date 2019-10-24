@@ -23,8 +23,8 @@ public class MagiaFuerza extends Magia {
 	}
 
 	@Override
-	public void setCampeon(Campeon camp) {
-		// TODO Auto-generated method stub
+	public void comenzarMagia(Campeon camp) {
+		//llama hilo;
 		
 	}
 	
