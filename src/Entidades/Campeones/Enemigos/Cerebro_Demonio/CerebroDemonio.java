@@ -1,12 +1,12 @@
-package Entidades.Campeones.Enemigos.Colmena;
+package Entidades.Campeones.Enemigos.Cerebro_Demonio;
 
 import Entidades.Campeones.Enemigos.Enemigo;
 import Main.MapaLogico;
 
-public class Colmena extends Enemigo {
-	
-	public Colmena(MapaLogico mapaLogico) {
-		super(mapaLogico);
+public class CerebroDemonio extends Enemigo{
+
+	public CerebroDemonio(MapaLogico m) {
+		super(m);
 		
 		this.ancho = 65; //34 por regla de 3 (39 -> 75)
 		this.alto = 75;  //39                (34 ->  X)
@@ -18,12 +18,13 @@ public class Colmena extends Enemigo {
 		this.dps = 35;
 		monedas = 30;
 		
-		ColmenaGrafico c = new ColmenaGrafico(mapaLogico, this, ancho, alto);
-		entidadGrafica = c;
+		
+		CerebroDemonioGrafico cer = new CerebroDemonioGrafico(this.mapaLogico, this, ancho, alto);
+		entidadGrafica = cer;
 	}
 
-	public void golpearRango() {
+	
+	public void golpearRango() {	
 	}
-
 
 }

@@ -1,12 +1,12 @@
-package Entidades.Campeones.Enemigos.Colmena;
+package Entidades.Campeones.Enemigos.Isaac_Cerebro;
 
 import Entidades.Campeones.Enemigos.Enemigo;
 import Main.MapaLogico;
 
-public class Colmena extends Enemigo {
-	
-	public Colmena(MapaLogico mapaLogico) {
-		super(mapaLogico);
+public class IsaacCerebro extends Enemigo{
+
+	public IsaacCerebro(MapaLogico m) {
+		super(m);
 		
 		this.ancho = 65; //34 por regla de 3 (39 -> 75)
 		this.alto = 75;  //39                (34 ->  X)
@@ -18,12 +18,14 @@ public class Colmena extends Enemigo {
 		this.dps = 35;
 		monedas = 30;
 		
-		ColmenaGrafico c = new ColmenaGrafico(mapaLogico, this, ancho, alto);
+		IsaacCerebroGrafico c = new IsaacCerebroGrafico(mapaLogico, this, ancho, alto);
 		entidadGrafica = c;
 	}
 
+	@Override
 	public void golpearRango() {
+		// TODO Auto-generated method stub
+		
 	}
-
 
 }

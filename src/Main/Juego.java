@@ -5,7 +5,6 @@ import java.util.Random;
 
 import Entidades.Campeones.Enemigos.Colmena.Colmena;
 import Entidades.Objetos.Magias.Magia;
-import Entidades.Objetos.Magias.Escudos.MagiaDefensa;
 import Entidades.Objetos.Magias.Escudos.MagiaEscudo;
 
 
