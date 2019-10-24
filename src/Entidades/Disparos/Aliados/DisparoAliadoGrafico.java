@@ -5,7 +5,7 @@ import Main.MapaLogico;
 
 public abstract class DisparoAliadoGrafico extends EntidadGrafica {
 
-	public DisparoAliadoGrafico(MapaLogico mapaLogico, DisparoAliado e, int ancho, int alto) {
+	public DisparoAliadoGrafico(MapaLogico mapaLogico, DisparoAliado e) {
 		super(mapaLogico);
 		
 //		this.imagenes[0] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Lazaro/lazaro_estatico.png")); // Estatico;

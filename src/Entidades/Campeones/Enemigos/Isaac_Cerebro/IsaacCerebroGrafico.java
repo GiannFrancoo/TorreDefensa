@@ -7,6 +7,8 @@ import javax.swing.ImageIcon;
 
 import Entidades.Campeones.CampeonGrafica;
 import Main.MapaLogico;
+import Main.Animaciones.AtaqueEnemigo;
+import Main.Animaciones.AtaqueLilith;
 
 public class IsaacCerebroGrafico extends CampeonGrafica{
 
@@ -29,8 +31,8 @@ public class IsaacCerebroGrafico extends CampeonGrafica{
 
 	@Override
 	public void golpearMelee() {
-		// TODO Auto-generated method stub
-		
+		AtaqueEnemigo al = new AtaqueEnemigo(mapaLogico, entidad.getX(), entidad.getY());
+		al.start();
 	}
 
 	@Override

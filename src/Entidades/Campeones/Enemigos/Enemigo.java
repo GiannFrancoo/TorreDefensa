@@ -88,9 +88,8 @@ public abstract class Enemigo extends Campeon{
 		PositionList<Entidad> listaColisionados = mapaLogico.colisioneRango(x - this.rango, x-1, y);
 		for (Entidad e : listaColisionados) {
 			e.visitar(visitante);
-			//e.visitar(visitanteMelee);
 		}
-		//this.entidadGrafica.golpearMelee();
+		this.entidadGrafica.golpearMelee();
 	}
 	
 	public void visitar(Visitante a) {

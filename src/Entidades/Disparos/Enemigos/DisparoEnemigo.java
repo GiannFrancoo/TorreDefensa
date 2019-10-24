@@ -20,8 +20,6 @@ public class DisparoEnemigo extends Disparo {
 		
 		this.visitante = new VisitanteDisparoA_Aliado(this);
 		
-		disparoEnemigoGrafico = new DisparoEnemigoGrafico(mapaLogico, this);
-		entidadGrafica = disparoEnemigoGrafico;
 	}
 
 	
@@ -37,7 +35,7 @@ public class DisparoEnemigo extends Disparo {
 
 		for(Entidad e: listaColisionados) {
 			
-			//Hace da�o al primer enemigo y muere.
+			//Hace danio al primer enemigo y muere.
 			e.visitar(visitante);
 		}
 		

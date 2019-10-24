@@ -5,31 +5,28 @@ import Main.MapaLogico;
 
 public class DisparoEnemigoGrafico extends EntidadGrafica{
 
-	protected DisparoEnemigo disparoEnemigo;
-	
 	public DisparoEnemigoGrafico(MapaLogico mapaLogico, DisparoEnemigo e) {
 		super(mapaLogico);
-		disparoEnemigo = e;
-	
-		//Carga las imagenes;
-	}
-	
-	public void mover() {
-		//Cambia la imagen;
-		//Mueve para la derecha;
 	}
 
-	public void golpearMelee() {
-	}
+	@Override
+	public void golpearMelee() {}
 
-	public void golpearRango() {
-	}
+	@Override
+	public void golpearRango() {}
 
+	@Override
 	public void eliminar() {
+		// TODO Auto-generated method stub
+		
 	}
 
+	@Override
 	public void recibirGolpe() {
+		// TODO Auto-generated method stub
+		
 	}
+
 	
 	
 

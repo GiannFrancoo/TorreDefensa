@@ -14,7 +14,7 @@ public class MagiaEscudoGrafica extends EntidadGrafica{
 		this.entidad = magiaEscudo;
 		
 
-		this.imagenes[0] = new ImageIcon(this.getClass().getClassLoader().getResource("texturas/escudo/escudo.gif")); // Corriendo (GIF);
+		this.imagenes[0] = new ImageIcon(this.getClass().getClassLoader().getResource("texturas/escudo/dropMagia.gif")); // Corriendo (GIF);
 		
 		grafica.setBounds(new Rectangle(ancho, alto));
 		grafica.setIcon(new ImageIcon(imagenes[0].getImage().getScaledInstance(ancho, alto, Image.SCALE_DEFAULT))); // Arranca con la imagen estatica;
