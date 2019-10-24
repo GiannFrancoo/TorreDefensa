@@ -4,12 +4,15 @@ import java.awt.*;
 import javax.swing.*;
 import Main.Tienda.Tienda;
 import Main.Tienda.TiendaGrafica;
+import sun.reflect.ReflectionFactory.GetReflectionFactoryAction;
 
 public class MapaGUI extends JFrame {
 
 	private JLayeredPane panel;
 	private ClickeablePanel contentPane;
 	private TiendaGrafica tiendaGrafica;
+	JLabel lblFondo;
+	JLabel lblIsaac;
 
 	/**
 	 * Create the frame.
@@ -29,13 +32,13 @@ public class MapaGUI extends JFrame {
 		panel.setLayout(null);
 		contentPane.add(panel);
 		
-		JLabel lblFondo = new JLabel();
+		lblFondo = new JLabel();
 		lblFondo.setSize(panel.getSize());
 		lblFondo.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/fondo_nivel1.png")).getImage().getScaledInstance(lblFondo.getWidth(), lblFondo.getHeight(), Image.SCALE_SMOOTH)));
 		panel.add(lblFondo, 1, 0); 
 		
 		
-		JLabel lblIsaac = new JLabel();
+		lblIsaac = new JLabel();
 		lblIsaac.setBounds(45, 220, 150, 150);
 		lblIsaac.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/utilidades/isaac.gif")).getImage().getScaledInstance(lblIsaac.getWidth(), lblIsaac.getHeight(), Image.SCALE_DEFAULT)));
 		panel.add(lblIsaac, 10, 2); 
@@ -61,4 +64,25 @@ public class MapaGUI extends JFrame {
 		this.repaint();
 	}
 	
+	public void perderJuego() {
+		JLabel perder = new JLabel();
+		perder.setSize(panel.getSize());
+		perder.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/terminarPartida.png")).getImage().getScaledInstance(perder.getWidth(), perder.getHeight(), Image.SCALE_SMOOTH)));
+		panel.add(perder, 11, 5); 	
+		JLabel texto = new JLabel("Perdiste");
+		texto.setBounds(500, 300, 200, 200);
+		panel.add(texto, 12, 6);
+
+	}
+	
+	public void ganarJuego() {
+		JLabel ganar = new JLabel();
+		ganar.setSize(panel.getSize());
+		ganar.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/terminarPartida.png")).getImage().getScaledInstance(ganar.getWidth(), ganar.getHeight(), Image.SCALE_SMOOTH)));
+		panel.add(ganar, 11, 5); 	
+		JLabel texto = new JLabel("Ganaste");
+		texto.setBounds(500, 500, 200, 200);
+		panel.add(texto, 12, 6);
+
+	}
 }

@@ -28,9 +28,9 @@ public class Juego extends Thread{
 	
 	public Juego() {
 		this.mapaLogico = new MapaLogico();
-		PositionList<Entidad> nivel = this.mapaLogico.generarNivel();
-		CargadorNivel cn = new CargadorNivel(mapaLogico,nivel);
-		cn.start();
+//		PositionList<Entidad> nivel = this.mapaLogico.generarNivel();
+//		CargadorNivel cn = new CargadorNivel(mapaLogico,nivel);
+//		cn.start();
 //		Sonido.BACK_LVL1.loop();
 		
 		this.start();
