@@ -12,6 +12,7 @@ public abstract class Aliado extends Campeon{
 	
 	public Aliado(MapaLogico m) {
 		super(m);
+		drop = null; // Aliado no tiene drops;
 		this.visitante = new VisitanteMeleeA_Enemigo(this);
 		this.visitanteAlcance = new VisitanteAlcanceGolpeA_Enemigo(this);
 	}

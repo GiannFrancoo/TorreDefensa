@@ -18,7 +18,7 @@ public class CerebroDemonioGrafico extends CampeonGrafica{
 		this.imagenes[0] = new ImageIcon(this.getClass().getClassLoader().getResource("texturas/enemigos/cerebro_demonio/cerebro_demonio.png")); // Estatico;
 		
 		grafica.setBounds(new Rectangle(ancho, alto));
-		grafica.setIcon(new ImageIcon(imagenes[3].getImage().getScaledInstance(grafica.getWidth(), grafica.getHeight(), Image.SCALE_DEFAULT))); // Arranca con la imagen estatica;		
+		grafica.setIcon(new ImageIcon(imagenes[0].getImage().getScaledInstance(grafica.getWidth(), grafica.getHeight(), Image.SCALE_DEFAULT))); // Arranca con la imagen estatica;		
 		grafica.setLocation(99999999, 999999999);
 	}
 	

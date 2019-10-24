@@ -17,6 +17,8 @@ public abstract class Campeon extends Entidad{
 	protected PositionList<Magia> magias;
 	protected static int monedas;
 	
+	protected Magia drop; // Para dropear magia;
+	
 	protected Visitante visitanteAlcance;
 
 	
@@ -49,13 +51,26 @@ public abstract class Campeon extends Entidad{
 	public void recibirGolpe(int d) {
 		vidaActual -= d;
 		if(vidaActual <= 0) {
-			mapaLogico.eliminar(this.getPosEnLista());
+			mapaLogico.eliminar(this.getPosEnLista()); // Se elimina;
+			if(drop != null) {
+				//int xNueva = (((this.x * 841) / 10 ) + 233);
+				//int yNueva =(((this.y * 487) / 6) + 42 ); 
+				mapaLogico.insertar(drop);
+				drop.setX(this.x);
+				drop.setY(this.y);
+				drop.contadorDespawn();
+				//mapaLogico.getMapaGUI().insertar(drop.getEntidadGrafica().getLabel()); // Inserto el drop;
+			}
 		}
 		this.entidadGrafica.recibirGolpe();
 	}
 	
 	public void agregarMagia(Magia m) {
 		m.comenzarMagia(this);
+	}
+	
+	public Magia getDrop() {
+		return drop;
 	}
 	
 	public abstract void golpearRango();

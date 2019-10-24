@@ -6,11 +6,19 @@ import java.util.Random;
 
 import Entidades.Entidad;
 import Entidades.Campeones.Campeon;
+import Entidades.Campeones.Enemigos.Casper.Casper;
+import Entidades.Campeones.Enemigos.Cerebro.Cerebro;
+import Entidades.Campeones.Enemigos.Cerebro_Demonio.CerebroDemonio;
 import Entidades.Campeones.Enemigos.Colmena.Colmena;
+import Entidades.Campeones.Enemigos.Isaac_Cerebro.IsaacCerebro;
 import Entidades.Objetos.Magias.Magia;
+import Entidades.Objetos.Magias.AumentarFuerza.MagiaFuerza;
+import Entidades.Objetos.Magias.Escudos.MagiaEscudo;
 import Main.Estados.EstadoJuego;
 import Main.Estados.Jugando;
 import Main.Tienda.Tienda;
+import Main.Visitantes.Visitante;
+import Main.Visitantes.VisitanteEnemigo;
 
 public class MapaLogico {
 	
@@ -19,6 +27,7 @@ public class MapaLogico {
 	protected int cantEnemigos = 2;
 	protected int nivelMaximo = 2;
 	protected int nivelActual = 1;
+	protected boolean quedanEnemigos;
 	
 	
 	//Atributos de instancia ndeahh re IPOO.
@@ -99,25 +108,37 @@ public class MapaLogico {
  		
  		
  		
- 		// PARA NIVELES
+ 		// PARA NIVELES !!!!!!!!! ARREGLAR EL InstansOf falso para detectar que no hay más enmigos;
  		/*
  		 * Si la lista esta vacia y no hay más enmigos en entidades, termino nivel; (Controlo con entero que no sea el ultimo nivel);
  		 * sino carga el siguiente nivel; ++nivelActual;
  		 */
- 		boolean enemigos = false;
  		
+ 		Visitante v = new VisitanteEnemigo(this);
+ 		quedanEnemigos = false; // Asumis que no quedan ninguno;
+ 		// Si depsues de recorrer todo quedanEnemigos es verdadero, hay vivos;
  		
-
- 		if(nivel.isEmpty() && !enemigos) {
+ 		for(Entidad e : this.entidades) {
+ 			e.visitar(v);
+ 		}
+ 		
+ 		if(nivel.isEmpty() && !quedanEnemigos) {
  			if(nivelActual == nivelMaximo) {
  				ganarJuego();
  			}
  			else {
  				++nivelActual;
- 	 	 		generarNivel();			
+ 	 	 		generarNivel();	
+ 	 	 		CargadorNivel c = new CargadorNivel(this,nivel);
+ 	 	 		c.start();
  			}
  		}	
+ 		
 	}
+ 	
+ 	public void hayEnemigos(boolean b) {
+ 		quedanEnemigos = b; 		
+ 	}
 	
 	//AplicarMagia: Metodo que aplica la magia a el campeon pasado por parametro.
 	public void aplicarMagia(Campeon c, Magia m) {
@@ -163,10 +184,10 @@ public class MapaLogico {
 		this.magiaAplicada = m;
 	}
 
-	public void generarNivel() {
+	public PositionList<Entidad> generarNivel() {
 		// Consite en generar 3 oleadas, con +2 enemigos en cada una;
 		
-		nivel = null; // Limpio lista por las dudas;
+		nivel = new DoubleLinkedList(); // Limpio lista por las dudas;
 		
 		for(int i = 0; i < 3; i++) {
 			generarOleada();
@@ -174,42 +195,64 @@ public class MapaLogico {
 			cantEnemigos = cantEnemigos + 2;
 		}
 		
-		
-		
+		return nivel;
+			
 	}
 	
 	private void generarOleada() {
 		int numEnemigo = 0;
+		int tieneMagia = 0;
+		int queMagia  = 0;
 		Entidad enemigo = null; // Enemigo a meter a la lista;
+		Magia magia = null;
 		
-		Random r = new Random();		
-		
+		Random r = new Random();	
+			
+			
 		for(int i = 0; i < cantEnemigos; i++) {
 		
-			numEnemigo = r.nextInt(5);
+			magia = null;
+			numEnemigo = r.nextInt(5); // Que enemigo va a meter;
+			tieneMagia = r.nextInt(5); // Si tiene magia o no (Es para prueba); 
+			
+			if(tieneMagia == 0) { // Si tiene magia;
+				queMagia = r.nextInt(2); // Que tipo de magia va a tener (Es para prueba);
+				
+				switch(queMagia) {
+					case(0):{
+						magia = new MagiaEscudo(9, 9, this);
+						break;
+					}
+					case(1):{
+						magia = new MagiaFuerza(9, 9, this);
+						break;	
+					}
+				}
+			}
+				
 			switch(numEnemigo) {
 				case(0):{
-					enemigo = new Colmena(this);
+					enemigo = new Casper(this, magia);
 					break;
 				}
 				case(1):{
-					enemigo = new Colmena(this);
+					enemigo = new Cerebro(this, magia);
 					break;
 				}
 				case(2):{
-					enemigo = new Colmena(this);
+					enemigo = new Colmena(this, magia);
 					break;
 				}
 				case(3):{
-					enemigo = new Colmena(this);
+					enemigo = new IsaacCerebro(this, magia);
 					break;
 				}
 				case(4):{
-					enemigo = new Colmena(this);
+					enemigo = new CerebroDemonio(this, magia);
 					break;
 				}
 			}
-			
+					
 			nivel.addLast(enemigo);
 		}	
 	}
