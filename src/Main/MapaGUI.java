@@ -4,7 +4,6 @@ import java.awt.*;
 import javax.swing.*;
 import Main.Tienda.Tienda;
 import Main.Tienda.TiendaGrafica;
-import sun.reflect.ReflectionFactory.GetReflectionFactoryAction;
 
 public class MapaGUI extends JFrame {
 

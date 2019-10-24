@@ -114,9 +114,9 @@ public class MapaLogico {
 	 		}
 	 		this.aInsertar = new DoubleLinkedList<Entidad>();
 	 		
-	 		// PARA NIVELES !!!!!!!!! ARREGLAR EL InstansOf falso para detectar que no hay más enmigos;
+	 		// PARA NIVELES !!!!!!!!! ARREGLAR EL InstansOf falso para detectar que no hay mï¿½s enmigos;
 	 		/*
-	 		 * Si la lista esta vacia y no hay más enmigos en entidades, termino nivel; (Controlo con entero que no sea el ultimo nivel);
+	 		 * Si la lista esta vacia y no hay mï¿½s enmigos en entidades, termino nivel; (Controlo con entero que no sea el ultimo nivel);
 	 		 * sino carga el siguiente nivel; ++nivelActual;
 	 		 */
 	 		
@@ -218,7 +218,7 @@ public class MapaLogico {
 		
 			magia = null;
 			numEnemigo = r.nextInt(5); // Que enemigo va a meter;
-			tieneMagia = r.nextInt(5); // Si tiene magia o no (Es para prueba); 
+			tieneMagia = r.nextInt(1); // Si tiene magia o no (Es para prueba); 
 			
 			if(tieneMagia == 0) { // Si tiene magia;
 				queMagia = r.nextInt(2); // Que tipo de magia va a tener (Es para prueba);
