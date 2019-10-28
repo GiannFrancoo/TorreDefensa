@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import Entidades.Entidad;
+import Entidades.Campeones.Campeon;
 import Main.MapaLogico;
 import Main.Estados.Comprando;
 import Main.Estados.EstadoJuego;
@@ -24,13 +25,15 @@ public abstract class BotonTienda extends JButton{
 
 	public abstract Entidad crear();
 	public abstract void setImagenTienda();
+	public abstract int getPrecio();
 	
 	
 	public class miListener implements ActionListener  {
 		public void actionPerformed(ActionEvent e) {
-	    	mapaLogico.setEstado(new Comprando(mapaLogico));	
-	    	Entidad l = crear();
-	    	tienda.setComprado(l);
+			tienda.comprar(crear());
+//	    	Entidad l = crear();
+//	    	mapaLogico.setEstado(new Comprando(mapaLogico));	
+//	    	tienda.setComprado(l);
 	    	
 		}
 	}

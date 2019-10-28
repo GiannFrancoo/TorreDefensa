@@ -5,7 +5,9 @@ import java.awt.Image;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import Entidades.Entidad;
+import Entidades.Campeones.Campeon;
 import Entidades.Campeones.Aliados.Poop.Poop;
+import Entidades.Objetos.Consumibles.Bomba;
 import Main.MapaLogico;
 
 public class BotonPoop extends BotonTienda{
@@ -29,4 +31,8 @@ public class BotonPoop extends BotonTienda{
 		this.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/aliados/Poop/poop_tienda.png")).getImage().getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_SMOOTH)));
 	}
 
+	public int getPrecio() {
+		return Poop.monedas;
+	}
+	
 }

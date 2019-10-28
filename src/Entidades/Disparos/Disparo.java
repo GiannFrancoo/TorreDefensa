@@ -19,7 +19,7 @@ public abstract class Disparo extends Entidad{
 		super(m);
 		this.alto = 75;
 		this.ancho = 75;
-		this.velocidad = 5; //En la que recorre el mapa;
+		this.velocidad = 10; //En la que recorre el mapa;
 	}
 	
 	public AudioClip getSonido() {

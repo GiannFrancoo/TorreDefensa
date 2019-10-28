@@ -5,6 +5,7 @@ import java.awt.Image;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import Entidades.Entidad;
+import Entidades.Campeones.Campeon;
 import Entidades.Campeones.Aliados.Apollyon.Apollyon;
 import Main.MapaLogico;
 
@@ -28,6 +29,10 @@ public class BotonApollyon extends BotonTienda {
 
 	public void setImagenTienda() {
 		this.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/aliados/Apollyon/apollyon_tienda.png")).getImage().getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_SMOOTH)));
+	}
+
+	public int getPrecio() {
+		return Apollyon.monedas;
 	}
 
 }

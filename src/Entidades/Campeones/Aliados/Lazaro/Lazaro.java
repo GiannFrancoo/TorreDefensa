@@ -19,8 +19,8 @@ public class Lazaro extends Aliado {
 		this.alto = 80;
 		this.fuerza = 20;
 		this.rango = 550;		
-		this.dps = 35;
-		monedas = 100;
+		this.dps = 45;
+		monedas = 50;
 		
 
 		lazaroGrafico = new LazaroGrafico(mapaLogico, this, ancho, alto);

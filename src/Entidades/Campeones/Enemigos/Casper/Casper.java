@@ -16,9 +16,9 @@ public class Casper extends Enemigo{
 		this.ancho = 65; //34 por regla de 3 (39 -> 75)
 		this.alto = 75;  //39                (34 ->  X)
 		this.velocidad = 1;
-		this.fuerza = 25;
-		this.rango = 600;
-		this.dps = 25;
+		this.fuerza = 10;
+		this.rango = 650;
+		this.dps = 70;
 		monedas = 30;
 		
 		CasperGrafico cas = new CasperGrafico(this.mapaLogico, this, alto, ancho);

@@ -5,7 +5,6 @@ import Entidades.Campeones.Aliados.Lazaro.DisparoLazaro;
 import Main.MapaLogico;
 
 public class Azazel extends Aliado{
-	protected AzazelGrafico azazelGrafico;
 	
 	public Azazel(MapaLogico m) {
 		super(m);
@@ -14,12 +13,12 @@ public class Azazel extends Aliado{
 		this.vidaActual = this.vidaMaxima;
 		this.ancho = 90; 
 		this.alto = 80;
-		this.fuerza = 20;
-		this.rango = 550;		
-		this.dps = 35;
-		monedas = 100;
+		this.fuerza = 40;
+		this.rango = 650;		
+		this.dps = 45;
+		this.monedas = 120;
 		
-		this.azazelGrafico = new AzazelGrafico(this.mapaLogico, this, alto, ancho);
+		AzazelGrafico azazelGrafico = new AzazelGrafico(this.mapaLogico, this, alto, ancho);
 		entidadGrafica = azazelGrafico;
 		
 	}
