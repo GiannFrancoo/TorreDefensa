@@ -8,6 +8,7 @@ import javax.swing.ImageIcon;
 
 import Entidades.Entidad;
 import Entidades.Campeones.Aliados.Lilith.Lilith;
+import Entidades.Objetos.Consumibles.Bomba;
 import Main.MapaLogico;
 
 public class BotonLilith extends BotonTienda{
@@ -31,5 +32,8 @@ public class BotonLilith extends BotonTienda{
 		this.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/aliados/Lilith/lilith_tienda.png")).getImage().getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_SMOOTH)));
 	}
 
+	public int getPrecio() {
+		return Lilith.monedas;
+	}
 
 }

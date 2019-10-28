@@ -39,7 +39,7 @@ public class Juego extends Thread{
 	public void run() {
 		while(true){
 			try {
-				Thread.sleep(50);
+				Thread.sleep(70);
 			} catch (InterruptedException e) { 
 				e.printStackTrace();
 			}

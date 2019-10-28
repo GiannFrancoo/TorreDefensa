@@ -5,6 +5,7 @@ import java.awt.Image;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import Entidades.Entidad;
+import Entidades.Campeones.Campeon;
 import Entidades.Campeones.Aliados.Azazel.Azazel;
 import Main.MapaLogico;
 
@@ -29,6 +30,10 @@ public class BotonAzazel extends BotonTienda {
 
 	public void setImagenTienda() {
 		this.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/aliados/Azazel/azazelTienda.gif")).getImage().getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_DEFAULT)));
+	}
+	
+	public int getPrecio() {
+		return Azazel.monedas;
 	}
 
 }

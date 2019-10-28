@@ -30,4 +30,8 @@ public class BotonBomba extends BotonTienda{
 		this.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/objetos/bombas.png")).getImage().getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_SMOOTH)));
 	}
 
+	public int getPrecio() {
+		return Bomba.monedas;
+	}
+
 }

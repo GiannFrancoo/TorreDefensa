@@ -19,6 +19,7 @@ public abstract class Entidad {
 	protected EntidadGrafica entidadGrafica;
 	protected MapaLogico mapaLogico;
 	protected Position<Entidad> posEnLista;
+	public int monedas;
 	
 	protected Visitante visitante;
 	
@@ -28,6 +29,14 @@ public abstract class Entidad {
 	
 	public EntidadGrafica getEntidadGrafica() {
 		return this.entidadGrafica;
+	}
+	
+	public int getMonedas() {
+		if (this.vidaActual == this.vidaMaxima) {
+			return monedas;
+		} else {
+			return monedas/2;
+		}
 	}
 	
 	public int getAncho() {

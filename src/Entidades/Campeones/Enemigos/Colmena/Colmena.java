@@ -14,8 +14,8 @@ public class Colmena extends Enemigo {
 		this.ancho = 65; //34 por regla de 3 (39 -> 75)
 		this.alto = 75;  //39                (34 ->  X)
 		this.velocidad = 1;
-		this.vidaMaxima = 100;
-		this.vidaActual = 100;
+		this.vidaMaxima = 120;
+		this.vidaActual = this.vidaMaxima;
 		this.fuerza = 25;
 		this.rango = 20;
 		this.dps = 35;

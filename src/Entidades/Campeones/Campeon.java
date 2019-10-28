@@ -15,7 +15,7 @@ public abstract class Campeon extends Entidad{
 	protected int fuerza;
 	protected int rango;
 	protected PositionList<Magia> magias;
-	protected static int monedas;
+	
 	
 	protected Magia drop; // Para dropear magia;
 	
@@ -25,14 +25,6 @@ public abstract class Campeon extends Entidad{
 	public Campeon(MapaLogico m) {
 		super(m); // Entidad;
 		magias = new DoubleLinkedList<Magia>();
-	}
-
-	public int getMonedas() {
-		if (this.vidaActual == this.vidaMaxima) {
-			return monedas;
-		} else {
-			return monedas/2;
-		}
 	}
 	
 	public int getRango() {

@@ -87,6 +87,7 @@ public class MapaLogico {
 	
  	public void actualizar() {
  		if (!this.juegoTerminado) {
+ 			 			
 	 		//Recorre toda la lista y llamo a los accionar de las clases.
 	 		for(Entidad e : this.entidades) {
 				e.accionar();
@@ -174,11 +175,15 @@ public class MapaLogico {
 	}
 	
 	public Tienda getTienda() {
-		return tienda;
+		return this.tienda;
+	}
+	
+	public Jugador getJugador() {
+		return this.jugador;
 	}
 	
 	public MapaGUI getMapaGUI() {
-		return mapaGUI;
+		return this.mapaGUI;
 	}
 	
 	public Magia getMagia(){

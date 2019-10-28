@@ -13,7 +13,7 @@ public class BlueBaby extends Aliado{
 		this.vidaActual = this.vidaMaxima;
 		this.ancho = 67; 
 		this.alto = 80;
-		this.fuerza = 20;
+		this.fuerza = 35;
 		this.rango = 550;		
 		this.dps = 35;
 		monedas = 100;

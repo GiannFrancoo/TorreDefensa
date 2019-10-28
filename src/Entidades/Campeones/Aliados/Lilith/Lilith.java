@@ -13,10 +13,10 @@ public class Lilith extends Aliado{
 		this.vidaActual = this.vidaMaxima;
 		this.ancho = 67; 
 		this.alto = 80;
-		this.fuerza = 30;	
+		this.fuerza = 40;	
 		this.rango = 20;
 		this.dps = 35;
-		monedas = 100;
+		monedas = 75;
 
 		LilithGrafico lilithGrafico = new LilithGrafico(mapaLogico, this, ancho, alto);
 		entidadGrafica = lilithGrafico;

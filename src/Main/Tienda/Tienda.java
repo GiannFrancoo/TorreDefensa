@@ -6,12 +6,9 @@ import Entidades.Campeones.Aliados.Aliado;
 import Main.Jugador;
 import Main.MapaLogico;
 import Main.Estados.Comprando;
-import Utilidad.Pair;
 
 public class Tienda {
 	
-	private Pair<Entidad,Integer> [] arreglo;
-	private Jugador jugador;
 	private MapaLogico mapaLogico;
 	private Entidad comprado;
 	private TiendaGrafica tiendaGrafica;
@@ -19,34 +16,23 @@ public class Tienda {
 	
 	public Tienda(MapaLogico mapaLogico, Jugador jugador) {
 		this.mapaLogico = mapaLogico;
-		this.jugador = jugador;
 		
 		tiendaGrafica = new TiendaGrafica(mapaLogico, this);
 		tiendaGrafica.actualizarMonedas(jugador.getMonedas());
-		
-		arreglo = (Pair<Entidad, Integer>[])new Pair[10];
-		//Creacion de 10 entidades; (Puede ser por archivo);
+		actualizarTienda();
 	}
 	
-	public void comprar(int codigo) {
-		//Se chequea si jugador tiene la moneda para comprarlo;
-		//if (jugador.getMonedas() >= arreglo[codigo].getValue()) {
-			
-			mapaLogico.setEstado(new Comprando(mapaLogico)); // Cambio el estado;
-			
-			comprado = arreglo[codigo].getKey(); // Habria que hacer una copia; y lo guardo en el atributo;
-			
-			jugador.disminuirMonedas(arreglo[codigo].getValue());//Aca habria q actualizar el label de la moneda en la gui.
-			
-			
-		//}
-		
-				
+	public void comprar(Entidad entidadComprada) {
+    	mapaLogico.setEstado(new Comprando(mapaLogico));
+//    	jugador.disminuirMonedas(entidadComprada.getMonedas());
+//    	tiendaGrafica.actualizarMonedas(jugador.getMonedas());
+//    	actualizarTienda();
+    	this.setComprado(entidadComprada);
 	}
 	
 	public void vender(Aliado a) {
-		jugador.agregarMonedas(a.getMonedas());
-		tiendaGrafica.actualizarMonedas(jugador.getMonedas());
+		this.mapaLogico.getJugador().agregarMonedas(a.getMonedas());
+		tiendaGrafica.actualizarMonedas(this.mapaLogico.getJugador().getMonedas());
 		mapaLogico.eliminar(a.getPosEnLista());
 	}
 	
@@ -61,6 +47,14 @@ public class Tienda {
 	
 	public TiendaGrafica getGrafica() {
 		return tiendaGrafica;
+	}
+	
+	public void actualizarTienda() {
+		tiendaGrafica.actualizarTienda(this.mapaLogico.getJugador().getMonedas());
+	}
+	
+	public void actualizarMonedas() {
+		this.tiendaGrafica.actualizarMonedas(this.mapaLogico.getJugador().getMonedas());
 	}
 	
 	
