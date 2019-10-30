@@ -11,8 +11,8 @@ public class IsaacCerebro extends Enemigo{
 		
 		this.drop = drop;
 		
-		this.ancho = 65; //34 por regla de 3 (39 -> 75)
-		this.alto = 75;  //39                (34 ->  X)
+		this.ancho = 57; //34 por regla de 3 (39 -> 75)
+		this.alto = 80;  //39                (34 ->  X)
 		this.velocidad = 2;
 		this.vidaMaxima = 100;
 		this.vidaActual = this.vidaMaxima;

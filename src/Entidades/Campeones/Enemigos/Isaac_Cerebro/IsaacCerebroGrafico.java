@@ -16,7 +16,7 @@ public class IsaacCerebroGrafico extends CampeonGrafica{
 		super(mapaLogico);
 		entidad = i;
 		
-		this.imagenes[0] = new ImageIcon(this.getClass().getClassLoader().getResource("texturas/enemigos/isaac_cerebro/isaac_cerebro.png")); // Estatico;
+		this.imagenes[0] = new ImageIcon(this.getClass().getClassLoader().getResource("texturas/enemigos/isaac_cerebro/isaac_cerebro.gif")); // Estatico;
 		
 		grafica.setBounds(new Rectangle(ancho, alto));
 		grafica.setIcon(new ImageIcon(imagenes[0].getImage().getScaledInstance(grafica.getWidth(), grafica.getHeight(), Image.SCALE_DEFAULT))); // Arranca con la imagen estatica;		

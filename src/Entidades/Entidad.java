@@ -32,11 +32,7 @@ public abstract class Entidad {
 	}
 	
 	public int getMonedas() {
-		if (this.vidaActual == this.vidaMaxima) {
-			return monedas;
-		} else {
-			return monedas/2;
-		}
+		return monedas;
 	}
 	
 	public int getAncho() {

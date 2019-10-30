@@ -11,11 +11,11 @@ import Main.Animaciones.AtaqueEnemigo;
 
 public class CerebroGrafico extends CampeonGrafica{
 
-	public CerebroGrafico(MapaLogico mapaLogico, Cerebro cer, int alto, int ancho) {
+	public CerebroGrafico(MapaLogico mapaLogico, Cerebro cer, int ancho, int alto) {
 		super(mapaLogico);
 		entidad = cer;
 		
-		this.imagenes[0] = new ImageIcon(this.getClass().getClassLoader().getResource("texturas/enemigos/cerebro/cerebro.png")); // Estatico;
+		this.imagenes[0] = new ImageIcon(this.getClass().getClassLoader().getResource("texturas/enemigos/cerebro/cerebro.gif")); // Estatico;
 	
 		grafica.setBounds(new Rectangle(ancho, alto));
 		grafica.setIcon(new ImageIcon(imagenes[0].getImage().getScaledInstance(grafica.getWidth(), grafica.getHeight(), Image.SCALE_DEFAULT))); // Arranca con la imagen estatica;		

@@ -17,7 +17,7 @@ public class Apollyon extends Aliado {
 		this.fuerza = 40;
 		this.rango = 300;		
 		this.dps = 45;
-		monedas = 75;
+		this.monedas = 75;
 		
 
 		ApollyonGrafico apollyonGrafico= new ApollyonGrafico(mapaLogico, this, ancho, alto);

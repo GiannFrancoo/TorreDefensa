@@ -32,7 +32,7 @@ public class BotonApollyon extends BotonTienda {
 	}
 
 	public int getPrecio() {
-		return Apollyon.monedas;
+		return crear().getMonedas();
 	}
 
 }
