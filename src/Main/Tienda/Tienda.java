@@ -31,7 +31,11 @@ public class Tienda {
 	}
 	
 	public void vender(Aliado a) {
-		this.mapaLogico.getJugador().agregarMonedas(a.getMonedas());
+		if (a.getVidaActual() == a.getVidaMaxima()) {
+			this.mapaLogico.getJugador().agregarMonedas(a.getMonedas());
+		} else {
+			this.mapaLogico.getJugador().agregarMonedas(a.getMonedas()/2);
+		}
 		tiendaGrafica.actualizarMonedas(this.mapaLogico.getJugador().getMonedas());
 		mapaLogico.eliminar(a.getPosEnLista());
 	}

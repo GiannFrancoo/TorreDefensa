@@ -16,7 +16,7 @@ public class BlueBaby extends Aliado{
 		this.fuerza = 35;
 		this.rango = 550;		
 		this.dps = 35;
-		monedas = 100;
+		this.monedas = 100;
 		
 		BlueBabyGrafico b = new BlueBabyGrafico(this.mapaLogico, this, this.alto, this.ancho);
 		entidadGrafica = b;

@@ -32,7 +32,7 @@ public class BotonPoop extends BotonTienda{
 	}
 
 	public int getPrecio() {
-		return Poop.monedas;
+		return crear().getMonedas();
 	}
 	
 }

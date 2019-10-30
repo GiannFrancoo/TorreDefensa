@@ -33,7 +33,7 @@ public class BotonLilith extends BotonTienda{
 	}
 
 	public int getPrecio() {
-		return Lilith.monedas;
+		return crear().getMonedas();
 	}
 
 }

@@ -14,7 +14,7 @@ public class Poop extends Aliado{
 		this.vidaMaxima = 150;
 		this.vidaActual = vidaMaxima;
 		this.fuerza = 0;	
-		monedas = 100;
+		this.monedas = 100;
 		
 	
 		PoopGrafico p = new PoopGrafico(mapaLogico, this, ancho, alto);

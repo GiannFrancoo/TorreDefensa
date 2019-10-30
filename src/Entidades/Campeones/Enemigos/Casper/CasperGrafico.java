@@ -15,7 +15,7 @@ public class CasperGrafico extends CampeonGrafica{
 		
 		entidad = cas;
 		
-		this.imagenes[0] = new ImageIcon(this.getClass().getClassLoader().getResource("texturas/enemigos/casper/casper_estatico.png")); // Estatico;
+		this.imagenes[0] = new ImageIcon(this.getClass().getClassLoader().getResource("texturas/enemigos/casper/casper_estatico.gif")); // Estatico;
 		
 		grafica.setBounds(new Rectangle(ancho, alto));
 		grafica.setIcon(new ImageIcon(imagenes[0].getImage().getScaledInstance(grafica.getWidth(), grafica.getHeight(), Image.SCALE_SMOOTH))); // Arranca con la imagen estatica;		

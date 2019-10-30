@@ -31,7 +31,7 @@ public class BotonBomba extends BotonTienda{
 	}
 
 	public int getPrecio() {
-		return Bomba.monedas;
+		return crear().getMonedas();
 	}
 
 }

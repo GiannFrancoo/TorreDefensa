@@ -33,7 +33,7 @@ public class BotonAzazel extends BotonTienda {
 	}
 	
 	public int getPrecio() {
-		return Azazel.monedas;
+		return crear().getMonedas();
 	}
 
 }

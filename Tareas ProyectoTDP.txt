@@ -1,6 +1,7 @@
 Prioridad:
 
 - Aliados que ocupa 2 celdas
+- Drops de enemigos monedas
 
 =======================
 
@@ -9,7 +10,5 @@ No prioridad:
 - Implementar aliado que pegue a melee y a rango
 - Hilo para bomba
 - Unificar golpes de aliados y enemigos (melee/rango)
-- Drops de enemigos (monedas y magias)
-- Uso de las monedas en la tienda
 - Mejorar el sistema de botones de la tienda (GUI)
 - Mejoras visuales, intuitivas para comprar/vender/aplicar magias

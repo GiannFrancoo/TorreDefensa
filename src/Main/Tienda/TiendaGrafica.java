@@ -89,7 +89,6 @@ public class TiendaGrafica extends JPanel {
 		for(int i = 0; i < botones.length; i++) {
 			if (botones[i].getPrecio() > maxPrecio) {
 				botones[i].setEnabled(false);
-				System.out.println("Boton Enabled: false");
 			}
 			else {
 				botones[i].setEnabled(true);

@@ -17,7 +17,7 @@ public class Pers2Casillas extends Aliado{
 		this.fuerza = 20;
 		this.rango = 550;		
 		this.dps = 45;
-		monedas = 50;
+		this.monedas = 150;
 		
 		per = new Persj2CasillasGrafico(this.mapaLogico , this, this.ancho, this.alto);
 		entidadGrafica = per; 

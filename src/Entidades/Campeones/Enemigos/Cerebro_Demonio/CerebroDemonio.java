@@ -9,8 +9,8 @@ public class CerebroDemonio extends Enemigo{
 	public CerebroDemonio(MapaLogico m, Magia drop) {
 		super(m);
 				
-		this.ancho = 65; //34 por regla de 3 (39 -> 75)
-		this.alto = 75;  //39                (34 ->  X)
+		this.ancho = 57;
+		this.alto = 80;
 		this.velocidad = 1;
 		this.vidaMaxima = 100;
 		this.vidaActual = 100;
