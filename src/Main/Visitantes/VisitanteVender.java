@@ -20,6 +20,7 @@ public class VisitanteVender implements Visitante {
 
 	public void visita(Aliado a) {
 		tienda.vender(a);
+		tienda.actualizarTienda();
 	}
 
 	public void visita(Consumible c) {

@@ -12,7 +12,7 @@ public class Tienda {
 	private MapaLogico mapaLogico;
 	private Entidad comprado;
 	private TiendaGrafica tiendaGrafica;
-	
+	private boolean compraValida;
 	
 	public Tienda(MapaLogico mapaLogico, Jugador jugador) {
 		this.mapaLogico = mapaLogico;
@@ -20,11 +20,12 @@ public class Tienda {
 		tiendaGrafica = new TiendaGrafica(mapaLogico, this);
 		tiendaGrafica.actualizarMonedas(jugador.getMonedas());
 		actualizarTienda();
+		compraValida = true;
 	}
 	
 	public void comprar(Entidad entidadComprada) {
+		this.setComprado(entidadComprada);
     	mapaLogico.setEstado(new Comprando(mapaLogico));
-    	//this.setComprado(entidadComprada);
 	}
 	
 	public void vender(Aliado a) {
@@ -58,6 +59,13 @@ public class Tienda {
 		this.tiendaGrafica.actualizarMonedas(this.mapaLogico.getJugador().getMonedas());
 	}
 	
+	public void setCompraValida(boolean valido) {//Setea si donde clickeo el usuario es un lugar valido o no.
+		this.compraValida = valido;
+	}
+	
+	public boolean getCompraValida() {//Devuelvo si donde clickeo es un lugar valido o no.
+		return this.compraValida;
+	}
 	
 	
 	//public Tienda() {}

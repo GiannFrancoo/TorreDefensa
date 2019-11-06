@@ -31,10 +31,6 @@ public abstract class BotonTienda extends JButton{
 	public class miListener implements ActionListener  {
 		public void actionPerformed(ActionEvent e) {
 			tienda.comprar(crear());
-//	    	Entidad l = crear();
-//	    	mapaLogico.setEstado(new Comprando(mapaLogico));	
-//	    	tienda.setComprado(l);
-	    	
 		}
 	}
 	
