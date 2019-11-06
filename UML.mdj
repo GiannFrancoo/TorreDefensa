@@ -120,11 +120,30 @@
 									"model": {
 										"$ref": "AAAAAAFs3jBkw1QAcQk="
 									},
+									"subViews": [
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAFuImYBwG8oA/I=",
+											"_parent": {
+												"$ref": "AAAAAAFs3jBk0VQI+8w="
+											},
+											"model": {
+												"$ref": "AAAAAAFuImYBNW8l9wA="
+											},
+											"font": "Arial;13;0",
+											"left": 21,
+											"top": 46,
+											"width": 249.65966796875,
+											"height": 13,
+											"text": "-MapaLogico mapaLogico",
+											"horizontalAlignment": 0
+										}
+									],
 									"font": "Arial;13;0",
 									"left": 16,
 									"top": 41,
 									"width": 259.65966796875,
-									"height": 10
+									"height": 23
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -147,18 +166,35 @@
 											},
 											"font": "Arial;13;0",
 											"left": 21,
-											"top": 56,
+											"top": 69,
 											"width": 249.65966796875,
 											"height": 13,
-											"text": "+jugar()",
+											"text": "+Juego()",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAFuImfOO3MbZ5o=",
+											"_parent": {
+												"$ref": "AAAAAAFs3jBk0lQJfw8="
+											},
+											"model": {
+												"$ref": "AAAAAAFuImfNaXMYTzk="
+											},
+											"font": "Arial;13;0",
+											"left": 21,
+											"top": 84,
+											"width": 249.65966796875,
+											"height": 13,
+											"text": "+run()",
 											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 16,
-									"top": 51,
+									"top": 64,
 									"width": 259.65966796875,
-									"height": 23
+									"height": 38
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -198,7 +234,7 @@
 							"left": 16,
 							"top": 16,
 							"width": 259.65966796875,
-							"height": 73,
+							"height": 86,
 							"nameCompartment": {
 								"$ref": "AAAAAAFs3jBkzlQDeL0="
 							},
@@ -1966,23 +2002,6 @@
 									"subViews": [
 										{
 											"_type": "UMLAttributeView",
-											"_id": "AAAAAAFtEkJiDw6yk8Y=",
-											"_parent": {
-												"$ref": "AAAAAAFs3jJH1cxTV6s="
-											},
-											"model": {
-												"$ref": "AAAAAAFtEkJhpg6vmmI="
-											},
-											"font": "Arial;13;0",
-											"left": 621,
-											"top": 926,
-											"width": 182.20947265625,
-											"height": 13,
-											"text": "#int vida",
-											"horizontalAlignment": 0
-										},
-										{
-											"_type": "UMLAttributeView",
 											"_id": "AAAAAAFtEkJx5Q8wWGI=",
 											"_parent": {
 												"$ref": "AAAAAAFs3jJH1cxTV6s="
@@ -1992,7 +2011,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 621,
-											"top": 941,
+											"top": 926,
 											"width": 182.20947265625,
 											"height": 13,
 											"text": "#int fuerza",
@@ -2009,7 +2028,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 621,
-											"top": 956,
+											"top": 941,
 											"width": 182.20947265625,
 											"height": 13,
 											"text": "#int rango",
@@ -2026,10 +2045,78 @@
 											},
 											"font": "Arial;13;0",
 											"left": 621,
-											"top": 971,
+											"top": 956,
 											"width": 182.20947265625,
 											"height": 13,
 											"text": "#PositionList Magia magias",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAFuImjev3hsrek=",
+											"_parent": {
+												"$ref": "AAAAAAFs3jJH1cxTV6s="
+											},
+											"model": {
+												"$ref": "AAAAAAFuImjd73hpG9g="
+											},
+											"font": "Arial;13;0",
+											"left": 621,
+											"top": 971,
+											"width": 182.20947265625,
+											"height": 13,
+											"text": "#int dps",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAFuImmPi3riYn4=",
+											"_parent": {
+												"$ref": "AAAAAAFs3jJH1cxTV6s="
+											},
+											"model": {
+												"$ref": "AAAAAAFuImmOzHrfUGQ="
+											},
+											"font": "Arial;13;0",
+											"left": 621,
+											"top": 986,
+											"width": 182.20947265625,
+											"height": 13,
+											"text": "#int dpsTiming",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAFuImorWn0+Vlw=",
+											"_parent": {
+												"$ref": "AAAAAAFs3jJH1cxTV6s="
+											},
+											"model": {
+												"$ref": "AAAAAAFuImoqm307mrw="
+											},
+											"font": "Arial;13;0",
+											"left": 621,
+											"top": 1001,
+											"width": 182.20947265625,
+											"height": 13,
+											"text": "#Magia drop",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAFuImrFy4CnR2Y=",
+											"_parent": {
+												"$ref": "AAAAAAFs3jJH1cxTV6s="
+											},
+											"model": {
+												"$ref": "AAAAAAFuImrFCICkQbc="
+											},
+											"font": "Arial;13;0",
+											"left": 621,
+											"top": 1016,
+											"width": 182.20947265625,
+											"height": 13,
+											"text": "#Visitante visitanteAlcance",
 											"horizontalAlignment": 0
 										}
 									],
@@ -2037,7 +2124,7 @@
 									"left": 616,
 									"top": 921,
 									"width": 192.20947265625,
-									"height": 68
+									"height": 113
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -2060,61 +2147,10 @@
 											},
 											"font": "Arial;13;0",
 											"left": 621,
-											"top": 994,
-											"width": 182.20947265625,
-											"height": 13,
-											"text": "+Campeon(int x, int y)",
-											"horizontalAlignment": 0
-										},
-										{
-											"_type": "UMLOperationView",
-											"_id": "AAAAAAFtIc11Cv95r6Y=",
-											"_parent": {
-												"$ref": "AAAAAAFs3jJH1cxUcFE="
-											},
-											"model": {
-												"$ref": "AAAAAAFtIc10jf92sO4="
-											},
-											"font": "Arial;13;0",
-											"left": 621,
-											"top": 1009,
-											"width": 182.20947265625,
-											"height": 13,
-											"text": "+restarVida(DisparoEnemigo e)",
-											"horizontalAlignment": 0
-										},
-										{
-											"_type": "UMLOperationView",
-											"_id": "AAAAAAFtIffpnat+WbQ=",
-											"_parent": {
-												"$ref": "AAAAAAFs3jJH1cxUcFE="
-											},
-											"model": {
-												"$ref": "AAAAAAFtIffpPKt72lI="
-											},
-											"font": "Arial;13;0",
-											"left": 621,
-											"top": 1024,
-											"width": 182.20947265625,
-											"height": 13,
-											"text": "+restarVida(DisparoAliado a)",
-											"horizontalAlignment": 0
-										},
-										{
-											"_type": "UMLOperationView",
-											"_id": "AAAAAAFtKFlh+c7Yw0A=",
-											"_parent": {
-												"$ref": "AAAAAAFs3jJH1cxUcFE="
-											},
-											"model": {
-												"$ref": "AAAAAAFtKFlhVs7V/cM="
-											},
-											"font": "Arial;13;0",
-											"left": 621,
 											"top": 1039,
 											"width": 182.20947265625,
 											"height": 13,
-											"text": "+cambiarGrafica(int i)",
+											"text": "+Campeon(MapaLogico m)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -2188,9 +2224,9 @@
 									],
 									"font": "Arial;13;0",
 									"left": 616,
-									"top": 989,
+									"top": 1034,
 									"width": 192.20947265625,
-									"height": 128
+									"height": 83
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -2230,7 +2266,7 @@
 							"left": 616,
 							"top": 896,
 							"width": 192.20947265625,
-							"height": 221,
+							"height": 233,
 							"nameCompartment": {
 								"$ref": "AAAAAAFs3jJH1MxOXOg="
 							},
@@ -3953,7 +3989,7 @@
 							"tail": {
 								"$ref": "AAAAAAFs3jKB0sx3YOg="
 							},
-							"points": "577:1392;577:1368;680:1368;680:1116",
+							"points": "577:1392;577:1368;680:1368;680:1128",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFs3jQuWs30VkU="
@@ -4046,7 +4082,7 @@
 							"tail": {
 								"$ref": "AAAAAAFs3jKaFMyhZao="
 							},
-							"points": "775:1392;775:1368;680:1368;680:1116",
+							"points": "775:1392;775:1368;680:1368;680:1128",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFs3jQ+F84F4RI="
@@ -5354,7 +5390,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 81,
-									"top": 97,
+									"top": 103,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -5375,7 +5411,7 @@
 									"visible": null,
 									"font": "Arial;13;0",
 									"left": 66,
-									"top": 97,
+									"top": 103,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -5396,7 +5432,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 110,
-									"top": 98,
+									"top": 104,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -5480,7 +5516,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 81,
-									"top": 107,
+									"top": 120,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 30,
@@ -5500,7 +5536,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 67,
-									"top": 110,
+									"top": 123,
 									"height": 13,
 									"alpha": -0.7853981633974483,
 									"distance": 40,
@@ -5520,7 +5556,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 108,
-									"top": 103,
+									"top": 116,
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 25,
@@ -5564,7 +5600,7 @@
 							"tail": {
 								"$ref": "AAAAAAFs3jF2jMt3g8k="
 							},
-							"points": "96:120;96:88",
+							"points": "96:120;96:101",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFs3jT8/8/UXtg="
@@ -15146,6 +15182,17 @@
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
 					"name": "Juego extend Thread",
+					"attributes": [
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAFuImYBNW8l9wA=",
+							"_parent": {
+								"$ref": "AAAAAAFs3jBkw1QAcQk="
+							},
+							"name": "MapaLogico mapaLogico",
+							"visibility": "private"
+						}
+					],
 					"operations": [
 						{
 							"_type": "UMLOperation",
@@ -15153,7 +15200,15 @@
 							"_parent": {
 								"$ref": "AAAAAAFs3jBkw1QAcQk="
 							},
-							"name": "jugar"
+							"name": "Juego"
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAFuImfNaXMYTzk=",
+							"_parent": {
+								"$ref": "AAAAAAFs3jBkw1QAcQk="
+							},
+							"name": "run"
 						}
 					]
 				},
@@ -16200,16 +16255,6 @@
 					"attributes": [
 						{
 							"_type": "UMLAttribute",
-							"_id": "AAAAAAFtEkJhpg6vmmI=",
-							"_parent": {
-								"$ref": "AAAAAAFs3jJH0sxLoAU="
-							},
-							"name": "int vida",
-							"visibility": "protected",
-							"type": ""
-						},
-						{
-							"_type": "UMLAttribute",
 							"_id": "AAAAAAFtEkJxiA8tG9M=",
 							"_parent": {
 								"$ref": "AAAAAAFs3jJH0sxLoAU="
@@ -16237,6 +16282,42 @@
 							"name": "PositionList Magia magias",
 							"visibility": "protected",
 							"type": ""
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAFuImjd73hpG9g=",
+							"_parent": {
+								"$ref": "AAAAAAFs3jJH0sxLoAU="
+							},
+							"name": "int dps",
+							"visibility": "protected"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAFuImmOzHrfUGQ=",
+							"_parent": {
+								"$ref": "AAAAAAFs3jJH0sxLoAU="
+							},
+							"name": "int dpsTiming",
+							"visibility": "protected"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAFuImoqm307mrw=",
+							"_parent": {
+								"$ref": "AAAAAAFs3jJH0sxLoAU="
+							},
+							"name": "Magia drop",
+							"visibility": "protected"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAFuImrFCICkQbc=",
+							"_parent": {
+								"$ref": "AAAAAAFs3jJH0sxLoAU="
+							},
+							"name": "Visitante visitanteAlcance",
+							"visibility": "protected"
 						}
 					],
 					"operations": [
@@ -16254,74 +16335,7 @@
 									"_parent": {
 										"$ref": "AAAAAAFtExW4hXcHQIA="
 									},
-									"name": "int x",
-									"type": ""
-								},
-								{
-									"_type": "UMLParameter",
-									"_id": "AAAAAAFtI1SNeyj/bIw=",
-									"_parent": {
-										"$ref": "AAAAAAFtExW4hXcHQIA="
-									},
-									"name": "int y",
-									"type": ""
-								}
-							]
-						},
-						{
-							"_type": "UMLOperation",
-							"_id": "AAAAAAFtIc10jf92sO4=",
-							"_parent": {
-								"$ref": "AAAAAAFs3jJH0sxLoAU="
-							},
-							"name": "restarVida",
-							"parameters": [
-								{
-									"_type": "UMLParameter",
-									"_id": "AAAAAAFtIc2+uAA968E=",
-									"_parent": {
-										"$ref": "AAAAAAFtIc10jf92sO4="
-									},
-									"name": "DisparoEnemigo e",
-									"type": ""
-								}
-							]
-						},
-						{
-							"_type": "UMLOperation",
-							"_id": "AAAAAAFtIffpPKt72lI=",
-							"_parent": {
-								"$ref": "AAAAAAFs3jJH0sxLoAU="
-							},
-							"name": "restarVida",
-							"parameters": [
-								{
-									"_type": "UMLParameter",
-									"_id": "AAAAAAFtIfgcx6xCX24=",
-									"_parent": {
-										"$ref": "AAAAAAFtIffpPKt72lI="
-									},
-									"name": "DisparoAliado a",
-									"type": ""
-								}
-							]
-						},
-						{
-							"_type": "UMLOperation",
-							"_id": "AAAAAAFtKFlhVs7V/cM=",
-							"_parent": {
-								"$ref": "AAAAAAFs3jJH0sxLoAU="
-							},
-							"name": "cambiarGrafica",
-							"parameters": [
-								{
-									"_type": "UMLParameter",
-									"_id": "AAAAAAFtKFnp0tHIg4g=",
-									"_parent": {
-										"$ref": "AAAAAAFtKFlhVs7V/cM="
-									},
-									"name": "int i",
-									"type": ""
+									"name": "MapaLogico m"
 								}
 							]
 						},

@@ -24,10 +24,7 @@ public class Tienda {
 	
 	public void comprar(Entidad entidadComprada) {
     	mapaLogico.setEstado(new Comprando(mapaLogico));
-//    	jugador.disminuirMonedas(entidadComprada.getMonedas());
-//    	tiendaGrafica.actualizarMonedas(jugador.getMonedas());
-//    	actualizarTienda();
-    	this.setComprado(entidadComprada);
+    	//this.setComprado(entidadComprada);
 	}
 	
 	public void vender(Aliado a) {
