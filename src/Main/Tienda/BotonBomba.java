@@ -16,7 +16,7 @@ public class BotonBomba extends BotonTienda{
 		
 		this.setOpaque(true);
 		this.setContentAreaFilled(false);
-		this.setBorder(BorderFactory.createLineBorder(Color.BLACK, 3));
+		this.setBorder(null);
 		this.setBounds(297, 10, 90, 90);
 		
 		this.setImagenTienda();			
