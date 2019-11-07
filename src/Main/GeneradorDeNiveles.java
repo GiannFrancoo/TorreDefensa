@@ -3,6 +3,7 @@ package Main;
 import java.util.Random;
 
 import Entidades.Entidad;
+import Entidades.Campeones.Enemigos.Enemigo;
 import Entidades.Campeones.Enemigos.Casper.Casper;
 import Entidades.Campeones.Enemigos.Cerebro.Cerebro;
 import Entidades.Campeones.Enemigos.Cerebro_Demonio.CerebroDemonio;
@@ -22,9 +23,9 @@ public class GeneradorDeNiveles {
 	}
 	
 	//Genera 3 oleadas, con +2 enemigos en cada una.
-	public PositionList<Entidad> generarNivel() {
+	public PositionList<Enemigo> generarNivel() {
 		
-		PositionList<Entidad> nivel = new DoubleLinkedList<Entidad>();
+		PositionList<Enemigo> nivel = new DoubleLinkedList<Enemigo>();
 		
 		for(int i = 0; i < 3; i++) {
 			generarOleada(nivel);
@@ -36,7 +37,7 @@ public class GeneradorDeNiveles {
 			
 	}
 	
-	private void generarOleada(PositionList<Entidad> nivel) {
+	private void generarOleada(PositionList<Enemigo> nivel) {
 		
 		Random r = new Random();	
 			
