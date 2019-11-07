@@ -3,6 +3,7 @@ package Entidades.EventosAleatorios.EATiempo;
 import Entidades.Entidad;
 import Main.MapaLogico;
 import Main.Visitantes.Visitante;
+import Main.Visitantes.VisitanteAlcanceGolpeA_Enemigo;
 import Main.Visitantes.VisitanteEATiempo;
 import Utilidad.Lista.PositionList;
 
@@ -10,12 +11,18 @@ public class EventoAleatorioTiempo extends Entidad{
 
 	protected EATiempoGrafico EATG;
 	protected Visitante visitanteAlcance;
-	protected int dpsTiming;
-	protected int rango;
+	
+	protected int dps = 45;
+	protected int dpsTiming = dps;
+	protected int rango = 0;
+	protected int ancho = 57;
+	protected int alto = 80;
+	protected int fuerza = 45;
 	
 	public EventoAleatorioTiempo(MapaLogico m) {
 		super(m);
-		this.visitanteAlcance = new VisitanteEATiempo(this);
+		//this.visitanteAlcance = new VisitanteAlcanceGolpeA_Enemigo(this);
+		this.visitante = new VisitanteEATiempo(this);
 		
 	}
 	
@@ -45,6 +52,14 @@ public class EventoAleatorioTiempo extends Entidad{
 		}
 	}
 	
+	public void golpearMelee() {
+		this.dpsTiming = dps;
+		PositionList<Entidad> listaColisionados = mapaLogico.colisioneRango(x, x + this.rango + this.getAncho(), y);
+		for (Entidad e : listaColisionados) {
+			e.visitar(visitante);
+		}
+		this.entidadGrafica.golpearMelee();
+	}
 	
 	public void visitar(Visitante a) {
 		a.visita(this);

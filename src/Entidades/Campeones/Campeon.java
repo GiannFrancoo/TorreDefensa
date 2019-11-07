@@ -5,8 +5,6 @@ import Entidades.Entidad;
 import Entidades.Objetos.Magias.Magia;
 import Main.MapaLogico;
 import Main.Visitantes.Visitante;
-import Utilidad.Lista.DoubleLinkedList;
-import Utilidad.Lista.PositionList;
 
 public abstract class Campeon extends Entidad{
 
