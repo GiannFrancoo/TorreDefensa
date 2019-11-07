@@ -25,8 +25,9 @@ public class EventoAleatorioTiempo extends Entidad{
 		this.entidadGrafica  = EATG;
 		
 		this.visitante = new VisitanteEATiempo(this);
+//		crono = new Cronometro(5000);
+//		
 		crono = new Cronometro(5000);
-		
 	}
 	
 	public void recibirGolpe(int d) {
