@@ -24,7 +24,6 @@ public class CargadorNivel extends Thread {
 	@SuppressWarnings("deprecation")
 	public void run() {
 		
-		//Enemigo aInsertar = null;
 		Enemigo aInsertar = null;
 			
 		while(!nivel.isEmpty()) {
@@ -40,7 +39,7 @@ public class CargadorNivel extends Thread {
 					mapaLogico.insertar(aInsertar);
 					setearleCoordenadas(aInsertar);
 					aplicarEscudoRandom(aInsertar);
-					Thread.sleep(2000); // Entre enemigo y enemigo; 1000
+					Thread.sleep(3000); // Entre enemigo y enemigo; 1000
 				}
 				
 				

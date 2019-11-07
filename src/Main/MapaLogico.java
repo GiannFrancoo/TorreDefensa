@@ -24,12 +24,17 @@ import Main.Visitantes.VisitanteEnemigo;
 public class MapaLogico {
 	
 	// Para los niveles;
-	protected PositionList<Enemigo> nivel;
-	protected int cantEnemigos = 2;
-	protected int nivelMaximo = 2;
-	protected int nivelActual = 1;
-	protected boolean quedanEnemigos;
+//	protected PositionList<Entidad> nivel;
+//	protected int cantEnemigos = 2;
+//	protected int nivelMaximo = 2;
+//	protected int nivelActual = 1;
+//	protected boolean quedanEnemigos;
+//	protected CargadorNivel cargadorNivel;
 	protected CargadorNivel cargadorNivel;
+	protected int cantEnemigos;
+	protected int CANT_NIVELES = 2;
+	protected int nivelActual;
+	protected GeneradorDeNiveles generadorN;
 	
 	
 	//Atributos de instancia ndeahh re IPOO.
@@ -57,10 +62,12 @@ public class MapaLogico {
 		magiaAplicada = null;
 		juegoTerminado = false;
 		
+		this.nivelActual = 1;
+		this.generadorN = new GeneradorDeNiveles(this);
 		
-		nivel = generarNivel();
-		cargadorNivel = new CargadorNivel(this,nivel);
-		cargadorNivel.start();
+//		nivel = generarNivel();
+//		cargadorNivel = new CargadorNivel(this,nivel);
+//		cargadorNivel.start();
 	}
 	
 	
@@ -106,6 +113,20 @@ public class MapaLogico {
 	
  	public void actualizar() {
  		if (!this.juegoTerminado) {
+ 			
+ 			//Genera y carga el nivel
+ 			if(cantEnemigos == 0) {
+	 			if(nivelActual == CANT_NIVELES) {
+	 				ganarJuego();
+	 			}
+	 			else {
+	 				++nivelActual;
+	 				PositionList<Enemigo> nivel = generadorN.generarNivel();
+	 				this.cantEnemigos = nivel.size();
+	 	 	 		cargadorNivel = new CargadorNivel(this, nivel);
+	 	 	 		cargadorNivel.start();
+	 			}
+	 		}	
  			 			
 	 		//Recorre toda la lista y llamo a los accionar de las clases.
 	 		for(Entidad e : this.entidades) {
@@ -140,36 +161,36 @@ public class MapaLogico {
 	 		 * sino carga el siguiente nivel; ++nivelActual;
 	 		 */
 	 		
-	 		Visitante v = new VisitanteEnemigo(this);
-	 		quedanEnemigos = false; // Asumis que no quedan ninguno;
-	 		// Si depsues de recorrer todo quedanEnemigos es verdadero, hay vivos;
-	 		
-	 		for(Entidad e : this.entidades) {
-	 			e.visitar(v);
-	 		}
-	 		
-	 		if(nivel.isEmpty() && !quedanEnemigos) {
-	 			if(nivelActual == nivelMaximo) {
-	 				ganarJuego();
-	 			}
-	 			else {
-	 				++nivelActual;
-	 	 	 		generarNivel();	
-	 	 	 		cargadorNivel = new CargadorNivel(this,nivel);
-	 	 	 		cargadorNivel.start();
-	 			}
-	 		}	
+//	 		Visitante v = new VisitanteEnemigo(this);
+//	 		quedanEnemigos = false; // Asumis que no quedan ninguno;
+//	 		// Si depsues de recorrer todo quedanEnemigos es verdadero, hay vivos;
+//	 		
+//	 		for(Entidad e : this.entidades) {
+//	 			e.visitar(v);
+//	 		}
+//	 		
+//	 		if(nivel.isEmpty() && !quedanEnemigos) {
+//	 			if(nivelActual == nivelMaximo) {
+//	 				ganarJuego();
+//	 			}
+//	 			else {
+//	 				++nivelActual;
+//	 	 	 		generarNivel();	
+//	 	 	 		cargadorNivel = new CargadorNivel(this,nivel);
+//	 	 	 		cargadorNivel.start();
+//	 			}
+//	 		}	
  		}
 	}
  	
- 	public void hayEnemigos(boolean b) {
- 		quedanEnemigos = b; 		
- 	}
+// 	public void hayEnemigos(boolean b) {
+// 		quedanEnemigos = b; 		
+// 	}
 	
 	//AplicarMagia: Metodo que aplica la magia a el campeon pasado por parametro.
-	public void aplicarMagia(Campeon c, Magia m) {
-		c.agregarMagia(m);
-	}
+//	public void aplicarMagia(Campeon c, Magia m) {
+//		c.agregarMagia(m);
+//	}
 	
 	public PositionList<Entidad> colisione(int x, int y) {
 		PositionList<Entidad> listaColisionados = new DoubleLinkedList<Entidad>();
@@ -213,59 +234,59 @@ public class MapaLogico {
 		this.magiaAplicada = m;
 	}
 
-	public PositionList<Enemigo> generarNivel() {
-		// Consite en generar 3 oleadas, con +2 enemigos en cada una;
-		
-		nivel = new DoubleLinkedList<Enemigo>(); // Limpio lista por las dudas;
-		
-		for(int i = 0; i < 3; i++) {
-			generarOleada();
-			nivel.addLast(null); // Esta la bandera
-			cantEnemigos = cantEnemigos + 2;
-		}
-		
-		return nivel;
-			
-	}
-	
-	private void generarOleada() {
-		int numEnemigo = 0;
-		Enemigo enemigo = null; // Enemigo a meter a la lista;
-		
-		Random r = new Random();	
-			
-			
-		for(int i = 0; i < cantEnemigos; i++) {
-		
-			numEnemigo = r.nextInt(5); // Que enemigo va a meter;
-			
-				
-			switch(numEnemigo) {
-				case(0):{
-					enemigo = new Casper(this);
-					break;
-				}
-				case(1):{
-					enemigo = new Cerebro(this);
-					break;
-				}
-				case(2):{
-					enemigo = new Colmena(this);
-					break;
-				}
-				case(3):{
-					enemigo = new IsaacCerebro(this);
-					break;
-				}
-				case(4):{
-					enemigo = new CerebroDemonio(this);
-					break;
-				}
-			}
-					
-			nivel.addLast(enemigo);
-		}	
-	}
+//	public PositionList<Enemigo> generarNivel() {
+//		// Consite en generar 3 oleadas, con +2 enemigos en cada una;
+//		
+//		nivel = new DoubleLinkedList<Enemigo>(); // Limpio lista por las dudas;
+//		
+//		for(int i = 0; i < 3; i++) {
+//			generarOleada();
+//			nivel.addLast(null); // Esta la bandera
+//			cantEnemigos = cantEnemigos + 2;
+//		}
+//		
+//		return nivel;
+//			
+//	}
+//	
+//	private void generarOleada() {
+//		int numEnemigo = 0;
+//		Enemigo enemigo = null; // Enemigo a meter a la lista;
+//		
+//		Random r = new Random();	
+//			
+//			
+//		for(int i = 0; i < cantEnemigos; i++) {
+//		
+//			numEnemigo = r.nextInt(5); // Que enemigo va a meter;
+//			
+//				
+//			switch(numEnemigo) {
+//				case(0):{
+//					enemigo = new Casper(this);
+//					break;
+//				}
+//				case(1):{
+//					enemigo = new Cerebro(this);
+//					break;
+//				}
+//				case(2):{
+//					enemigo = new Colmena(this);
+//					break;
+//				}
+//				case(3):{
+//					enemigo = new IsaacCerebro(this);
+//					break;
+//				}
+//				case(4):{
+//					enemigo = new CerebroDemonio(this);
+//					break;
+//				}
+//			}
+//					
+//			nivel.addLast(enemigo);
+//		}	
+//	}
 	
 	@SuppressWarnings("deprecation")
 	public void ganarJuego() {
