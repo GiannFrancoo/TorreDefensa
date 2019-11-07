@@ -1,9 +1,7 @@
 package Entidades.EventosAleatorios.EAVida;
 
-import Entidades.Entidad;
 import Entidades.Campeones.Aliados.Aliado;
 import Main.MapaLogico;
-import Main.Visitantes.Visitante;
 
 
 public class EventoAleatorioVida extends Aliado {
@@ -15,7 +13,7 @@ public class EventoAleatorioVida extends Aliado {
 		
 		this.vidaMaxima = 150;
 		this.vidaActual = this.vidaMaxima;
-		this.ancho = 67; 
+		this.ancho = 80; 
 		this.alto = 160;
 		this.fuerza = 80;
 		this.rango = 550;		

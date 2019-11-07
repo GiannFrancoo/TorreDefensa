@@ -44,6 +44,7 @@ public abstract class Enemigo extends Campeon{
 				drop.setY(getY());
 			}
 			this.eliminar();
+			mapaLogico.restarEnemigo();
 		}
 		this.entidadGrafica.recibirGolpe();
 	}

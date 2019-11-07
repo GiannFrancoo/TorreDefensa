@@ -1,9 +1,7 @@
 package Main;
 
 import java.util.Random;
-
 import Entidades.Entidad;
-import Entidades.Campeones.Enemigos.Colmena.Colmena;
 import Utilidad.Lista.EmptyListException;
 import Utilidad.Lista.InvalidPositionException;
 import Utilidad.Lista.PositionList;
@@ -35,7 +33,7 @@ public class CargadorNivel extends Thread {
 				else {
 					mapaLogico.insertar(aInsertar);
 					setearleCoordenadas(aInsertar);
-					Thread.sleep(2000); // Entre enemigo y enemigo; 1000
+					Thread.sleep(3000); // Entre enemigo y enemigo; 1000
 				}
 				
 				

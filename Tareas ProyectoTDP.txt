@@ -1,8 +1,5 @@
 Prioridad:
 
-- Aliados que ocupa 2 celdas
-- Drops de enemigos monedas
-
 =======================
 
 No prioridad:

@@ -10,10 +10,10 @@ public class Pers2Casillas extends Aliado{
 	public Pers2Casillas(MapaLogico m) {
 		super(m);
 		
+		this.ancho = 85; 
+		this.alto = 160;
 		this.vidaMaxima = 100;
 		this.vidaActual = this.vidaMaxima;
-		this.ancho = 67; 
-		this.alto = 80;
 		this.fuerza = 20;
 		this.rango = 550;		
 		this.dps = 45;
