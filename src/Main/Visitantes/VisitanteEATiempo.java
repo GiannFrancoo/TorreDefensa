@@ -9,13 +9,20 @@ import Entidades.Objetos.Consumibles.Consumible;
 import Entidades.Objetos.Magias.Magia;
 
 public class VisitanteEATiempo implements Visitante{
-
+	protected EventoAleatorioTiempo EATiempo;
+	
+	public VisitanteEATiempo(EventoAleatorioTiempo e) {
+		this.EATiempo = e;
+		
+	}
 	
 	public void visita(Enemigo e) {
+		e.recibirGolpe(this.EATiempo.getFuerza());
 	}
 
 	
 	public void visita(Aliado a) {
+		
 	}
 
 	

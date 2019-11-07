@@ -31,8 +31,8 @@ public class EventoAleatorioVida extends Aliado {
 		this.dpsTiming = dps;
 		DisparoEAVida disparoEAV = new DisparoEAVida(x, y, this.fuerza, this.rango, mapaLogico);
 		mapaLogico.insertar(disparoEAV);
-		disparoEAV.setX(this.x);
-		disparoEAV.setY(this.y);
+		//disparoEAV.setX(this.x);
+		//disparoEAV.setY(this.y);
 	}
 
 	

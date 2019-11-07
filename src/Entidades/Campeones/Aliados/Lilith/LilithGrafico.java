@@ -38,9 +38,8 @@ public class LilithGrafico extends EntidadGrafica {
 	public void recibirGolpe() {
 	}
 
-	@Override
+	
 	public void eliminar() {
-		// TODO Auto-generated method stub
 		
 	}
 }
