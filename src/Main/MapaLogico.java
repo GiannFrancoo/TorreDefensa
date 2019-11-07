@@ -85,6 +85,24 @@ public class MapaLogico {
 		this.aBorrar.addLast(pos);
 	}
 	
+	public Magia getMagiaRandom() {
+		Magia toReturn = null;
+		Random rnd = new Random();
+		
+		switch(rnd.nextInt(2)) {
+			
+			case(0):{
+				toReturn = new MagiaEscudo(9, 9, this);
+				break;
+			}
+			case(1):{
+				toReturn = new MagiaFuerza(9, 9, this);
+				break;	
+			}
+		}
+		return toReturn;
+	}
+	
  	public void actualizar() {
  		if (!this.juegoTerminado) {
  			 			
@@ -211,54 +229,35 @@ public class MapaLogico {
 	
 	private void generarOleada() {
 		int numEnemigo = 0;
-		int tieneMagia = 0;
-		int queMagia  = 0;
 		Entidad enemigo = null; // Enemigo a meter a la lista;
-		Magia magia = null;
 		
 		Random r = new Random();	
 			
 			
 		for(int i = 0; i < cantEnemigos; i++) {
 		
-			magia = null;
 			numEnemigo = r.nextInt(5); // Que enemigo va a meter;
-			tieneMagia = r.nextInt(1); // Si tiene magia o no (Es para prueba); 
 			
-			if(tieneMagia == 0) { // Si tiene magia;
-				queMagia = r.nextInt(2); // Que tipo de magia va a tener (Es para prueba);
-				
-				switch(queMagia) {
-					case(0):{
-						magia = new MagiaEscudo(9, 9, this);
-						break;
-					}
-					case(1):{
-						magia = new MagiaFuerza(9, 9, this);
-						break;	
-					}
-				}
-			}
 				
 			switch(numEnemigo) {
 				case(0):{
-					enemigo = new Casper(this, magia);
+					enemigo = new Casper(this);
 					break;
 				}
 				case(1):{
-					enemigo = new Cerebro(this, magia);
+					enemigo = new Cerebro(this);
 					break;
 				}
 				case(2):{
-					enemigo = new Colmena(this, magia);
+					enemigo = new Colmena(this);
 					break;
 				}
 				case(3):{
-					enemigo = new IsaacCerebro(this, magia);
+					enemigo = new IsaacCerebro(this);
 					break;
 				}
 				case(4):{
-					enemigo = new CerebroDemonio(this, magia);
+					enemigo = new CerebroDemonio(this);
 					break;
 				}
 			}

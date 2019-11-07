@@ -6,10 +6,8 @@ import Main.MapaLogico;
 
 public class Colmena extends Enemigo {
 	
-	public Colmena(MapaLogico mapaLogico, Magia m) {
+	public Colmena(MapaLogico mapaLogico) {
 		super(mapaLogico);
-
-		this.drop = m;
 		
 		this.ancho = 65; //34 por regla de 3 (39 -> 75)
 		this.alto = 75;  //39                (34 ->  X)

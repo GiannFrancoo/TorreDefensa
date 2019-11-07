@@ -30,7 +30,7 @@ public abstract class EfectoMagia extends Thread {
 		}
 		
 		this.revertirEfectoMagia();
-		
+		camp.setTieneMagia(false);
 		mapaLogico.getMapaGUI().remover(label);
 		this.stop();
 	}

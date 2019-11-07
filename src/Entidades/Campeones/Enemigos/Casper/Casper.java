@@ -6,11 +6,9 @@ import Main.MapaLogico;
 
 public class Casper extends Enemigo{
 
-	public Casper(MapaLogico m, Magia drop) {
+	public Casper(MapaLogico m) {
 		super(m);
-		
-		this.drop = drop;
-		
+				
 		this.vidaMaxima = 100;
 		this.vidaActual = 100;
 		this.ancho = 65; //34 por regla de 3 (39 -> 75)
