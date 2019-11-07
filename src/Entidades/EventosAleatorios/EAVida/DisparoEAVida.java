@@ -11,7 +11,7 @@ public class DisparoEAVida extends DisparoAliado{
 		
 		
 		this.sonido = Sonido.DISPARO_NORMAL1;
-		DisparoEAVidaGrafico DisparoEAVGrafico = new DisparoEAVidaGrafico(m, this, this.alto + 50, this.ancho); //Se modifico el alto. 
+		DisparoEAVidaGrafico DisparoEAVGrafico = new DisparoEAVidaGrafico(m, this, this.alto, this.ancho); //Se modifico el alto. 
 		entidadGrafica = DisparoEAVGrafico;
 	}
 	

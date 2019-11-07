@@ -74,7 +74,7 @@ public class TiendaGrafica extends JPanel {
 		botones[3] = new BotonBomba(mapaLogico, tienda);
 		botones[4] = new BotonPoop(mapaLogico, tienda);
 		botones[5] = new BotonAzazel(mapaLogico, tienda);
-		botones[6] = new BotonEAVida(mapaLogico, tienda);
+		botones[6] = new BotonMascara(mapaLogico, tienda);
 	
 		
 		
