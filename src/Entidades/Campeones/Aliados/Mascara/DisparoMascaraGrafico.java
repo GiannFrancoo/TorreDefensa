@@ -22,6 +22,7 @@ public class DisparoMascaraGrafico extends DisparoAliadoGrafico{
 		
 		grafica.setBounds(new Rectangle(ancho, alto));
 		grafica.setIcon(new ImageIcon(imagenes[0].getImage().getScaledInstance(grafica.getWidth(), grafica.getHeight(), Image.SCALE_DEFAULT))); // Arranca con la imagen estatica;
+		grafica.setLocation(99999999, 9999999);
 		
 	}
 
