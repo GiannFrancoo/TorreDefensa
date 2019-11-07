@@ -13,7 +13,7 @@ public class Mascara extends Aliado{
 		
 		this.vidaMaxima = 100;
 		this.vidaActual = this.vidaMaxima;
-		this.ancho = 67; 
+		this.ancho = 80; 
 		this.alto = 160;
 		this.fuerza = 20;
 		this.rango = 550;		
@@ -28,9 +28,13 @@ public class Mascara extends Aliado{
 	public void golpearRango() {
 		this.dpsTiming = dps;
 		DisparoMascara disparoMascara = new DisparoMascara(x, y, this.fuerza, this.rango, mapaLogico);
+		DisparoMascara1 disparoMascara1 = new DisparoMascara1(x, y, this.fuerza, this.rango, mapaLogico);
 		mapaLogico.insertar(disparoMascara);
+		mapaLogico.insertar(disparoMascara1);
 		disparoMascara.setX(this.x);
 		disparoMascara.setY(this.y);
+		disparoMascara1.setX(this.x);
+		disparoMascara1.setY(this.y + 50);
 	}
 
 }
