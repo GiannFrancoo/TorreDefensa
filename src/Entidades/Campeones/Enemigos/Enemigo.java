@@ -1,7 +1,10 @@
 package Entidades.Campeones.Enemigos;
 
+import java.util.Random;
+
 import Entidades.Entidad;
 import Entidades.Campeones.Campeon;
+import Entidades.Objetos.Magias.Magia;
 import Main.MapaLogico;
 import Main.Visitantes.Visitante;
 import Main.Visitantes.VisitanteAlcanceGolpeA_Aliado;
@@ -28,7 +31,22 @@ public abstract class Enemigo extends Campeon{
 		this.visitanteMovimiento = new VisitanteMovimientoEnemigo(this);
 	}	
 	
-	
+	public void recibirGolpe(int d) {
+		vidaActual -= d;
+		if(vidaActual <= 0) {
+			this.mapaLogico.getJugador().agregarMonedas(this.monedas);
+			this.mapaLogico.getTienda().actualizarMonedas();
+			Random rnd = new Random();
+			if (rnd.nextInt(4) == 0){
+				Magia drop = this.mapaLogico.getMagiaRandom();
+				this.mapaLogico.insertar(drop);
+				drop.setX(getX());
+				drop.setY(getY());
+			}
+			this.eliminar();
+		}
+		this.entidadGrafica.recibirGolpe();
+	}
 	
 	public int getVelocidad() {
 		return this.velocidad;

@@ -6,7 +6,7 @@ import Main.MapaLogico;
 
 public class CerebroDemonio extends Enemigo{
 
-	public CerebroDemonio(MapaLogico m, Magia drop) {
+	public CerebroDemonio(MapaLogico m) {
 		super(m);
 				
 		this.ancho = 57;
@@ -18,9 +18,7 @@ public class CerebroDemonio extends Enemigo{
 		this.rango = 20;
 		this.dps = 25;
 		monedas = 50;
-		
-		this.drop = drop;
-		
+				
 		CerebroDemonioGrafico cer = new CerebroDemonioGrafico(this.mapaLogico, this, ancho, alto);
 		entidadGrafica = cer;
 	}

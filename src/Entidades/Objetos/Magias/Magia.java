@@ -13,14 +13,11 @@ public abstract class Magia extends Objeto {
 
 	public Magia(int x, int y, MapaLogico m) {
 		super(m);
-	}
-	
-	public void contadorDespawn(){
-		crono = new Cronometro(5000); //5000
+		crono = new Cronometro(10000); //5000
 		crono.start();
 	}
 	
-	//Comprueba si el cronometro terminó o el efecto de la magia ya fue aplicado a un campeón, si es así elimina la entidad.
+	//Comprueba si el cronometro terminï¿½ o el efecto de la magia ya fue aplicado a un campeï¿½n, si es asï¿½ elimina la entidad.
 	public void accionar() {
 		if (this.estaVivo) {
 			if (!crono.isAlive()) {

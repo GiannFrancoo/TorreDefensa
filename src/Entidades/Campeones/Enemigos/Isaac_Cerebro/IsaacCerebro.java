@@ -6,11 +6,9 @@ import Main.MapaLogico;
 
 public class IsaacCerebro extends Enemigo{
 
-	public IsaacCerebro(MapaLogico m, Magia drop) {
+	public IsaacCerebro(MapaLogico m) {
 		super(m);
-		
-		this.drop = drop;
-		
+				
 		this.ancho = 57; //34 por regla de 3 (39 -> 75)
 		this.alto = 80;  //39                (34 ->  X)
 		this.velocidad = 2;
