@@ -18,21 +18,18 @@ public class BotonMascara extends BotonTienda{
 		
 		this.setOpaque(true);
 		this.setContentAreaFilled(false);
-		this.setBorder(BorderFactory.createLineBorder(Color.BLACK, 3));
+		this.setBorder(null);
 		this.setBounds(580, 10, 90, 90);	
 		
 		this.setImagenTienda();
 	}
 
-	
 	public Entidad crear() {
 		return new Mascara(mapaLogico);
 	}
-
 	
 	public void setImagenTienda() {
 		this.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/aliados/Mascara/mascara.png")).getImage().getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_SMOOTH)));
-
 	}
 
 	public int getPrecio() {

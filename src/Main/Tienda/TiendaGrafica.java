@@ -25,12 +25,13 @@ public class TiendaGrafica extends JPanel {
 	public TiendaGrafica(MapaLogico mapaLogico, Tienda tienda) {
 		this.mapaLogico = mapaLogico;
 		this.tienda = tienda;
-		botones = new BotonTienda[7]; //Uno mas por el EventoAleatorioVida(hay que cambiarlo).
+		botones = new BotonTienda[7];
 		
-		this.setBounds(new Rectangle(1130, 162));
+		this.setBounds(new Rectangle(1130, 162)); // 1130 162
 		this.setBackground(Color.MAGENTA);
 		this.setOpaque(false);
 		this.setLayout(null);
+
 		
 		JLabel lblMonedas = new JLabel();
 		lblMonedas.setBounds(1000, 10, 52, 29);
@@ -45,7 +46,7 @@ public class TiendaGrafica extends JPanel {
 		this.add(lblCantMonedas);
 		
 		JButton btnVender = new JButton("Vender");
-		btnVender.setBounds(950, 50, 150, 20);
+		btnVender.setBounds(950, 50, 150, 50); // 950 50 150 20
 		btnVender.addActionListener(new ActionListener() {
 		    public void actionPerformed(ActionEvent e) {
 		    	mapaLogico.setEstado(new Vendiendo(mapaLogico));
@@ -79,8 +80,16 @@ public class TiendaGrafica extends JPanel {
 		
 		
 		//Agrego los botones
+		int x;
+		int y;
+		JLabel precio;
 		for(int i = 0; i < botones.length; ++i) {
 			this.add(botones[i]);
+			x = (int) botones[i].getX();
+			y = (int) botones[i].getY();
+			precio = new JLabel("$ " + botones[i].crear().getMonedas());
+			precio.setBounds(x + 25, y + 100, 40, 10);
+			this.add(precio);
 		}
 		
 	}
