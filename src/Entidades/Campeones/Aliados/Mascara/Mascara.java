@@ -28,13 +28,9 @@ public class Mascara extends Aliado{
 	public void golpearRango() {
 		this.dpsTiming = dps;
 		DisparoMascara disparoMascara = new DisparoMascara(x, y, this.fuerza, this.rango, mapaLogico);
-		DisparoMascara1 disparoMascara1 = new DisparoMascara1(x, y, this.fuerza, this.rango, mapaLogico);
+		DisparoMascara1 disparoMascara1 = new DisparoMascara1(x, y + 90, this.fuerza, this.rango, mapaLogico);
 		mapaLogico.insertar(disparoMascara);
 		mapaLogico.insertar(disparoMascara1);
-		disparoMascara.setX(this.x);
-		disparoMascara.setY(this.y);
-		disparoMascara1.setX(this.x);
-		disparoMascara1.setY(this.y + 50);
 	}
 
 }

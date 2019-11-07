@@ -10,7 +10,7 @@ public class DisparoMascara extends DisparoAliado{
 		super(x, y, fuerza, rango, m);
 		
 		this.sonido = Sonido.DISPARO_NORMAL1;
-		DisparoMascaraGrafico dis = new DisparoMascaraGrafico(this.mapaLogico, this, this.ancho + 35, this.alto + 50); //Ancho e alto cambiado.
+		DisparoMascaraGrafico dis = new DisparoMascaraGrafico(this.mapaLogico, this, this.ancho, this.alto); //Ancho e alto cambiado.
 		
 		entidadGrafica = dis;
 	}
