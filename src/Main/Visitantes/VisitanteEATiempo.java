@@ -8,31 +8,36 @@ import Entidades.EventosAleatorios.EventoAleatorioVida;
 import Entidades.Objetos.Consumibles.Consumible;
 import Entidades.Objetos.Magias.Magia;
 
-public class VisitanteAlcanceGolpeA_Enemigo implements Visitante {
-	
-	protected Aliado aliado;
-	
-	public VisitanteAlcanceGolpeA_Enemigo(Aliado a) {
-		this.aliado = a;
-	}
+public class VisitanteEATiempo implements Visitante{
 
+	@Override
 	public void visita(Enemigo e) {
-		if(aliado.getRango() >= 30)
-			aliado.golpearRango();
-		else
-			aliado.golpearMelee();
+		// TODO Auto-generated method stub
+		
 	}
 
+	@Override
 	public void visita(Aliado a) {
+		// TODO Auto-generated method stub
+		
 	}
 
+	@Override
 	public void visita(Consumible c) {
+		// TODO Auto-generated method stub
+		
 	}
 
+	@Override
 	public void visita(Disparo d) {
+		// TODO Auto-generated method stub
+		
 	}
 
+	@Override
 	public void visita(Magia m) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
@@ -46,5 +51,6 @@ public class VisitanteAlcanceGolpeA_Enemigo implements Visitante {
 		// TODO Auto-generated method stub
 		
 	}
+
 
 }
