@@ -51,6 +51,10 @@ public class Bomba extends Consumible {
 				int anchoC = this.radio * 2;
 				int altoC = this.radio * 2;
 				
+				//Sonido y animacion de humo.
+				Sonido.BOMBA.play();
+				this.entidadGrafica.golpearMelee();
+				
 				//Explotar
 				for (Entidad e : mapaLogico.getListaEntidades()) {
 					int leftX = e.getX() ;
@@ -63,8 +67,6 @@ public class Bomba extends Consumible {
 					}
 				}
 				//Auto-Eliminarse
-				Sonido.BOMBA.play();
-				this.entidadGrafica.golpearMelee();
 				this.eliminar();
 			} else {
 				--tiempoActual;

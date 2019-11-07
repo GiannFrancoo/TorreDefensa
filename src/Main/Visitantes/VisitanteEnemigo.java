@@ -19,7 +19,7 @@ public class VisitanteEnemigo implements Visitante{
 	
 	
 	public void visita(Enemigo e) {
-		mapaLogico.hayEnemigos(true);
+//		mapaLogico.hayEnemigos(true);
 	}
 
 	
