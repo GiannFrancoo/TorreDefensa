@@ -16,7 +16,7 @@ public class EventoAleatorioVida extends Aliado {
 		this.vidaMaxima = 150;
 		this.vidaActual = this.vidaMaxima;
 		this.ancho = 67; 
-		this.alto = 160;
+		this.alto = 80;
 		this.fuerza = 80;
 		this.rango = 550;		
 		this.dps = 45;
