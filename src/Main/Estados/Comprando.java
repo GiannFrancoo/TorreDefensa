@@ -15,12 +15,11 @@ public class Comprando extends EstadoJuego{
 	}
 	
 	public void actua(int x, int y) {
-		//Comprobar que no haya otra entidad
+		
 		
 		
 		int xx = (((x - 233) * 10)/ 841);
 		int yy = (((y - 42) * 6)/ 487);
-		//llamo al visitor para que verifico si donde quiere poner la entidad es un lugar valido.
 		
 		mapaLogico.getTienda().setCompraValida(true);
 		PositionList<Entidad> listaColisionados = mapaLogico.colisione(x, y);
@@ -41,9 +40,6 @@ public class Comprando extends EstadoJuego{
 			mapaLogico.getTienda().actualizarTienda();
 			mapaLogico.insertar(e);
 		}
-		
-		//mapaLogico.getTienda().setComprado(null);
-		
 		
 		mapaLogico.setEstado(new Jugando(mapaLogico));
 

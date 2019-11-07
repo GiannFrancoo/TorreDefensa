@@ -23,7 +23,7 @@ public class EventoAleatorioVida extends Entidad {
 
 	
 	public void visitar(Visitante a) {
-		
+		a.visita(this);
 	}
 	
 	
