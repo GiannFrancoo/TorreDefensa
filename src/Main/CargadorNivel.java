@@ -3,7 +3,10 @@ package Main;
 import java.util.Random;
 
 import Entidades.Entidad;
+import Entidades.Campeones.Campeon;
+import Entidades.Campeones.Enemigos.Enemigo;
 import Entidades.Campeones.Enemigos.Colmena.Colmena;
+import Entidades.Objetos.Magias.Escudos.MagiaEscudo;
 import Utilidad.Lista.EmptyListException;
 import Utilidad.Lista.InvalidPositionException;
 import Utilidad.Lista.PositionList;
@@ -11,9 +14,9 @@ import Utilidad.Lista.PositionList;
 public class CargadorNivel extends Thread {
 	
 	protected MapaLogico mapaLogico;
-	protected PositionList<Entidad> nivel;
+	protected PositionList<Enemigo> nivel;
 	
-	public CargadorNivel(MapaLogico mapaLogico, PositionList<Entidad> nivel) {
+	public CargadorNivel(MapaLogico mapaLogico, PositionList<Enemigo> nivel) {
 		this.mapaLogico = mapaLogico;
 		this.nivel = nivel;		
 	}
@@ -21,7 +24,7 @@ public class CargadorNivel extends Thread {
 	@SuppressWarnings("deprecation")
 	public void run() {
 		
-		Entidad aInsertar = null;
+		Enemigo aInsertar = null;
 		
 		while(!nivel.isEmpty()) {
 			
@@ -35,6 +38,7 @@ public class CargadorNivel extends Thread {
 				else {
 					mapaLogico.insertar(aInsertar);
 					setearleCoordenadas(aInsertar);
+					aplicarEscudoRandom(aInsertar);
 					Thread.sleep(2000); // Entre enemigo y enemigo; 1000
 				}
 				
@@ -50,7 +54,7 @@ public class CargadorNivel extends Thread {
 
 	}
 	
-	private void setearleCoordenadas(Entidad aInsertar) {
+	private void setearleCoordenadas(Enemigo aInsertar) {
 		int y = 0;
 		Random r  = new Random();			
 		y = r.nextInt(6);
@@ -58,6 +62,15 @@ public class CargadorNivel extends Thread {
 		aInsertar.setX(((9 * 841) / 10 ) + 233);
 		aInsertar.setY(((y * 487) / 6) + 42);
 
+	}
+	
+	private void aplicarEscudoRandom(Enemigo e) {
+		Random rnd = new Random();
+		if (rnd.nextInt(6) == 0) {
+			MagiaEscudo magia = new MagiaEscudo(mapaLogico);
+			mapaLogico.insertar(magia);
+			e.agregarMagia(magia);
+		}
 	}
 	
 	

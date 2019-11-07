@@ -8,8 +8,8 @@ public class MagiaEscudo extends Magia {
 	
 	protected MagiaEscudoGrafica magiaEscudoGrafica;
 
-	public MagiaEscudo(int x, int y, MapaLogico m) {
-		super(x, y, m);
+	public MagiaEscudo(MapaLogico m) {
+		super(m);
 		
 		this.ancho = 85; 
 		this.alto = 85;
