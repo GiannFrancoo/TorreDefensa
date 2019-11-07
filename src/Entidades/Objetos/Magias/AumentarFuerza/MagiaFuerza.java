@@ -11,8 +11,8 @@ public class MagiaFuerza extends Magia {
 	
 	protected MagiaFuerzaGrafica magiaFuerzaGrafica;
 	
-	public MagiaFuerza(int x, int y, MapaLogico m) {
-		super(x, y, m);
+	public MagiaFuerza(MapaLogico m) {
+		super(m);
 		
 		this.ancho = 85; 
 		this.alto = 85;

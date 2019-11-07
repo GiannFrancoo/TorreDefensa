@@ -6,6 +6,7 @@ import java.util.Random;
 
 import Entidades.Entidad;
 import Entidades.Campeones.Campeon;
+import Entidades.Campeones.Enemigos.Enemigo;
 import Entidades.Campeones.Enemigos.Casper.Casper;
 import Entidades.Campeones.Enemigos.Cerebro.Cerebro;
 import Entidades.Campeones.Enemigos.Cerebro_Demonio.CerebroDemonio;
@@ -23,7 +24,7 @@ import Main.Visitantes.VisitanteEnemigo;
 public class MapaLogico {
 	
 	// Para los niveles;
-	protected PositionList<Entidad> nivel;
+	protected PositionList<Enemigo> nivel;
 	protected int cantEnemigos = 2;
 	protected int nivelMaximo = 2;
 	protected int nivelActual = 1;
@@ -57,7 +58,7 @@ public class MapaLogico {
 		juegoTerminado = false;
 		
 		
-		PositionList<Entidad> nivel = generarNivel();
+		nivel = generarNivel();
 		cargadorNivel = new CargadorNivel(this,nivel);
 		cargadorNivel.start();
 	}
@@ -92,11 +93,11 @@ public class MapaLogico {
 		switch(rnd.nextInt(2)) {
 			
 			case(0):{
-				toReturn = new MagiaEscudo(9, 9, this);
+				toReturn = new MagiaEscudo(this);
 				break;
 			}
 			case(1):{
-				toReturn = new MagiaFuerza(9, 9, this);
+				toReturn = new MagiaFuerza(this);
 				break;	
 			}
 		}
@@ -212,10 +213,10 @@ public class MapaLogico {
 		this.magiaAplicada = m;
 	}
 
-	public PositionList<Entidad> generarNivel() {
+	public PositionList<Enemigo> generarNivel() {
 		// Consite en generar 3 oleadas, con +2 enemigos en cada una;
 		
-		nivel = new DoubleLinkedList<Entidad>(); // Limpio lista por las dudas;
+		nivel = new DoubleLinkedList<Enemigo>(); // Limpio lista por las dudas;
 		
 		for(int i = 0; i < 3; i++) {
 			generarOleada();
@@ -229,7 +230,7 @@ public class MapaLogico {
 	
 	private void generarOleada() {
 		int numEnemigo = 0;
-		Entidad enemigo = null; // Enemigo a meter a la lista;
+		Enemigo enemigo = null; // Enemigo a meter a la lista;
 		
 		Random r = new Random();	
 			
