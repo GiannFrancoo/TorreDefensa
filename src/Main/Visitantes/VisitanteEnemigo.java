@@ -3,8 +3,8 @@ package Main.Visitantes;
 import Entidades.Campeones.Aliados.Aliado;
 import Entidades.Campeones.Enemigos.Enemigo;
 import Entidades.Disparos.Disparo;
-import Entidades.EventosAleatorios.EventoAleatorioTiempo;
-import Entidades.EventosAleatorios.EventoAleatorioVida;
+import Entidades.EventosAleatorios.EATiempo.EventoAleatorioTiempo;
+import Entidades.EventosAleatorios.EAVida.EventoAleatorioVida;
 import Entidades.Objetos.Consumibles.Consumible;
 import Entidades.Objetos.Magias.Magia;
 import Main.MapaLogico;
@@ -17,36 +17,36 @@ public class VisitanteEnemigo implements Visitante{
 		this.mapaLogico = mapaLogico;
 	}
 	
-	@Override
+	
 	public void visita(Enemigo e) {
 		mapaLogico.hayEnemigos(true);
 	}
 
-	@Override
+	
 	public void visita(Aliado a) {
 	}
 
-	@Override
+	
 	public void visita(Consumible c) {
 	}
 
-	@Override
+	
 	public void visita(Disparo d) {		
 	}
 
-	@Override
+	
 	public void visita(Magia m) {
 	}
 
-	@Override
+	
 	public void visita(EventoAleatorioVida e) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
-	@Override
+
 	public void visita(EventoAleatorioTiempo e) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 	
