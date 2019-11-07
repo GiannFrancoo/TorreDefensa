@@ -13,12 +13,12 @@ public class Mascara extends Aliado{
 		
 		this.vidaMaxima = 100;
 		this.vidaActual = this.vidaMaxima;
-		this.ancho = 65; //67 
+		this.ancho = 67; 
 		this.alto = 160;
 		this.fuerza = 20;
 		this.rango = 550;		
 		this.dps = 45;
-		this.monedas = 10; // Cambiar
+		this.monedas = 10; // Cambiar.
 		
 		per = new MascaraGrafico(this.mapaLogico , this, this.ancho, this.alto);
 		entidadGrafica = per; 
