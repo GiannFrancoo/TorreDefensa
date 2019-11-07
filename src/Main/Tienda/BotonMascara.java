@@ -7,12 +7,13 @@ import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 
 import Entidades.Entidad;
+import Entidades.Campeones.Aliados.Mascara.Mascara;
 import Entidades.EventosAleatorios.EAVida.EventoAleatorioVida;
 import Main.MapaLogico;
 
-public class BotonEAVida extends BotonTienda{
+public class BotonMascara extends BotonTienda{
 
-	protected BotonEAVida(MapaLogico m, Tienda t) {
+	protected BotonMascara(MapaLogico m, Tienda t) {
 		super(m, t);
 		
 		this.setOpaque(true);
@@ -25,7 +26,7 @@ public class BotonEAVida extends BotonTienda{
 
 	
 	public Entidad crear() {
-		return new EventoAleatorioVida(mapaLogico);
+		return new Mascara(mapaLogico);
 	}
 
 	

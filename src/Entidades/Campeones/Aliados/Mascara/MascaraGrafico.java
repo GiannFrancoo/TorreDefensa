@@ -1,4 +1,4 @@
-package Entidades.Campeones.Aliados.Persj2Casillas;
+package Entidades.Campeones.Aliados.Mascara;
 
 import java.awt.Image;
 import java.awt.Rectangle;
@@ -8,9 +8,9 @@ import javax.swing.ImageIcon;
 import Entidades.Campeones.CampeonGrafica;
 import Main.MapaLogico;
 
-public class Persj2CasillasGrafico extends CampeonGrafica{
+public class MascaraGrafico extends CampeonGrafica{
 
-	public Persj2CasillasGrafico(MapaLogico mapaLogico, Pers2Casillas p, int ancho, int alto) {
+	public MascaraGrafico(MapaLogico mapaLogico, Mascara p, int ancho, int alto) {
 		super(mapaLogico);
 		
 		

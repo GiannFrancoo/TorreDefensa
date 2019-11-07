@@ -1,4 +1,4 @@
-package Entidades.Campeones.Aliados.Persj2Casillas;
+package Entidades.Campeones.Aliados.Mascara;
 
 import java.awt.Image;
 import java.awt.Rectangle;
@@ -9,10 +9,11 @@ import Entidades.Disparos.Aliados.DisparoAliado;
 import Entidades.Disparos.Aliados.DisparoAliadoGrafico;
 import Main.MapaLogico;
 import Main.Textura;
+import Main.Animaciones.LagrimaNormal;
 
-public class DisparoPersj2CasillasGrafico extends DisparoAliadoGrafico{
+public class DisparoMascaraGrafico extends DisparoAliadoGrafico{
 
-	public DisparoPersj2CasillasGrafico(MapaLogico mapaLogico, DisparoAliado e, int ancho, int alto) {
+	public DisparoMascaraGrafico(MapaLogico mapaLogico, DisparoAliado e, int ancho, int alto) {
 		super(mapaLogico, e);
 		
 		entidad = e;
@@ -25,8 +26,8 @@ public class DisparoPersj2CasillasGrafico extends DisparoAliadoGrafico{
 	}
 
 	public void eliminar() {
-		
-		
+		LagrimaNormal l = new LagrimaNormal(mapaLogico, entidad.getX(), entidad.getY());
+		l.start();
 	}
 
 	

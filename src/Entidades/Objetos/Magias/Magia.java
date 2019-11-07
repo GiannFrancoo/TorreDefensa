@@ -11,7 +11,7 @@ public abstract class Magia extends Objeto {
 	private Cronometro crono;
 	protected EfectoMagia efecto;
 
-	public Magia(int x, int y, MapaLogico m) {
+	public Magia(MapaLogico m) {
 		super(m);
 		crono = new Cronometro(10000); //5000
 		crono.start();
