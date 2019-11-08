@@ -68,8 +68,10 @@ public class CargadorNivel extends Thread {
 		Random rnd = new Random();
 		if (rnd.nextInt(6) == 0) {
 			MagiaEscudo magia = new MagiaEscudo(mapaLogico);
-			mapaLogico.insertar(magia);
-			e.agregarMagia(magia);
+//			mapaLogico.insertar(magia);
+//			e.agregarMagia(magia);
+			magia.comenzarMagia(e);
+			e.setTieneMagia(true);
 		}
 	}
 	
