@@ -10,12 +10,10 @@ public class MapaGUI extends JFrame {
 	private JLayeredPane panel;
 	private ClickeablePanel contentPane;
 	private TiendaGrafica tiendaGrafica;
-	JLabel lblFondo;
-	JLabel lblIsaac;
+	private JLabel lblFondo;
+	private JLabel lblIsaac;
+	private JLabel instrucciones;
 
-	/**
-	 * Create the frame.
-	 */
 	public MapaGUI(MapaLogico mapaLogico, Tienda tienda, Jugador jugador) {
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -45,13 +43,12 @@ public class MapaGUI extends JFrame {
 		
 		tiendaGrafica = tienda.getGrafica();
 		tiendaGrafica.setLocation(0, 548);
-		panel.add(tiendaGrafica, 10, 2);
-//		tiendaGrafica.setBounds(0, 548, 1130, 162);
-	
+		panel.add(tiendaGrafica, 10, 2);	
 		
+		
+		instrucciones = new JLabel();
 		
 	}
-		
 	
 	public void insertar(JLabel lbl) {
 		panel.add(lbl, 10, 2);
@@ -61,6 +58,22 @@ public class MapaGUI extends JFrame {
 	public void remover(JLabel lbl) {
 		panel.remove(lbl);
 		this.repaint();
+	}
+	
+	public void mostrarColocarComprado() {
+		
+	}
+	
+	public void mostrarColocarMagia() {
+		
+	}
+	
+	public void mostrarVenderAliado() {
+		
+	}
+	
+	public void ocultarIndicacion() {
+		
 	}
 	
 	public void perderJuego() {
