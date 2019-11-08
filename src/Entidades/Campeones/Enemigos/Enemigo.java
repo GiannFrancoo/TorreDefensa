@@ -119,4 +119,5 @@ public abstract class Enemigo extends Campeon{
 			a.visita(this);
 		}
 	}
+
 }

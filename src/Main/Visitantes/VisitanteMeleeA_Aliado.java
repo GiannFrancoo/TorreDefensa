@@ -3,7 +3,7 @@ package Main.Visitantes;
 import Entidades.Campeones.Aliados.Aliado;
 import Entidades.Campeones.Enemigos.Enemigo;
 import Entidades.Disparos.Disparo;
-import Entidades.EventosAleatorios.EATiempo.EventoAleatorioTiempo;
+import Entidades.EventosAleatorios.EATiempo.EATiempo;
 import Entidades.EventosAleatorios.EAVida.EAVida;
 import Entidades.Objetos.Consumibles.Consumible;
 import Entidades.Objetos.Magias.Magia;
@@ -32,12 +32,11 @@ public class VisitanteMeleeA_Aliado implements Visitante {
 	public void visita(Magia m) {
 	}
 	
-	public void visita(EAVida e) { //EventoAleatorioVida tmb es un aliado.
+	public void visita(EAVida e) {
 		e.recibirGolpe(enemigo.getFueza());
 	}
 	
-	public void visita(EventoAleatorioTiempo e) {//EventoAleatorioTiempo tmb es un aliado.
-		//Aqui no se hace nada.
+	public void visita(EATiempo e) {
 	}
 
 }

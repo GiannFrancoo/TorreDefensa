@@ -12,6 +12,8 @@ import Entidades.Campeones.Enemigos.Cerebro.Cerebro;
 import Entidades.Campeones.Enemigos.Cerebro_Demonio.CerebroDemonio;
 import Entidades.Campeones.Enemigos.Colmena.Colmena;
 import Entidades.Campeones.Enemigos.Isaac_Cerebro.IsaacCerebro;
+import Entidades.EventosAleatorios.EATiempo.EATiempo;
+import Entidades.EventosAleatorios.EAVida.EAVida;
 import Entidades.Objetos.Magias.Magia;
 import Entidades.Objetos.Magias.AumentarFuerza.MagiaFuerza;
 import Entidades.Objetos.Magias.Escudos.MagiaEscudo;
@@ -117,7 +119,7 @@ public class MapaLogico {
 	
  	public void actualizar() {
  		if (!this.juegoTerminado) {
- 			
+ 				
  			//Genera y carga el nivel
  			if(cantEnemigos == 0) {
 	 			if(nivelActual == CANT_NIVELES) {
@@ -156,9 +158,18 @@ public class MapaLogico {
 	 			} catch (EmptyListException e1) {
 	 				e1.printStackTrace();
 	 			}
-	 			mapaGUI.insertar(e.getGrafica());
+	 			mapaGUI.insertar(e.getGrafica());	 			
 	 		}
 	 		this.aInsertar = new DoubleLinkedList<Entidad>();
+	 		
+	 		
+	 		
+ 			// Puede o no generar un evento;
+ 			generarEventoRandom();
+ 			
+ 	
+	 		
+	 		
 	 		
 	 		// PARA NIVELES !!!!!!!!! ARREGLAR EL InstansOf falso para detectar que no hay m�s enmigos;
 	 		/*
@@ -238,6 +249,81 @@ public class MapaLogico {
 	public void setMagia(Magia m) {
 		this.magiaAplicada = m;
 	}
+	
+	
+	public void generarEventoRandom() {
+		
+		Random rand = new Random();
+			
+		if(rand.nextInt(50) == 0) {
+			
+			if(rand.nextInt(2) == 0) { // EA Tiempo;
+				EATiempo evento = new EATiempo(this);
+				
+				// 233 + 320 --> 233 por margen, y 320 por 4 casillas; x > 553;
+				// Meno a 233 + 841; x < 1074
+				
+				// y > 42;  y < 42 + 487 == 529;
+				
+				int x = rand.nextInt(521) + 554;
+				int y = rand.nextInt(485) + 43;
+				
+				// Obtengo las coordenas en forma de grilla;
+				int xx = (((x - 233) * 10)/ 841);
+				int yy = (((y - 42) * 6)/ 487); 
+				
+				// La obtengo en la esquina de cada celda;
+				int xNormalizada = ((xx * 841) / 10 ) + 233;
+				int yNormalizada = ((yy * 487) / 6) + 42;
+				
+				
+				this.entidades.addLast(evento);
+				mapaGUI.insertar(evento.getGrafica());
+
+				evento.setX(xNormalizada);
+				evento.setY(yNormalizada);
+				
+				try {
+					evento.setPosEnLista(this.entidades.last());
+				} catch (EmptyListException e) {}
+				
+			}
+			else { // EA Vida;
+				EAVida evento = new EAVida(this);
+				
+				// 233 + 320 --> 233 por margen, y 320 por 4 casillas; x > 553;
+				// Meno a 233 + 841; x < 1074
+				
+				// y > 42;  y < 42 + 487 == 529;
+				
+				int x = rand.nextInt(521) + 554;
+				int y = rand.nextInt(485) + 43;
+				
+				// Obtengo las coordenas en forma de grilla;
+				int xx = (((x - 233) * 10)/ 841);
+				int yy = (((y - 42) * 6)/ 487); 
+				
+				// La obtengo en la esquina de cada celda;
+				int xNormalizada = ((xx * 841) / 10 ) + 233;
+				int yNormalizada = ((yy * 487) / 6) + 42;
+				
+				
+				this.entidades.addLast(evento);
+				mapaGUI.insertar(evento.getGrafica());
+				
+				evento.setX(xNormalizada);
+				evento.setY(yNormalizada);
+				
+				try {
+					evento.setPosEnLista(this.entidades.last());
+				} catch (EmptyListException e) {}
+				
+			}
+			
+		}
+	}
+	
+	
 
 //	public PositionList<Enemigo> generarNivel() {
 //		// Consite en generar 3 oleadas, con +2 enemigos en cada una;

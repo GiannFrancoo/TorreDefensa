@@ -3,7 +3,7 @@ package Main.Visitantes;
 import Entidades.Campeones.Aliados.Aliado;
 import Entidades.Campeones.Enemigos.Enemigo;
 import Entidades.Disparos.Disparo;
-import Entidades.EventosAleatorios.EATiempo.EventoAleatorioTiempo;
+import Entidades.EventosAleatorios.EATiempo.EATiempo;
 import Entidades.EventosAleatorios.EAVida.EAVida;
 import Entidades.Objetos.Consumibles.Consumible;
 import Entidades.Objetos.Magias.Magia;
@@ -16,5 +16,5 @@ public interface Visitante {
 	public void visita(Disparo d);
 	public void visita(Magia m);
 	public void visita(EAVida e);
-	public void visita(EventoAleatorioTiempo e);
+	public void visita(EATiempo e);
 }

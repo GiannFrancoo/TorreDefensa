@@ -21,21 +21,24 @@ public class EAVida extends Entidad{
 	public EAVida(MapaLogico m) {
 		super(m);
 		
+		EAVGrafico = new EAVidaGrafico(m, this, this.alto, this.ancho);
+		this.entidadGrafica  = EAVGrafico;
+		
 	}
 	
 	public void golpearRango(){
 	}
 
 	public void recibirGolpe(int d) {
-		this.setVidaActual(this.vidaActual -= d);
+		this.vidaActual -= d;
+		this.setVidaActual(this.vidaActual);
 		if(this.vidaActual <= 0) { //esta morido.
 			this.eliminar();
 		}
 		this.entidadGrafica.recibirGolpe();
 	}
 
-	public void accionar() {
-	}
+	public void accionar() {}
 
 	public void visitar(Visitante a) {
 		a.visita(this);

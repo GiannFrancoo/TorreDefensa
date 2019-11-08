@@ -3,27 +3,25 @@ package Main.Visitantes;
 import Entidades.Campeones.Aliados.Aliado;
 import Entidades.Campeones.Enemigos.Enemigo;
 import Entidades.Disparos.Disparo;
-import Entidades.EventosAleatorios.EATiempo.EventoAleatorioTiempo;
+import Entidades.EventosAleatorios.EATiempo.EATiempo;
 import Entidades.EventosAleatorios.EAVida.EAVida;
 import Entidades.Objetos.Consumibles.Consumible;
 import Entidades.Objetos.Magias.Magia;
 
 public class VisitanteEATiempo implements Visitante{
-	protected EventoAleatorioTiempo EATiempo;
+	protected EATiempo EATiempo;
 	
-	public VisitanteEATiempo(EventoAleatorioTiempo e) {
+	public VisitanteEATiempo(EATiempo e) {
 		this.EATiempo = e;
 		
 	}
 	
 	public void visita(Enemigo e) {
-		e.recibirGolpe(this.EATiempo.getFuerza());
+		e.recibirGolpe(EATiempo.getFuerza());
 	}
 
 	
-	public void visita(Aliado a) {
-		
-	}
+	public void visita(Aliado a) { }
 
 	
 	public void visita(Consumible c) {
@@ -42,7 +40,7 @@ public class VisitanteEATiempo implements Visitante{
 	}
 
 	
-	public void visita(EventoAleatorioTiempo e) {
+	public void visita(EATiempo e) {
 	}
 
 

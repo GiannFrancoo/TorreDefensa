@@ -12,11 +12,11 @@ public class PoopGrafico extends CampeonGrafica{
 		super(mapaLogico);
 		entidad = p;
 		
-		this.imagenes[0] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Poop/poop_1.png"));
-		this.imagenes[1] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Poop/poop_2.png"));
-		this.imagenes[2] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Poop/poop_3.png"));
-		this.imagenes[3] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Poop/poop_4.png"));
-		this.imagenes[4] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Poop/poop_5.png"));
+		this.imagenes[0] = new ImageIcon(getClass().getClassLoader().getResource("texturas/objetos/poop/poop_1.png"));
+		this.imagenes[1] = new ImageIcon(getClass().getClassLoader().getResource("texturas/objetos/poop/poop_2.png"));
+		this.imagenes[2] = new ImageIcon(getClass().getClassLoader().getResource("texturas/objetos/poop/poop_3.png"));
+		this.imagenes[3] = new ImageIcon(getClass().getClassLoader().getResource("texturas/objetos/poop/poop_4.png"));
+		this.imagenes[4] = new ImageIcon(getClass().getClassLoader().getResource("texturas/objetos/poop/poop_5.png"));
 		
 		grafica.setBounds(new Rectangle(ancho, alto));
 		grafica.setIcon(new ImageIcon(imagenes[0].getImage().getScaledInstance(grafica.getWidth(), grafica.getHeight(), Image.SCALE_SMOOTH))); // Arranca con la imagen estatica;;
