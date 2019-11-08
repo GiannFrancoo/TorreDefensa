@@ -265,7 +265,7 @@ public class MapaLogico {
 				
 				// y > 42;  y < 42 + 487 == 529;
 				
-				int x = rand.nextInt(521) + 554;
+				int x = rand.nextInt(521) + 560;
 				int y = rand.nextInt(485) + 43;
 				
 				// Obtengo las coordenas en forma de grilla;
@@ -296,7 +296,7 @@ public class MapaLogico {
 				
 				// y > 42;  y < 42 + 487 == 529;
 				
-				int x = rand.nextInt(521) + 554;
+				int x = rand.nextInt(521) + 560;
 				int y = rand.nextInt(485) + 43;
 				
 				// Obtengo las coordenas en forma de grilla;
