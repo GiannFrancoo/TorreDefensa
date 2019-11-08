@@ -1,7 +1,7 @@
 package Entidades.Campeones.Aliados.Mascara;
 
 import Entidades.Campeones.Aliados.Aliado;
-import Entidades.EventosAleatorios.EAVida1.DisparoEAVida;
+import Entidades.EventosAleatorios.EAVida.DisparoEAVida;
 import Main.MapaLogico;
 
 public class Mascara extends Aliado{

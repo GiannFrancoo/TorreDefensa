@@ -8,7 +8,7 @@ import javax.swing.ImageIcon;
 
 import Entidades.Entidad;
 import Entidades.Campeones.Aliados.Mascara.Mascara;
-import Entidades.EventosAleatorios.EAVida1.EAVida1;
+import Entidades.EventosAleatorios.EAVida.EAVida;
 import Main.MapaLogico;
 
 public class BotonMascara extends BotonTienda{
