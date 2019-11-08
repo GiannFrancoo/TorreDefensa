@@ -46,6 +46,7 @@ public abstract class Campeon extends Entidad{
 		if (!tieneMagia) {
 			m.comenzarMagia(this);
 			m.eliminar();
+			this.entidadGrafica.agregarMagiaVisual(m.getEfectoVisual());
 			this.tieneMagia = true;
 		}
 	}

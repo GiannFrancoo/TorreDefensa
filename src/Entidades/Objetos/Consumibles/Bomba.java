@@ -22,7 +22,7 @@ public class Bomba extends Consumible {
 		this.fuerza = 999999;
 		this.tiempoExplosion = 50;
 		this.tiempoActual = tiempoExplosion;
-		this.radio = 60;
+		this.radio = 85;
 		this.monedas = 25;
 		
 		this.visitante = new VisitanteBomba(this);
