@@ -34,8 +34,11 @@ public class Comprando extends EstadoJuego{
 			int dondeQuiereInsertarlo = mapaLogico.getTienda().getComprado().getAlto() + yNormalizada;
 			
 			if(dondeQuiereInsertarlo < (42+487)) { // Si no es la ultima casilla;
-				PositionList<Entidad> listaArriba = mapaLogico.colisioneRango(xNormalizada, xNormalizada + 80, yNormalizada);
-				PositionList<Entidad> listaAbajo = mapaLogico.colisioneRango(xNormalizada, xNormalizada + 80, yNormalizada + 85);
+
+				PositionList<Entidad> listaArriba = mapaLogico.colisioneRango(xNormalizada, xNormalizada + 80, yNormalizada, yNormalizada+80);
+				PositionList<Entidad> listaAbajo = mapaLogico.colisioneRango(xNormalizada, xNormalizada + 80, yNormalizada + 85, yNormalizada+85+80);
+//				PositionList<Entidad> listaArriba = mapaLogico.colisioneRango(xNormalizada, xNormalizada + 80, yNormalizada);
+//				PositionList<Entidad> listaAbajo = mapaLogico.colisioneRango(xNormalizada, xNormalizada + 80, yNormalizada + 85);
 				PositionList<Entidad> listaColisionados = new DoubleLinkedList<Entidad>();
 				
 				for(Entidad e : listaArriba) { // Junto la lista de arriba;
@@ -58,7 +61,7 @@ public class Comprando extends EstadoJuego{
 		}
 		else { // 1 Casilla;
 						
-			PositionList<Entidad> listaColisionados = mapaLogico.colisioneRango(xNormalizada, xNormalizada + 80, yNormalizada);
+			PositionList<Entidad> listaColisionados = mapaLogico.colisioneRango(xNormalizada, xNormalizada + 80, yNormalizada, yNormalizada+80);
 			
 			for(Entidad e : listaColisionados) { // Se modifica la compra valida si es que hay un enemigo o aliado;
 				e.visitar(visitanteCompra);	

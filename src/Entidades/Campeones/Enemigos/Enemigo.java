@@ -43,6 +43,7 @@ public abstract class Enemigo extends Campeon{
 				drop.setX(getX());
 				drop.setY(getY());
 			}
+			mapaLogico.restarEnemigo();
 			this.eliminar();
 		}
 		this.entidadGrafica.recibirGolpe();
@@ -85,7 +86,7 @@ public abstract class Enemigo extends Campeon{
 	
 	public void intentarGolpear() {
 		if (this.dpsTiming == 0) {
-			PositionList<Entidad> listaColisionados = mapaLogico.colisioneRango(x - this.rango, x-1, y);
+			PositionList<Entidad> listaColisionados = mapaLogico.colisioneRango(x - this.rango, x-1, y, y + this.getY());
 			for (Entidad e : listaColisionados) {
 				if (this.dpsTiming == 0) {
 					e.visitar(visitanteAlcance);
@@ -103,7 +104,7 @@ public abstract class Enemigo extends Campeon{
 	
 	public void golpearMelee() {
 		this.dpsTiming = dps;
-		PositionList<Entidad> listaColisionados = mapaLogico.colisioneRango(x - this.rango, x-1, y);
+		PositionList<Entidad> listaColisionados = mapaLogico.colisioneRango(x - this.rango, x-1, y, y + this.getY());
 		for (Entidad e : listaColisionados) {
 			e.visitar(visitante);
 		}
