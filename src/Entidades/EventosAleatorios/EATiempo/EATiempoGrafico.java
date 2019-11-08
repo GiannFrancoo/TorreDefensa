@@ -10,36 +10,29 @@ import Main.MapaLogico;
 
 public class EATiempoGrafico extends EntidadGrafica{
 
-	protected EventoAleatorioTiempo EAT;
+	protected EATiempo EAT;
 	
-	public EATiempoGrafico(MapaLogico mapaLogico, EventoAleatorioTiempo e, int alto, int ancho) {
+	public EATiempoGrafico(MapaLogico mapaLogico, EATiempo e, int alto, int ancho) {
 		super(mapaLogico);
 		
 		EAT = e;
 		
-		this.imagenes[0] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/escudo/efectoLoco.gif")); // Estatico;
+		this.imagenes[0] = new ImageIcon(getClass().getClassLoader().getResource("texturas/eventoAleatorio/relentizar/relentizar.gif")); // Estatico;
 		grafica.setBounds(new Rectangle(ancho, alto));
-		grafica.setIcon(new ImageIcon(imagenes[0].getImage().getScaledInstance(grafica.getWidth(), grafica.getHeight(), Image.SCALE_SMOOTH))); // Arranca con la imagen estatica;
+		grafica.setIcon(new ImageIcon(imagenes[0].getImage().getScaledInstance(grafica.getWidth(), grafica.getHeight(), Image.SCALE_DEFAULT))); // Arranca con la imagen estatica;
 		grafica.setLocation(99999999, 999999999);
 		
 	}
 
 	
-	public void golpearMelee() {
-	}
+	public void golpearMelee() {}
 
+	public void golpearRango() {}
 	
-	public void golpearRango() {
-		//Aqui no hace nada.
-	}
+	public void eliminar() {} 
 
-	
-	public void eliminar() {
-	}
-
-	
 	public void recibirGolpe() {
-		//No le puede pegar(es inmune).
+		//No le pueden pegar(es inmune).
 	}
 
 

@@ -6,7 +6,7 @@ import Main.MapaLogico;
 import Main.Visitantes.Visitante;
 import Main.Visitantes.VisitanteEATiempo;
 
-public class EventoAleatorioTiempo extends Entidad{
+public class EATiempo extends Entidad{
 
 	protected EATiempoGrafico EATG;	
 	protected int dps = 45;
@@ -18,7 +18,7 @@ public class EventoAleatorioTiempo extends Entidad{
 	protected Cronometro crono;
 
 	
-	public EventoAleatorioTiempo(MapaLogico m) {
+	public EATiempo(MapaLogico m) {
 		super(m);
 		
 		EATG = new EATiempoGrafico(m, this, this.alto, this.ancho);
@@ -28,28 +28,29 @@ public class EventoAleatorioTiempo extends Entidad{
 		crono = new Cronometro(5000);
 	}
 	
-	public void recibirGolpe(int d) {
-		//Aqui no se hace nada.
-	}
+	public void recibirGolpe(int d) {}
 
 	
 	public void accionar() {
 		if (this.crono.isAlive()) {
 			
 			if (this.dpsTiming == 0) {
-				for(Entidad e: mapaLogico.colisioneRango( this.getX(), this.getX() + this.getAncho(), this.getY(), this.getY() + this.getAlto())) {
+				for(Entidad e: mapaLogico.colisioneRango(this.getX(), this.getX() + this.getAncho(), this.getY(), this.getY() + this.getAlto())) {
 					if(e.getVidaActual() > 0) { //si la entidad esta viva lo visito.
 						e.visitar(this.visitante);
 					}
 				}
-				this.entidadGrafica.golpearMelee();
+				
+				//this.entidadGrafica.golpearMelee();
 				this.dpsTiming = dps;
 				
 			} else {
 				this.dpsTiming--;
 			}
-		}else {
-			this.eliminar(); //Elimino el crono.
+		}
+		else {
+			this.crono.stop(); //Elimino el crono.
+			//this.eliminar(); --> No podemos poner el eliminar aca, porque es instaneo o_O
 		}
 	}
 		

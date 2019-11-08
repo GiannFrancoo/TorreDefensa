@@ -17,35 +17,37 @@ public class EAVidaGrafico extends EntidadGrafica{
 		
 		EAVida = e;
 		
-		this.imagenes[0] = new ImageIcon(getClass().getClassLoader().getResource("texturas/aliados/Mascara/mascara.png")); // Estatico;
+		this.imagenes[0] = new ImageIcon(getClass().getClassLoader().getResource("texturas/eventoAleatorio/gusano/gusano1.png")); // Estatico;
+		this.imagenes[1] = new ImageIcon(getClass().getClassLoader().getResource("texturas/eventoAleatorio/gusano/gusano2.png")); // Estatico;
+		this.imagenes[2] = new ImageIcon(getClass().getClassLoader().getResource("texturas/eventoAleatorio/gusano/gusano3.png")); // Estatico;
 
 		grafica.setBounds(new Rectangle(ancho, alto));
-		grafica.setIcon(new ImageIcon(imagenes[0].getImage().getScaledInstance(grafica.getWidth(), grafica.getHeight(), Image.SCALE_SMOOTH))); // Arranca con la imagen estatica;
+		grafica.setIcon(new ImageIcon(imagenes[2].getImage().getScaledInstance(grafica.getWidth(), grafica.getHeight(), Image.SCALE_SMOOTH))); // Arranca con la imagen estatica;
 		grafica.setLocation(99999999, 999999999);
 	}
 
 	
-	public void golpearMelee() {
-		
-		
-	}
+	public void golpearMelee() { }
 
 	
-	public void golpearRango() {
-		
-		
-	}
+	public void golpearRango() { }
 
 	
-	public void eliminar() {
-		
-		
-	}
+	public void eliminar() { }
 
 	
 	public void recibirGolpe() {
 		
+		float n = entidad.getVidaMaxima() / 3;
+		int vida = entidad.getVidaActual();
 		
+		if(vida <= 2 * n && vida > n) {
+			grafica.setIcon(new ImageIcon(imagenes[1].getImage().getScaledInstance(grafica.getWidth(), grafica.getHeight(), Image.SCALE_SMOOTH)));
+		}
+		
+		if(vida <= n) {
+			grafica.setIcon(new ImageIcon(imagenes[0].getImage().getScaledInstance(grafica.getWidth(), grafica.getHeight(), Image.SCALE_SMOOTH)));
+		}
 	}
 
 }

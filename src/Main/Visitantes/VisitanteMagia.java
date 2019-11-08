@@ -3,7 +3,7 @@ package Main.Visitantes;
 import Entidades.Campeones.Aliados.Aliado;
 import Entidades.Campeones.Enemigos.Enemigo;
 import Entidades.Disparos.Disparo;
-import Entidades.EventosAleatorios.EATiempo.EventoAleatorioTiempo;
+import Entidades.EventosAleatorios.EATiempo.EATiempo;
 import Entidades.EventosAleatorios.EAVida.EAVida;
 import Entidades.Objetos.Consumibles.Consumible;
 import Entidades.Objetos.Magias.Magia;
@@ -36,7 +36,7 @@ public class VisitanteMagia implements Visitante{
 	}
 
 	@Override
-	public void visita(EventoAleatorioTiempo e) {
+	public void visita(EATiempo e) {
 		// TODO Auto-generated method stub
 		
 	}
