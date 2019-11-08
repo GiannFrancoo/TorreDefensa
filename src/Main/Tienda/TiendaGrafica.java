@@ -25,7 +25,7 @@ public class TiendaGrafica extends JPanel {
 	public TiendaGrafica(MapaLogico mapaLogico, Tienda tienda) {
 		this.mapaLogico = mapaLogico;
 		this.tienda = tienda;
-		botones = new BotonTienda[7];
+		botones = new BotonTienda[9];
 		
 		this.setBounds(new Rectangle(1130, 162)); // 1130 162
 		this.setBackground(Color.MAGENTA);
@@ -76,6 +76,8 @@ public class TiendaGrafica extends JPanel {
 		botones[4] = new BotonPoop(mapaLogico, tienda);
 		botones[5] = new BotonAzazel(mapaLogico, tienda);
 		botones[6] = new BotonMascara(mapaLogico, tienda);
+		botones[7] = new BotonPiedra(mapaLogico, tienda);
+		botones[8] = new BotonPincho(mapaLogico, tienda);
 	
 		
 		
