@@ -35,16 +35,10 @@ private Disparo disparo;
 	public void visita(Magia m) {
 	}
 
-	@Override
-	public void visita(EAVida e) {
-		// TODO Auto-generated method stub
-		
+	public void visita(EAVida e) {	
 	}
 
-	@Override
-	public void visita(EATiempo e) {
-		// TODO Auto-generated method stub
-		
+	public void visita(EATiempo e) {		
 	}
 
 }

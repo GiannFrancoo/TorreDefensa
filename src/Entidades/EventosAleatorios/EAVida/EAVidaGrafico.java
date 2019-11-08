@@ -10,12 +10,10 @@ import Main.MapaLogico;
 
 public class EAVidaGrafico extends EntidadGrafica{
 
-	protected EAVida EAVida;
-	
 	public EAVidaGrafico(MapaLogico mapaLogico, EAVida e, int ancho, int alto) {
 		super(mapaLogico);
 		
-		EAVida = e;
+		this.entidad = e;
 		
 		this.imagenes[0] = new ImageIcon(getClass().getClassLoader().getResource("texturas/eventoAleatorio/gusano/gusano1.png")); // Estatico;
 		this.imagenes[1] = new ImageIcon(getClass().getClassLoader().getResource("texturas/eventoAleatorio/gusano/gusano2.png")); // Estatico;
@@ -38,7 +36,7 @@ public class EAVidaGrafico extends EntidadGrafica{
 	
 	public void recibirGolpe() {
 		
-		float n = entidad.getVidaMaxima() / 3;
+		int n = entidad.getVidaMaxima() / 3;
 		int vida = entidad.getVidaActual();
 		
 		if(vida <= 2 * n && vida > n) {

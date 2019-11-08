@@ -7,21 +7,27 @@ import Main.Visitantes.Visitante;
 
 public class EAVida extends Entidad{
 	
-	protected EAVidaGrafico EAVGrafico;//EA (Electronic Arts).
-	int vidaMaxima = 150;
-	int vidaActual = this.vidaMaxima;
-	int ancho = 67; 
-	int alto = 80;
-	int fuerza = 80;
-	int rango = 550;
-	int monedas = 0;
-	int dps = 45;
-	int dpsTiming = dps;
+	//EA (Electronic Arts).
+	protected int fuerza;
+	protected int rango;
+	protected int dps = 45;
+	protected int dpsTiming = dps;
 	
 	public EAVida(MapaLogico m) {
 		super(m);
 		
-		EAVGrafico = new EAVidaGrafico(m, this, this.alto, this.ancho);
+		this.vidaMaxima = 150;
+		this.vidaActual = this.vidaMaxima;
+		this.ancho = 67; 
+		this.alto = 80;
+		this.fuerza = 80;
+		this.rango = 550;
+		this.monedas = 0;
+		this.dps = 45;
+		this.dpsTiming = dps;
+		
+		
+		EAVidaGrafico EAVGrafico = new EAVidaGrafico(m, this, this.alto, this.ancho);
 		this.entidadGrafica  = EAVGrafico;
 		
 	}
@@ -41,7 +47,9 @@ public class EAVida extends Entidad{
 	public void accionar() {}
 
 	public void visitar(Visitante a) {
-		a.visita(this);
+		if(this.estaVivo) {
+			a.visita(this);
+		}
 	}
 
 	
