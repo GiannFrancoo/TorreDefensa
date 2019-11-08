@@ -25,8 +25,6 @@ public class EventoAleatorioTiempo extends Entidad{
 		this.entidadGrafica  = EATG;
 		
 		this.visitante = new VisitanteEATiempo(this);
-//		crono = new Cronometro(5000);
-//		
 		crono = new Cronometro(5000);
 	}
 	
@@ -39,9 +37,13 @@ public class EventoAleatorioTiempo extends Entidad{
 		if (this.crono.isAlive()) {
 			
 			if (this.dpsTiming == 0) {
-			//Aca se llamaria a el rango	
-			//entidad.visitar(visitante).
+				for(Entidad e: mapaLogico.colisioneRango( this.getX(), this.getX() + this.getAncho(), this.getY(), this.getY() + this.getAlto())) {
+					if(e.getVidaActual() > 0) { //si la entidad esta viva lo visito.
+						e.visitar(this.visitante);
+					}
+				}
 				this.entidadGrafica.golpearMelee();
+				this.dpsTiming = dps;
 				
 			} else {
 				this.dpsTiming--;
@@ -58,5 +60,9 @@ public class EventoAleatorioTiempo extends Entidad{
 	public int getFuerza() {
 		return this.getFuerza();
 	}
+	
+	
+	
+	
 	
 }

@@ -4,6 +4,7 @@ import java.util.Random;
 
 import Entidades.Entidad;
 import Entidades.Campeones.Enemigos.Enemigo;
+import Entidades.Campeones.Enemigos.Arrastre.Arrastre;
 import Entidades.Campeones.Enemigos.Casper.Casper;
 import Entidades.Campeones.Enemigos.Cerebro.Cerebro;
 import Entidades.Campeones.Enemigos.Cerebro_Demonio.CerebroDemonio;
@@ -43,7 +44,7 @@ public class GeneradorDeNiveles {
 			
 		for(int i = 0; i < cantEnemigos; i++) {
 				
-			switch(r.nextInt(5)) {
+			switch(r.nextInt(6)) {
 			
 				case(0):{
 					nivel.addLast(new Casper(mapaLogico));
@@ -63,6 +64,10 @@ public class GeneradorDeNiveles {
 				}
 				case(4):{
 					nivel.addLast(new CerebroDemonio(mapaLogico));
+					break;
+				}
+				case(5):{
+					nivel.addLast(new Arrastre(mapaLogico));
 					break;
 				}
 			}

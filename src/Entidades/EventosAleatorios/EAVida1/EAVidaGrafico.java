@@ -1,4 +1,4 @@
-package Entidades.EventosAleatorios.EAVida;
+package Entidades.EventosAleatorios.EAVida1;
 
 import java.awt.Image;
 import java.awt.Rectangle;
@@ -10,9 +10,9 @@ import Main.MapaLogico;
 
 public class EAVidaGrafico extends EntidadGrafica{
 
-	protected EventoAleatorioVida EAVida;
+	protected EAVida1 EAVida;
 	
-	public EAVidaGrafico(MapaLogico mapaLogico, EventoAleatorioVida e, int ancho, int alto) {
+	public EAVidaGrafico(MapaLogico mapaLogico, EAVida1 e, int ancho, int alto) {
 		super(mapaLogico);
 		
 		EAVida = e;
