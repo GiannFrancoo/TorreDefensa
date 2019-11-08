@@ -255,7 +255,7 @@ public class MapaLogico {
 		int x = 0;
 		Random r  = new Random();			
 		y = r.nextInt(6);
-		x = r.nextInt(5) + 5;
+		x = r.nextInt(6) + 3;
 
 		aInsertar.setX(((x * 841) / 10 ) + 233);
 		aInsertar.setY(((y * 487) / 6) + 42);

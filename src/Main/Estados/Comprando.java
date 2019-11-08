@@ -16,6 +16,7 @@ public class Comprando extends EstadoJuego{
 	}
 	
 	public void actua(int x, int y) {
+		
 		//42 + 487 --> El alto de toda la grilla;
 		
 		// ACA HABRIA QUE CAMBIAR LA IMAGEN DEL MAPA!!!
@@ -83,6 +84,10 @@ public class Comprando extends EstadoJuego{
 				mapaLogico.getTienda().actualizarTienda();
 				mapaLogico.insertar(e);
 			}		
+			
+			
+			mapaLogico.getMapaGUI().ocultarIndicacion();
+			
 			
 			mapaLogico.setEstado(new Jugando(mapaLogico));
 		}	
