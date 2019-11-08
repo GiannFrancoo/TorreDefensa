@@ -1,4 +1,4 @@
-package Entidades.EventosAleatorios.EAVida;
+package Entidades.EventosAleatorios.EAVida1;
 
 import java.awt.Image;
 import java.awt.Rectangle;

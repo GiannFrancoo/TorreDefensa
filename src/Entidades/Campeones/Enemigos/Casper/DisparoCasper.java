@@ -1,6 +1,5 @@
 package Entidades.Campeones.Enemigos.Casper;
 
-import Entidades.Campeones.Aliados.Azazel.DisparoAzazelGrafico;
 import Entidades.Disparos.Enemigos.DisparoEnemigo;
 import Main.MapaLogico;
 import Main.Sonido;

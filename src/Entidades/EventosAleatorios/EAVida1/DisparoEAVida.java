@@ -1,4 +1,4 @@
-package Entidades.EventosAleatorios.EAVida;
+package Entidades.EventosAleatorios.EAVida1;
 
 import Entidades.Disparos.Aliados.DisparoAliado;
 import Main.MapaLogico;
