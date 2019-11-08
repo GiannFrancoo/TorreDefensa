@@ -25,6 +25,7 @@ public class Tienda {
 	
 	public void comprar(Entidad entidadComprada) {
 		this.setComprado(entidadComprada);
+		this.mapaLogico.getMapaGUI().mostrarColocarComprado();
     	mapaLogico.setEstado(new Comprando(mapaLogico));
 	}
 	

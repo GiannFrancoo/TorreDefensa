@@ -47,6 +47,11 @@ public class MapaGUI extends JFrame {
 		
 		
 		instrucciones = new JLabel();
+		instrucciones.setBounds(300, 600, 200, 50);
+		instrucciones.setOpaque(true);
+		instrucciones.setVisible(false);
+		panel.add(instrucciones, 10, 2);	
+
 		
 	}
 	
@@ -61,19 +66,38 @@ public class MapaGUI extends JFrame {
 	}
 	
 	public void mostrarColocarComprado() {
+		this.tiendaGrafica.setVisible(false);
+		this.tiendaGrafica.setEnabled(false);
 		
+		this.lblFondo.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/fondo_marcado.png")).getImage().getScaledInstance(lblFondo.getWidth(), lblFondo.getHeight(), Image.SCALE_SMOOTH)));
+
+		this.instrucciones.setText("Colocar el aliado comprado en una casilla vacia");
+		this.instrucciones.setVisible(true);
 	}
 	
 	public void mostrarColocarMagia() {
-		
+		this.tiendaGrafica.setEnabled(false);
+		this.tiendaGrafica.setVisible(false);
+
+		this.instrucciones.setText("Colocar la magia en un Aliado");
+		this.instrucciones.setVisible(true);
 	}
 	
 	public void mostrarVenderAliado() {
-		
+		this.tiendaGrafica.setEnabled(false);
+		this.tiendaGrafica.setVisible(false);
+
+		this.instrucciones.setText("Clickear en el Aliado que desea vender");
+		this.instrucciones.setVisible(true);
 	}
 	
 	public void ocultarIndicacion() {
+		lblFondo.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/fondo_nivel1.png")).getImage().getScaledInstance(lblFondo.getWidth(), lblFondo.getHeight(), Image.SCALE_SMOOTH)));
+
 		
+		this.instrucciones.setVisible(false);
+		this.tiendaGrafica.setEnabled(true);
+		this.tiendaGrafica.setVisible(true);
 	}
 	
 	public void perderJuego() {
