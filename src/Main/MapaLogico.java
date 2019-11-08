@@ -1,9 +1,7 @@
 package Main;
 
 import Utilidad.Lista.*;
-
 import java.util.Random;
-
 import Entidades.Entidad;
 import Entidades.Campeones.Campeon;
 import Entidades.Campeones.Enemigos.Enemigo;
@@ -21,7 +19,6 @@ import Main.Estados.EstadoJuego;
 import Main.Estados.Jugando;
 import Main.Tienda.Tienda;
 import Main.Visitantes.Visitante;
-import Main.Visitantes.VisitanteEnemigo;
 
 public class MapaLogico {
 	
@@ -253,9 +250,20 @@ public class MapaLogico {
 	
 	public void generarEventoRandom() {
 		
+		/*
+		int y = 0;
+		int x = 0;
+		Random r  = new Random();			
+		y = r.nextInt(6);
+		x = r.nextInt(5) + 5;
+
+		aInsertar.setX(((x * 841) / 10 ) + 233);
+		aInsertar.setY(((y * 487) / 6) + 42);
+		*/
+		
 		Random rand = new Random();
 			
-		if(rand.nextInt(50) == 0) {
+		if(rand.nextInt(10) == 0) {
 			
 			if(rand.nextInt(2) == 0) { // EA Tiempo;
 				EATiempo evento = new EATiempo(this);
@@ -265,7 +273,7 @@ public class MapaLogico {
 				
 				// y > 42;  y < 42 + 487 == 529;
 				
-				int x = rand.nextInt(521) + 560;
+				int x = rand.nextInt(500) + 570;
 				int y = rand.nextInt(485) + 43;
 				
 				// Obtengo las coordenas en forma de grilla;
@@ -277,15 +285,9 @@ public class MapaLogico {
 				int yNormalizada = ((yy * 487) / 6) + 42;
 				
 				
-				this.entidades.addLast(evento);
-				mapaGUI.insertar(evento.getGrafica());
-
+				this.insertar(evento);
 				evento.setX(xNormalizada);
 				evento.setY(yNormalizada);
-				
-				try {
-					evento.setPosEnLista(this.entidades.last());
-				} catch (EmptyListException e) {}
 				
 			}
 			else { // EA Vida;
@@ -296,7 +298,7 @@ public class MapaLogico {
 				
 				// y > 42;  y < 42 + 487 == 529;
 				
-				int x = rand.nextInt(521) + 560;
+				int x = rand.nextInt(521) + 550;
 				int y = rand.nextInt(485) + 43;
 				
 				// Obtengo las coordenas en forma de grilla;
@@ -307,16 +309,9 @@ public class MapaLogico {
 				int xNormalizada = ((xx * 841) / 10 ) + 233;
 				int yNormalizada = ((yy * 487) / 6) + 42;
 				
-				
-				this.entidades.addLast(evento);
-				mapaGUI.insertar(evento.getGrafica());
-				
+				this.insertar(evento);
 				evento.setX(xNormalizada);
 				evento.setY(yNormalizada);
-				
-				try {
-					evento.setPosEnLista(this.entidades.last());
-				} catch (EmptyListException e) {}
 				
 			}
 			

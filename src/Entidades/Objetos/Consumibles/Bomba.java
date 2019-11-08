@@ -51,8 +51,7 @@ public class Bomba extends Consumible {
 				
 				//Explotar
 				for (Entidad e : mapaLogico.colisioneRango(rX, rX+(this.radio*2), rY, rY+(this.radio*2))) {
-					if(e.getVidaActual() > 0)
-						e.visitar(visitante);
+					e.visitar(visitante);
 				}
 				
 				//Auto-Eliminarse

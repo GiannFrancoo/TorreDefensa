@@ -25,31 +25,22 @@ public class ArrastreGrafico extends CampeonGrafica{
 	}
 
 	public void golpear() {
-		
 	}
 
 	
 	public void golpearMelee() {
-		AtaqueEnemigo al = new AtaqueEnemigo(mapaLogico, entidad.getX(), entidad.getY());
-		al.start();
 	}
 
 
 	public void golpearRango() {
-		
-		
 	}
 
 	
-	public void eliminar() {
-	
-		
+	public void eliminar() {		
 	}
 
 	
 	public void recibirGolpe() {
-	
-		
 	}
 
 }

@@ -9,14 +9,14 @@ public class Arrastre extends Enemigo{
 	public Arrastre(MapaLogico m) {
 		super(m);
 		
-		this.vidaMaxima = 100;
-		this.vidaActual = 100;
+		this.vidaMaxima = 70;
+		this.vidaActual = this.vidaMaxima;
 		this.ancho = 65; //34 por regla de 3 (39 -> 75)
 		this.alto = 75;  //39                (34 ->  X)
-		this.velocidad = 1;
-		this.fuerza = 10;
-		this.rango = 650;
-		this.dps = 70;
+		this.velocidad = 3;
+		this.fuerza = 30;
+		this.rango = 20;
+		this.dps = 20;
 		monedas = 25;
 		
 		ArrastreGrafico ng = new ArrastreGrafico(m, this, this.ancho, this.alto);
