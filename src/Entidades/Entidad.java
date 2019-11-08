@@ -91,7 +91,8 @@ public abstract class Entidad {
 	}
 	
 	public void eliminar() {
-		mapaLogico.eliminar(this.getPosEnLista());
+		this.estaVivo = false;
+		this.mapaLogico.eliminar(this.getPosEnLista());
 	}
 	
 	public abstract void recibirGolpe(int d);

@@ -1,5 +1,7 @@
 package Entidades.Objetos.Magias;
 
+import javax.swing.JLabel;
+
 import Entidades.Campeones.Campeon;
 import Entidades.Objetos.Objeto;
 import Main.Cronometro;
@@ -34,5 +36,6 @@ public abstract class Magia extends Objeto {
 	}
 	
 	public abstract void comenzarMagia(Campeon camp);
+	public abstract JLabel getEfectoVisual();
 
 }
