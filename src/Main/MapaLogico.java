@@ -70,6 +70,9 @@ public class MapaLogico {
 //		cargadorNivel.start();
 	}
 	
+	public void restarEnemigo() {
+		--this.cantEnemigos;
+	}
 	
 	public void setEstado(EstadoJuego e) {
 		this.estadoJuego = e;
@@ -203,11 +206,11 @@ public class MapaLogico {
 	}
 	
 	//Detecta entidades entre x1 y x2 (x1 coordenada mas a la izquierda del mapaGUI, x2 coordenada mas a la derecha del mapaGUI).
-	public PositionList<Entidad> colisioneRango(int x1, int x2, int y) {
+	public PositionList<Entidad> colisioneRango(int x1, int x2, int y1, int y2) {
 		PositionList<Entidad> listaColisionados = new DoubleLinkedList<Entidad>();
 		for(Entidad e: this.entidades) {
 			
-			if (((e.getX() >= x1 && e.getX() <= x2) || (e.getX()+e.getAncho() >= x1 && e.getX()+e.getAncho() <= x2)) &&  (y >= e.getY() && y <= e.getY()+e.getAlto())) {
+			if (((e.getX() >= x1 && e.getX() <= x2) || (e.getX()+e.getAncho() >= x1 && e.getX()+e.getAncho() <= x2)) &&  ((e.getY() >= y1 && e.getY() <= y2) || (e.getY()+e.getAlto() >= y1 && e.getY()+e.getAlto() <= y2))) {
 				listaColisionados.addLast(e);
 			}
 		}

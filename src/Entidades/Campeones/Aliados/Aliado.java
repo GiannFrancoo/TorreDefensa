@@ -32,7 +32,7 @@ public abstract class Aliado extends Campeon{
 	
 	public void intentarGolpear() {
 		if (this.dpsTiming == 0) {
-			PositionList<Entidad> listaColisionados = mapaLogico.colisioneRango(x, x + this.rango + this.getAncho(), y);
+			PositionList<Entidad> listaColisionados = mapaLogico.colisioneRango(x, x + this.rango + this.getAncho(), y, y + this.getY());
 			for (Entidad e : listaColisionados) {
 				if (this.dpsTiming == 0) {
 					e.visitar(visitanteAlcance);
@@ -49,7 +49,7 @@ public abstract class Aliado extends Campeon{
 	
 	public void golpearMelee() {
 		this.dpsTiming = dps;
-		PositionList<Entidad> listaColisionados = mapaLogico.colisioneRango(x, x + this.rango + this.getAncho(), y);
+		PositionList<Entidad> listaColisionados = mapaLogico.colisioneRango(x, x + this.rango + this.getAncho(), y, y + this.getY());
 		for (Entidad e : listaColisionados) {
 			e.visitar(visitante);
 		}
