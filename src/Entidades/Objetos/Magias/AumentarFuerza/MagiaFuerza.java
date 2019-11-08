@@ -1,5 +1,6 @@
 package Entidades.Objetos.Magias.AumentarFuerza;
 
+import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
 import Entidades.Campeones.Campeon;
@@ -30,8 +31,8 @@ public class MagiaFuerza extends Magia {
 	
 	public void recibirGolpe(int d) {}
 
-	public JLabel getEfectoVisual() {
-		return entidadGrafica.getEfectoVisual();
+	public ImageIcon getEfectoVisual() {
+		return magiaFuerzaGrafica.getEfectoVisual();
 	}
 	
 }

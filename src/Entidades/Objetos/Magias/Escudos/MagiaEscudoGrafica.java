@@ -14,12 +14,17 @@ public class MagiaEscudoGrafica extends EntidadGrafica{
 		this.entidad = magiaEscudo;
 		
 
-		this.imagenes[0] = new ImageIcon(this.getClass().getClassLoader().getResource("texturas/escudo/dropMagia.gif")); // Corriendo (GIF);
+		this.imagenes[0] = new ImageIcon(this.getClass().getClassLoader().getResource("texturas/escudo/dropMagia.gif")); //Drop
+		this.imagenes[1] = new ImageIcon(this.getClass().getClassLoader().getResource("texturas/escudo/escudo.gif")); //Efecto Magia
 		
 		grafica.setBounds(new Rectangle(ancho, alto));
 		grafica.setIcon(new ImageIcon(imagenes[0].getImage().getScaledInstance(ancho, alto, Image.SCALE_DEFAULT))); // Arranca con la imagen estatica;
 		grafica.setLocation(99999999, 99999999);
 		
+	}
+	
+	public ImageIcon getEfectoVisual() {
+		return this.imagenes[1];
 	}
 
 	@Override

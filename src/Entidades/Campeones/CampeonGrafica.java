@@ -4,7 +4,7 @@ import Entidades.EntidadGrafica;
 import Main.MapaLogico;
 
 public abstract class CampeonGrafica extends EntidadGrafica {
-
+	
 	public CampeonGrafica(MapaLogico mapaLogico) {
 		super(mapaLogico);
 	}

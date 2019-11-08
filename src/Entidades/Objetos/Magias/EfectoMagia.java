@@ -9,18 +9,18 @@ import Main.MapaLogico;
 public abstract class EfectoMagia extends Thread {
 	
 	protected MapaLogico mapaLogico;
-	protected JLabel label;
+//	protected JLabel label;
 	protected Campeon camp;
 	
 	public EfectoMagia(MapaLogico mapaLogico, Campeon camp) {
 		this.mapaLogico = mapaLogico;
-		this.label = new JLabel();
+//		this.label = new JLabel();
 		this.camp = camp;
 	}
 	
 	@SuppressWarnings("deprecation")
 	public void run() {
-		mapaLogico.getMapaGUI().insertar(label);
+//		mapaLogico.getMapaGUI().insertar(label);
 		this.aplicarEfectoMagia();
 		
 		try {
@@ -31,7 +31,8 @@ public abstract class EfectoMagia extends Thread {
 		
 		this.revertirEfectoMagia();
 		camp.setTieneMagia(false);
-		mapaLogico.getMapaGUI().remover(label);
+		camp.getEntidadGrafica().eliminarMagiaVisual();
+//		mapaLogico.getMapaGUI().remover(label);
 		this.stop();
 	}
 	

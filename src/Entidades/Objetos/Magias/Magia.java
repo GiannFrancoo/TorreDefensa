@@ -1,5 +1,6 @@
 package Entidades.Objetos.Magias;
 
+import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
 import Entidades.Campeones.Campeon;
@@ -36,6 +37,6 @@ public abstract class Magia extends Objeto {
 	}
 	
 	public abstract void comenzarMagia(Campeon camp);
-	public abstract JLabel getEfectoVisual();
+	public abstract ImageIcon getEfectoVisual();
 
 }

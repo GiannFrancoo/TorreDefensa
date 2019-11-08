@@ -1,5 +1,6 @@
 package Entidades.Objetos.Magias.Escudos;
 
+import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
 import Entidades.Campeones.Campeon;
@@ -27,8 +28,8 @@ public class MagiaEscudo extends Magia {
 
 	public void recibirGolpe(int d) {}
 
-	public JLabel getEfectoVisual() {
-		return entidadGrafica.getEfectoVisual();
+	public ImageIcon getEfectoVisual() {
+		return magiaEscudoGrafica.getEfectoVisual();
 	}
 
 	
