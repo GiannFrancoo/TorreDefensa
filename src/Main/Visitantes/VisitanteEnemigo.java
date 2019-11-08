@@ -4,7 +4,7 @@ import Entidades.Campeones.Aliados.Aliado;
 import Entidades.Campeones.Enemigos.Enemigo;
 import Entidades.Disparos.Disparo;
 import Entidades.EventosAleatorios.EATiempo.EventoAleatorioTiempo;
-import Entidades.EventosAleatorios.EAVida.EventoAleatorioVida;
+import Entidades.EventosAleatorios.EAVida.EAVida;
 import Entidades.Objetos.Consumibles.Consumible;
 import Entidades.Objetos.Magias.Magia;
 import Main.MapaLogico;
@@ -39,7 +39,7 @@ public class VisitanteEnemigo implements Visitante{
 	}
 
 	
-	public void visita(EventoAleatorioVida e) {
+	public void visita(EAVida e) {
 		
 		
 	}
@@ -49,7 +49,7 @@ public class VisitanteEnemigo implements Visitante{
 		
 		
 	}
-	
-	
+
+
 
 }

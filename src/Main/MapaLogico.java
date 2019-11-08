@@ -68,6 +68,8 @@ public class MapaLogico {
 //		nivel = generarNivel();
 //		cargadorNivel = new CargadorNivel(this,nivel);
 //		cargadorNivel.start();
+		
+		
 	}
 	
 	public void restarEnemigo() {
@@ -91,7 +93,6 @@ public class MapaLogico {
 	}
 	
 	public void eliminar(Position<Entidad> pos) {
-		pos.element().setVivo(false);
 		mapaGUI.remover(pos.element().getGrafica());
 		this.aBorrar.addLast(pos);
 	}
@@ -128,6 +129,7 @@ public class MapaLogico {
 	 				this.cantEnemigos = nivel.size();
 	 	 	 		cargadorNivel = new CargadorNivel(this, nivel);
 	 	 	 		cargadorNivel.start();
+
 	 			}
 	 		}	
  			 			

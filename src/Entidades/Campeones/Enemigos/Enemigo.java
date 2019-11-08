@@ -75,6 +75,9 @@ public abstract class Enemigo extends Campeon{
 	
 	public void mover() {
 		this.setX(x-velocidad);
+		if (tieneMagia) {
+			this.entidadGrafica.moverMagia(this.getX(), this.getY());
+		}
 		if (this.getX() < 233) {
 			mapaLogico.perderJuego();
 		}

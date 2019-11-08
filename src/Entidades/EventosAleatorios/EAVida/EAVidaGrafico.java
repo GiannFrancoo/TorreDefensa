@@ -10,9 +10,9 @@ import Main.MapaLogico;
 
 public class EAVidaGrafico extends EntidadGrafica{
 
-	protected EventoAleatorioVida EAVida;
+	protected EAVida EAVida;
 	
-	public EAVidaGrafico(MapaLogico mapaLogico, EventoAleatorioVida e, int ancho, int alto) {
+	public EAVidaGrafico(MapaLogico mapaLogico, EAVida e, int ancho, int alto) {
 		super(mapaLogico);
 		
 		EAVida = e;

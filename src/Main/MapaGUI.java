@@ -68,10 +68,11 @@ public class MapaGUI extends JFrame {
 		perder.setSize(panel.getSize());
 		perder.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/terminarPartida.png")).getImage().getScaledInstance(perder.getWidth(), perder.getHeight(), Image.SCALE_SMOOTH)));
 		panel.add(perder, 11, 5); 	
-		JLabel texto = new JLabel("Perdiste");
-		texto.setBounds(500, 300, 200, 200);
+		JLabel texto = new JLabel();
+		texto.setBounds(260, 280, 600, 120);
+		texto.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/perdiste.png")).getImage().getScaledInstance(texto.getWidth(), texto.getHeight(), Image.SCALE_SMOOTH)));
 		panel.add(texto, 12, 6);
-
+		// 133 27
 	}
 	
 	public void ganarJuego() {
@@ -79,8 +80,9 @@ public class MapaGUI extends JFrame {
 		ganar.setSize(panel.getSize());
 		ganar.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/terminarPartida.png")).getImage().getScaledInstance(ganar.getWidth(), ganar.getHeight(), Image.SCALE_SMOOTH)));
 		panel.add(ganar, 11, 5); 	
-		JLabel texto = new JLabel("Ganaste");
-		texto.setBounds(500, 500, 200, 200);
+		JLabel texto = new JLabel();
+		texto.setBounds(260, 280, 600, 120);
+		texto.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/ganaste.png")).getImage().getScaledInstance(texto.getWidth(), texto.getHeight(), Image.SCALE_SMOOTH)));
 		panel.add(texto, 12, 6);
 
 	}

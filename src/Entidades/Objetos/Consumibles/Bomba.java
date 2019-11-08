@@ -22,7 +22,7 @@ public class Bomba extends Consumible {
 		this.fuerza = 999999;
 		this.tiempoExplosion = 50;
 		this.tiempoActual = tiempoExplosion;
-		this.radio = 60;
+		this.radio = 85;
 		this.monedas = 25;
 		
 		this.visitante = new VisitanteBomba(this);
@@ -48,20 +48,12 @@ public class Bomba extends Consumible {
 				
 				int rX = cX - this.radio; //Esquina superior izquierda
 				int rY = cY - this.radio;
-				int anchoC = this.radio * 2;
-				int altoC = this.radio * 2;
 				
 				//Explotar
-				for (Entidad e : mapaLogico.getListaEntidades()) {
-					int leftX = e.getX() ;
-					int rightX = e.getX()+e.getAncho();
-					int topY =  e.getY();
-					int botY =  e.getY()+e.getAlto();
-					if (((leftX >= rX && leftX <= rX+anchoC) && (topY >= rY && topY <= rY+altoC)) || ((leftX >= rX && leftX <= rX+anchoC) && (botY >= rY && botY <= rY+altoC)) || ((rightX >= rX && rightX <= rX+anchoC) && (topY >= rY && topY <= rY+altoC)) || ((rightX >= rX && rightX <= rX+anchoC) && (botY >= rY && botY <= rY+altoC))) {
-						//Hace da�o a cada aliado y enemigo en el area.
-						e.visitar(visitante);
-					}
+				for (Entidad e : mapaLogico.colisioneRango(rX, rX+(this.radio*2), rY, rY+(this.radio*2))) {
+					e.visitar(visitante);
 				}
+				
 				//Auto-Eliminarse
 				Sonido.BOMBA.play();
 				this.entidadGrafica.golpearMelee();

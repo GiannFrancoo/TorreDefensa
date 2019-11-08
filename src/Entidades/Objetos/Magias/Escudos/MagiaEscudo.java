@@ -1,5 +1,8 @@
 package Entidades.Objetos.Magias.Escudos;
 
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
 import Entidades.Campeones.Campeon;
 import Entidades.Objetos.Magias.Magia;
 import Main.MapaLogico;
@@ -21,10 +24,13 @@ public class MagiaEscudo extends Magia {
 	public void comenzarMagia(Campeon camp) { // Para pasarselo al hilo de efecto;
 		DuracionEscudo esc = new DuracionEscudo(mapaLogico, camp);
 		esc.start();
-		this.eliminar(); // Elimina la magia y queda el efecto andando;
 	}
 
 	public void recibirGolpe(int d) {}
+
+	public ImageIcon getEfectoVisual() {
+		return magiaEscudoGrafica.getEfectoVisual();
+	}
 
 	
 }

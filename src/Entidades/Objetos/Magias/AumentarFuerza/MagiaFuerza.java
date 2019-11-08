@@ -1,5 +1,8 @@
 package Entidades.Objetos.Magias.AumentarFuerza;
 
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
 import Entidades.Campeones.Campeon;
 import Entidades.Objetos.Magias.Magia;
 import Entidades.Objetos.Magias.Escudos.DuracionEscudo;
@@ -21,17 +24,15 @@ public class MagiaFuerza extends Magia {
 		entidadGrafica = magiaFuerzaGrafica;
 	}
 
-	@Override
 	public void comenzarMagia(Campeon camp) {
 		DuracionAumentarFuerza daf = new DuracionAumentarFuerza(mapaLogico, camp);
-		daf.start();
-		this.eliminar(); // Elimina la magia y queda el efecto andando;
-		
+		daf.start();		
 	}
 	
-	
+	public void recibirGolpe(int d) {}
 
-	public void recibirGolpe(int d) {
+	public ImageIcon getEfectoVisual() {
+		return magiaFuerzaGrafica.getEfectoVisual();
 	}
 	
 }
