@@ -21,6 +21,9 @@ public class Jugando extends EstadoJuego{
 				e.visitar(visMagia);
 			}
 			if(mapaLogico.getMagia() != null) { // Asi no agarra varias;
+				
+				this.mapaLogico.getMapaGUI().mostrarColocarMagia();
+				
 				this.mapaLogico.setEstado(new AplicarMagia(this.mapaLogico));
 				break;
 			}

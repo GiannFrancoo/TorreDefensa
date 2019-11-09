@@ -49,6 +49,7 @@ public class TiendaGrafica extends JPanel {
 		btnVender.setBounds(950, 50, 150, 50); // 950 50 150 20
 		btnVender.addActionListener(new ActionListener() {
 		    public void actionPerformed(ActionEvent e) {
+		    	mapaLogico.getMapaGUI().mostrarVenderAliado();
 		    	mapaLogico.setEstado(new Vendiendo(mapaLogico));
 		    }
 		});

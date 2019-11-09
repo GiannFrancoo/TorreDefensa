@@ -27,6 +27,9 @@ public class AplicarMagia extends EstadoJuego{
 			this.mapaLogico.getMapaGUI().remover(this.mapaLogico.getMagia().getGrafica()); // Sacas el drop!
 			this.mapaLogico.setMagia(null); // Volves a la magia null;			
 		}
+		
+		this.mapaLogico.getMapaGUI().ocultarIndicacion();
+		
 		this.mapaLogico.setEstado(new Jugando(this.mapaLogico)); // Setea de nuevo el mapa;
 	}
 

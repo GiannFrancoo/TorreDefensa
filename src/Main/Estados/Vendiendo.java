@@ -21,6 +21,8 @@ public class Vendiendo extends EstadoJuego{
 			}
 		}
 		
+		mapaLogico.getMapaGUI().ocultarIndicacion();
+		
 		mapaLogico.setEstado(new Jugando(mapaLogico));
 	}
 
