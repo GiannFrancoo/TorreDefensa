@@ -11,7 +11,7 @@ public class Azazel extends Aliado{
 		
 		this.vidaMaxima = 100;
 		this.vidaActual = this.vidaMaxima;
-		this.ancho = 90; 
+		this.ancho = 80; 
 		this.alto = 80;
 		this.fuerza = 40;
 		this.rango = 650;		

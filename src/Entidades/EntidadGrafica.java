@@ -29,15 +29,16 @@ public abstract class EntidadGrafica {
 	
 	public void moverMagia(int x, int y) {
 		if (magia != null) {
-			magia.setLocation(x-37, y-30);
+			magia.setLocation(x-25, y-25); // -37 -30
 		}
 	}
 	
-	public void agregarMagiaVisual(ImageIcon efectoVisual) {
+	public void agregarMagiaVisual(ImageIcon efectoVisual, Entidad entidad) {
 		magia = new JLabel();
-		magia.setBounds(new Rectangle(130, 130));
+//		magia.setBounds(new Rectangle(130, 130));
+		magia.setBounds(new Rectangle(entidad.getAncho()+35, entidad.getAlto()+35));
 		magia.setIcon(new ImageIcon(efectoVisual.getImage().getScaledInstance(magia.getWidth(), magia.getHeight(), Image.SCALE_DEFAULT))); // Arranca con la imagen estatica;
-		magia.setLocation(entidad.getX(), entidad.getY());
+		magia.setLocation(entidad.getX()-25, entidad.getY()-20);
 		mapaLogico.getMapaGUI().insertar(magia);
 	}
 	

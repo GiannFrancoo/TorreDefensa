@@ -15,8 +15,8 @@ public class MagiaFuerzaGrafica extends EntidadGrafica{
 		super(mapaLogico);
 		this.entidad = mag;
     
-		this.imagenes[0] = new ImageIcon(this.getClass().getClassLoader().getResource("texturas/disparos/portalAnimado.gif")); //Drop
-		this.imagenes[1] = new ImageIcon(this.getClass().getClassLoader().getResource("texturas/disparos/portalAnimado.gif")); //Efecto Visual
+		this.imagenes[0] = new ImageIcon(this.getClass().getClassLoader().getResource("texturas/escudo/magiaFuerza.gif")); //Drop
+		this.imagenes[1] = new ImageIcon(this.getClass().getClassLoader().getResource("texturas/escudo/efectoFuerza.gif")); //Efecto Visual
 		
 		grafica.setBounds(new Rectangle(ancho, alto));
 		grafica.setIcon(new ImageIcon(imagenes[0].getImage().getScaledInstance(ancho, alto, Image.SCALE_DEFAULT)));

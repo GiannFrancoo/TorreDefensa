@@ -71,7 +71,7 @@ public class CargadorNivel extends Thread {
 //			mapaLogico.insertar(magia);
 //			e.agregarMagia(magia);
 			magia.comenzarMagia(e);
-			e.getEntidadGrafica().agregarMagiaVisual(magia.getEfectoVisual());
+			e.getEntidadGrafica().agregarMagiaVisual(magia.getEfectoVisual() , e);
 			e.setTieneMagia(true);
 		}
 	}
