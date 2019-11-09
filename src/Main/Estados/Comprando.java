@@ -41,7 +41,7 @@ public class Comprando extends EstadoJuego{
 				if(dondeQuiereInsertarlo < (42+487)) { // Si no es la ultima casilla;
 	
 					PositionList<Entidad> listaArriba = mapaLogico.colisioneRango(xNormalizada, xNormalizada + 80, yNormalizada, yNormalizada+80);
-					PositionList<Entidad> listaAbajo = mapaLogico.colisioneRango(xNormalizada, xNormalizada + 80, yNormalizada + 85, yNormalizada+85+80);
+					PositionList<Entidad> listaAbajo = mapaLogico.colisioneRango(xNormalizada, xNormalizada + 80, yNormalizada + 80, yNormalizada+80+80);
 	//				PositionList<Entidad> listaArriba = mapaLogico.colisioneRango(xNormalizada, xNormalizada + 80, yNormalizada);
 	//				PositionList<Entidad> listaAbajo = mapaLogico.colisioneRango(xNormalizada, xNormalizada + 80, yNormalizada + 85);
 					PositionList<Entidad> listaColisionados = new DoubleLinkedList<Entidad>();
