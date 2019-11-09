@@ -1,0 +1,2083 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.3" icons="true" automaticImage="JPEG" always-add-relationships="false" 
+  generalizations="true" realizations="true" associations="true" dependencies="false" nesting-relationships="true" 
+  router="FAN">  
+  <class id="1" language="java" name="Main.Estados.Comprando" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/Estados/Comprando.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="147" x="5613" y="1439"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="Entidades.Campeones.Aliados.Poop.Poop" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Campeones/Aliados/Poop/Poop.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="161" x="6121" y="3327"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="Entidades.Objetos.Magias.EfectoMagia" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Objetos/Magias/EfectoMagia.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="199" x="2105" y="1776"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="Entidades.Objetos.Objeto" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Objetos/Objeto.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="123" x="5038" y="2401"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="Main.Visitantes.VisitanteAlcanceGolpeA_Aliado" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/Visitantes/VisitanteAlcanceGolpeA_Aliado.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="228" x="2145" y="2401"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="Entidades.Campeones.Aliados.Piedra.Piedra" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Campeones/Aliados/Piedra/Piedra.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="166" x="6322" y="3327"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="Entidades.Campeones.Enemigos.Cerebro_Demonio.CerebroDemonio" 
+    project="TorreDefensa" file="/TorreDefensa/src/Entidades/Campeones/Enemigos/Cerebro_Demonio/CerebroDemonio.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="226" x="1561" y="3327"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="Main.Tienda.BotonMascara" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/Tienda/BotonMascara.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="197" x="4268" y="1264"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="Entidades.Disparos.Enemigos.DisparoEnemigo" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Disparos/Enemigos/DisparoEnemigo.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="225" x="8268" y="2756"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="Main.Tienda.BotonTienda" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/Tienda/BotonTienda.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="187" x="6099" y="981"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="Main.Visitantes.VisitanteMovimientoEnemigo" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/Visitantes/VisitanteMovimientoEnemigo.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="209" x="2641" y="2401"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="Main.Tienda.BotonAzazel" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/Tienda/BotonAzazel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="189" x="4505" y="1264"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="Entidades.Campeones.Aliados.Azazel.DisparoAzazelGrafico" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Campeones/Aliados/Azazel/DisparoAzazelGrafico.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="117" width="301" x="2890" y="2401"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="Main.Visitantes.VisitanteCompra" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/Visitantes/VisitanteCompra.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="145" x="6579" y="1776"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="Entidades.Campeones.CampeonGrafica" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Campeones/CampeonGrafica.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="173" x="9071" y="2401"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="Main.Animaciones.ExplosionBomba" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/Animaciones/ExplosionBomba.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="199" x="11635" y="2756"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="Entidades.Disparos.Aliados.DisparoAliadoGrafico" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Disparos/Aliados/DisparoAliadoGrafico.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="265" x="4287" y="1776"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="Main.Tienda.BotonPincho" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/Tienda/BotonPincho.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="187" x="4734" y="1264"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="19" language="java" name="Entidades.Objetos.Consumibles.Consumible" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Objetos/Consumibles/Consumible.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="147" x="5014" y="2756"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="20" language="java" name="Entidades.Campeones.Aliados.Lilith.LilithGrafico" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Campeones/Aliados/Lilith/LilithGrafico.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="201" x="3777" y="1776"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="21" language="java" name="Main.Juego" project="TorreDefensa" file="/TorreDefensa/src/Main/Juego.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="113" x="6560" y="2401"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="22" language="java" name="Entidades.Campeones.Aliados.Mascara.DisparoMascara1" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Campeones/Aliados/Mascara/DisparoMascara1.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="81" width="233" x="8663" y="3327"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="23" language="java" name="Entidades.EntidadGrafica" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/EntidadGrafica.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="279" width="239" x="5800" y="1439"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="24" language="java" name="Main.Tienda.BotonLazaro" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/Tienda/BotonLazaro.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="189" x="4961" y="1264"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="25" language="java" name="Main.MapaLogico" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/MapaLogico.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="531" width="264" x="6499" y="2756"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="26" language="java" name="Main.MapaGUI" project="TorreDefensa" file="/TorreDefensa/src/Main/MapaGUI.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="297" width="212" x="6262" y="1439"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="27" language="java" name="Main.Cronometro" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/Cronometro.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="101" x="5243" y="3574"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="28" language="java" name="Entidades.Campeones.Aliados.BlueBaby.DisparoBlueBabyGrafico" 
+    project="TorreDefensa" file="/TorreDefensa/src/Entidades/Campeones/Aliados/BlueBaby/DisparoBlueBabyGrafico.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="324" x="3231" y="2401"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="29" language="java" name="Entidades.Campeones.Aliados.Lazaro.DisparoLazaroGrafico" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Campeones/Aliados/Lazaro/DisparoLazaroGrafico.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="117" width="301" x="3595" y="2401"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="30" language="java" name="Main.Visitantes.VisitanteDisparoA_Enemigo" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/Visitantes/VisitanteDisparoA_Enemigo.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="204" x="7615" y="1776"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="31" language="java" name="Entidades.Campeones.Aliados.BlueBaby.BlueBabyGrafico" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Campeones/Aliados/BlueBaby/BlueBabyGrafico.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="171" width="250" x="7711" y="2756"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="32" language="java" name="Main.Animaciones.AtaqueEnemigo" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/Animaciones/AtaqueEnemigo.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="195" x="11874" y="2756"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="33" language="java" name="Main.Visitantes.VisitanteMeleeA_Enemigo" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/Visitantes/VisitanteMeleeA_Enemigo.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="188" x="5788" y="2401"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="34" language="java" name="Entidades.Campeones.Enemigos.Arrastre.Arrastre" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Campeones/Enemigos/Arrastre/Arrastre.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="184" x="1827" y="3327"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="35" language="java" name="Main.Visitantes.Visitante" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/Visitantes/Visitante.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="137" x="5438" y="3327"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="36" language="java" name="Entidades.Campeones.Aliados.Apollyon.ApollyonGrafico" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Campeones/Aliados/Apollyon/ApollyonGrafico.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="171" width="243" x="8788" y="2756"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="37" language="java" name="Entidades.Campeones.Aliados.BlueBaby.DisparoBlueBaby" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Campeones/Aliados/BlueBaby/DisparoBlueBaby.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="81" width="231" x="8936" y="3327"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="38" language="java" name="Entidades.Campeones.Enemigos.Casper.DisparoCasperGrafico" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Campeones/Enemigos/Casper/DisparoCasperGrafico.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="117" width="302" x="7641" y="3574"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="39" language="java" name="Entidades.Campeones.Enemigos.Colmena.Colmena" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Campeones/Enemigos/Colmena/Colmena.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="188" x="2051" y="3327"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="40" language="java" name="Entidades.Campeones.Aliados.Mascara.DisparoMascara" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Campeones/Aliados/Mascara/DisparoMascara.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="81" width="227" x="9207" y="3327"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="41" language="java" name="Entidades.Objetos.Magias.AumentarFuerza.DuracionAumentarFuerza" 
+    project="TorreDefensa" file="/TorreDefensa/src/Entidades/Objetos/Magias/AumentarFuerza/DuracionAumentarFuerza.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="264" x="1561" y="2401"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="42" language="java" name="Main.Visitantes.VisitanteBomba" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/Visitantes/VisitanteBomba.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="142" x="5875" y="2756"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="43" language="java" name="Entidades.Objetos.Magias.Escudos.MagiaEscudoGrafica" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Objetos/Magias/Escudos/MagiaEscudoGrafica.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="171" width="287" x="1540" y="3785"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="44" language="java" name="Entidades.Campeones.Enemigos.Isaac_Cerebro.IsaacCerebro" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Campeones/Enemigos/Isaac_Cerebro/IsaacCerebro.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="212" x="2279" y="3327"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="45" language="java" name="Main.Tienda.TiendaGrafica" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/Tienda/TiendaGrafica.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="195" x="6302" y="1776"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="46" language="java" name="Entidades.Objetos.Magias.AumentarFuerza.MagiaFuerzaGrafica" 
+    project="TorreDefensa" file="/TorreDefensa/src/Entidades/Objetos/Magias/AumentarFuerza/MagiaFuerzaGrafica.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="283" x="7118" y="3785"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="47" language="java" name="Entidades.Campeones.Enemigos.Casper.DisparoCasper" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Campeones/Enemigos/Casper/DisparoCasper.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="220" x="8137" y="3327"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="48" language="java" name="Main.Sonido" project="TorreDefensa" file="/TorreDefensa/src/Main/Sonido.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="243" width="204" x="3698" y="981"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="49" language="java" name="Entidades.Campeones.Aliados.Lazaro.DisparoLazaro" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Campeones/Aliados/Lazaro/DisparoLazaro.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="219" x="9474" y="3327"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="50" language="java" name="Entidades.EventosAleatorios.EATiempo.EATiempo" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/EventosAleatorios/EATiempo/EATiempo.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="174" x="5243" y="2401"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="51" language="java" name="Main.Tienda.Tienda" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/Tienda/Tienda.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="261" width="176" x="6302" y="2401"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="52" language="java" name="Entidades.Campeones.Aliados.Azazel.DisparoAzazel" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Campeones/Aliados/Azazel/DisparoAzazel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="219" x="9733" y="3327"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="53" language="java" name="Entidades.Disparos.Enemigos.DisparoEnemigoGrafico" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Disparos/Enemigos/DisparoEnemigoGrafico.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="285" x="7812" y="3327"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="54" language="java" name="Entidades.Campeones.Aliados.Mascara.DisparoMascaraGrafico1" 
+    project="TorreDefensa" file="/TorreDefensa/src/Entidades/Campeones/Aliados/Mascara/DisparoMascaraGrafico1.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="311" x="3936" y="2401"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="55" language="java" name="Main.Visitantes.VisitanteAlcanceGolpeA_Enemigo" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/Visitantes/VisitanteAlcanceGolpeA_Enemigo.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="228" x="5520" y="2401"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="56" language="java" name="Main.ClickeablePanel" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/ClickeablePanel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="201" x="6040" y="1776"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="57" language="java" name="Entidades.Campeones.Enemigos.Enemigo" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Campeones/Enemigos/Enemigo.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="279" width="154" x="2051" y="2756"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="58" language="java" name="Main.Estados.Jugando" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/Estados/Jugando.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="133" x="5065" y="1439"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="59" language="java" name="Main.Visitantes.VisitanteVender" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/Visitantes/VisitanteVender.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="143" x="5857" y="1776"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="60" language="java" name="Entidades.Campeones.Enemigos.Arrastre.ArrastreGrafico" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Campeones/Enemigos/Arrastre/ArrastreGrafico.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="171" width="241" x="9071" y="2756"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="61" language="java" name="Entidades.Objetos.Consumibles.Bomba" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Objetos/Consumibles/Bomba.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="143" x="5723" y="3327"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="62" language="java" name="Main.Visitantes.VisitanteAplicarMagia" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/Visitantes/VisitanteAplicarMagia.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="166" x="4523" y="2756"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="63" language="java" name="Entidades.Campeones.Enemigos.Isaac_Cerebro.IsaacCerebroGrafico" 
+    project="TorreDefensa" file="/TorreDefensa/src/Entidades/Campeones/Enemigos/Isaac_Cerebro/IsaacCerebroGrafico.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="289" x="9352" y="2756"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="64" language="java" name="Entidades.Campeones.Enemigos.Colmena.ColmenaGrafico" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Campeones/Enemigos/Colmena/ColmenaGrafico.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="171" width="241" x="9681" y="2756"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="65" language="java" name="Entidades.Disparos.Disparo" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Disparos/Disparo.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="130" x="7615" y="2401"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="66" language="java" name="Main.Jugador" project="TorreDefensa" file="/TorreDefensa/src/Main/Jugador.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="154" x="6943" y="3327"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="67" language="java" name="Entidades.Campeones.Aliados.Mascara.Mascara" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Campeones/Aliados/Mascara/Mascara.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="175" x="5906" y="3327"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="68" language="java" name="Main.Estados.Vendiendo" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/Estados/Vendiendo.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="143" x="6079" y="1439"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="69" language="java" name="Main.Tienda.BotonApollyon" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/Tienda/BotonApollyon.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="197" x="5190" y="1264"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="70" language="java" name="Main.Estados.AplicarMagia" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/Estados/AplicarMagia.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="154" x="5238" y="1439"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="71" language="java" name="Main.Animaciones.AtaqueLilith" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/Animaciones/AtaqueLilith.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="176" x="12109" y="2756"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="72" language="java" name="Entidades.Campeones.Aliados.Azazel.AzazelGrafico" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Campeones/Aliados/Azazel/AzazelGrafico.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="227" x="7444" y="2756"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="73" language="java" name="Entidades.Campeones.Enemigos.Arrastre.DisparoArrastre" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Campeones/Enemigos/Arrastre/DisparoArrastre.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="81" width="226" x="8397" y="3327"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="74" language="java" name="Main.Tienda.BotonPoop" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/Tienda/BotonPoop.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="179" x="5427" y="1264"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="75" language="java" name="Entidades.Campeones.Enemigos.Cerebro.CerebroGrafico" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Campeones/Enemigos/Cerebro/CerebroGrafico.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="171" width="237" x="9962" y="2756"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="76" language="java" name="Main.Visitantes.VisitantePincho" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/Visitantes/VisitantePincho.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="140" x="4729" y="2756"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="77" language="java" name="Entidades.Campeones.Aliados.Apollyon.Apollyon" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Campeones/Aliados/Apollyon/Apollyon.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="176" x="6528" y="3327"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="78" language="java" name="Main.Estados.EstadoJuego" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/Estados/EstadoJuego.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="154" x="6315" y="1264"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="79" language="java" name="Main.Tienda.BotonPiedra" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/Tienda/BotonPiedra.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="185" x="5646" y="1264"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="80" language="java" name="Entidades.Objetos.Consumibles.Pincho.PinchoGrafico" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Objetos/Consumibles/Pincho/PinchoGrafico.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="171" width="223" x="10239" y="2756"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="81" language="java" name="Entidades.Campeones.Enemigos.Casper.Casper" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Campeones/Enemigos/Casper/Casper.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="181" x="2531" y="3327"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="82" language="java" name="Entidades.Objetos.Magias.AumentarFuerza.MagiaFuerza" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Objetos/Magias/AumentarFuerza/MagiaFuerza.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="135" width="189" x="5014" y="3574"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="83" language="java" name="Main.Visitantes.VisitanteDisparoA_Aliado" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/Visitantes/VisitanteDisparoA_Aliado.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="194" x="7381" y="1776"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="84" language="java" name="Main.Visitantes.VisitanteMagia" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/Visitantes/VisitanteMagia.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="162" x="6016" y="2401"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="85" language="java" name="Entidades.Campeones.Enemigos.Arrastre.DisparoArrastreGrafico" 
+    project="TorreDefensa" file="/TorreDefensa/src/Entidades/Campeones/Enemigos/Arrastre/DisparoArrastreGrafico.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="315" x="7983" y="3574"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="86" language="java" name="Main.Tienda.BotonBomba" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/Tienda/BotonBomba.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="188" x="5871" y="1264"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="87" language="java" name="Entidades.Campeones.Aliados.Lazaro.Lazaro" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Campeones/Aliados/Lazaro/Lazaro.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="167" x="7605" y="3327"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="88" language="java" name="Entidades.Campeones.Enemigos.Cerebro.Cerebro" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Campeones/Enemigos/Cerebro/Cerebro.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="184" x="2752" y="3327"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="89" language="java" name="Main.Animaciones.LagrimaNormal" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/Animaciones/LagrimaNormal.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="191" x="12325" y="2756"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="90" language="java" name="Entidades.Campeones.Aliados.Azazel.Azazel" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Campeones/Aliados/Azazel/Azazel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="166" x="7179" y="3327"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="91" language="java" name="Entidades.Campeones.Aliados.Lilith.Lilith" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Campeones/Aliados/Lilith/Lilith.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="159" x="6744" y="3327"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="92" language="java" name="Entidades.Campeones.Aliados.BlueBaby.BlueBaby" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Campeones/Aliados/BlueBaby/BlueBaby.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="180" x="7385" y="3327"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="93" language="java" name="Entidades.Campeones.Aliados.Poop.PoopGrafico" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Campeones/Aliados/Poop/PoopGrafico.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="207" x="10502" y="2756"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="94" language="java" name="Entidades.Campeones.Aliados.Mascara.DisparoMascaraGrafico" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Campeones/Aliados/Mascara/DisparoMascaraGrafico.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="117" width="305" x="4287" y="2401"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="95" language="java" name="Main.Tienda.BotonLilith" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/Tienda/BotonLilith.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="176" x="6099" y="1264"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="96" language="java" name="Main.Visitantes.VisitanteMeleeA_Aliado" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/Visitantes/VisitanteMeleeA_Aliado.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="188" x="2413" y="2401"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="97" language="java" name="Entidades.Campeones.Aliados.Mascara.MascaraGrafico" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Campeones/Aliados/Mascara/MascaraGrafico.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="171" width="243" x="7158" y="3574"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="98" language="java" name="Entidades.Campeones.Aliados.Piedra.PiedraGrafico" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Campeones/Aliados/Piedra/PiedraGrafico.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="219" x="10749" y="2756"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="99" language="java" name="Entidades.Objetos.Consumibles.Pincho.Pincho" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Objetos/Consumibles/Pincho/Pincho.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="174" x="5014" y="3327"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="100" language="java" name="Entidades.Campeones.Enemigos.Cerebro_Demonio.CerebroDemonioGrafico" 
+    project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Campeones/Enemigos/Cerebro_Demonio/CerebroDemonioGrafico.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="171" width="319" x="11008" y="2756"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="101" language="java" name="Entidades.Disparos.Aliados.DisparoAliado" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Disparos/Aliados/DisparoAliado.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="215" x="8533" y="2756"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="102" language="java" name="Entidades.EventosAleatorios.EAVida.EAVidaGrafico" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/EventosAleatorios/EAVida/EAVidaGrafico.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="229" x="4018" y="1776"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="103" language="java" name="Main.Animaciones.HiloAnimacion" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/Animaciones/HiloAnimacion.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="159" x="11874" y="2401"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="104" language="java" name="Entidades.Entidad" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Entidad.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="585" width="209" x="5038" y="1776"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="105" language="java" name="Entidades.Objetos.Magias.Escudos.DuracionEscudo" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Objetos/Magias/Escudos/DuracionEscudo.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="219" x="1865" y="2401"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="106" language="java" name="Entidades.Objetos.Magias.Escudos.MagiaEscudo" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Objetos/Magias/Escudos/MagiaEscudo.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="178" x="3165" y="3574"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="107" language="java" name="Main.Visitantes.VisitanteEATiempo" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/Visitantes/VisitanteEATiempo.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="170" x="5580" y="1776"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="108" language="java" name="Entidades.Campeones.Campeon" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Campeones/Campeon.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="315" width="164" x="4632" y="2401"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="109" language="java" name="Entidades.Campeones.Enemigos.Casper.CasperGrafico" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Campeones/Enemigos/Casper/CasperGrafico.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="228" x="11367" y="2756"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="110" language="java" name="Entidades.EventosAleatorios.EAVida.EAVida" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/EventosAleatorios/EAVida/EAVida.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="225" width="162" x="4836" y="2401"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="111" language="java" name="Entidades.Objetos.Magias.Magia" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Objetos/Magias/Magia.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="183" x="4791" y="3327"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="112" language="java" name="Main.Estados.Terminado" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/Estados/Terminado.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="141" x="5432" y="1439"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="113" language="java" name="Entidades.Objetos.Consumibles.BombaGrafico" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Objetos/Consumibles/BombaGrafico.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="225" x="6057" y="2756"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="114" language="java" name="Main.CargadorNivel" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/CargadorNivel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="269" x="6755" y="2401"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="115" language="java" name="Entidades.EventosAleatorios.EATiempo.EATiempoGrafico" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/EventosAleatorios/EATiempo/EATiempoGrafico.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="153" width="253" x="5287" y="1776"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="116" language="java" name="Main.Tienda.BotonTienda.miListener" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/Tienda/BotonTienda.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="194" x="6509" y="1264"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="117" language="java" name="Entidades.Campeones.Aliados.Lazaro.LazaroGrafico" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Campeones/Aliados/Lazaro/LazaroGrafico.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="227" x="8001" y="2756"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="118" language="java" name="Entidades.Campeones.Aliados.Aliado" project="TorreDefensa" 
+    file="/TorreDefensa/src/Entidades/Campeones/Aliados/Aliado.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="137" x="6322" y="2756"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="119" language="java" name="Main.GeneradorDeNiveles" project="TorreDefensa" 
+    file="/TorreDefensa/src/Main/GeneradorDeNiveles.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="235" x="7085" y="2401"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <generalization id="120">    
+    <end type="SOURCE" refId="81"/>    
+    <end type="TARGET" refId="57"/>  
+  </generalization>  
+  <association id="121">    
+    <bendpoint x="6733" y="1439"/>    
+    <bendpoint x="6733" y="1264"/>    
+    <end type="SOURCE" refId="45" navigable="false">      
+      <attribute id="122" name="botones"/>      
+      <multiplicity id="123" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="124">    
+    <end type="SOURCE" refId="65"/>    
+    <end type="TARGET" refId="104"/>  
+  </generalization>  
+  <association id="125">    
+    <end type="SOURCE" refId="96" navigable="false">      
+      <attribute id="126" name="enemigo"/>      
+      <multiplicity id="127" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="57" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="128">    
+    <bendpoint x="6208" y="2401"/>    
+    <end type="SOURCE" refId="104" navigable="false">      
+      <attribute id="129" name="mapaLogico"/>      
+      <multiplicity id="130" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="131">    
+    <bendpoint x="5447" y="2401"/>    
+    <bendpoint x="5447" y="2756"/>    
+    <end type="SOURCE" refId="107"/>    
+    <end type="TARGET" refId="35"/>  
+  </realization>  
+  <generalization id="132">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="118"/>  
+  </generalization>  
+  <generalization id="133">    
+    <end type="SOURCE" refId="89"/>    
+    <end type="TARGET" refId="103"/>  
+  </generalization>  
+  <realization id="134">    
+    <bendpoint x="4941" y="2756"/>    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="35"/>  
+  </realization>  
+  <association id="135">    
+    <bendpoint x="6508" y="2401"/>    
+    <end type="SOURCE" refId="45" navigable="false">      
+      <attribute id="136" name="mapaLogico"/>      
+      <multiplicity id="137" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="138">    
+    <end type="SOURCE" refId="30" navigable="false">      
+      <attribute id="139" name="disparo"/>      
+      <multiplicity id="140" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="65" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="141">    
+    <end type="SOURCE" refId="34"/>    
+    <end type="TARGET" refId="57"/>  
+  </generalization>  
+  <generalization id="142">    
+    <end type="SOURCE" refId="44"/>    
+    <end type="TARGET" refId="57"/>  
+  </generalization>  
+  <association id="143">    
+    <bendpoint x="6754" y="1439"/>    
+    <bendpoint x="6754" y="1776"/>    
+    <bendpoint x="6724" y="2401"/>    
+    <end type="SOURCE" refId="78" navigable="false">      
+      <attribute id="144" name="mapaLogico"/>      
+      <multiplicity id="145" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="146">    
+    <end type="SOURCE" refId="40"/>    
+    <end type="TARGET" refId="101"/>  
+  </generalization>  
+  <generalization id="147">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="103"/>  
+  </generalization>  
+  <generalization id="148">    
+    <end type="SOURCE" refId="88"/>    
+    <end type="TARGET" refId="57"/>  
+  </generalization>  
+  <generalization id="149">    
+    <end type="SOURCE" refId="58"/>    
+    <end type="TARGET" refId="78"/>  
+  </generalization>  
+  <generalization id="150">    
+    <end type="SOURCE" refId="39"/>    
+    <end type="TARGET" refId="57"/>  
+  </generalization>  
+  <generalization id="151">    
+    <end type="SOURCE" refId="79"/>    
+    <end type="TARGET" refId="10"/>  
+  </generalization>  
+  <association id="152">    
+    <end type="SOURCE" refId="55" navigable="false">      
+      <attribute id="153" name="aliado"/>      
+      <multiplicity id="154" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="118" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="155">    
+    <end type="SOURCE" refId="61" navigable="false">      
+      <attribute id="156" name="bombaG"/>      
+      <multiplicity id="157" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="113" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="158">    
+    <end type="SOURCE" refId="98"/>    
+    <end type="TARGET" refId="15"/>  
+  </generalization>  
+  <generalization id="159">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="78"/>  
+  </generalization>  
+  <generalization id="160">    
+    <bendpoint x="7148" y="3327"/>    
+    <bendpoint x="7148" y="2756"/>    
+    <end type="SOURCE" refId="97"/>    
+    <end type="TARGET" refId="15"/>  
+  </generalization>  
+  <generalization id="161">    
+    <end type="SOURCE" refId="112"/>    
+    <end type="TARGET" refId="78"/>  
+  </generalization>  
+  <generalization id="162">    
+    <end type="SOURCE" refId="85"/>    
+    <end type="TARGET" refId="53"/>  
+  </generalization>  
+  <generalization id="163">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="10"/>  
+  </generalization>  
+  <association id="164">    
+    <end type="SOURCE" refId="107" navigable="false">      
+      <attribute id="165" name="EATiempo"/>      
+      <multiplicity id="166" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="50" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="167">    
+    <end type="SOURCE" refId="113" navigable="false">      
+      <attribute id="168" name="bomba"/>      
+      <multiplicity id="169" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="61" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="170">    
+    <end type="SOURCE" refId="36"/>    
+    <end type="TARGET" refId="15"/>  
+  </generalization>  
+  <realization id="171">    
+    <bendpoint x="7371" y="2401"/>    
+    <bendpoint x="7085" y="2756"/>    
+    <end type="SOURCE" refId="83"/>    
+    <end type="TARGET" refId="35"/>  
+  </realization>  
+  <generalization id="172">    
+    <end type="SOURCE" refId="101"/>    
+    <end type="TARGET" refId="65"/>  
+  </generalization>  
+  <association id="173">    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="174" name="jugador"/>      
+      <multiplicity id="175" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="66" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="176">    
+    <end type="SOURCE" refId="59" navigable="false">      
+      <attribute id="177" name="tienda"/>      
+      <multiplicity id="178" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="51" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="179">    
+    <end type="SOURCE" refId="71"/>    
+    <end type="TARGET" refId="103"/>  
+  </generalization>  
+  <generalization id="180">    
+    <end type="SOURCE" refId="72"/>    
+    <end type="TARGET" refId="15"/>  
+  </generalization>  
+  <realization id="181">    
+    <bendpoint x="5489" y="2401"/>    
+    <bendpoint x="5489" y="2756"/>    
+    <end type="SOURCE" refId="59"/>    
+    <end type="TARGET" refId="35"/>  
+  </realization>  
+  <generalization id="182">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="118"/>  
+  </generalization>  
+  <generalization id="183">    
+    <end type="SOURCE" refId="60"/>    
+    <end type="TARGET" refId="15"/>  
+  </generalization>  
+  <generalization id="184">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="101"/>  
+  </generalization>  
+  <association id="185">    
+    <end type="SOURCE" refId="117" navigable="false">      
+      <attribute id="186" name="lazaro"/>      
+      <multiplicity id="187" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="87" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="188">    
+    <end type="SOURCE" refId="114" navigable="false">      
+      <attribute id="189" name="mapaLogico"/>      
+      <multiplicity id="190" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="191">    
+    <end type="SOURCE" refId="21" navigable="false">      
+      <attribute id="192" name="mapaLogico"/>      
+      <multiplicity id="193" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="194">    
+    <bendpoint x="5826" y="1776"/>    
+    <bendpoint x="6229" y="2401"/>    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="195" name="mapaLogico"/>      
+      <multiplicity id="196" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="197">    
+    <end type="SOURCE" refId="109"/>    
+    <end type="TARGET" refId="15"/>  
+  </generalization>  
+  <association id="198">    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="199" name="generadorN"/>      
+      <multiplicity id="200" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="119" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="201">    
+    <end type="SOURCE" refId="57"/>    
+    <end type="TARGET" refId="108"/>  
+  </generalization>  
+  <generalization id="202">    
+    <end type="SOURCE" refId="74"/>    
+    <end type="TARGET" refId="10"/>  
+  </generalization>  
+  <association id="203">    
+    <end type="SOURCE" refId="103" navigable="false">      
+      <attribute id="204" name="mapaLogico"/>      
+      <multiplicity id="205" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="206">    
+    <end type="SOURCE" refId="76" navigable="false">      
+      <attribute id="207" name="pincho"/>      
+      <multiplicity id="208" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="99" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="209">    
+    <end type="SOURCE" refId="51" navigable="false">      
+      <attribute id="210" name="tiendaGrafica"/>      
+      <multiplicity id="211" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="45" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="212">    
+    <end type="SOURCE" refId="104" navigable="false">      
+      <attribute id="213" name="entidadGrafica"/>      
+      <multiplicity id="214" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="215">    
+    <end type="SOURCE" refId="33" navigable="false">      
+      <attribute id="216" name="aliado"/>      
+      <multiplicity id="217" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="118" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="218">    
+    <end type="SOURCE" refId="38"/>    
+    <end type="TARGET" refId="53"/>  
+  </generalization>  
+  <association id="219">    
+    <end type="SOURCE" refId="82" navigable="false">      
+      <attribute id="220" name="magiaFuerzaGrafica"/>      
+      <multiplicity id="221" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="46" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="222">    
+    <bendpoint x="7127" y="3574"/>    
+    <bendpoint x="7127" y="3327"/>    
+    <bendpoint x="7127" y="2756"/>    
+    <bendpoint x="6703" y="2401"/>    
+    <bendpoint x="6527" y="1776"/>    
+    <end type="SOURCE" refId="46"/>    
+    <end type="TARGET" refId="23"/>  
+  </generalization>  
+  <nesting id="223">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="116"/>  
+  </nesting>  
+  <association id="224">    
+    <end type="SOURCE" refId="87" navigable="false">      
+      <attribute id="225" name="lazaroGrafico"/>      
+      <multiplicity id="226" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="117" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="227">    
+    <end type="SOURCE" refId="50"/>    
+    <end type="TARGET" refId="104"/>  
+  </generalization>  
+  <association id="228">    
+    <end type="SOURCE" refId="72" navigable="false">      
+      <attribute id="229" name="azazel"/>      
+      <multiplicity id="230" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="90" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="231">    
+    <bendpoint x="6796" y="1264"/>    
+    <bendpoint x="6796" y="1439"/>    
+    <bendpoint x="6548" y="1776"/>    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="232" name="tienda"/>      
+      <multiplicity id="233" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="51" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="234">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="104"/>  
+  </generalization>  
+  <association id="235">    
+    <end type="SOURCE" refId="26" navigable="false">      
+      <attribute id="236" name="tiendaGrafica"/>      
+      <multiplicity id="237" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="45" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="238">    
+    <bendpoint x="4983" y="2756"/>    
+    <end type="SOURCE" refId="108" navigable="false">      
+      <attribute id="239" name="visitanteAlcance"/>      
+      <multiplicity id="240" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="35" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="241">    
+    <end type="SOURCE" refId="28"/>    
+    <end type="TARGET" refId="17"/>  
+  </generalization>  
+  <generalization id="242">    
+    <end type="SOURCE" refId="68"/>    
+    <end type="TARGET" refId="78"/>  
+  </generalization>  
+  <generalization id="243">    
+    <end type="SOURCE" refId="87"/>    
+    <end type="TARGET" refId="118"/>  
+  </generalization>  
+  <generalization id="244">    
+    <end type="SOURCE" refId="90"/>    
+    <end type="TARGET" refId="118"/>  
+  </generalization>  
+  <generalization id="245">    
+    <end type="SOURCE" refId="52"/>    
+    <end type="TARGET" refId="101"/>  
+  </generalization>  
+  <realization id="246">    
+    <bendpoint x="4920" y="2756"/>    
+    <end type="SOURCE" refId="96"/>    
+    <end type="TARGET" refId="35"/>  
+  </realization>  
+  <generalization id="247">    
+    <end type="SOURCE" refId="70"/>    
+    <end type="TARGET" refId="78"/>  
+  </generalization>  
+  <generalization id="248">    
+    <end type="SOURCE" refId="80"/>    
+    <end type="TARGET" refId="15"/>  
+  </generalization>  
+  <generalization id="249">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="23"/>  
+  </generalization>  
+  <generalization id="250">    
+    <bendpoint x="7413" y="2756"/>    
+    <bendpoint x="7413" y="2401"/>    
+    <bendpoint x="7329" y="1776"/>    
+    <end type="SOURCE" refId="53"/>    
+    <end type="TARGET" refId="23"/>  
+  </generalization>  
+  <realization id="251">    
+    <bendpoint x="5510" y="2756"/>    
+    <end type="SOURCE" refId="55"/>    
+    <end type="TARGET" refId="35"/>  
+  </realization>  
+  <association id="252">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="253" name="disparoEnemigoGrafico"/>      
+      <multiplicity id="254" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="53" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="255">    
+    <end type="SOURCE" refId="95"/>    
+    <end type="TARGET" refId="10"/>  
+  </generalization>  
+  <association id="256">    
+    <end type="SOURCE" refId="51" navigable="false">      
+      <attribute id="257" name="mapaLogico"/>      
+      <multiplicity id="258" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="259">    
+    <end type="SOURCE" refId="32"/>    
+    <end type="TARGET" refId="103"/>  
+  </generalization>  
+  <association id="260">    
+    <end type="SOURCE" refId="106" navigable="false">      
+      <attribute id="261" name="magiaEscudoGrafica"/>      
+      <multiplicity id="262" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="43" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="263">    
+    <end type="SOURCE" refId="51" navigable="false">      
+      <attribute id="264" name="comprado"/>      
+      <multiplicity id="265" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="104" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="266">    
+    <bendpoint x="7350" y="1264"/>    
+    <bendpoint x="7350" y="1439"/>    
+    <bendpoint x="7350" y="1776"/>    
+    <bendpoint x="7350" y="2401"/>    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="267" name="mapaLogico"/>      
+      <multiplicity id="268" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="269">    
+    <end type="SOURCE" refId="93"/>    
+    <end type="TARGET" refId="15"/>  
+  </generalization>  
+  <generalization id="270">    
+    <end type="SOURCE" refId="67"/>    
+    <end type="TARGET" refId="118"/>  
+  </generalization>  
+  <association id="271">    
+    <end type="SOURCE" refId="115" navigable="false">      
+      <attribute id="272" name="EAT"/>      
+      <multiplicity id="273" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="50" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="274">    
+    <bendpoint x="5736" y="2756"/>    
+    <end type="SOURCE" refId="84"/>    
+    <end type="TARGET" refId="35"/>  
+  </realization>  
+  <association id="275">    
+    <bendpoint x="6271" y="2401"/>    
+    <bendpoint x="6271" y="1776"/>    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="276" name="mapaGUI"/>      
+      <multiplicity id="277" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="26" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="278">    
+    <end type="SOURCE" refId="45" navigable="false">      
+      <attribute id="279" name="tienda"/>      
+      <multiplicity id="280" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="51" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="281">    
+    <end type="SOURCE" refId="82"/>    
+    <end type="TARGET" refId="111"/>  
+  </generalization>  
+  <generalization id="282">    
+    <end type="SOURCE" refId="63"/>    
+    <end type="TARGET" refId="15"/>  
+  </generalization>  
+  <generalization id="283">    
+    <end type="SOURCE" refId="29"/>    
+    <end type="TARGET" refId="17"/>  
+  </generalization>  
+  <association id="284">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="285" name="tienda"/>      
+      <multiplicity id="286" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="51" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="287">    
+    <end type="SOURCE" refId="102"/>    
+    <end type="TARGET" refId="23"/>  
+  </generalization>  
+  <generalization id="288">    
+    <end type="SOURCE" refId="61"/>    
+    <end type="TARGET" refId="19"/>  
+  </generalization>  
+  <realization id="289">    
+    <bendpoint x="7392" y="2401"/>    
+    <bendpoint x="7106" y="2756"/>    
+    <end type="SOURCE" refId="30"/>    
+    <end type="TARGET" refId="35"/>  
+  </realization>  
+  <association id="290">    
+    <end type="SOURCE" refId="84" navigable="false">      
+      <attribute id="291" name="mapaLogico"/>      
+      <multiplicity id="292" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="293">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="17"/>  
+  </generalization>  
+  <association id="294">    
+    <end type="SOURCE" refId="119" navigable="false">      
+      <attribute id="295" name="mapaLogico"/>      
+      <multiplicity id="296" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="297">    
+    <end type="SOURCE" refId="42" navigable="false">      
+      <attribute id="298" name="bomba"/>      
+      <multiplicity id="299" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="61" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="300">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="301" name="camp"/>      
+      <multiplicity id="302" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="108" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="303">    
+    <end type="SOURCE" refId="47"/>    
+    <end type="TARGET" refId="9"/>  
+  </generalization>  
+  <generalization id="304">    
+    <end type="SOURCE" refId="92"/>    
+    <end type="TARGET" refId="118"/>  
+  </generalization>  
+  <generalization id="305">    
+    <end type="SOURCE" refId="106"/>    
+    <end type="TARGET" refId="111"/>  
+  </generalization>  
+  <generalization id="306">    
+    <end type="SOURCE" refId="31"/>    
+    <end type="TARGET" refId="15"/>  
+  </generalization>  
+  <generalization id="307">    
+    <end type="SOURCE" refId="118"/>    
+    <end type="TARGET" refId="108"/>  
+  </generalization>  
+  <association id="308">    
+    <end type="SOURCE" refId="57" navigable="false">      
+      <attribute id="309" name="visitanteMovimiento"/>      
+      <multiplicity id="310" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="35" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="311">    
+    <end type="SOURCE" refId="64"/>    
+    <end type="TARGET" refId="15"/>  
+  </generalization>  
+  <association id="312">    
+    <bendpoint x="5252" y="2756"/>    
+    <bendpoint x="5252" y="3327"/>    
+    <end type="SOURCE" refId="50" navigable="false">      
+      <attribute id="313" name="crono"/>      
+      <multiplicity id="314" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="27" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="315">    
+    <end type="SOURCE" refId="115"/>    
+    <end type="TARGET" refId="23"/>  
+  </generalization>  
+  <association id="316">    
+    <end type="SOURCE" refId="26" navigable="false">      
+      <attribute id="317" name="contentPane"/>      
+      <multiplicity id="318" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="56" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="319">    
+    <end type="SOURCE" refId="111" navigable="false">      
+      <attribute id="320" name="crono"/>      
+      <multiplicity id="321" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="27" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="322">    
+    <end type="SOURCE" refId="117"/>    
+    <end type="TARGET" refId="15"/>  
+  </generalization>  
+  <generalization id="323">    
+    <end type="SOURCE" refId="94"/>    
+    <end type="TARGET" refId="17"/>  
+  </generalization>  
+  <association id="324">    
+    <end type="SOURCE" refId="62" navigable="false">      
+      <attribute id="325" name="m"/>      
+      <multiplicity id="326" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="111" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="327">    
+    <end type="SOURCE" refId="73"/>    
+    <end type="TARGET" refId="9"/>  
+  </generalization>  
+  <association id="328">    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="329" name="magiaAplicada"/>      
+      <multiplicity id="330" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="111" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="331">    
+    <bendpoint x="5191" y="2401"/>    
+    <bendpoint x="5191" y="2756"/>    
+    <end type="SOURCE" refId="104" navigable="false">      
+      <attribute id="332" name="visitante"/>      
+      <multiplicity id="333" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="35" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="334">    
+    <bendpoint x="6250" y="2401"/>    
+    <end type="SOURCE" refId="56" navigable="false">      
+      <attribute id="335" name="mapaLogico"/>      
+      <multiplicity id="336" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="337">    
+    <bendpoint x="7003" y="1776"/>    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="23"/>  
+  </generalization>  
+  <generalization id="338">    
+    <bendpoint x="5468" y="2401"/>    
+    <bendpoint x="5780" y="1776"/>    
+    <end type="SOURCE" refId="113"/>    
+    <end type="TARGET" refId="23"/>  
+  </generalization>  
+  <association id="339">    
+    <end type="SOURCE" refId="68" navigable="false">      
+      <attribute id="340" name="visitante"/>      
+      <multiplicity id="341" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="59" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="342">    
+    <bendpoint x="6529" y="2401"/>    
+    <bendpoint x="5844" y="2756"/>    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="35"/>  
+  </realization>  
+  <generalization id="343">    
+    <end type="SOURCE" refId="105"/>    
+    <end type="TARGET" refId="3"/>  
+  </generalization>  
+  <association id="344">    
+    <end type="SOURCE" refId="67" navigable="false">      
+      <attribute id="345" name="per"/>      
+      <multiplicity id="346" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="97" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="347">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="348" name="entidadComprada"/>      
+      <multiplicity id="349" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="104" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="350">    
+    <bendpoint x="4962" y="2756"/>    
+    <end type="SOURCE" refId="111"/>    
+    <end type="TARGET" refId="4"/>  
+  </generalization>  
+  <generalization id="351">    
+    <end type="SOURCE" refId="108"/>    
+    <end type="TARGET" refId="104"/>  
+  </generalization>  
+  <association id="352">    
+    <bendpoint x="2235" y="2756"/>    
+    <bendpoint x="2114" y="2401"/>    
+    <end type="SOURCE" refId="111" navigable="false">      
+      <attribute id="353" name="efecto"/>      
+      <multiplicity id="354" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="355">    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="356" name="blueBaby"/>      
+      <multiplicity id="357" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="92" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="358">    
+    <end type="SOURCE" refId="37"/>    
+    <end type="TARGET" refId="101"/>  
+  </generalization>  
+  <generalization id="359">    
+    <end type="SOURCE" refId="86"/>    
+    <end type="TARGET" refId="10"/>  
+  </generalization>  
+  <generalization id="360">    
+    <end type="SOURCE" refId="75"/>    
+    <end type="TARGET" refId="15"/>  
+  </generalization>  
+  <generalization id="361">    
+    <end type="SOURCE" refId="99"/>    
+    <end type="TARGET" refId="19"/>  
+  </generalization>  
+  <generalization id="362">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="4"/>  
+  </generalization>  
+  <association id="363">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="364" name="enemigo"/>      
+      <multiplicity id="365" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="57" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="366">    
+    <bendpoint x="5622" y="2756"/>    
+    <end type="SOURCE" refId="33"/>    
+    <end type="TARGET" refId="35"/>  
+  </realization>  
+  <realization id="367">    
+    <end type="SOURCE" refId="76"/>    
+    <end type="TARGET" refId="35"/>  
+  </realization>  
+  <generalization id="368">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="65"/>  
+  </generalization>  
+  <generalization id="369">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="23"/>  
+  </generalization>  
+  <association id="370">    
+    <bendpoint x="7054" y="2401"/>    
+    <bendpoint x="7024" y="1776"/>    
+    <bendpoint x="6775" y="1439"/>    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="371" name="estadoJuego"/>      
+      <multiplicity id="372" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="78" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="373">    
+    <end type="SOURCE" refId="100"/>    
+    <end type="TARGET" refId="15"/>  
+  </generalization>  
+  <association id="374">    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="375" name="entidad"/>      
+      <multiplicity id="376" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="104" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="377">    
+    <end type="SOURCE" refId="54"/>    
+    <end type="TARGET" refId="17"/>  
+  </generalization>  
+  <generalization id="378">    
+    <end type="SOURCE" refId="41"/>    
+    <end type="TARGET" refId="3"/>  
+  </generalization>  
+  <association id="379">    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="380" name="cargadorNivel"/>      
+      <multiplicity id="381" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="114" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="382">    
+    <end type="SOURCE" refId="83" navigable="false">      
+      <attribute id="383" name="disparo"/>      
+      <multiplicity id="384" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="65" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="385">    
+    <bendpoint x="5212" y="2401"/>    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="386" name="mapaLogico"/>      
+      <multiplicity id="387" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="388">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="10"/>  
+  </generalization>  
+  <realization id="389">    
+    <end type="SOURCE" refId="62"/>    
+    <end type="TARGET" refId="35"/>  
+  </realization>  
+  <association id="390">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="391" name="estadoJuego"/>      
+      <multiplicity id="392" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="78" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="393">    
+    <end type="SOURCE" refId="110"/>    
+    <end type="TARGET" refId="104"/>  
+  </generalization>  
+  <association id="394">    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="395" name="tienda"/>      
+      <multiplicity id="396" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="51" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="397">    
+    <bendpoint x="1530" y="3574"/>    
+    <bendpoint x="1530" y="3327"/>    
+    <bendpoint x="1530" y="2756"/>    
+    <bendpoint x="1530" y="2401"/>    
+    <bendpoint x="1530" y="1776"/>    
+    <end type="SOURCE" refId="43"/>    
+    <end type="TARGET" refId="23"/>  
+  </generalization>  
+  <generalization id="398">    
+    <end type="SOURCE" refId="69"/>    
+    <end type="TARGET" refId="10"/>  
+  </generalization>  
+  <generalization id="399">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="57"/>  
+  </generalization>  
+  <generalization id="400">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="10"/>  
+  </generalization>  
+  <generalization id="401">    
+    <end type="SOURCE" refId="77"/>    
+    <end type="TARGET" refId="118"/>  
+  </generalization>  
+  <association id="402">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="403" name="enemigo"/>      
+      <multiplicity id="404" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="57" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="405">    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="10"/>  
+  </generalization>  
+  <realization id="406">    
+    <bendpoint x="4899" y="2756"/>    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="35"/>  
+  </realization>  
+  <generalization id="407">    
+    <end type="SOURCE" refId="49"/>    
+    <end type="TARGET" refId="101"/>  
+  </generalization>  
+  <realization id="408">    
+    <end type="SOURCE" refId="42"/>    
+    <end type="TARGET" refId="35"/>  
+  </realization>  
+  <generalization id="409">    
+    <end type="SOURCE" refId="91"/>    
+    <end type="TARGET" refId="118"/>  
+  </generalization>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

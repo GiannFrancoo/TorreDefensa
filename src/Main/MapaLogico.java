@@ -3,13 +3,7 @@ package Main;
 import Utilidad.Lista.*;
 import java.util.Random;
 import Entidades.Entidad;
-import Entidades.Campeones.Campeon;
 import Entidades.Campeones.Enemigos.Enemigo;
-import Entidades.Campeones.Enemigos.Casper.Casper;
-import Entidades.Campeones.Enemigos.Cerebro.Cerebro;
-import Entidades.Campeones.Enemigos.Cerebro_Demonio.CerebroDemonio;
-import Entidades.Campeones.Enemigos.Colmena.Colmena;
-import Entidades.Campeones.Enemigos.Isaac_Cerebro.IsaacCerebro;
 import Entidades.EventosAleatorios.EATiempo.EATiempo;
 import Entidades.EventosAleatorios.EAVida.EAVida;
 import Entidades.Objetos.Magias.Magia;
@@ -18,7 +12,6 @@ import Entidades.Objetos.Magias.Escudos.MagiaEscudo;
 import Main.Estados.EstadoJuego;
 import Main.Estados.Jugando;
 import Main.Tienda.Tienda;
-import Main.Visitantes.Visitante;
 
 public class MapaLogico {
 	
@@ -31,7 +24,7 @@ public class MapaLogico {
 //	protected CargadorNivel cargadorNivel;
 	protected CargadorNivel cargadorNivel;
 	protected int cantEnemigos;
-	protected int CANT_NIVELES = 2;
+	protected int CANT_NIVELES = 1;
 	protected int nivelActual;
 	protected GeneradorDeNiveles generadorN;
 	
@@ -61,7 +54,7 @@ public class MapaLogico {
 		magiaAplicada = null;
 		juegoTerminado = false;
 		
-		this.nivelActual = 1;
+		this.nivelActual = 0;
 		this.generadorN = new GeneradorDeNiveles(this);
 		
 //		nivel = generarNivel();
@@ -72,7 +65,7 @@ public class MapaLogico {
 	}
 	
 	public void restarEnemigo() {
-		--this.cantEnemigos;
+		this.cantEnemigos -= 1;
 	}
 	
 	public void setEstado(EstadoJuego e) {
@@ -125,7 +118,15 @@ public class MapaLogico {
 	 			else {
 	 				++nivelActual;
 	 				PositionList<Enemigo> nivel = generadorN.generarNivel();
-	 				this.cantEnemigos = nivel.size();
+	 				
+	 				int cont = 0;
+	 				for (Enemigo e : nivel) {
+	 					if (e != null) {
+	 						cont++;
+	 					}
+	 				}
+	 				this.cantEnemigos = cont;
+	 				
 	 	 	 		cargadorNivel = new CargadorNivel(this, nivel);
 	 	 	 		cargadorNivel.start();
 

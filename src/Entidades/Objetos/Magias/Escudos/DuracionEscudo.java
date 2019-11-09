@@ -1,12 +1,8 @@
 package Entidades.Objetos.Magias.Escudos;
 
-import java.awt.Image;
-import java.awt.Rectangle;
-import javax.swing.ImageIcon;
 import Entidades.Campeones.Campeon;
 import Entidades.Objetos.Magias.EfectoMagia;
 import Main.MapaLogico;
-import Main.Textura;
 
 public class DuracionEscudo extends EfectoMagia {
 	
