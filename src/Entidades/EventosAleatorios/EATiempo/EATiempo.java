@@ -10,7 +10,7 @@ public class EATiempo extends Entidad{
 
 	protected int dps = 5;
 	protected int dpsTiming = dps;
-	protected int fuerza = 500;
+	protected int fuerza = 4;
 	protected Cronometro crono;
 
 	

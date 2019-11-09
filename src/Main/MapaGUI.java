@@ -47,9 +47,14 @@ public class MapaGUI extends JFrame {
 		
 		
 		instrucciones = new JLabel();
-		instrucciones.setBounds(300, 600, 400, 50);
-		instrucciones.setOpaque(true);
+		instrucciones.setBounds(370, 580, 600, 50);
+		instrucciones.setOpaque(false);
 		instrucciones.setVisible(false);
+		
+		Font f = new Font("TimesRoman",Font.BOLD,25);
+		instrucciones.setForeground(Color.LIGHT_GRAY);
+		instrucciones.setFont(f);
+		
 		panel.add(instrucciones, 10, 2);	
 
 		
@@ -71,7 +76,7 @@ public class MapaGUI extends JFrame {
 		
 		this.lblFondo.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/fondo_marcado.png")).getImage().getScaledInstance(lblFondo.getWidth(), lblFondo.getHeight(), Image.SCALE_SMOOTH)));
 
-		this.instrucciones.setText("Colocar el aliado comprado en una casilla vacia");
+		this.instrucciones.setText("Coloca el aliado en una casilla vacia");
 		this.instrucciones.setVisible(true);
 	}
 	
@@ -79,7 +84,7 @@ public class MapaGUI extends JFrame {
 		this.tiendaGrafica.setEnabled(false);
 		this.tiendaGrafica.setVisible(false);
 
-		this.instrucciones.setText("Colocar la magia en un Aliado");
+		this.instrucciones.setText("Coloca la magia en un Aliado");
 		this.instrucciones.setVisible(true);
 	}
 	
