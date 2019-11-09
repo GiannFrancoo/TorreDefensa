@@ -17,7 +17,7 @@ public class GeneradorDeNiveles {
 	
 	MapaLogico mapaLogico;
 	
-	protected int cantEnemigos = 20;
+	protected int cantEnemigos = 2;
 	
 	public GeneradorDeNiveles(MapaLogico mapaLogico) {
 		this.mapaLogico = mapaLogico;
