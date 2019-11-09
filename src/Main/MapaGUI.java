@@ -47,7 +47,7 @@ public class MapaGUI extends JFrame {
 		
 		
 		instrucciones = new JLabel();
-		instrucciones.setBounds(300, 600, 200, 50);
+		instrucciones.setBounds(300, 600, 400, 50);
 		instrucciones.setOpaque(true);
 		instrucciones.setVisible(false);
 		panel.add(instrucciones, 10, 2);	
