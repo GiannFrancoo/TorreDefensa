@@ -50,7 +50,7 @@ public class MapaLogico {
 	protected Magia magiaAplicada;
 	
 	public MapaLogico() {
-		this.jugador = new Jugador(100);
+		this.jugador = new Jugador(240);
 		this.tienda = new Tienda(this, jugador);
 		this.mapaGUI = new MapaGUI(this, tienda, jugador);
 		mapaGUI.setVisible(true);
@@ -249,73 +249,53 @@ public class MapaLogico {
 	
 	
 	public void generarEventoRandom() {
+		// 233 + 320 --> 233 por margen, y 320 por 4 casillas; x > 553;
+		// Meno a 233 + 841; x < 1074
 		
-		/*
-		int y = 0;
-		int x = 0;
-		Random r  = new Random();			
-		y = r.nextInt(6);
-		x = r.nextInt(6) + 3;
-
-		aInsertar.setX(((x * 841) / 10 ) + 233);
-		aInsertar.setY(((y * 487) / 6) + 42);
-		*/
+		// y > 42;  y < 42 + 487 == 529;
+				
 		
 		Random rand = new Random();
+		
+		if(rand.nextInt(1000) == 0) {
 			
-		if(rand.nextInt(10) == 0) {
+			int i = 0;
+			int y = 0;
+			int x = 0;
+			boolean encontreLugar = false;
+			PositionList<Entidad> listaColisionado;
 			
-			if(rand.nextInt(2) == 0) { // EA Tiempo;
-				EATiempo evento = new EATiempo(this);
+			
+			while(i < 5 && !encontreLugar) {				
+				x = ((((rand.nextInt(5) + 4) * 841) / 10 ) + 233);
+				y = (((rand.nextInt(6) * 487) / 6) + 42);
 				
-				// 233 + 320 --> 233 por margen, y 320 por 4 casillas; x > 553;
-				// Meno a 233 + 841; x < 1074
+				encontreLugar = true;
 				
-				// y > 42;  y < 42 + 487 == 529;
+				listaColisionado = colisioneRango(x, x+80, y, y+80);
 				
-				int x = rand.nextInt(500) + 570;
-				int y = rand.nextInt(485) + 43;
-				
-				// Obtengo las coordenas en forma de grilla;
-				int xx = (((x - 233) * 10)/ 841);
-				int yy = (((y - 42) * 6)/ 487); 
-				
-				// La obtengo en la esquina de cada celda;
-				int xNormalizada = ((xx * 841) / 10 ) + 233;
-				int yNormalizada = ((yy * 487) / 6) + 42;
-				
-				
-				this.insertar(evento);
-				evento.setX(xNormalizada);
-				evento.setY(yNormalizada);
-				
-			}
-			else { // EA Vida;
-				EAVida evento = new EAVida(this);
-				
-				// 233 + 320 --> 233 por margen, y 320 por 4 casillas; x > 553;
-				// Meno a 233 + 841; x < 1074
-				
-				// y > 42;  y < 42 + 487 == 529;
-				
-				int x = rand.nextInt(521) + 550;
-				int y = rand.nextInt(485) + 43;
-				
-				// Obtengo las coordenas en forma de grilla;
-				int xx = (((x - 233) * 10)/ 841);
-				int yy = (((y - 42) * 6)/ 487); 
-				
-				// La obtengo en la esquina de cada celda;
-				int xNormalizada = ((xx * 841) / 10 ) + 233;
-				int yNormalizada = ((yy * 487) / 6) + 42;
-				
-				this.insertar(evento);
-				evento.setX(xNormalizada);
-				evento.setY(yNormalizada);
-				
+				if(!listaColisionado.isEmpty()) {
+					encontreLugar = false;
+					++i;
+				}
 			}
 			
+			if(encontreLugar) {			
+				if(rand.nextInt(2) == 0) { // EA Tiempo;
+					EATiempo evento = new EATiempo(this);
+					this.insertar(evento);
+					evento.setX(x);
+					evento.setY(y);
+				}
+				else { // EA Vida;
+					EAVida evento = new EAVida(this);
+					this.insertar(evento);
+					evento.setX(x);
+					evento.setY(y);
+				}
+			}
 		}
+		
 	}
 	
 	
