@@ -11,6 +11,8 @@ public class MapaGUI extends JFrame {
 	private ClickeablePanel contentPane;
 	private TiendaGrafica tiendaGrafica;
 	private JLabel lblFondo;
+	private ImageIcon lblFondoActual;
+	private ImageIcon lblFondoIndicador;
 	private JLabel lblIsaac;
 	private JLabel instrucciones;
 
@@ -29,11 +31,17 @@ public class MapaGUI extends JFrame {
 		panel.setLayout(null);
 		contentPane.add(panel);
 		
+		//FONDO
 		lblFondo = new JLabel();
 		lblFondo.setSize(panel.getSize());
-		lblFondo.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/fondo_nivel1.png")).getImage().getScaledInstance(lblFondo.getWidth(), lblFondo.getHeight(), Image.SCALE_SMOOTH)));
+//		lblFondo.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/fondo_nivel1.png")).getImage().getScaledInstance(lblFondo.getWidth(), lblFondo.getHeight(), Image.SCALE_SMOOTH)));
 		panel.add(lblFondo, 1, 0); 
 		
+		//FONDO ACTUAL
+		lblFondoActual = new ImageIcon();
+		
+		//FONDO INDICACIONES
+		lblFondoIndicador = new ImageIcon();
 		
 		lblIsaac = new JLabel();
 		lblIsaac.setBounds(45, 220, 150, 150);
@@ -74,7 +82,8 @@ public class MapaGUI extends JFrame {
 		this.tiendaGrafica.setVisible(false);
 		this.tiendaGrafica.setEnabled(false);
 		
-		this.lblFondo.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/fondo_marcado.png")).getImage().getScaledInstance(lblFondo.getWidth(), lblFondo.getHeight(), Image.SCALE_SMOOTH)));
+		this.lblFondo.setIcon(lblFondoIndicador);
+//		this.lblFondo.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/fondo_marcado.png")).getImage().getScaledInstance(lblFondo.getWidth(), lblFondo.getHeight(), Image.SCALE_SMOOTH)));
 
 		this.instrucciones.setText("Coloca el aliado en una casilla vacia");
 		this.instrucciones.setVisible(true);
@@ -97,12 +106,17 @@ public class MapaGUI extends JFrame {
 	}
 	
 	public void ocultarIndicacion() {
-		lblFondo.setIcon(new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/fondo_nivel1.png")).getImage().getScaledInstance(lblFondo.getWidth(), lblFondo.getHeight(), Image.SCALE_SMOOTH)));
-
+		lblFondo.setIcon(lblFondoActual);
 		
 		this.instrucciones.setVisible(false);
 		this.tiendaGrafica.setEnabled(true);
 		this.tiendaGrafica.setVisible(true);
+	}
+	
+	public void cambiarNivel(int nivel) {
+		lblFondoActual = (new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/fondo_nivel" + nivel + ".png")).getImage().getScaledInstance(lblFondo.getWidth(), lblFondo.getHeight(), Image.SCALE_SMOOTH)));		
+		lblFondoIndicador = (new ImageIcon(new ImageIcon(this.getClass().getClassLoader().getResource("texturas/fondo_marcadoNivel" + nivel + ".png")).getImage().getScaledInstance(lblFondo.getWidth(), lblFondo.getHeight(), Image.SCALE_SMOOTH)));		
+		lblFondo.setIcon(lblFondoActual);
 	}
 	
 	public void perderJuego() {
