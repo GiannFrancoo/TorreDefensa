@@ -24,7 +24,7 @@ public class MapaLogico {
 //	protected CargadorNivel cargadorNivel;
 	protected CargadorNivel cargadorNivel;
 	protected int cantEnemigos;
-	protected int CANT_NIVELES = 1;
+	protected int CANT_NIVELES = 2;
 	protected int nivelActual;
 	protected GeneradorDeNiveles generadorN;
 	
@@ -116,6 +116,7 @@ public class MapaLogico {
 	 				ganarJuego();
 	 			}
 	 			else {
+	 				this.mapaGUI.cambiarNivel(nivelActual);
 	 				++nivelActual;
 	 				PositionList<Enemigo> nivel = generadorN.generarNivel();
 	 				

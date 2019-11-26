@@ -4,6 +4,7 @@ import java.util.Random;
 
 import Entidades.Entidad;
 import Entidades.Campeones.Campeon;
+import Entidades.Objetos.Consumibles.Bomba;
 import Entidades.Objetos.Magias.Magia;
 import Main.MapaLogico;
 import Main.Visitantes.Visitante;
@@ -38,10 +39,20 @@ public abstract class Enemigo extends Campeon{
 			this.mapaLogico.getTienda().actualizarMonedas();
 			Random rnd = new Random();
 			if (rnd.nextInt(4) == 0){
-				Magia drop = this.mapaLogico.getMagiaRandom();
-				this.mapaLogico.insertar(drop);
-				drop.setX(getX());
-				drop.setY(getY());
+				if (rnd.nextInt(2) == 0) {
+					//Drop bomba
+					Bomba dropBomba = new Bomba(this.mapaLogico);
+					this.mapaLogico.insertar(dropBomba);
+					dropBomba.setX(getX());
+					dropBomba.setY(getY());
+				}
+				else {
+					//Drop Magia
+					Magia drop = this.mapaLogico.getMagiaRandom();
+					this.mapaLogico.insertar(drop);
+					drop.setX(getX());
+					drop.setY(getY());
+				}
 			}
 			mapaLogico.restarEnemigo();
 			this.eliminar();
